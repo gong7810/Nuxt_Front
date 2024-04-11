@@ -1,298 +1,91 @@
-globalThis._importMeta_ = { url: import.meta.url, env: process.env };
-import "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/node-fetch-native@1.4.0/node_modules/node-fetch-native/dist/polyfill.mjs";
-import { Server } from "node:http";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { mkdirSync } from "node:fs";
-import { parentPort, threadId } from "node:worker_threads";
-import {
-  defineEventHandler,
-  handleCacheHeaders,
-  isEvent,
-  createEvent,
-  getRequestHeader,
-  splitCookiesString,
-  eventHandler,
-  setHeaders,
-  sendRedirect,
-  proxyRequest,
-  setResponseHeader,
-  send,
-  getResponseStatus,
-  setResponseStatus,
-  setResponseHeaders,
-  setCookie,
-  appendHeader,
-  parseCookies,
-  getHeaders,
-  getMethod,
-  getQuery as getQuery$1,
-  createError,
-  isMethod,
-  readBody,
-  getRequestHeaders,
-  createApp,
-  createRouter as createRouter$1,
-  toNodeListener,
-  fetchWithEvent,
-  lazyEventHandler,
-  getResponseStatusText,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/h3@1.8.2/node_modules/h3/dist/index.mjs";
-import is from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/@sindresorhus+is@6.0.1/node_modules/@sindresorhus/is/dist/index.js";
-import destr, {
-  destr as destr$1,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/destr@2.0.1/node_modules/destr/dist/index.mjs";
-import CredentialsProvider from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/providers/credentials.js";
-import { AuthHandler } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/core/index.js";
-import { getToken as getToken$1 } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/jwt/index.js";
-import defu, {
-  defuFn,
-  defu as defu$1,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/defu@6.1.3/node_modules/defu/dist/defu.mjs";
-import {
-  parseURL,
-  withoutBase,
-  joinURL,
-  getQuery,
-  withQuery,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/ufo@1.3.1/node_modules/ufo/dist/index.mjs";
-import {
-  getRequestDependencies,
-  getPreloadLinks,
-  getPrefetchLinks,
-  createRenderer,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/vue-bundle-renderer@2.0.0/node_modules/vue-bundle-renderer/dist/runtime.mjs";
-import {
-  stringify,
-  uneval,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/devalue@4.3.2/node_modules/devalue/index.js";
-import { renderToString } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/vue@3.3.4/node_modules/vue/server-renderer/index.mjs";
-import { renderSSRHead } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/@unhead+ssr@1.7.4/node_modules/@unhead/ssr/dist/index.mjs";
-import {
-  createFetch as createFetch$1,
-  Headers as Headers$1,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/ofetch@1.3.3/node_modules/ofetch/dist/node.mjs";
-import {
-  createCall,
-  createFetch,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/unenv@1.7.4/node_modules/unenv/runtime/fetch/index.mjs";
-import { createHooks } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs";
-import { snakeCase } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/scule@1.0.0/node_modules/scule/dist/index.mjs";
-import { klona } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs";
-import { hash } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs";
-import {
-  createStorage,
-  prefixStorage,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/unstorage@1.9.0/node_modules/unstorage/dist/index.mjs";
-import unstorage_47drivers_47fs from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/unstorage@1.9.0/node_modules/unstorage/drivers/fs.mjs";
-import {
-  toRouteMatcher,
-  createRouter,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/radix3@1.1.0/node_modules/radix3/dist/index.mjs";
-import getURL from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/requrl@3.0.2/node_modules/requrl/dist/requrl.js";
-import {
-  version,
-  unref,
-} from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/vue@3.3.4/node_modules/vue/index.mjs";
-import { createServerHead as createServerHead$1 } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/unhead@1.7.4/node_modules/unhead/dist/index.mjs";
-import { defineHeadPlugin } from "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/node_modules/.pnpm/@unhead+shared@1.7.4/node_modules/@unhead/shared/dist/index.mjs";
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/node-fetch-native@1.4.0/node_modules/node-fetch-native/dist/polyfill.mjs';
+import { Server } from 'node:http';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { mkdirSync } from 'node:fs';
+import { parentPort, threadId } from 'node:worker_threads';
+import { defineEventHandler, handleCacheHeaders, isEvent, createEvent, getRequestHeader, splitCookiesString, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, setCookie, appendHeader, parseCookies, getHeaders, getMethod, getQuery as getQuery$1, createError, isMethod, readBody, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getResponseStatusText } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/h3@1.8.2/node_modules/h3/dist/index.mjs';
+import is from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/@sindresorhus+is@6.0.1/node_modules/@sindresorhus/is/dist/index.js';
+import destr, { destr as destr$1 } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/destr@2.0.1/node_modules/destr/dist/index.mjs';
+import CredentialsProvider from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/providers/credentials.js';
+import { AuthHandler } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/core/index.js';
+import { getToken as getToken$1 } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/next-auth@4.21.1_next@13.5.5_react-dom@18.2.0_react@18.2.0/node_modules/next-auth/jwt/index.js';
+import defu, { defuFn, defu as defu$1 } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/defu@6.1.3/node_modules/defu/dist/defu.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/ufo@1.3.1/node_modules/ufo/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/vue-bundle-renderer@2.0.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/devalue@4.3.2/node_modules/devalue/index.js';
+import { renderToString } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/vue@3.3.4/node_modules/vue/server-renderer/index.mjs';
+import { renderSSRHead } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/@unhead+ssr@1.7.4/node_modules/@unhead/ssr/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/ofetch@1.3.3/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/unenv@1.7.4/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/scule@1.0.0/node_modules/scule/dist/index.mjs';
+import { klona } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import { hash } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/unstorage@1.9.0/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/unstorage@1.9.0/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/radix3@1.1.0/node_modules/radix3/dist/index.mjs';
+import getURL from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/requrl@3.0.2/node_modules/requrl/dist/requrl.js';
+import { version, unref } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/vue@3.3.4/node_modules/vue/index.mjs';
+import { createServerHead as createServerHead$1 } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/unhead@1.7.4/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/node_modules/.pnpm/@unhead+shared@1.7.4/node_modules/@unhead/shared/dist/index.mjs';
 
-const r = Object.create(null),
-  t = (e) =>
-    globalThis.process?.env ||
-    globalThis._importMeta_.env ||
-    globalThis.Deno?.env.toObject() ||
-    globalThis.__env__ ||
-    (e ? r : globalThis),
-  s = new Proxy(r, {
-    get(e, o) {
-      return t()[o] ?? r[o];
-    },
-    has(e, o) {
-      const i = t();
-      return o in i || o in r;
-    },
-    set(e, o, i) {
-      const p = t(!0);
-      return (p[o] = i), !0;
-    },
-    deleteProperty(e, o) {
-      if (!o) return !1;
-      const i = t(!0);
-      return delete i[o], !0;
-    },
-    ownKeys() {
-      const e = t(!0);
-      return Object.keys(e);
-    },
-  }),
-  E = (typeof process < "u" && process.env && "development") || "",
-  d = [
-    ["APPVEYOR"],
-    ["AZURE_PIPELINES", "SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],
-    ["AZURE_STATIC", "INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],
-    ["APPCIRCLE", "AC_APPCIRCLE"],
-    ["BAMBOO", "bamboo_planKey"],
-    ["BITBUCKET", "BITBUCKET_COMMIT"],
-    ["BITRISE", "BITRISE_IO"],
-    ["BUDDY", "BUDDY_WORKSPACE_ID"],
-    ["BUILDKITE"],
-    ["CIRCLE", "CIRCLECI"],
-    ["CIRRUS", "CIRRUS_CI"],
-    ["CLOUDFLARE_PAGES", "CF_PAGES", { ci: !0 }],
-    ["CODEBUILD", "CODEBUILD_BUILD_ARN"],
-    ["CODEFRESH", "CF_BUILD_ID"],
-    ["DRONE"],
-    ["DRONE", "DRONE_BUILD_EVENT"],
-    ["DSARI"],
-    ["GITHUB_ACTIONS"],
-    ["GITLAB", "GITLAB_CI"],
-    ["GITLAB", "CI_MERGE_REQUEST_ID"],
-    ["GOCD", "GO_PIPELINE_LABEL"],
-    ["LAYERCI"],
-    ["HUDSON", "HUDSON_URL"],
-    ["JENKINS", "JENKINS_URL"],
-    ["MAGNUM"],
-    ["NETLIFY"],
-    ["NETLIFY", "NETLIFY_LOCAL", { ci: !1 }],
-    ["NEVERCODE"],
-    ["RENDER"],
-    ["SAIL", "SAILCI"],
-    ["SEMAPHORE"],
-    ["SCREWDRIVER"],
-    ["SHIPPABLE"],
-    ["SOLANO", "TDDIUM"],
-    ["STRIDER"],
-    ["TEAMCITY", "TEAMCITY_VERSION"],
-    ["TRAVIS"],
-    ["VERCEL", "NOW_BUILDER"],
-    ["VERCEL", "VERCEL", { ci: !1 }],
-    ["VERCEL", "VERCEL_ENV", { ci: !1 }],
-    ["APPCENTER", "APPCENTER_BUILD_ID"],
-    ["CODESANDBOX", "CODESANDBOX_SSE", { ci: !1 }],
-    ["STACKBLITZ"],
-    ["STORMKIT"],
-    ["CLEAVR"],
-  ];
-function B() {
-  if (globalThis.process?.env)
-    for (const e of d) {
-      const o = e[1] || e[0];
-      if (globalThis.process?.env[o])
-        return { name: e[0].toLowerCase(), ...e[2] };
-    }
-  return globalThis.process?.env?.SHELL === "/bin/jsh" &&
-    globalThis.process?.versions?.webcontainer
-    ? { name: "stackblitz", ci: !1 }
-    : { name: "", ci: !1 };
-}
-const I = B(),
-  U = I.name;
-function n(e) {
-  return e ? e !== "false" : !1;
-}
-const l = globalThis.process?.platform || "",
-  T = n(s.CI) || I.ci !== !1,
-  a = n(globalThis.process?.stdout && globalThis.process?.stdout.isTTY);
-n(s.DEBUG);
-const c = E === "test" || n(s.TEST);
-n(s.MINIMAL) || T || c || !a;
-const C = /^win/i.test(l);
-!n(s.NO_COLOR) &&
-  (n(s.FORCE_COLOR) ||
-    (C && s.TERM !== "dumb") ||
-    (a && s.TERM && s.TERM === "dumb") ||
-    T);
-const R = (globalThis.process?.versions?.node || "").replace(/^v/, "") || null;
-Number(R?.split(".")[0]) || null;
-const Y = globalThis.process || Object.create(null),
-  L = { versions: {} };
-new Proxy(Y, {
-  get(e, o) {
-    if (o === "env") return s;
-    if (o in e) return e[o];
-    if (o in L) return L[o];
-  },
-});
-const _ = !!globalThis.Netlify,
-  O = !!globalThis.EdgeRuntime,
-  D = globalThis.navigator?.userAgent === "Cloudflare-Workers",
-  A = !!globalThis.Deno,
-  u = !!globalThis.__lagon__,
-  N = globalThis.process?.release?.name === "node",
-  S = !!globalThis.Bun || !!globalThis.process?.versions?.bun,
-  b = !!globalThis.fastly,
-  K = [
-    [_, "netlify"],
-    [O, "edge-light"],
-    [D, "workerd"],
-    [A, "deno"],
-    [u, "lagon"],
-    [N, "node"],
-    [S, "bun"],
-    [b, "fastly"],
-  ];
-function F() {
-  const e = K.find((o) => o[0]);
-  if (e) return { name: e[1] };
-}
-const g = F();
-g?.name || "";
+const r=Object.create(null),t=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return t()[o]??r[o]},has(e,o){const i=t();return o in i||o in r},set(e,o,i){const p=t(!0);return p[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=t(!0);return delete i[o],!0},ownKeys(){const e=t(!0);return Object.keys(e)}}),E=typeof process<"u"&&process.env&&"development"||"",d=[["APPVEYOR"],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"]];function B(){if(globalThis.process?.env)for(const e of d){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const I=B(),U=I.name;function n(e){return e?e!=="false":!1}const l=globalThis.process?.platform||"",T=n(s.CI)||I.ci!==!1,a=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const c=E==="test"||n(s.TEST);n(s.MINIMAL)||T||c||!a;const C=/^win/i.test(l);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||C&&s.TERM!=="dumb"||a&&s.TERM&&s.TERM==="dumb"||T);const R=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(R?.split(".")[0])||null;const Y=globalThis.process||Object.create(null),L={versions:{}};new Proxy(Y,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in L)return L[o]}});const _=!!globalThis.Netlify,O=!!globalThis.EdgeRuntime,D=globalThis.navigator?.userAgent==="Cloudflare-Workers",A=!!globalThis.Deno,u=!!globalThis.__lagon__,N=globalThis.process?.release?.name==="node",S=!!globalThis.Bun||!!globalThis.process?.versions?.bun,b=!!globalThis.fastly,K=[[_,"netlify"],[O,"edge-light"],[D,"workerd"],[A,"deno"],[u,"lagon"],[N,"node"],[S,"bun"],[b,"fastly"]];function F(){const e=K.find(o=>o[0]);if(e)return {name:e[1]}}const g=F();g?.name||"";
 
 const inlineAppConfig = {
-  nuxt: {},
+  "nuxt": {}
 };
+
+
 
 const appConfig = defuFn(inlineAppConfig);
 
 const _inlineRuntimeConfig = {
-  app: {
-    baseURL: "/",
-    buildAssetsDir: "/_nuxt/",
-    cdnURL: "",
+  "app": {
+    "baseURL": "/",
+    "buildAssetsDir": "/_nuxt/",
+    "cdnURL": ""
   },
-  nitro: {
-    envPrefix: "NUXT_",
-    routeRules: {
+  "nitro": {
+    "envPrefix": "NUXT_",
+    "routeRules": {
       "/__nuxt_error": {
-        cache: false,
-      },
-    },
+        "cache": false
+      }
+    }
   },
-  public: {
-    apiBaseUrl: "/api",
-    device: {
-      enabled: true,
-      defaultUserAgent:
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.39 Safari/537.36",
-      refreshOnResize: false,
+  "public": {
+    "apiBaseUrl": "/api",
+    "device": {
+      "enabled": true,
+      "defaultUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.39 Safari/537.36",
+      "refreshOnResize": false
     },
-    auth: {
-      computed: {
-        origin: "",
-        pathname: "/api/auth",
-        fullBaseUrl: "/api/auth",
+    "auth": {
+      "computed": {
+        "origin": "",
+        "pathname": "/api/auth",
+        "fullBaseUrl": "/api/auth"
       },
-      isEnabled: true,
-      session: {
-        enableRefreshPeriodically: false,
-        enableRefreshOnWindowFocus: true,
+      "isEnabled": true,
+      "session": {
+        "enableRefreshPeriodically": false,
+        "enableRefreshOnWindowFocus": true
       },
-      globalAppMiddleware: false,
-      provider: {
-        type: "authjs",
-        trustHost: false,
-        defaultProvider: "",
-        addDefaultCallbackUrl: true,
-      },
-    },
+      "globalAppMiddleware": false,
+      "provider": {
+        "type": "authjs",
+        "trustHost": false,
+        "defaultProvider": "",
+        "addDefaultCallbackUrl": true
+      }
+    }
   },
-  AUTH_ORIGIN: "",
-  AUTH_SECRET: "",
+  "AUTH_ORIGIN": "",
+  "AUTH_SECRET": ""
 };
 const ENV_PREFIX = "NITRO_";
-const ENV_PREFIX_ALT =
-  _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
+const ENV_PREFIX_ALT = _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const _sharedRuntimeConfig = _deepFreeze(
   _applyEnv(klona(_inlineRuntimeConfig))
 );
@@ -353,15 +146,10 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
       return runtimeConfig[prop];
     }
     return void 0;
-  },
+  }
 });
 
-const serverAssets = [
-  {
-    baseName: "server",
-    dir: "C:/Users/young/OneDrive/바탕 화면/학생프로젝트/77기 1차 Vue/회계/77th_acc_front/server/assets",
-  },
-];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/gong5/Desktop/새 폴더/Nuxt_Front/server/assets"}];
 
 const assets = createStorage();
 
@@ -371,52 +159,13 @@ for (const asset of serverAssets) {
 
 const storage = createStorage({});
 
-storage.mount("/assets", assets);
+storage.mount('/assets', assets);
 
-storage.mount(
-  "root",
-  unstorage_47drivers_47fs({
-    driver: "fs",
-    readOnly: true,
-    base: "C:\\Users\\young\\OneDrive\\바탕 화면\\학생프로젝트\\77기 1차 Vue\\회계\\77th_acc_front",
-    ignore: ["**/node_modules/**", "**/.git/**"],
-  })
-);
-storage.mount(
-  "src",
-  unstorage_47drivers_47fs({
-    driver: "fs",
-    readOnly: true,
-    base: "C:\\Users\\young\\OneDrive\\바탕 화면\\학생프로젝트\\77기 1차 Vue\\회계\\77th_acc_front\\server",
-    ignore: ["**/node_modules/**", "**/.git/**"],
-  })
-);
-storage.mount(
-  "build",
-  unstorage_47drivers_47fs({
-    driver: "fs",
-    readOnly: false,
-    base: "C:\\Users\\young\\OneDrive\\바탕 화면\\학생프로젝트\\77기 1차 Vue\\회계\\77th_acc_front\\.nuxt",
-    ignore: ["**/node_modules/**", "**/.git/**"],
-  })
-);
-storage.mount(
-  "cache",
-  unstorage_47drivers_47fs({
-    driver: "fs",
-    readOnly: false,
-    base: "C:\\Users\\young\\OneDrive\\바탕 화면\\학생프로젝트\\77기 1차 Vue\\회계\\77th_acc_front\\.nuxt\\cache",
-    ignore: ["**/node_modules/**", "**/.git/**"],
-  })
-);
-storage.mount(
-  "data",
-  unstorage_47drivers_47fs({
-    driver: "fs",
-    base: "C:\\Users\\young\\OneDrive\\바탕 화면\\학생프로젝트\\77기 1차 Vue\\회계\\77th_acc_front\\.data\\kv",
-    ignore: ["**/node_modules/**", "**/.git/**"],
-  })
-);
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\gong5\\Desktop\\새 폴더\\Nuxt_Front","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\gong5\\Desktop\\새 폴더\\Nuxt_Front\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\gong5\\Desktop\\새 폴더\\Nuxt_Front\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\gong5\\Desktop\\새 폴더\\Nuxt_Front\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\gong5\\Desktop\\새 폴더\\Nuxt_Front\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -426,7 +175,7 @@ const defaultCacheOptions = {
   name: "_",
   base: "/cache",
   swr: true,
-  maxAge: 1,
+  maxAge: 1
 };
 function defineCachedFunction(fn, opts = {}) {
   opts = { ...defaultCacheOptions, ...opts };
@@ -436,28 +185,17 @@ function defineCachedFunction(fn, opts = {}) {
   const integrity = hash([opts.integrity, fn, opts]);
   const validate = opts.validate || (() => true);
   async function get(key, resolver, shouldInvalidateCache, event) {
-    const cacheKey = [opts.base, group, name, key + ".json"]
-      .filter(Boolean)
-      .join(":")
-      .replace(/:\/$/, ":index");
-    const entry = (await useStorage().getItem(cacheKey)) || {};
+    const cacheKey = [opts.base, group, name, key + ".json"].filter(Boolean).join(":").replace(/:\/$/, ":index");
+    const entry = await useStorage().getItem(cacheKey) || {};
     const ttl = (opts.maxAge ?? opts.maxAge ?? 0) * 1e3;
     if (ttl) {
       entry.expires = Date.now() + ttl;
     }
-    const expired =
-      shouldInvalidateCache ||
-      entry.integrity !== integrity ||
-      (ttl && Date.now() - (entry.mtime || 0) > ttl) ||
-      !validate(entry);
+    const expired = shouldInvalidateCache || entry.integrity !== integrity || ttl && Date.now() - (entry.mtime || 0) > ttl || !validate(entry);
     const _resolve = async () => {
       const isPending = pending[key];
       if (!isPending) {
-        if (
-          entry.value !== void 0 &&
-          (opts.staleMaxAge || 0) >= 0 &&
-          opts.swr === false
-        ) {
+        if (entry.value !== void 0 && (opts.staleMaxAge || 0) >= 0 && opts.swr === false) {
           entry.value = void 0;
           entry.integrity = void 0;
           entry.mtime = void 0;
@@ -478,11 +216,9 @@ function defineCachedFunction(fn, opts = {}) {
         entry.integrity = integrity;
         delete pending[key];
         if (validate(entry)) {
-          const promise = useStorage()
-            .setItem(cacheKey, entry)
-            .catch((error) => {
-              useNitroApp().captureError(error, { event, tags: ["cache"] });
-            });
+          const promise = useStorage().setItem(cacheKey, entry).catch((error) => {
+            useNitroApp().captureError(error, { event, tags: ["cache"] });
+          });
           if (event && event.waitUntil) {
             event.waitUntil(promise);
           }
@@ -516,7 +252,7 @@ function defineCachedFunction(fn, opts = {}) {
     );
     let value = entry.value;
     if (opts.transform) {
-      value = (await opts.transform(entry, ...args)) || value;
+      value = await opts.transform(entry, ...args) || value;
     }
     return value;
   };
@@ -529,10 +265,7 @@ function escapeKey(key) {
   return String(key).replace(/\W/g, "");
 }
 function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
-  const variableHeaderNames = (opts.varies || [])
-    .filter(Boolean)
-    .map((h) => h.toLowerCase())
-    .sort();
+  const variableHeaderNames = (opts.varies || []).filter(Boolean).map((h) => h.toLowerCase()).sort();
   const _opts = {
     ...opts,
     getKey: async (event) => {
@@ -540,14 +273,10 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
       if (customKey) {
         return escapeKey(customKey);
       }
-      const _path =
-        event.node.req.originalUrl || event.node.req.url || event.path;
-      const _pathname =
-        escapeKey(decodeURI(parseURL(_path).pathname)).slice(0, 16) || "index";
+      const _path = event.node.req.originalUrl || event.node.req.url || event.path;
+      const _pathname = escapeKey(decodeURI(parseURL(_path).pathname)).slice(0, 16) || "index";
       const _hashedPath = `${_pathname}.${hash(_path)}`;
-      const _headers = variableHeaderNames
-        .map((header) => [header, event.node.req.headers[header]])
-        .map(([name, value]) => `${escapeKey(name)}.${hash(value)}`);
+      const _headers = variableHeaderNames.map((header) => [header, event.node.req.headers[header]]).map(([name, value]) => `${escapeKey(name)}.${hash(value)}`);
       return [_hashedPath, ..._headers].join(":");
     },
     validate: (entry) => {
@@ -560,109 +289,109 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
       return true;
     },
     group: opts.group || "nitro/handlers",
-    integrity: [opts.integrity, handler],
+    integrity: [opts.integrity, handler]
   };
-  const _cachedHandler = cachedFunction(async (incomingEvent) => {
-    const variableHeaders = {};
-    for (const header of variableHeaderNames) {
-      variableHeaders[header] = incomingEvent.node.req.headers[header];
-    }
-    const reqProxy = cloneWithProxy(incomingEvent.node.req, {
-      headers: variableHeaders,
-    });
-    const resHeaders = {};
-    let _resSendBody;
-    const resProxy = cloneWithProxy(incomingEvent.node.res, {
-      statusCode: 200,
-      writableEnded: false,
-      writableFinished: false,
-      headersSent: false,
-      closed: false,
-      getHeader(name) {
-        return resHeaders[name];
-      },
-      setHeader(name, value) {
-        resHeaders[name] = value;
-        return this;
-      },
-      getHeaderNames() {
-        return Object.keys(resHeaders);
-      },
-      hasHeader(name) {
-        return name in resHeaders;
-      },
-      removeHeader(name) {
-        delete resHeaders[name];
-      },
-      getHeaders() {
-        return resHeaders;
-      },
-      end(chunk, arg2, arg3) {
-        if (typeof chunk === "string") {
-          _resSendBody = chunk;
-        }
-        if (typeof arg2 === "function") {
-          arg2();
-        }
-        if (typeof arg3 === "function") {
-          arg3();
-        }
-        return this;
-      },
-      write(chunk, arg2, arg3) {
-        if (typeof chunk === "string") {
-          _resSendBody = chunk;
-        }
-        if (typeof arg2 === "function") {
-          arg2();
-        }
-        if (typeof arg3 === "function") {
-          arg3();
-        }
-        return this;
-      },
-      writeHead(statusCode, headers2) {
-        this.statusCode = statusCode;
-        if (headers2) {
-          for (const header in headers2) {
-            this.setHeader(header, headers2[header]);
+  const _cachedHandler = cachedFunction(
+    async (incomingEvent) => {
+      const variableHeaders = {};
+      for (const header of variableHeaderNames) {
+        variableHeaders[header] = incomingEvent.node.req.headers[header];
+      }
+      const reqProxy = cloneWithProxy(incomingEvent.node.req, {
+        headers: variableHeaders
+      });
+      const resHeaders = {};
+      let _resSendBody;
+      const resProxy = cloneWithProxy(incomingEvent.node.res, {
+        statusCode: 200,
+        writableEnded: false,
+        writableFinished: false,
+        headersSent: false,
+        closed: false,
+        getHeader(name) {
+          return resHeaders[name];
+        },
+        setHeader(name, value) {
+          resHeaders[name] = value;
+          return this;
+        },
+        getHeaderNames() {
+          return Object.keys(resHeaders);
+        },
+        hasHeader(name) {
+          return name in resHeaders;
+        },
+        removeHeader(name) {
+          delete resHeaders[name];
+        },
+        getHeaders() {
+          return resHeaders;
+        },
+        end(chunk, arg2, arg3) {
+          if (typeof chunk === "string") {
+            _resSendBody = chunk;
           }
+          if (typeof arg2 === "function") {
+            arg2();
+          }
+          if (typeof arg3 === "function") {
+            arg3();
+          }
+          return this;
+        },
+        write(chunk, arg2, arg3) {
+          if (typeof chunk === "string") {
+            _resSendBody = chunk;
+          }
+          if (typeof arg2 === "function") {
+            arg2();
+          }
+          if (typeof arg3 === "function") {
+            arg3();
+          }
+          return this;
+        },
+        writeHead(statusCode, headers2) {
+          this.statusCode = statusCode;
+          if (headers2) {
+            for (const header in headers2) {
+              this.setHeader(header, headers2[header]);
+            }
+          }
+          return this;
         }
-        return this;
-      },
-    });
-    const event = createEvent(reqProxy, resProxy);
-    event.context = incomingEvent.context;
-    const body = (await handler(event)) || _resSendBody;
-    const headers = event.node.res.getHeaders();
-    headers.etag = headers.Etag || headers.etag || `W/"${hash(body)}"`;
-    headers["last-modified"] =
-      headers["Last-Modified"] ||
-      headers["last-modified"] ||
-      /* @__PURE__ */ new Date().toUTCString();
-    const cacheControl = [];
-    if (opts.swr) {
-      if (opts.maxAge) {
-        cacheControl.push(`s-maxage=${opts.maxAge}`);
+      });
+      const event = createEvent(reqProxy, resProxy);
+      event.context = incomingEvent.context;
+      const body = await handler(event) || _resSendBody;
+      const headers = event.node.res.getHeaders();
+      headers.etag = headers.Etag || headers.etag || `W/"${hash(body)}"`;
+      headers["last-modified"] = headers["Last-Modified"] || headers["last-modified"] || (/* @__PURE__ */ new Date()).toUTCString();
+      const cacheControl = [];
+      if (opts.swr) {
+        if (opts.maxAge) {
+          cacheControl.push(`s-maxage=${opts.maxAge}`);
+        }
+        if (opts.staleMaxAge) {
+          cacheControl.push(`stale-while-revalidate=${opts.staleMaxAge}`);
+        } else {
+          cacheControl.push("stale-while-revalidate");
+        }
+      } else if (opts.maxAge) {
+        cacheControl.push(`max-age=${opts.maxAge}`);
       }
-      if (opts.staleMaxAge) {
-        cacheControl.push(`stale-while-revalidate=${opts.staleMaxAge}`);
-      } else {
-        cacheControl.push("stale-while-revalidate");
+      if (cacheControl.length > 0) {
+        headers["cache-control"] = cacheControl.join(", ");
       }
-    } else if (opts.maxAge) {
-      cacheControl.push(`max-age=${opts.maxAge}`);
-    }
-    if (cacheControl.length > 0) {
-      headers["cache-control"] = cacheControl.join(", ");
-    }
-    const cacheEntry = {
-      code: event.node.res.statusCode,
-      headers,
-      body,
-    };
-    return cacheEntry;
-  }, _opts);
+      const cacheEntry = {
+        code: event.node.res.statusCode,
+        headers,
+        body
+      };
+      return cacheEntry;
+    },
+    _opts
+  );
   return defineEventHandler(async (event) => {
     if (opts.headersOnly) {
       if (handleCacheHeaders(event, { maxAge: opts.maxAge })) {
@@ -674,13 +403,11 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
     if (event.node.res.headersSent || event.node.res.writableEnded) {
       return response.body;
     }
-    if (
-      handleCacheHeaders(event, {
-        modifiedTime: new Date(response.headers["last-modified"]),
-        etag: response.headers.etag,
-        maxAge: opts.maxAge,
-      })
-    ) {
+    if (handleCacheHeaders(event, {
+      modifiedTime: new Date(response.headers["last-modified"]),
+      etag: response.headers.etag,
+      maxAge: opts.maxAge
+    })) {
       return;
     }
     event.node.res.statusCode = response.code;
@@ -704,56 +431,35 @@ function cloneWithProxy(obj, overrides) {
         return true;
       }
       return Reflect.set(target, property, value, receiver);
-    },
+    }
   });
 }
 const cachedEventHandler = defineCachedEventHandler;
 
 function hasReqHeader(event, name, includes) {
   const value = getRequestHeader(event, name);
-  return (
-    value && typeof value === "string" && value.toLowerCase().includes(includes)
-  );
+  return value && typeof value === "string" && value.toLowerCase().includes(includes);
 }
 function isJsonRequest(event) {
-  return (
-    hasReqHeader(event, "accept", "application/json") ||
-    hasReqHeader(event, "user-agent", "curl/") ||
-    hasReqHeader(event, "user-agent", "httpie/") ||
-    hasReqHeader(event, "sec-fetch-mode", "cors") ||
-    event.path.startsWith("/api/") ||
-    event.path.endsWith(".json")
-  );
+  return hasReqHeader(event, "accept", "application/json") || hasReqHeader(event, "user-agent", "curl/") || hasReqHeader(event, "user-agent", "httpie/") || hasReqHeader(event, "sec-fetch-mode", "cors") || event.path.startsWith("/api/") || event.path.endsWith(".json");
 }
 function normalizeError(error) {
   const cwd = typeof process.cwd === "function" ? process.cwd() : "/";
-  const stack = (error.stack || "")
-    .split("\n")
-    .splice(1)
-    .filter((line) => line.includes("at "))
-    .map((line) => {
-      const text = line
-        .replace(cwd + "/", "./")
-        .replace("webpack:/", "")
-        .replace("file://", "")
-        .trim();
-      return {
-        text,
-        internal:
-          (line.includes("node_modules") && !line.includes(".cache")) ||
-          line.includes("internal") ||
-          line.includes("new Promise"),
-      };
-    });
+  const stack = (error.stack || "").split("\n").splice(1).filter((line) => line.includes("at ")).map((line) => {
+    const text = line.replace(cwd + "/", "./").replace("webpack:/", "").replace("file://", "").trim();
+    return {
+      text,
+      internal: line.includes("node_modules") && !line.includes(".cache") || line.includes("internal") || line.includes("new Promise")
+    };
+  });
   const statusCode = error.statusCode || 500;
-  const statusMessage =
-    error.statusMessage ?? (statusCode === 404 ? "Not Found" : "");
+  const statusMessage = error.statusMessage ?? (statusCode === 404 ? "Not Found" : "");
   const message = error.message || error.toString();
   return {
     stack,
     statusCode,
     statusMessage,
-    message,
+    message
   };
 }
 function _captureError(error, type) {
@@ -761,11 +467,13 @@ function _captureError(error, type) {
   useNitroApp().captureError(error, { tags: [type] });
 }
 function trapUnhandledNodeErrors() {
-  process.on("unhandledRejection", (error) =>
-    _captureError(error, "unhandledRejection")
+  process.on(
+    "unhandledRejection",
+    (error) => _captureError(error, "unhandledRejection")
   );
-  process.on("uncaughtException", (error) =>
-    _captureError(error, "uncaughtException")
+  process.on(
+    "uncaughtException",
+    (error) => _captureError(error, "uncaughtException")
   );
 }
 function joinHeaders(value) {
@@ -778,7 +486,7 @@ function normalizeFetchResponse(response) {
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
-    headers: normalizeCookieHeaders(response.headers),
+    headers: normalizeCookieHeaders(response.headers)
   });
 }
 function normalizeCookieHeader(header = "") {
@@ -830,7 +538,7 @@ function createRouteRulesHandler(ctx) {
       }
       return proxyRequest(event, target, {
         fetch: ctx.localFetch,
-        ...routeRules.proxy,
+        ...routeRules.proxy
       });
     }
   });
@@ -849,10 +557,8 @@ function getRouteRulesForPath(path) {
 }
 
 const ERROR_MESSAGES = {
-  NO_SECRET:
-    "AUTH_NO_SECRET: No `secret` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development",
-  NO_ORIGIN:
-    "AUTH_NO_ORIGIN: No `origin` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development",
+  NO_SECRET: "AUTH_NO_SECRET: No `secret` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development",
+  NO_ORIGIN: "AUTH_NO_ORIGIN: No `origin` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development"
 };
 
 const isProduction = "development" === "production";
@@ -893,9 +599,7 @@ function defineRenderHandler(handler) {
     if (response.statusCode || response.statusMessage) {
       setResponseStatus(event, response.statusCode, response.statusMessage);
     }
-    return typeof response.body === "string"
-      ? response.body
-      : JSON.stringify(response.body);
+    return typeof response.body === "string" ? response.body : JSON.stringify(response.body);
   });
 }
 
@@ -906,36 +610,19 @@ function buildAssetsURL(...path) {
   return joinURL(publicAssetsURL(), buildAssetsDir(), ...path);
 }
 function publicAssetsURL(...path) {
-  const publicBase =
-    useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
+  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
   return path.length ? joinURL(publicBase, ...path) : publicBase;
 }
 
-const isNonEmptyObject = (obj) =>
-  typeof obj === "object" && Object.keys(obj).length > 0;
+const isNonEmptyObject = (obj) => typeof obj === "object" && Object.keys(obj).length > 0;
 
 let preparedAuthHandler;
 let usedSecret;
-const SUPPORTED_ACTIONS = [
-  "providers",
-  "session",
-  "csrf",
-  "signin",
-  "signout",
-  "callback",
-  "verify-request",
-  "error",
-  "_log",
-];
+const SUPPORTED_ACTIONS = ["providers", "session", "csrf", "signin", "signout", "callback", "verify-request", "error", "_log"];
 const useConfig = () => useTypedBackendConfig(useRuntimeConfig(), "authjs");
 const readBodyForNext = async (event) => {
   let body;
-  if (
-    isMethod(event, "PATCH") ||
-    isMethod(event, "POST") ||
-    isMethod(event, "PUT") ||
-    isMethod(event, "DELETE")
-  ) {
+  if (isMethod(event, "PATCH") || isMethod(event, "POST") || isMethod(event, "PUT") || isMethod(event, "DELETE")) {
     body = await readBody(event);
   }
   return body;
@@ -943,22 +630,12 @@ const readBodyForNext = async (event) => {
 const parseActionAndProvider = ({ context }) => {
   const params = context.params?._?.split("/");
   if (!params || ![1, 2].includes(params.length)) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: `Invalid path used for auth-endpoint. Supply either one path parameter (e.g., \`/api/auth/session\`) or two (e.g., \`/api/auth/signin/github\` after the base path (in previous examples base path was: \`/api/auth/\`. Received \`${params}\``,
-    });
+    throw createError({ statusCode: 400, statusMessage: `Invalid path used for auth-endpoint. Supply either one path parameter (e.g., \`/api/auth/session\`) or two (e.g., \`/api/auth/signin/github\` after the base path (in previous examples base path was: \`/api/auth/\`. Received \`${params}\`` });
   }
   const [unvalidatedAction, providerId] = params;
-  const action = SUPPORTED_ACTIONS.find(
-    (action2) => action2 === unvalidatedAction
-  );
+  const action = SUPPORTED_ACTIONS.find((action2) => action2 === unvalidatedAction);
   if (!action) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: `Called endpoint with unsupported action ${unvalidatedAction}. Only the following actions are supported: ${SUPPORTED_ACTIONS.join(
-        ", "
-      )}`,
-    });
+    throw createError({ statusCode: 400, statusMessage: `Called endpoint with unsupported action ${unvalidatedAction}. Only the following actions are supported: ${SUPPORTED_ACTIONS.join(", ")}` });
   }
   return { action, providerId };
 };
@@ -974,36 +651,31 @@ const NuxtAuthHandler = (nuxtAuthOptions) => {
     secret: usedSecret,
     logger: void 0,
     providers: [],
-    trustHost: useConfig().trustHost,
+    trustHost: useConfig().trustHost
   });
   const getInternalNextAuthRequestData = async (event) => {
     const nextRequest = {
-      host: getRequestURLFromRequest(event, {
-        trustHost: useConfig().trustHost,
-      }),
+      host: getRequestURLFromRequest(event, { trustHost: useConfig().trustHost }),
       body: void 0,
       cookies: parseCookies(event),
       query: void 0,
       headers: getHeaders(event),
       method: getMethod(event),
       providerId: void 0,
-      error: void 0,
+      error: void 0
     };
     if (event.context.checkSessionOnNonAuthRequest === true) {
       return {
         ...nextRequest,
         method: "GET",
-        action: "session",
+        action: "session"
       };
     }
     const query = getQuery$1(event);
     const { action, providerId } = parseActionAndProvider(event);
     const error = query.error;
     if (Array.isArray(error)) {
-      throw createError({
-        statusCode: 400,
-        statusMessage: "Error query parameter can only appear once",
-      });
+      throw createError({ statusCode: 400, statusMessage: "Error query parameter can only appear once" });
     }
     const body = await readBodyForNext(event);
     return {
@@ -1012,7 +684,7 @@ const NuxtAuthHandler = (nuxtAuthOptions) => {
       query,
       action,
       providerId,
-      error: String(error) || void 0,
+      error: String(error) || void 0
     };
   };
   const handler = eventHandler(async (event) => {
@@ -1020,17 +692,13 @@ const NuxtAuthHandler = (nuxtAuthOptions) => {
     const nextRequest = await getInternalNextAuthRequestData(event);
     const nextResult = await AuthHandler({
       req: nextRequest,
-      options,
+      options
     });
     if (nextResult.status) {
       res.statusCode = nextResult.status;
     }
-    nextResult.cookies?.forEach((cookie) =>
-      setCookie(event, cookie.name, cookie.value, cookie.options)
-    );
-    nextResult.headers?.forEach((header) =>
-      appendHeader(event, header.key, header.value)
-    );
+    nextResult.cookies?.forEach((cookie) => setCookie(event, cookie.name, cookie.value, cookie.options));
+    nextResult.headers?.forEach((header) => appendHeader(event, header.key, header.value));
     if (!nextResult.redirect) {
       return nextResult.body;
     }
@@ -1040,9 +708,7 @@ const NuxtAuthHandler = (nuxtAuthOptions) => {
     return sendRedirect(event, nextResult.redirect);
   });
   if (preparedAuthHandler) {
-    console.warn(
-      "You setup the auth handler for a second time - this is likely undesired. Make sure that you only call `NuxtAuthHandler( ... )` once"
-    );
+    console.warn("You setup the auth handler for a second time - this is likely undesired. Make sure that you only call `NuxtAuthHandler( ... )` once");
   }
   preparedAuthHandler = handler;
   return handler;
@@ -1054,15 +720,9 @@ const getServerSession = async (event) => {
   }
   if (!preparedAuthHandler) {
     const headers = getHeaders(event);
-    await $fetch(joinURL(authBasePath, "/session"), { headers }).catch(
-      (error) => error.data
-    );
+    await $fetch(joinURL(authBasePath, "/session"), { headers }).catch((error) => error.data);
     if (!preparedAuthHandler) {
-      throw createError({
-        statusCode: 500,
-        statusMessage:
-          "Tried to get server session without setting up an endpoint to handle authentication (see https://github.com/sidebase/nuxt-auth#quick-start)",
-      });
+      throw createError({ statusCode: 500, statusMessage: "Tried to get server session without setting up an endpoint to handle authentication (see https://github.com/sidebase/nuxt-auth#quick-start)" });
     }
   }
   event.context.checkSessionOnNonAuthRequest = true;
@@ -1073,28 +733,24 @@ const getServerSession = async (event) => {
   }
   return null;
 };
-const getToken = ({ event, secureCookie, secret, ...rest }) =>
-  getToken$1({
-    // @ts-expect-error As our request is not a real next-auth request, we pass down only what's required for the method, as per code from https://github.com/nextauthjs/next-auth/blob/8387c78e3fef13350d8a8c6102caeeb05c70a650/packages/next-auth/src/jwt/index.ts#L68
-    req: {
-      cookies: parseCookies(event),
-      headers: getHeaders(event),
-    },
-    // see https://github.com/nextauthjs/next-auth/blob/8387c78e3fef13350d8a8c6102caeeb05c70a650/packages/next-auth/src/jwt/index.ts#L73
-    secureCookie: secureCookie || getServerOrigin(event).startsWith("https://"),
-    secret: secret || usedSecret,
-    ...rest,
-  });
+const getToken = ({ event, secureCookie, secret, ...rest }) => getToken$1({
+  // @ts-expect-error As our request is not a real next-auth request, we pass down only what's required for the method, as per code from https://github.com/nextauthjs/next-auth/blob/8387c78e3fef13350d8a8c6102caeeb05c70a650/packages/next-auth/src/jwt/index.ts#L68
+  req: {
+    cookies: parseCookies(event),
+    headers: getHeaders(event)
+  },
+  // see https://github.com/nextauthjs/next-auth/blob/8387c78e3fef13350d8a8c6102caeeb05c70a650/packages/next-auth/src/jwt/index.ts#L73
+  secureCookie: secureCookie || getServerOrigin(event).startsWith("https://"),
+  secret: secret || usedSecret,
+  ...rest
+});
 
-async function setAuthOnlyRoute(
-  event,
-  statusMessage = "You must be signed in to access this API."
-) {
+async function setAuthOnlyRoute(event, statusMessage = "You must be signed in to access this API.") {
   const session = await getServerSession(event);
   if (!session) {
     throw createError({
       statusCode: 403,
-      statusMessage,
+      statusMessage
     });
   }
   return session;
@@ -1115,7 +771,7 @@ const getIntId = (event, msg404 = "Id is required to get item details") => {
   if (!id || !Number.isInteger(id)) {
     throw createError({
       statusCode: 404,
-      statusMessage: msg404,
+      statusMessage: msg404
     });
   }
   return id;
@@ -1126,8 +782,7 @@ const getPublicUrl = (path) => {
   return `http://localhost:3000${prefix}${path}`;
 };
 
-const paginateArray = (array, perPage, page) =>
-  array.slice((page - 1) * perPage, page * perPage);
+const paginateArray = (array, perPage, page) => array.slice((page - 1) * perPage, page * perPage);
 
 const getServerOrigin = (event) => {
   const envOrigin = process.env.AUTH_ORIGIN;
@@ -1162,7 +817,7 @@ const getRequestURLFromRequest = (event, { trustHost }) => {
 function defineNitroPlugin(def) {
   return def;
 }
-const _Y0NtkrVnNi = defineNitroPlugin(() => {
+const _aMAFhkU4z8 = defineNitroPlugin(() => {
   try {
     getServerOrigin();
   } catch (error) {
@@ -1172,33 +827,26 @@ const _Y0NtkrVnNi = defineNitroPlugin(() => {
   }
 });
 
-const _XjZHy1ZO9J = defineNitroPlugin$1((nitroApp) => {
+const _WgHInaAWwG = defineNitroPlugin$1((nitroApp) => {
   nitroApp.hooks.hook("render:response", (response) => {
     response.body = response.body.replaceAll("/_nuxt/\0", "/_nuxt/");
   });
 });
 
-const plugins = [_Y0NtkrVnNi, _XjZHy1ZO9J];
+const plugins = [
+  _aMAFhkU4z8,
+_WgHInaAWwG
+];
 
-const errorHandler = async function errorhandler(error, event) {
+const errorHandler = (async function errorhandler(error, event) {
   const { stack, statusCode, statusMessage, message } = normalizeError(error);
   const errorObject = {
     url: event.path,
     statusCode,
     statusMessage,
     message,
-    stack:
-      statusCode !== 404
-        ? `<pre>${stack
-            .map(
-              (i) =>
-                `<span class="stack${i.internal ? " internal" : ""}">${
-                  i.text
-                }</span>`
-            )
-            .join("\n")}</pre>`
-        : "",
-    data: error.data,
+    stack: statusCode !== 404 ? `<pre>${stack.map((i) => `<span class="stack${i.internal ? " internal" : ""}">${i.text}</span>`).join("\n")}</pre>` : "",
+    data: error.data
   };
   if (error.unhandled || error.fatal) {
     const tags = [
@@ -1206,46 +854,25 @@ const errorHandler = async function errorhandler(error, event) {
       "[request error]",
       error.unhandled && "[unhandled]",
       error.fatal && "[fatal]",
-      Number(errorObject.statusCode) !== 200 && `[${errorObject.statusCode}]`,
-    ]
-      .filter(Boolean)
-      .join(" ");
-    console.error(
-      tags,
-      errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n")
-    );
+      Number(errorObject.statusCode) !== 200 && `[${errorObject.statusCode}]`
+    ].filter(Boolean).join(" ");
+    console.error(tags, errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
   }
   if (event.handled) {
     return;
   }
-  setResponseStatus(
-    event,
-    (errorObject.statusCode !== 200 && errorObject.statusCode) || 500,
-    errorObject.statusMessage
-  );
+  setResponseStatus(event, errorObject.statusCode !== 200 && errorObject.statusCode || 500, errorObject.statusMessage);
   if (isJsonRequest(event)) {
     setResponseHeader(event, "Content-Type", "application/json");
     return send(event, JSON.stringify(errorObject));
   }
   const isErrorPage = event.path.startsWith("/__nuxt_error");
-  const res = !isErrorPage
-    ? await useNitroApp()
-        .localFetch(
-          withQuery(
-            joinURL(useRuntimeConfig().app.baseURL, "/__nuxt_error"),
-            errorObject
-          ),
-          {
-            headers: getRequestHeaders(event),
-            redirect: "manual",
-          }
-        )
-        .catch(() => null)
-    : null;
+  const res = !isErrorPage ? await useNitroApp().localFetch(withQuery(joinURL(useRuntimeConfig().app.baseURL, "/__nuxt_error"), errorObject), {
+    headers: getRequestHeaders(event),
+    redirect: "manual"
+  }).catch(() => null) : null;
   if (!res) {
-    const { template } = await Promise.resolve().then(function () {
-      return errorDev;
-    });
+    const { template } = await Promise.resolve().then(function () { return errorDev; }) ;
     {
       errorObject.description = errorObject.message;
     }
@@ -1262,496 +889,106 @@ const errorHandler = async function errorhandler(error, event) {
   for (const [header, value] of res.headers.entries()) {
     setResponseHeader(event, header, value);
   }
-  setResponseStatus(
-    event,
-    res.status && res.status !== 200 ? res.status : void 0,
-    res.statusText
-  );
+  setResponseStatus(event, res.status && res.status !== 200 ? res.status : void 0, res.statusText);
   return send(event, html);
-};
+});
 
-const _lazy_YVSLzr = () =>
-  Promise.resolve().then(function () {
-    return index$3;
-  });
-const _lazy_mYQ72L = () =>
-  Promise.resolve().then(function () {
-    return courseDetails_get$1;
-  });
-const _lazy_Jl809q = () =>
-  Promise.resolve().then(function () {
-    return courses_get$1;
-  });
-const _lazy_6KTX37 = () =>
-  Promise.resolve().then(function () {
-    return _id__delete$9;
-  });
-const _lazy_dVO0J9 = () =>
-  Promise.resolve().then(function () {
-    return _id__put$1;
-  });
-const _lazy_XnyBFA = () =>
-  Promise.resolve().then(function () {
-    return index_get$p;
-  });
-const _lazy_bf4Epp = () =>
-  Promise.resolve().then(function () {
-    return index_post$5;
-  });
-const _lazy_XACjfF = () =>
-  Promise.resolve().then(function () {
-    return chatsAndContacts_get$1;
-  });
-const _lazy_F3vxv1 = () =>
-  Promise.resolve().then(function () {
-    return _id__get$7;
-  });
-const _lazy_1xNbtz = () =>
-  Promise.resolve().then(function () {
-    return _id__post$1;
-  });
-const _lazy_up1nW4 = () =>
-  Promise.resolve().then(function () {
-    return _id__get$5;
-  });
-const _lazy_B7Nd9s = () =>
-  Promise.resolve().then(function () {
-    return index_get$n;
-  });
-const _lazy_CS9bAE = () =>
-  Promise.resolve().then(function () {
-    return _id__delete$7;
-  });
-const _lazy_BlymHe = () =>
-  Promise.resolve().then(function () {
-    return index_get$l;
-  });
-const _lazy_7h3zDl = () =>
-  Promise.resolve().then(function () {
-    return index_get$j;
-  });
-const _lazy_i4bWBp = () =>
-  Promise.resolve().then(function () {
-    return index_get$h;
-  });
-const _lazy_EGDjk5 = () =>
-  Promise.resolve().then(function () {
-    return _id__delete$5;
-  });
-const _lazy_CAliuF = () =>
-  Promise.resolve().then(function () {
-    return index_get$f;
-  });
-const _lazy_OyAchy = () =>
-  Promise.resolve().then(function () {
-    return index_get$d;
-  });
-const _lazy_XFkWKw = () =>
-  Promise.resolve().then(function () {
-    return index_post$3;
-  });
-const _lazy_eucIan = () =>
-  Promise.resolve().then(function () {
-    return _id__delete$3;
-  });
-const _lazy_kaJhHg = () =>
-  Promise.resolve().then(function () {
-    return _id__get$3;
-  });
-const _lazy_PFGmiw = () =>
-  Promise.resolve().then(function () {
-    return clients_get$1;
-  });
-const _lazy_NTWZlp = () =>
-  Promise.resolve().then(function () {
-    return index_get$b;
-  });
-const _lazy_kdPW4c = () =>
-  Promise.resolve().then(function () {
-    return index$1;
-  });
-const _lazy_L3fNz3 = () =>
-  Promise.resolve().then(function () {
-    return index_get$9;
-  });
-const _lazy_qkhVF8 = () =>
-  Promise.resolve().then(function () {
-    return _id__delete$1;
-  });
-const _lazy_JdwXKA = () =>
-  Promise.resolve().then(function () {
-    return _id__get$1;
-  });
-const _lazy_5OELbv = () =>
-  Promise.resolve().then(function () {
-    return index_get$7;
-  });
-const _lazy_BYcGXn = () =>
-  Promise.resolve().then(function () {
-    return index_post$1;
-  });
-const _lazy_ppQO4P = () =>
-  Promise.resolve().then(function () {
-    return _____$1;
-  });
-const _lazy_8xzMuL = () =>
-  Promise.resolve().then(function () {
-    return projects_get$1;
-  });
-const _lazy_m2Azid = () =>
-  Promise.resolve().then(function () {
-    return login_post$1;
-  });
-const _lazy_HBrRCm = () =>
-  Promise.resolve().then(function () {
-    return me_get$1;
-  });
-const _lazy_i9N7bw = () =>
-  Promise.resolve().then(function () {
-    return datatable_get$1;
-  });
-const _lazy_gSinir = () =>
-  Promise.resolve().then(function () {
-    return faq_get$1;
-  });
-const _lazy_1Y6Q9I = () =>
-  Promise.resolve().then(function () {
-    return index_get$5;
-  });
-const _lazy_F8Fos2 = () =>
-  Promise.resolve().then(function () {
-    return index_get$3;
-  });
-const _lazy_fsyY3U = () =>
-  Promise.resolve().then(function () {
-    return header_get$1;
-  });
-const _lazy_ljtAvb = () =>
-  Promise.resolve().then(function () {
-    return index_get$1;
-  });
-const _lazy_ZZtBpa = () =>
-  Promise.resolve().then(function () {
-    return token_get$1;
-  });
-const _lazy_zHqnrL = () =>
-  Promise.resolve().then(function () {
-    return renderer$1;
-  });
+const _lazy_exQtYX = () => Promise.resolve().then(function () { return index$3; });
+const _lazy_TyIijn = () => Promise.resolve().then(function () { return courseDetails_get$1; });
+const _lazy_PYHMJf = () => Promise.resolve().then(function () { return courses_get$1; });
+const _lazy_0wRFP3 = () => Promise.resolve().then(function () { return _id__delete$9; });
+const _lazy_Gr6oy1 = () => Promise.resolve().then(function () { return _id__put$1; });
+const _lazy_YhY1f9 = () => Promise.resolve().then(function () { return index_get$p; });
+const _lazy_kLdDss = () => Promise.resolve().then(function () { return index_post$5; });
+const _lazy_95cTBE = () => Promise.resolve().then(function () { return chatsAndContacts_get$1; });
+const _lazy_h1TWAD = () => Promise.resolve().then(function () { return _id__get$7; });
+const _lazy_D8OfJ6 = () => Promise.resolve().then(function () { return _id__post$1; });
+const _lazy_PZ9dbd = () => Promise.resolve().then(function () { return _id__get$5; });
+const _lazy_Q8COFn = () => Promise.resolve().then(function () { return index_get$n; });
+const _lazy_TG8jy7 = () => Promise.resolve().then(function () { return _id__delete$7; });
+const _lazy_0FUABx = () => Promise.resolve().then(function () { return index_get$l; });
+const _lazy_HmN00g = () => Promise.resolve().then(function () { return index_get$j; });
+const _lazy_tfBAss = () => Promise.resolve().then(function () { return index_get$h; });
+const _lazy_9oha4O = () => Promise.resolve().then(function () { return _id__delete$5; });
+const _lazy_erB9sY = () => Promise.resolve().then(function () { return index_get$f; });
+const _lazy_ISW6YF = () => Promise.resolve().then(function () { return index_get$d; });
+const _lazy_Milj9W = () => Promise.resolve().then(function () { return index_post$3; });
+const _lazy_6Y5qLU = () => Promise.resolve().then(function () { return _id__delete$3; });
+const _lazy_xr8dYt = () => Promise.resolve().then(function () { return _id__get$3; });
+const _lazy_0Nnoou = () => Promise.resolve().then(function () { return clients_get$1; });
+const _lazy_nFmPqe = () => Promise.resolve().then(function () { return index_get$b; });
+const _lazy_5R9q8z = () => Promise.resolve().then(function () { return index$1; });
+const _lazy_iVc1os = () => Promise.resolve().then(function () { return index_get$9; });
+const _lazy_0tpeRS = () => Promise.resolve().then(function () { return _id__delete$1; });
+const _lazy_7wO8Vo = () => Promise.resolve().then(function () { return _id__get$1; });
+const _lazy_RVyg1d = () => Promise.resolve().then(function () { return index_get$7; });
+const _lazy_3Z52pc = () => Promise.resolve().then(function () { return index_post$1; });
+const _lazy_KJTm1L = () => Promise.resolve().then(function () { return _____$1; });
+const _lazy_S0R4Cf = () => Promise.resolve().then(function () { return projects_get$1; });
+const _lazy_b0tGsf = () => Promise.resolve().then(function () { return login_post$1; });
+const _lazy_OZC9Oc = () => Promise.resolve().then(function () { return me_get$1; });
+const _lazy_8yHNBl = () => Promise.resolve().then(function () { return datatable_get$1; });
+const _lazy_Y257LT = () => Promise.resolve().then(function () { return faq_get$1; });
+const _lazy_7CZmMB = () => Promise.resolve().then(function () { return index_get$5; });
+const _lazy_OrcFsz = () => Promise.resolve().then(function () { return index_get$3; });
+const _lazy_G52gdb = () => Promise.resolve().then(function () { return header_get$1; });
+const _lazy_al9b8L = () => Promise.resolve().then(function () { return index_get$1; });
+const _lazy_EIcipx = () => Promise.resolve().then(function () { return token_get$1; });
+const _lazy_k9O3Ss = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  {
-    route: "/api/app-bar/search",
-    handler: _lazy_YVSLzr,
-    lazy: true,
-    middleware: false,
-    method: undefined,
-  },
-  {
-    route: "/api/apps/academy/course-details",
-    handler: _lazy_mYQ72L,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/academy/courses",
-    handler: _lazy_Jl809q,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/calendar/:id",
-    handler: _lazy_6KTX37,
-    lazy: true,
-    middleware: false,
-    method: "delete",
-  },
-  {
-    route: "/api/apps/calendar/:id",
-    handler: _lazy_dVO0J9,
-    lazy: true,
-    middleware: false,
-    method: "put",
-  },
-  {
-    route: "/api/apps/calendar",
-    handler: _lazy_XnyBFA,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/calendar",
-    handler: _lazy_bf4Epp,
-    lazy: true,
-    middleware: false,
-    method: "post",
-  },
-  {
-    route: "/api/apps/chat/chats-and-contacts",
-    handler: _lazy_XACjfF,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/chat/chats/:id",
-    handler: _lazy_F3vxv1,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/chat/chats/:id",
-    handler: _lazy_1xNbtz,
-    lazy: true,
-    middleware: false,
-    method: "post",
-  },
-  {
-    route: "/api/apps/ecommerce/customers/:id",
-    handler: _lazy_up1nW4,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/ecommerce/customers",
-    handler: _lazy_B7Nd9s,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/ecommerce/orders/:id",
-    handler: _lazy_CS9bAE,
-    lazy: true,
-    middleware: false,
-    method: "delete",
-  },
-  {
-    route: "/api/apps/ecommerce/orders",
-    handler: _lazy_BlymHe,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/ecommerce/products",
-    handler: _lazy_7h3zDl,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/ecommerce/referrals",
-    handler: _lazy_i4bWBp,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/ecommerce/reviews/:id",
-    handler: _lazy_EGDjk5,
-    lazy: true,
-    middleware: false,
-    method: "delete",
-  },
-  {
-    route: "/api/apps/ecommerce/reviews",
-    handler: _lazy_CAliuF,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/email",
-    handler: _lazy_OyAchy,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/email",
-    handler: _lazy_XFkWKw,
-    lazy: true,
-    middleware: false,
-    method: "post",
-  },
-  {
-    route: "/api/apps/invoice/:id",
-    handler: _lazy_eucIan,
-    lazy: true,
-    middleware: false,
-    method: "delete",
-  },
-  {
-    route: "/api/apps/invoice/:id",
-    handler: _lazy_kaJhHg,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/invoice/clients",
-    handler: _lazy_PFGmiw,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/invoice",
-    handler: _lazy_NTWZlp,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/logistics/vehicles",
-    handler: _lazy_kdPW4c,
-    lazy: true,
-    middleware: false,
-    method: undefined,
-  },
-  {
-    route: "/api/apps/permissions",
-    handler: _lazy_L3fNz3,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/users/:id",
-    handler: _lazy_qkhVF8,
-    lazy: true,
-    middleware: false,
-    method: "delete",
-  },
-  {
-    route: "/api/apps/users/:id",
-    handler: _lazy_JdwXKA,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/users",
-    handler: _lazy_5OELbv,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/apps/users",
-    handler: _lazy_BYcGXn,
-    lazy: true,
-    middleware: false,
-    method: "post",
-  },
-  {
-    route: "/api/auth/**",
-    handler: _lazy_ppQO4P,
-    lazy: true,
-    middleware: false,
-    method: undefined,
-  },
-  {
-    route: "/api/dashboard/analytics/projects",
-    handler: _lazy_8xzMuL,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/login",
-    handler: _lazy_m2Azid,
-    lazy: true,
-    middleware: false,
-    method: "post",
-  },
-  {
-    route: "/api/me",
-    handler: _lazy_HBrRCm,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/datatable",
-    handler: _lazy_i9N7bw,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/faq",
-    handler: _lazy_gSinir,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/help-center/article",
-    handler: _lazy_1Y6Q9I,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/help-center",
-    handler: _lazy_F8Fos2,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/profile/header",
-    handler: _lazy_fsyY3U,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/pages/profile",
-    handler: _lazy_ljtAvb,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/api/token",
-    handler: _lazy_ZZtBpa,
-    lazy: true,
-    middleware: false,
-    method: "get",
-  },
-  {
-    route: "/__nuxt_error",
-    handler: _lazy_zHqnrL,
-    lazy: true,
-    middleware: false,
-    method: undefined,
-  },
-  {
-    route: "/**",
-    handler: _lazy_zHqnrL,
-    lazy: true,
-    middleware: false,
-    method: undefined,
-  },
+  { route: '/api/app-bar/search', handler: _lazy_exQtYX, lazy: true, middleware: false, method: undefined },
+  { route: '/api/apps/academy/course-details', handler: _lazy_TyIijn, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/academy/courses', handler: _lazy_PYHMJf, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/calendar/:id', handler: _lazy_0wRFP3, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/apps/calendar/:id', handler: _lazy_Gr6oy1, lazy: true, middleware: false, method: "put" },
+  { route: '/api/apps/calendar', handler: _lazy_YhY1f9, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/calendar', handler: _lazy_kLdDss, lazy: true, middleware: false, method: "post" },
+  { route: '/api/apps/chat/chats-and-contacts', handler: _lazy_95cTBE, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/chat/chats/:id', handler: _lazy_h1TWAD, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/chat/chats/:id', handler: _lazy_D8OfJ6, lazy: true, middleware: false, method: "post" },
+  { route: '/api/apps/ecommerce/customers/:id', handler: _lazy_PZ9dbd, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/ecommerce/customers', handler: _lazy_Q8COFn, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/ecommerce/orders/:id', handler: _lazy_TG8jy7, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/apps/ecommerce/orders', handler: _lazy_0FUABx, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/ecommerce/products', handler: _lazy_HmN00g, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/ecommerce/referrals', handler: _lazy_tfBAss, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/ecommerce/reviews/:id', handler: _lazy_9oha4O, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/apps/ecommerce/reviews', handler: _lazy_erB9sY, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/email', handler: _lazy_ISW6YF, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/email', handler: _lazy_Milj9W, lazy: true, middleware: false, method: "post" },
+  { route: '/api/apps/invoice/:id', handler: _lazy_6Y5qLU, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/apps/invoice/:id', handler: _lazy_xr8dYt, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/invoice/clients', handler: _lazy_0Nnoou, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/invoice', handler: _lazy_nFmPqe, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/logistics/vehicles', handler: _lazy_5R9q8z, lazy: true, middleware: false, method: undefined },
+  { route: '/api/apps/permissions', handler: _lazy_iVc1os, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/users/:id', handler: _lazy_0tpeRS, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/apps/users/:id', handler: _lazy_7wO8Vo, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/users', handler: _lazy_RVyg1d, lazy: true, middleware: false, method: "get" },
+  { route: '/api/apps/users', handler: _lazy_3Z52pc, lazy: true, middleware: false, method: "post" },
+  { route: '/api/auth/**', handler: _lazy_KJTm1L, lazy: true, middleware: false, method: undefined },
+  { route: '/api/dashboard/analytics/projects', handler: _lazy_S0R4Cf, lazy: true, middleware: false, method: "get" },
+  { route: '/api/login', handler: _lazy_b0tGsf, lazy: true, middleware: false, method: "post" },
+  { route: '/api/me', handler: _lazy_OZC9Oc, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/datatable', handler: _lazy_8yHNBl, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/faq', handler: _lazy_Y257LT, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/help-center/article', handler: _lazy_7CZmMB, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/help-center', handler: _lazy_OrcFsz, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/profile/header', handler: _lazy_G52gdb, lazy: true, middleware: false, method: "get" },
+  { route: '/api/pages/profile', handler: _lazy_al9b8L, lazy: true, middleware: false, method: "get" },
+  { route: '/api/token', handler: _lazy_EIcipx, lazy: true, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_k9O3Ss, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_k9O3Ss, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
   const config = useRuntimeConfig();
   const hooks = createHooks();
   const captureError = (error, context = {}) => {
-    const promise = hooks
-      .callHookParallel("error", error, context)
-      .catch((_err) => {
-        console.error("Error while capturing another error", _err);
-      });
+    const promise = hooks.callHookParallel("error", error, context).catch((_err) => {
+      console.error("Error while capturing another error", _err);
+    });
     if (context.event && isEvent(context.event)) {
       const errors = context.event.context.nitro?.errors;
       if (errors) {
@@ -1774,34 +1011,30 @@ function createNitroApp() {
       });
     },
     onBeforeResponse: async (event, response) => {
-      await nitroApp.hooks
-        .callHook("beforeResponse", event, response)
-        .catch((error) => {
-          captureError(error, { event, tags: ["request", "response"] });
-        });
+      await nitroApp.hooks.callHook("beforeResponse", event, response).catch((error) => {
+        captureError(error, { event, tags: ["request", "response"] });
+      });
     },
     onAfterResponse: async (event, response) => {
-      await nitroApp.hooks
-        .callHook("afterResponse", event, response)
-        .catch((error) => {
-          captureError(error, { event, tags: ["request", "response"] });
-        });
-    },
+      await nitroApp.hooks.callHook("afterResponse", event, response).catch((error) => {
+        captureError(error, { event, tags: ["request", "response"] });
+      });
+    }
   });
   const router = createRouter$1({
-    preemptive: true,
+    preemptive: true
   });
   const localCall = createCall(toNodeListener(h3App));
   const _localFetch = createFetch(localCall, globalThis.fetch);
   const localFetch = (...args) => {
-    return _localFetch(...args).then((response) =>
-      normalizeFetchResponse(response)
+    return _localFetch(...args).then(
+      (response) => normalizeFetchResponse(response)
     );
   };
   const $fetch = createFetch$1({
     fetch: localFetch,
     Headers: Headers$1,
-    defaults: { baseURL: config.app.baseURL },
+    defaults: { baseURL: config.app.baseURL }
   });
   globalThis.$fetch = $fetch;
   h3App.use(createRouteRulesHandler({ localFetch }));
@@ -1812,12 +1045,10 @@ function createNitroApp() {
       if (envContext) {
         Object.assign(event.context, envContext);
       }
-      event.fetch = (req, init) =>
-        fetchWithEvent(event, req, init, { fetch: localFetch });
-      event.$fetch = (req, init) =>
-        fetchWithEvent(event, req, init, {
-          fetch: $fetch,
-        });
+      event.fetch = (req, init) => fetchWithEvent(event, req, init, { fetch: localFetch });
+      event.$fetch = (req, init) => fetchWithEvent(event, req, init, {
+        fetch: $fetch
+      });
       event.waitUntil = (promise) => {
         if (!event.context.nitro._waitUntilPromises) {
           event.context.nitro._waitUntilPromises = [];
@@ -1847,7 +1078,7 @@ function createNitroApp() {
       if (routeRules.cache) {
         handler = cachedEventHandler(handler, {
           group: "nitro/routes",
-          ...routeRules.cache,
+          ...routeRules.cache
         });
       }
       router.use(h.route, handler, h.method);
@@ -1860,7 +1091,7 @@ function createNitroApp() {
     router,
     localCall,
     localFetch,
-    captureError,
+    captureError
   };
   for (const plugin of plugins) {
     try {
@@ -1877,11 +1108,7 @@ const useNitroApp = () => nitroApp;
 
 const server = new Server(toNodeListener(nitroApp.h3App));
 function getAddress() {
-  if (
-    U === "stackblitz" ||
-    process.env.NITRO_NO_UNIX_SOCKET ||
-    process.versions.bun
-  ) {
+  if (U === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET || process.versions.bun) {
     return 0;
   }
   const socketName = `worker-${process.pid}-${threadId}.sock`;
@@ -1898,10 +1125,7 @@ server.listen(listenAddress, () => {
   const _address = server.address();
   parentPort.postMessage({
     event: "listen",
-    address:
-      typeof _address === "string"
-        ? { socketPath: _address }
-        : { host: "localhost", port: _address.port },
+    address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
   });
 });
 trapUnhandledNodeErrors();
@@ -1915,41 +1139,30 @@ parentPort.on("message", async (msg) => {
   }
 });
 
-const _messages = {
-  appName: "Nuxt",
-  version: "",
-  statusCode: 500,
-  statusMessage: "Server error",
-  description:
-    "An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.",
-  stack: "",
+const _messages = {"appName":"Nuxt","version":"","statusCode":500,"statusMessage":"Server error","description":"An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.","stack":""};
+const _render = function({ messages }) {
+var __t, __p = '';
+__p += '<!DOCTYPE html><html><head><title>' +
+((__t = ( messages.statusCode )) == null ? '' : __t) +
+' - ' +
+((__t = ( messages.statusMessage )) == null ? '' : __t) +
+' | ' +
+((__t = ( messages.appName )) == null ? '' : __t) +
+'</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,minimum-scale=1" name="viewport"><style>.spotlight{background:linear-gradient(45deg, #00DC82 0%, #36E4DA 50%, #0047E1 100%);opacity:0.8;filter:blur(30vh);height:60vh;bottom:-40vh}*,:before,:after{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e0e0e0}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(14, 165, 233, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{margin:0;font-family:inherit;line-height:inherit}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,p,pre{margin:0}h1{font-size:inherit;font-weight:inherit}pre{font-size:1em;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-black\\/5{--tw-bg-opacity:.05;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-1{-webkit-box-flex:1;-ms-flex:1 1 0%;-webkit-flex:1 1 0%;flex:1 1 0%}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.font-light{font-weight:300}.h-auto{height:auto}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-6xl{font-size:3.75rem;line-height:1}.leading-tight{line-height:1.25}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.min-h-screen{min-height:100vh}.overflow-y-auto{overflow-y:auto}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.z-10{z-index:10}@media (min-width: 640px){.sm\\:text-8xl{font-size:6rem;line-height:1}.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}}@media (prefers-color-scheme: dark){.dark\\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:bg-white\\/10{--tw-bg-opacity:.1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.dark\\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}</style><script>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll(\'link[rel="modulepreload"]\'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();</script></head><body class="font-sans antialiased bg-white px-10 pt-14 dark:bg-black text-black dark:text-white min-h-screen flex flex-col"><div class="fixed left-0 right-0 spotlight"></div><h1 class="text-6xl sm:text-8xl font-medium mb-6">' +
+((__t = ( messages.statusCode )) == null ? '' : __t) +
+'</h1><p class="text-xl sm:text-2xl font-light mb-8 leading-tight">' +
+((__t = ( messages.description )) == null ? '' : __t) +
+'</p><div class="bg-white rounded-t-md bg-black/5 dark:bg-white/10 flex-1 overflow-y-auto h-auto"><pre class="text-xl font-light leading-tight z-10 p-8">' +
+((__t = ( messages.stack )) == null ? '' : __t) +
+'</pre></div></body></html>';
+return __p
 };
-const _render = function ({ messages }) {
-  var __t,
-    __p = "";
-  __p +=
-    "<!DOCTYPE html><html><head><title>" +
-    ((__t = messages.statusCode) == null ? "" : __t) +
-    " - " +
-    ((__t = messages.statusMessage) == null ? "" : __t) +
-    " | " +
-    ((__t = messages.appName) == null ? "" : __t) +
-    '</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,minimum-scale=1" name="viewport"><style>.spotlight{background:linear-gradient(45deg, #00DC82 0%, #36E4DA 50%, #0047E1 100%);opacity:0.8;filter:blur(30vh);height:60vh;bottom:-40vh}*,:before,:after{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e0e0e0}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(14, 165, 233, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{margin:0;font-family:inherit;line-height:inherit}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,p,pre{margin:0}h1{font-size:inherit;font-weight:inherit}pre{font-size:1em;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-black\\/5{--tw-bg-opacity:.05;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-1{-webkit-box-flex:1;-ms-flex:1 1 0%;-webkit-flex:1 1 0%;flex:1 1 0%}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.font-light{font-weight:300}.h-auto{height:auto}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-6xl{font-size:3.75rem;line-height:1}.leading-tight{line-height:1.25}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.min-h-screen{min-height:100vh}.overflow-y-auto{overflow-y:auto}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.z-10{z-index:10}@media (min-width: 640px){.sm\\:text-8xl{font-size:6rem;line-height:1}.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}}@media (prefers-color-scheme: dark){.dark\\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:bg-white\\/10{--tw-bg-opacity:.1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.dark\\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}</style><script>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll(\'link[rel="modulepreload"]\'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();</script></head><body class="font-sans antialiased bg-white px-10 pt-14 dark:bg-black text-black dark:text-white min-h-screen flex flex-col"><div class="fixed left-0 right-0 spotlight"></div><h1 class="text-6xl sm:text-8xl font-medium mb-6">' +
-    ((__t = messages.statusCode) == null ? "" : __t) +
-    '</h1><p class="text-xl sm:text-2xl font-light mb-8 leading-tight">' +
-    ((__t = messages.description) == null ? "" : __t) +
-    '</p><div class="bg-white rounded-t-md bg-black/5 dark:bg-white/10 flex-1 overflow-y-auto h-auto"><pre class="text-xl font-light leading-tight z-10 p-8">' +
-    ((__t = messages.stack) == null ? "" : __t) +
-    "</pre></div></body></html>";
-  return __p;
-};
-const _template = (messages) =>
-  _render({ messages: { ..._messages, ...messages } });
+const _template = (messages) => _render({ messages: { ..._messages, ...messages } });
 const template$1 = _template;
 
-const errorDev = /*#__PURE__*/ Object.freeze({
+const errorDev = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  template: template$1,
+  template: template$1
 });
 
 const db$e = {
@@ -1961,29 +1174,29 @@ const db$e = {
         {
           url: { name: "dashboards-analytics" },
           icon: "tabler-timeline",
-          title: "Analytics Dashboard",
+          title: "Analytics Dashboard"
         },
         {
           url: { name: "dashboards-crm" },
           icon: "tabler-file-analytics",
-          title: "CRM Dashboard",
+          title: "CRM Dashboard"
         },
         {
           url: { name: "dashboards-ecommerce" },
           icon: "tabler-shopping-cart",
-          title: "ECommerce Dashboard",
+          title: "ECommerce Dashboard"
         },
         {
           url: { name: "dashboards-academy" },
           icon: "tabler-book",
-          title: "Academy Dashboard",
+          title: "Academy Dashboard"
         },
         {
           url: { name: "dashboards-logistics" },
           icon: "tabler-truck",
-          title: "Logistics Dashboard",
-        },
-      ],
+          title: "Logistics Dashboard"
+        }
+      ]
     },
     {
       title: "Front Pages",
@@ -1992,29 +1205,29 @@ const db$e = {
         {
           url: { name: "front-pages-landing-page" },
           icon: "tabler-file-description",
-          title: "Landing Front",
+          title: "Landing Front"
         },
         {
           url: { name: "front-pages-pricing" },
           icon: "tabler-file-description",
-          title: "Pricing Front",
+          title: "Pricing Front"
         },
         {
           url: { name: "front-pages-payment" },
           icon: "tabler-file-description",
-          title: "Payment Front",
+          title: "Payment Front"
         },
         {
           url: { name: "front-pages-checkout" },
           icon: "tabler-file-description",
-          title: "Checkout Front",
+          title: "Checkout Front"
         },
         {
           url: { name: "front-pages-help-center" },
           icon: "tabler-file-description",
-          title: "Help Center Front",
-        },
-      ],
+          title: "Help Center Front"
+        }
+      ]
     },
     {
       title: "Apps & Pages",
@@ -2023,305 +1236,284 @@ const db$e = {
         {
           url: { name: "apps-email" },
           icon: "tabler-mail",
-          title: "Email",
+          title: "Email"
         },
         {
           url: { name: "apps-chat" },
           icon: "tabler-message",
-          title: "Chat",
+          title: "Chat"
         },
         {
           url: { name: "apps-calendar" },
           icon: "tabler-calendar",
-          title: "Calendar",
+          title: "Calendar"
         },
         {
           url: { name: "apps-ecommerce-dashboard" },
           icon: "tabler-shopping-cart",
-          title: "ECommerce Dashboard",
+          title: "ECommerce Dashboard"
         },
         {
           url: { name: "apps-ecommerce-product-list" },
           icon: "tabler-list",
-          title: "Ecommerce - Product List",
+          title: "Ecommerce - Product List"
         },
         {
           url: { name: "apps-ecommerce-product-add" },
           icon: "tabler-circle-plus",
-          title: "Ecommerce - Add Product",
+          title: "Ecommerce - Add Product"
         },
         {
           url: { name: "apps-ecommerce-product-category-list" },
           icon: "tabler-list",
-          title: "Ecommerce - Category List",
+          title: "Ecommerce - Category List"
         },
         {
           url: { name: "apps-ecommerce-order-list" },
           icon: "tabler-list",
-          title: "Ecommerce - Order List",
+          title: "Ecommerce - Order List"
         },
         {
-          url: {
-            name: "apps-ecommerce-order-details-id",
-            params: { id: "9042" },
-          },
+          url: { name: "apps-ecommerce-order-details-id", params: { id: "9042" } },
           icon: "tabler-list-check",
-          title: "Ecommerce - Order Details",
+          title: "Ecommerce - Order Details"
         },
         {
           url: { name: "apps-ecommerce-customer-list" },
           icon: "tabler-user",
-          title: "Ecommerce - Customer List",
+          title: "Ecommerce - Customer List"
         },
         {
-          url: {
-            name: "apps-ecommerce-customer-details-id",
-            params: { id: "478426", tab: "security" },
-          },
+          url: { name: "apps-ecommerce-customer-details-id", params: { id: "478426", tab: "security" } },
           icon: "tabler-list",
-          title: "Ecommerce - Customer Details",
+          title: "Ecommerce - Customer Details"
         },
         {
           url: { name: "apps-ecommerce-manage-review" },
           icon: "tabler-quote",
-          title: "Ecommerce - Manage Review",
+          title: "Ecommerce - Manage Review"
         },
         {
           url: { name: "apps-ecommerce-referrals" },
           icon: "tabler-users-group",
-          title: "Ecommerce - Referrals",
+          title: "Ecommerce - Referrals"
         },
         {
           url: { name: "apps-ecommerce-settings" },
           icon: "tabler-settings",
-          title: "Ecommerce - Settings",
+          title: "Ecommerce - Settings"
         },
         {
           url: { name: "apps-academy-dashboard" },
           icon: "tabler-book",
-          title: "Academy - Dashboard",
+          title: "Academy - Dashboard"
         },
         {
           url: { name: "apps-academy-my-course" },
           icon: "tabler-list",
-          title: "Academy - My Courses",
+          title: "Academy - My Courses"
         },
         {
           url: { name: "apps-academy-course-details" },
           icon: "tabler-list",
-          title: "Academy - Course Details",
+          title: "Academy - Course Details"
         },
         {
           url: { name: "apps-logistics-dashboard" },
           icon: "tabler-book",
-          title: "Logistics - Dashboard",
+          title: "Logistics - Dashboard"
         },
         {
           url: { name: "apps-logistics-fleet" },
           icon: "tabler-car",
-          title: "Logistics - fleet",
+          title: "Logistics - fleet"
         },
         {
           url: { name: "apps-invoice-list" },
           icon: "tabler-list",
-          title: "Invoice List",
+          title: "Invoice List"
         },
         {
           url: { name: "apps-invoice-preview-id", params: { id: "5036" } },
           icon: "tabler-file-description",
-          title: "Invoice Preview",
+          title: "Invoice Preview"
         },
         {
           url: { name: "apps-invoice-edit-id", params: { id: "5036" } },
           icon: "tabler-file-pencil",
-          title: "Invoice Edit",
+          title: "Invoice Edit"
         },
         {
           url: { name: "apps-invoice-add" },
           icon: "tabler-file-plus",
-          title: "Invoice Add",
+          title: "Invoice Add"
         },
         {
           url: { name: "apps-user-list" },
           icon: "tabler-users-group",
-          title: "User List",
+          title: "User List"
         },
         {
           url: { name: "apps-user-view-id", params: { id: 21 } },
           icon: "tabler-eye",
-          title: "User View",
+          title: "User View"
         },
         {
           url: { name: "pages-user-profile-tab", params: { tab: "profile" } },
           icon: "tabler-user-circle",
-          title: "User Profile - Profile",
+          title: "User Profile - Profile"
         },
         {
-          url: {
-            name: "pages-account-settings-tab",
-            params: { tab: "account" },
-          },
+          url: { name: "pages-account-settings-tab", params: { tab: "account" } },
           icon: "tabler-user-circle",
-          title: "Account Settings - Account",
+          title: "Account Settings - Account"
         },
         {
-          url: {
-            name: "pages-account-settings-tab",
-            params: { tab: "security" },
-          },
+          url: { name: "pages-account-settings-tab", params: { tab: "security" } },
           icon: "tabler-lock-open",
-          title: "Account Settings - Security",
+          title: "Account Settings - Security"
         },
         {
-          url: {
-            name: "pages-account-settings-tab",
-            params: { tab: "billing-plans" },
-          },
+          url: { name: "pages-account-settings-tab", params: { tab: "billing-plans" } },
           icon: "tabler-currency-dollar",
-          title: "Account Settings - Billing",
+          title: "Account Settings - Billing"
         },
         {
-          url: {
-            name: "pages-account-settings-tab",
-            params: { tab: "notification" },
-          },
+          url: { name: "pages-account-settings-tab", params: { tab: "notification" } },
           icon: "tabler-bell",
-          title: "Account Settings - Notifications",
+          title: "Account Settings - Notifications"
         },
         {
-          url: {
-            name: "pages-account-settings-tab",
-            params: { tab: "connection" },
-          },
+          url: { name: "pages-account-settings-tab", params: { tab: "connection" } },
           icon: "tabler-link",
-          title: "Account Settings - Connections",
+          title: "Account Settings - Connections"
         },
         {
           url: { name: "pages-pricing" },
           icon: "tabler-currency-dollar",
-          title: "Pricing",
+          title: "Pricing"
         },
         {
           url: { name: "pages-faq" },
           icon: "tabler-help-circle",
-          title: "FAQ",
+          title: "FAQ"
         },
         {
           url: { name: "pages-misc-coming-soon" },
           icon: "tabler-clock",
-          title: "Coming Soon",
+          title: "Coming Soon"
         },
         {
           url: { name: "pages-misc-under-maintenance" },
           icon: "tabler-settings",
-          title: "Under Maintenance",
+          title: "Under Maintenance"
         },
         {
           url: { path: "/pages/misc/page-not-found" },
           icon: "tabler-alert-circle",
-          title: "Page Not Found - 404",
+          title: "Page Not Found - 404"
         },
         {
           url: { name: "pages-misc-not-authorized" },
           icon: "tabler-user-x",
-          title: "Not Authorized - 401",
+          title: "Not Authorized - 401"
         },
         {
           url: { name: "pages-authentication-login-v1" },
           icon: "tabler-login",
-          title: "Login V1",
+          title: "Login V1"
         },
         {
           url: { name: "pages-authentication-login-v2" },
           icon: "tabler-login",
-          title: "Login V2",
+          title: "Login V2"
         },
         {
           url: { name: "pages-authentication-register-v1" },
           icon: "tabler-user-plus",
-          title: "Register V1",
+          title: "Register V1"
         },
         {
           url: { name: "pages-authentication-register-v2" },
           icon: "tabler-user-plus",
-          title: "Register V2",
+          title: "Register V2"
         },
         {
           icon: "tabler-mail",
           title: "Verify Email V1",
-          url: { name: "pages-authentication-verify-email-v1" },
+          url: { name: "pages-authentication-verify-email-v1" }
         },
         {
           icon: "tabler-mail",
           title: "Verify Email V2",
-          url: { name: "pages-authentication-verify-email-v2" },
+          url: { name: "pages-authentication-verify-email-v2" }
         },
         {
           url: { name: "pages-authentication-forgot-password-v1" },
           icon: "tabler-lock-exclamation",
-          title: "Forgot Password V1",
+          title: "Forgot Password V1"
         },
         {
           url: { name: "pages-authentication-forgot-password-v2" },
           icon: "tabler-lock-exclamation",
-          title: "Forgot Password V2",
+          title: "Forgot Password V2"
         },
         {
           url: { name: "pages-authentication-reset-password-v1" },
           icon: "tabler-help-circle",
-          title: "Reset Password V1",
+          title: "Reset Password V1"
         },
         {
           url: { name: "pages-authentication-reset-password-v2" },
           icon: "tabler-help-circle",
-          title: "Reset Password V2",
+          title: "Reset Password V2"
         },
         {
           icon: "tabler-devices",
           title: "Two Steps V1",
-          url: { name: "pages-authentication-two-steps-v1" },
+          url: { name: "pages-authentication-two-steps-v1" }
         },
         {
           icon: "tabler-devices",
           title: "Two Steps V2",
-          url: { name: "pages-authentication-two-steps-v2" },
+          url: { name: "pages-authentication-two-steps-v2" }
         },
         {
           url: { name: "pages-dialog-examples" },
           icon: "tabler-square",
-          title: "Dialog Examples",
+          title: "Dialog Examples"
         },
         {
           url: { name: "pages-authentication-register-multi-steps" },
           icon: "tabler-user-plus",
-          title: "Register Multi-Steps",
+          title: "Register Multi-Steps"
         },
         {
           url: { name: "wizard-examples-checkout" },
           icon: "tabler-shopping-cart",
-          title: "Wizard - Checkout",
+          title: "Wizard - Checkout"
         },
         {
           url: { name: "wizard-examples-create-deal" },
           icon: "tabler-gift",
-          title: "Wizard - create deal",
+          title: "Wizard - create deal"
         },
         {
           url: { name: "wizard-examples-property-listing" },
           icon: "tabler-home-outline",
-          title: "Wizard - Property Listing",
+          title: "Wizard - Property Listing"
         },
         {
           url: { name: "apps-roles" },
           icon: "tabler-shield-checkered",
-          title: "Roles",
+          title: "Roles"
         },
         {
           url: { name: "apps-permissions" },
           icon: "tabler-shield-checkered",
-          title: "Permissions",
-        },
-      ],
+          title: "Permissions"
+        }
+      ]
     },
     {
       title: "User Interface",
@@ -2330,134 +1522,134 @@ const db$e = {
         {
           url: { name: "pages-typography" },
           icon: "tabler-letter-case",
-          title: "Typography",
+          title: "Typography"
         },
         {
           url: { name: "pages-icons" },
           icon: "tabler-icons",
-          title: "Icons",
+          title: "Icons"
         },
         {
           url: { name: "pages-cards-card-basic" },
           icon: "tabler-square",
-          title: "Card Basic",
+          title: "Card Basic"
         },
         {
           url: { name: "pages-cards-card-advance" },
           icon: "tabler-square-plus",
-          title: "Card Advance",
+          title: "Card Advance"
         },
         {
           url: { name: "pages-cards-card-statistics" },
           icon: "tabler-chart-bar",
-          title: "Card Statistics",
+          title: "Card Statistics"
         },
         {
           url: { name: "pages-cards-card-widgets" },
           icon: "tabler-chart-bar",
-          title: "Card widgets",
+          title: "Card widgets"
         },
         {
           url: { name: "pages-cards-card-gamification" },
           icon: "tabler-id",
-          title: "Card Gamification",
+          title: "Card Gamification"
         },
         {
           url: { name: "pages-cards-card-actions" },
           icon: "tabler-square-plus",
-          title: "Card Actions",
+          title: "Card Actions"
         },
         {
           url: { name: "components-alert" },
           icon: "tabler-alert-triangle",
-          title: "Alerts",
+          title: "Alerts"
         },
         {
           url: { name: "components-avatar" },
           icon: "tabler-user-circle",
-          title: "Avatars",
+          title: "Avatars"
         },
         {
           url: { name: "components-badge" },
           icon: "tabler-badge",
-          title: "Badges",
+          title: "Badges"
         },
         {
           url: { name: "components-button" },
           icon: "tabler-circle-plus",
-          title: "Buttons",
+          title: "Buttons"
         },
         {
           url: { name: "components-chip" },
           icon: "tabler-square",
-          title: "Chips",
+          title: "Chips"
         },
         {
           url: { name: "components-dialog" },
           icon: "tabler-square",
-          title: "Dialogs",
+          title: "Dialogs"
         },
         {
           url: { name: "components-list" },
           icon: "tabler-list",
-          title: "List",
+          title: "List"
         },
         {
           url: { name: "components-menu" },
           icon: "tabler-menu-2",
-          title: "Menu",
+          title: "Menu"
         },
         {
           url: { name: "components-pagination" },
           icon: "tabler-skip-forward",
-          title: "Pagination",
+          title: "Pagination"
         },
         {
           url: { name: "components-progress-circular" },
           icon: "tabler-progress",
-          title: "Progress Circular",
+          title: "Progress Circular"
         },
         {
           url: { name: "components-progress-linear" },
           icon: "tabler-progress",
-          title: "Progress Linear",
+          title: "Progress Linear"
         },
         {
           url: { name: "components-expansion-panel" },
           icon: "tabler-align-center",
-          title: "Expansion Panel",
+          title: "Expansion Panel"
         },
         {
           url: { name: "components-snackbar" },
           icon: "tabler-message-dots",
-          title: "Snackbar",
+          title: "Snackbar"
         },
         {
           url: { name: "components-tabs" },
           icon: "tabler-app-window",
-          title: "Tabs",
+          title: "Tabs"
         },
         {
           url: { name: "components-timeline" },
           icon: "tabler-timeline",
-          title: "Timeline",
+          title: "Timeline"
         },
         {
           url: { name: "components-tooltip" },
           icon: "tabler-message-2",
-          title: "Tooltip",
+          title: "Tooltip"
         },
         {
           url: { name: "extensions-tour" },
           icon: "tabler-box",
-          title: "Tour",
+          title: "Tour"
         },
         {
           url: { name: "extensions-swiper" },
           icon: "tabler-photo",
-          title: "Swiper",
-        },
-      ],
+          title: "Swiper"
+        }
+      ]
     },
     {
       title: "Forms & Tables",
@@ -2466,109 +1658,109 @@ const db$e = {
         {
           url: { name: "forms-textfield" },
           icon: "tabler-text-caption",
-          title: "TextField",
+          title: "TextField"
         },
         {
           url: { name: "forms-select" },
           icon: "tabler-list-check",
-          title: "Select",
+          title: "Select"
         },
         {
           url: { name: "forms-checkbox" },
           icon: "tabler-square-check",
-          title: "Checkbox",
+          title: "Checkbox"
         },
         {
           url: { name: "forms-radio" },
           icon: "tabler-circle-dot-filled",
-          title: "Radio",
+          title: "Radio"
         },
         {
           url: { name: "forms-combobox" },
           icon: "tabler-square-check",
-          title: "Combobox",
+          title: "Combobox"
         },
         {
           url: { name: "forms-date-time-picker" },
           icon: "tabler-calendar",
-          title: "Date Time picker",
+          title: "Date Time picker"
         },
         {
           url: { name: "forms-textarea" },
           icon: "tabler-notes",
-          title: "Textarea",
+          title: "Textarea"
         },
         {
           url: { name: "forms-switch" },
           icon: "tabler-toggle-right",
-          title: "Switch",
+          title: "Switch"
         },
         {
           url: { name: "forms-file-input" },
           icon: "tabler-upload",
-          title: "File Input",
+          title: "File Input"
         },
         {
           url: { name: "forms-editors" },
           icon: "tabler-file-pencil",
-          title: "Editors",
+          title: "Editors"
         },
         {
           url: { name: "forms-rating" },
           icon: "tabler-star",
-          title: "Form Rating",
+          title: "Form Rating"
         },
         {
           url: { name: "forms-slider" },
           icon: "tabler-hand-move",
-          title: "Slider",
+          title: "Slider"
         },
         {
           url: { name: "forms-range-slider" },
           icon: "tabler-adjustments-horizontal",
-          title: "Range Slider",
+          title: "Range Slider"
         },
         {
           url: { name: "forms-form-layouts" },
           icon: "tabler-box",
-          title: "Form Layouts",
+          title: "Form Layouts"
         },
         {
           url: { name: "forms-form-validation" },
           icon: "tabler-circle-check",
-          title: "Form Validation",
+          title: "Form Validation"
         },
         {
           url: { name: "forms-custom-input" },
           icon: "tabler-list-details",
-          title: "Custom Input",
+          title: "Custom Input"
         },
         {
           url: { name: "forms-autocomplete" },
           icon: "tabler-align-left",
-          title: "Autocomplete",
+          title: "Autocomplete"
         },
         {
           url: { name: "tables-data-table" },
           icon: "tabler-table",
-          title: "Data Table",
+          title: "Data Table"
         },
         {
           url: { name: "tables-simple-table" },
           icon: "tabler-table",
-          title: "Simple Table",
+          title: "Simple Table"
         },
         {
           url: { name: "forms-form-wizard-numbered" },
           icon: "tabler-align-center",
-          title: "Form Wizard Numbered",
+          title: "Form Wizard Numbered"
         },
         {
           url: { name: "forms-form-wizard-icons" },
           icon: "tabler-align-center",
-          title: "Form Wizard Icons",
-        },
-      ],
+          title: "Form Wizard Icons"
+        }
+      ]
     },
     {
       title: "Chart & Misc",
@@ -2577,40 +1769,39 @@ const db$e = {
         {
           url: { name: "charts-apex-chart" },
           icon: "tabler-chart-area-line",
-          title: "Apex Charts",
+          title: "Apex Charts"
         },
         {
           url: { name: "charts-chartjs" },
           icon: "tabler-chart-histogram",
-          title: "ChartJS",
+          title: "ChartJS"
         },
         {
           url: { name: "access-control" },
           icon: "tabler-shield",
-          title: "Access Control (ACL)",
-        },
-      ],
-    },
-  ],
+          title: "Access Control (ACL)"
+        }
+      ]
+    }
+  ]
 };
 
 const index$2 = defineEventHandler(async (event) => {
   const { q = "" } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLowered = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLowered = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const filteredSearchData = [];
   db$e.searchItems.forEach((item) => {
     if (item.children) {
-      const matchingChildren = item.children.filter((child) =>
-        child.title.toLowerCase().includes(queryLowered)
+      const matchingChildren = item.children.filter(
+        (child) => child.title.toLowerCase().includes(queryLowered)
       );
       if (matchingChildren.length > 0) {
         const parentCopy = { ...item };
         if (matchingChildren.length > 5)
           parentCopy.children = matchingChildren.slice(0, 5);
-        else parentCopy.children = matchingChildren;
+        else
+          parentCopy.children = matchingChildren;
         filteredSearchData.push(parentCopy);
       }
     }
@@ -2625,9 +1816,9 @@ const index$2 = defineEventHandler(async (event) => {
   return [...filteredSearchData];
 });
 
-const index$3 = /*#__PURE__*/ Object.freeze({
+const index$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index$2,
+  default: index$2
 });
 
 const avatar1$9 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -2666,7 +1857,7 @@ const db$d = {
       desc: "Introductory course for Angular and framework basics.Master Angular and build awesome apps.",
       tags: "Web",
       rating: 4.4,
-      ratingCount: 8,
+      ratingCount: 8
     },
     {
       id: 2,
@@ -2685,7 +1876,7 @@ const db$d = {
       courseTitle: "UI/UX Design",
       tags: "Design",
       rating: 4.9,
-      ratingCount: 10,
+      ratingCount: 10
     },
     {
       id: 3,
@@ -2704,7 +1895,7 @@ const db$d = {
       courseTitle: "React Native",
       tags: "Web",
       rating: 4.8,
-      ratingCount: 9,
+      ratingCount: 9
     },
     {
       id: 4,
@@ -2723,7 +1914,7 @@ const db$d = {
       desc: "Easy-to-follow video & guides show you how to draw animals & people.",
       tags: "Design",
       rating: 4.7,
-      ratingCount: 18,
+      ratingCount: 18
     },
     {
       id: 5,
@@ -2742,7 +1933,7 @@ const db$d = {
       desc: "Learn the basics of the most popular programming language.",
       tags: "Web",
       rating: 4.6,
-      ratingCount: 11,
+      ratingCount: 11
     },
     {
       id: 6,
@@ -2761,7 +1952,7 @@ const db$d = {
       desc: "Learn React in just a couple of afternoons with this immersive course",
       tags: "Web",
       rating: 4.5,
-      ratingCount: 68,
+      ratingCount: 68
     },
     {
       id: 7,
@@ -2780,7 +1971,7 @@ const db$d = {
       desc: "Learn how to improve your arguments & make better decisions",
       tags: "Psychology",
       rating: 4.4,
-      ratingCount: 64,
+      ratingCount: 64
     },
     {
       id: 8,
@@ -2799,7 +1990,7 @@ const db$d = {
       desc: "Learn how to design a beautiful & engaging mobile app with Figma",
       tags: "UI/UX",
       rating: 4.3,
-      ratingCount: 34,
+      ratingCount: 34
     },
     {
       id: 9,
@@ -2818,7 +2009,7 @@ const db$d = {
       desc: "Learn how to solve problems like a professional.Solve your problems easily.",
       tags: "Psychology",
       rating: 4.2,
-      ratingCount: 85,
+      ratingCount: 85
     },
     {
       id: 10,
@@ -2837,7 +2028,7 @@ const db$d = {
       desc: "Learn how to build the world's most popular mobile OS.Use react native like pro.",
       tags: "Web",
       rating: 4.1,
-      ratingCount: 88,
+      ratingCount: 88
     },
     {
       id: 11,
@@ -2856,7 +2047,7 @@ const db$d = {
       desc: "Learn how to build modern web apps with React and Redux",
       tags: "Web",
       rating: 4,
-      ratingCount: 9,
+      ratingCount: 9
     },
     {
       id: 12,
@@ -2875,7 +2066,7 @@ const db$d = {
       desc: "Learn how to build single page applications like a pro.Learn everything about router.",
       tags: "Web",
       rating: 3.9,
-      ratingCount: 16,
+      ratingCount: 16
     },
     {
       id: 13,
@@ -2894,7 +2085,7 @@ const db$d = {
       desc: "Learn how to solve problems creatively and effectively.Solve your problems easily.",
       tags: "Psychology",
       rating: 3.8,
-      ratingCount: 68,
+      ratingCount: 68
     },
     {
       id: 14,
@@ -2913,7 +2104,7 @@ const db$d = {
       desc: "Learn how to build complex modern web applications with Angular",
       tags: "Web",
       rating: 3.7,
-      ratingCount: 82,
+      ratingCount: 82
     },
     {
       id: 15,
@@ -2932,7 +2123,7 @@ const db$d = {
       desc: "Learn how to build complex modern web application with Angular",
       tags: "Web",
       rating: 3.6,
-      ratingCount: 12,
+      ratingCount: 12
     },
     {
       id: 16,
@@ -2951,7 +2142,7 @@ const db$d = {
       desc: "Learn how to build modern web apps with React and Redux",
       tags: "Web",
       rating: 3.5,
-      ratingCount: 10,
+      ratingCount: 10
     },
     {
       id: 17,
@@ -2970,7 +2161,7 @@ const db$d = {
       desc: "Learn how to build modern web apps with React and Redux",
       tags: "Design",
       rating: 3.4,
-      ratingCount: 19,
+      ratingCount: 19
     },
     {
       id: 18,
@@ -2989,7 +2180,7 @@ const db$d = {
       desc: "Learn everything about testing web application with Angular",
       tags: "Web",
       rating: 4.3,
-      ratingCount: 10,
+      ratingCount: 10
     },
     {
       id: 19,
@@ -3008,7 +2199,7 @@ const db$d = {
       desc: "Learn how to build modern web apps with React and Redux",
       tags: "Web",
       rating: 4.2,
-      ratingCount: 18,
+      ratingCount: 18
     },
     {
       id: 20,
@@ -3027,7 +2218,7 @@ const db$d = {
       desc: "Learn how to draw like a professional with this immersive course",
       tags: "Art",
       rating: 4.1,
-      ratingCount: 9,
+      ratingCount: 9
     },
     {
       id: 21,
@@ -3046,7 +2237,7 @@ const db$d = {
       desc: "Introductory course for Angular and framework basics.Master Angular and build awesome apps.",
       tags: "Web",
       rating: 4,
-      ratingCount: 7,
+      ratingCount: 7
     },
     {
       id: 22,
@@ -3065,7 +2256,7 @@ const db$d = {
       desc: "Learn how to draw like a professional with this immersive course",
       tags: "Art",
       rating: 3.9,
-      ratingCount: 18,
+      ratingCount: 18
     },
     {
       id: 23,
@@ -3084,7 +2275,7 @@ const db$d = {
       desc: "Learn how to think better, argue better, and choose better",
       tags: "Psychology",
       rating: 3.8,
-      ratingCount: 69,
+      ratingCount: 69
     },
     {
       id: 24,
@@ -3103,7 +2294,7 @@ const db$d = {
       desc: "Learn how to use the powerful techniques in Colour Therapy",
       tags: "Design",
       rating: 3.7,
-      ratingCount: 18,
+      ratingCount: 18
     },
     {
       id: 25,
@@ -3122,13 +2313,12 @@ const db$d = {
       desc: "Learn how to design a beautiful & engaging mobile app with Figma",
       tags: "UI/UX",
       rating: 3.6,
-      ratingCount: 83,
-    },
+      ratingCount: 83
+    }
   ],
   courseDetails: {
     title: "UI/UX Basic Fundamentals",
-    about:
-      "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines \u2014 tons of amazing web design resources included!",
+    about: "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines \u2014 tons of amazing web design resources included!",
     instructor: "Devonne Wallbridge",
     instructorAvatar: avatar3$8,
     instructorPosition: "Web Developer, Designer, and Teacher",
@@ -3157,20 +2347,12 @@ const db$d = {
         time: "4.4 min",
         id: "section1",
         topics: [
-          {
-            title: "Welcome to this course",
-            time: "2.4 min",
-            isCompleted: true,
-          },
-          {
-            title: "Watch before you start",
-            time: "4.8 min",
-            isCompleted: true,
-          },
+          { title: "Welcome to this course", time: "2.4 min", isCompleted: true },
+          { title: "Watch before you start", time: "4.8 min", isCompleted: true },
           { title: "Basic Design theory", time: "5.9 min", isCompleted: false },
           { title: "Basic Fundamentals", time: "3.6 min", isCompleted: false },
-          { title: "What is ui/ux", time: "10.6 min", isCompleted: false },
-        ],
+          { title: "What is ui/ux", time: "10.6 min", isCompleted: false }
+        ]
       },
       {
         title: "Web design for Developers",
@@ -3178,27 +2360,11 @@ const db$d = {
         time: "4.8 min",
         id: "section2",
         topics: [
-          {
-            title: "How to use Pages in Figma",
-            time: "8:31 min",
-            isCompleted: false,
-          },
-          {
-            title: "What is Lo Fi Wireframe",
-            time: "2 min",
-            isCompleted: false,
-          },
-          {
-            title: "How to use color in Figma",
-            time: "5.9 min",
-            isCompleted: false,
-          },
-          {
-            title: "Frames vs Groups in Figma",
-            time: "3.6 min",
-            isCompleted: false,
-          },
-        ],
+          { title: "How to use Pages in Figma", time: "8:31 min", isCompleted: false },
+          { title: "What is Lo Fi Wireframe", time: "2 min", isCompleted: false },
+          { title: "How to use color in Figma", time: "5.9 min", isCompleted: false },
+          { title: "Frames vs Groups in Figma", time: "3.6 min", isCompleted: false }
+        ]
       },
       {
         title: "Build Beautiful Websites!",
@@ -3206,21 +2372,13 @@ const db$d = {
         time: "4.4 min",
         id: "section3",
         topics: [
-          {
-            title: "Section & Div Block",
-            time: "3:53 min",
-            isCompleted: false,
-          },
-          {
-            title: "Read-Only Version of Chat App",
-            time: "2:03 min",
-            isCompleted: false,
-          },
+          { title: "Section & Div Block", time: "3:53 min", isCompleted: false },
+          { title: "Read-Only Version of Chat App", time: "2:03 min", isCompleted: false },
           { title: "Webflow Autosave", time: "8 min", isCompleted: false },
           { title: "Canvas Settings", time: "3 min", isCompleted: false },
           { title: "HTML Tags", time: "10 min", isCompleted: false },
-          { title: "Footer (Chat App)", time: "9:10 min", isCompleted: false },
-        ],
+          { title: "Footer (Chat App)", time: "9:10 min", isCompleted: false }
+        ]
       },
       {
         title: "Final Project",
@@ -3228,118 +2386,74 @@ const db$d = {
         time: "4.4 min",
         id: "section4",
         topics: [
-          {
-            title: "Responsive Blog Site",
-            time: "10:00 min",
-            isCompleted: false,
-          },
-          {
-            title: "Responsive Portfolio",
-            time: "13:00 min",
-            isCompleted: false,
-          },
-          { title: "Basic Design theory", time: "15 min", isCompleted: false },
-        ],
-      },
-    ],
-  },
+          { title: "Responsive Blog Site", time: "10:00 min", isCompleted: false },
+          { title: "Responsive Portfolio", time: "13:00 min", isCompleted: false },
+          { title: "Basic Design theory", time: "15 min", isCompleted: false }
+        ]
+      }
+    ]
+  }
 };
 
 const courseDetails_get = defineEventHandler(() => {
   return db$d.courseDetails;
 });
 
-const courseDetails_get$1 = /*#__PURE__*/ Object.freeze({
+const courseDetails_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: courseDetails_get,
+  default: courseDetails_get
 });
 
 const courses_get = defineEventHandler((event) => {
-  const {
-    q,
-    hideCompleted,
-    page = 1,
-    itemsPerPage = 10,
-    sortBy,
-    orderBy,
-    label = "All Courses",
-  } = getQuery$1(event);
+  const { q, hideCompleted, page = 1, itemsPerPage = 10, sortBy, orderBy, label = "All Courses" } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLowered = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLowered = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const parsedHideCompleted = destr$1(hideCompleted);
-  const hideCompletedLocal = is.boolean(parsedHideCompleted)
-    ? parsedHideCompleted
-    : false;
+  const hideCompletedLocal = is.boolean(parsedHideCompleted) ? parsedHideCompleted : false;
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const parsedLabel = destr$1(label);
   const labelLocal = is.string(parsedLabel) ? parsedLabel : "All Courses";
   const filteredCourses = db$d.courses.filter((course) => {
-    return (
-      (course.courseTitle.toLowerCase().includes(queryLowered) ||
-        course.user.toLowerCase().includes(queryLowered)) &&
-      !(course.completedTasks === course.totalTasks && hideCompletedLocal) &&
-      (labelLocal !== "All Courses"
-        ? course.tags.toLocaleLowerCase() ===
-          (labelLocal == null ? void 0 : labelLocal.toLowerCase())
-        : true)
-    );
+    return (course.courseTitle.toLowerCase().includes(queryLowered) || course.user.toLowerCase().includes(queryLowered)) && !(course.completedTasks === course.totalTasks && hideCompletedLocal) && (labelLocal !== "All Courses" ? course.tags.toLocaleLowerCase() === (labelLocal == null ? void 0 : labelLocal.toLowerCase()) : true);
   });
   if (sortByLocal) {
     if (sortByLocal === "courseName") {
       filteredCourses.sort((a, b) => {
         if (orderByLocal === "asc")
           return a.courseTitle.localeCompare(b.courseTitle);
-        else return b.courseTitle.localeCompare(a.courseTitle);
+        else
+          return b.courseTitle.localeCompare(a.courseTitle);
       });
     }
     if (sortByLocal === "progress") {
       filteredCourses.sort((a, b) => {
         if (orderByLocal === "asc")
-          return (
-            a.completedTasks / a.totalTasks - b.completedTasks / b.totalTasks
-          );
+          return a.completedTasks / a.totalTasks - b.completedTasks / b.totalTasks;
         else
-          return (
-            b.completedTasks / b.totalTasks - a.completedTasks / a.totalTasks
-          );
+          return b.completedTasks / b.totalTasks - a.completedTasks / a.totalTasks;
       });
     }
   }
   setResponseStatus(event, 200);
-  return {
-    courses: paginateArray(filteredCourses, itemsPerPageLocal, pageLocal),
-    total: filteredCourses.length,
-  };
+  return { courses: paginateArray(filteredCourses, itemsPerPageLocal, pageLocal), total: filteredCourses.length };
 });
 
-const courses_get$1 = /*#__PURE__*/ Object.freeze({
+const courses_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: courses_get,
+  default: courses_get
 });
 
 const date = /* @__PURE__ */ new Date();
-const nextDay = new Date(
-  /* @__PURE__ */ new Date().getTime() + 24 * 60 * 60 * 1e3
-);
-const nextMonth =
-  date.getMonth() === 11
-    ? new Date(date.getFullYear() + 1, 0, 1)
-    : new Date(date.getFullYear(), date.getMonth() + 1, 1);
-const prevMonth =
-  date.getMonth() === 11
-    ? new Date(date.getFullYear() - 1, 0, 1)
-    : new Date(date.getFullYear(), date.getMonth() - 1, 1);
+const nextDay = new Date((/* @__PURE__ */ new Date()).getTime() + 24 * 60 * 60 * 1e3);
+const nextMonth = date.getMonth() === 11 ? new Date(date.getFullYear() + 1, 0, 1) : new Date(date.getFullYear(), date.getMonth() + 1, 1);
+const prevMonth = date.getMonth() === 11 ? new Date(date.getFullYear() - 1, 0, 1) : new Date(date.getFullYear(), date.getMonth() - 1, 1);
 const db$c = {
   events: [
     {
@@ -3350,8 +2464,8 @@ const db$c = {
       end: nextDay,
       allDay: false,
       extendedProps: {
-        calendar: "Business",
-      },
+        calendar: "Business"
+      }
     },
     {
       id: 2,
@@ -3361,8 +2475,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -10),
       allDay: true,
       extendedProps: {
-        calendar: "Business",
-      },
+        calendar: "Business"
+      }
     },
     {
       id: 3,
@@ -3372,8 +2486,8 @@ const db$c = {
       start: new Date(date.getFullYear(), date.getMonth() + 1, -9),
       end: new Date(date.getFullYear(), date.getMonth() + 1, -7),
       extendedProps: {
-        calendar: "Holiday",
-      },
+        calendar: "Holiday"
+      }
     },
     {
       id: 4,
@@ -3383,8 +2497,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -10),
       allDay: true,
       extendedProps: {
-        calendar: "Personal",
-      },
+        calendar: "Personal"
+      }
     },
     {
       id: 5,
@@ -3394,8 +2508,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -12),
       allDay: true,
       extendedProps: {
-        calendar: "ETC",
-      },
+        calendar: "ETC"
+      }
     },
     {
       id: 6,
@@ -3405,8 +2519,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -12),
       allDay: true,
       extendedProps: {
-        calendar: "Personal",
-      },
+        calendar: "Personal"
+      }
     },
     {
       id: 7,
@@ -3416,8 +2530,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -12),
       allDay: true,
       extendedProps: {
-        calendar: "Family",
-      },
+        calendar: "Family"
+      }
     },
     {
       id: 8,
@@ -3427,8 +2541,8 @@ const db$c = {
       end: new Date(date.getFullYear(), date.getMonth() + 1, -12),
       allDay: true,
       extendedProps: {
-        calendar: "Business",
-      },
+        calendar: "Business"
+      }
     },
     {
       id: 9,
@@ -3438,8 +2552,8 @@ const db$c = {
       end: nextMonth,
       allDay: true,
       extendedProps: {
-        calendar: "Business",
-      },
+        calendar: "Business"
+      }
     },
     {
       id: 10,
@@ -3449,10 +2563,10 @@ const db$c = {
       end: prevMonth,
       allDay: true,
       extendedProps: {
-        calendar: "Personal",
-      },
-    },
-  ],
+        calendar: "Personal"
+      }
+    }
+  ]
 };
 
 const _id__delete$8 = defineEventHandler((event) => {
@@ -3463,9 +2577,9 @@ const _id__delete$8 = defineEventHandler((event) => {
   return null;
 });
 
-const _id__delete$9 = /*#__PURE__*/ Object.freeze({
+const _id__delete$9 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__delete$8,
+  default: _id__delete$8
 });
 
 const _id__put = defineEventHandler(async (event) => {
@@ -3481,52 +2595,42 @@ const _id__put = defineEventHandler(async (event) => {
   return { message: "Something went wrong" };
 });
 
-const _id__put$1 = /*#__PURE__*/ Object.freeze({
+const _id__put$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__put,
+  default: _id__put
 });
 
 const index_get$o = defineEventHandler((event) => {
   const queries = getQuery$1(event);
   const parsedCalendars = destr$1(queries.calendars);
-  const calendars = is.array(parsedCalendars)
-    ? parsedCalendars
-    : parsedCalendars !== void 0
-    ? [parsedCalendars]
-    : void 0;
-  const events = db$c.events.filter((e) =>
-    calendars == null ? void 0 : calendars.includes(e.extendedProps.calendar)
-  );
+  const calendars = is.array(parsedCalendars) ? parsedCalendars : parsedCalendars !== void 0 ? [parsedCalendars] : void 0;
+  const events = db$c.events.filter((e) => calendars == null ? void 0 : calendars.includes(e.extendedProps.calendar));
   setResponseStatus(event, 200);
   return events;
 });
 
-const index_get$p = /*#__PURE__*/ Object.freeze({
+const index_get$p = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$o,
+  default: index_get$o
 });
 
 const index_post$4 = defineEventHandler(async (event) => {
   const eventToAdd = await readBody(event);
   db$c.events.push({
     ...eventToAdd,
-    id: genId(db$c.events),
+    id: genId(db$c.events)
   });
   setResponseStatus(event, 201);
   return { body: eventToAdd };
 });
 
-const index_post$5 = /*#__PURE__*/ Object.freeze({
+const index_post$5 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_post$4,
+  default: index_post$4
 });
 
-const previousDay = new Date(
-  /* @__PURE__ */ new Date().getTime() - 24 * 60 * 60 * 1e3
-);
-const dayBeforePreviousDay = new Date(
-  /* @__PURE__ */ new Date().getTime() - 24 * 60 * 60 * 1e3 * 2
-);
+const previousDay = new Date((/* @__PURE__ */ new Date()).getTime() - 24 * 60 * 60 * 1e3);
+const dayBeforePreviousDay = new Date((/* @__PURE__ */ new Date()).getTime() - 24 * 60 * 60 * 1e3 * 2);
 const avatar1$8 = getPublicUrl("/images/avatars/avatar-1.png");
 const avatar2$8 = getPublicUrl("/images/avatars/avatar-2.png");
 const avatar3$7 = getPublicUrl("/images/avatars/avatar-3.png");
@@ -3540,105 +2644,94 @@ const db$b = {
     avatar: avatar1$8,
     fullName: "John Doe",
     role: "admin",
-    about:
-      "Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie marshmallow.",
+    about: "Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie marshmallow.",
     status: "online",
     settings: {
       isTwoStepAuthVerificationEnabled: true,
-      isNotificationsOn: false,
-    },
+      isNotificationsOn: false
+    }
   },
   contacts: [
     {
       id: 1,
       fullName: "Gavin Griffith",
       role: "Frontend Developer",
-      about:
-        "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
+      about: "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
       avatar: avatar5$7,
-      status: "offline",
+      status: "offline"
     },
     {
       id: 2,
       fullName: "Harriet McBride",
       role: "UI/UX Designer",
-      about:
-        "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
+      about: "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
       avatar: avatar2$8,
-      status: "busy",
+      status: "busy"
     },
     {
       id: 3,
       fullName: "Danny Conner",
       role: "Town planner",
-      about:
-        "Souffl\xE9 souffl\xE9 caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.",
+      about: "Souffl\xE9 souffl\xE9 caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.",
       avatar: "",
-      status: "busy",
+      status: "busy"
     },
     {
       id: 4,
       fullName: "Janie West",
       role: "Data scientist",
-      about:
-        "Chupa chups candy canes chocolate bar marshmallow liquorice muffin. Lemon drops oat cake tart liquorice tart cookie. Jelly-o cookie tootsie roll halvah.",
+      about: "Chupa chups candy canes chocolate bar marshmallow liquorice muffin. Lemon drops oat cake tart liquorice tart cookie. Jelly-o cookie tootsie roll halvah.",
       avatar: "",
-      status: "online",
+      status: "online"
     },
     {
       id: 5,
       fullName: "Bryan Murray",
       role: "Dietitian",
-      about:
-        "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
+      about: "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
       avatar: avatar5$7,
-      status: "busy",
+      status: "busy"
     },
     {
       id: 6,
       fullName: "Albert Underwood",
       role: "Marketing executive",
-      about:
-        "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
+      about: "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
       avatar: avatar6$6,
-      status: "online",
+      status: "online"
     },
     {
       id: 7,
       fullName: "Adele Ross",
       role: "Special educational needs teacher",
-      about:
-        "Biscuit powder oat cake donut brownie ice cream I love souffl\xE9. I love tootsie roll I love powder tootsie roll.",
+      about: "Biscuit powder oat cake donut brownie ice cream I love souffl\xE9. I love tootsie roll I love powder tootsie roll.",
       avatar: "",
-      status: "online",
+      status: "online"
     },
     {
       id: 8,
       fullName: "Mark Berry",
       role: "Advertising copywriter",
-      about:
-        "Bear claw ice cream lollipop gingerbread carrot cake. Brownie gummi bears chocolate muffin croissant jelly I love marzipan wafer.",
+      about: "Bear claw ice cream lollipop gingerbread carrot cake. Brownie gummi bears chocolate muffin croissant jelly I love marzipan wafer.",
       avatar: avatar3$7,
-      status: "away",
+      status: "away"
     },
     {
       id: 9,
       fullName: "Joseph Evans",
       role: "Designer, television/film set",
-      about:
-        "Gummies gummi bears I love candy icing apple pie I love marzipan bear claw. I love tart biscuit I love candy canes pudding chupa chups liquorice croissant.",
+      about: "Gummies gummi bears I love candy icing apple pie I love marzipan bear claw. I love tart biscuit I love candy canes pudding chupa chups liquorice croissant.",
       avatar: avatar8$5,
-      status: "offline",
+      status: "offline"
     },
     {
       id: 10,
       fullName: "Blake Carter",
       role: "Building surveyor",
-      about:
-        "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
+      about: "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing",
       avatar: avatar4$7,
-      status: "away",
-    },
+      status: "away"
+    }
   ],
   chats: [
     {
@@ -3653,8 +2746,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "Hello. How can I help You?",
@@ -3663,19 +2756,18 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
-          message:
-            "Can I get details of my last transaction I made last month? \u{1F914}",
+          message: "Can I get details of my last transaction I made last month? \u{1F914}",
           time: "Mon Dec 11 2018 07:46:10 GMT+0000 (GMT)",
           senderId: 11,
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "We need to check if we can provide you such information.",
@@ -3684,8 +2776,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "I will inform you as I get update on this.",
@@ -3694,8 +2786,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "If it takes long you can mail me at my mail address.",
@@ -3704,10 +2796,10 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: false,
-            isSeen: false,
-          },
-        },
-      ],
+            isSeen: false
+          }
+        }
+      ]
     },
     {
       id: 2,
@@ -3721,19 +2813,18 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
-          message:
-            "Hey John, I am looking for the best admin template. Could you please help me to find it out?",
+          message: "Hey John, I am looking for the best admin template. Could you please help me to find it out?",
           time: "Mon Dec 10 2018 07:45:23 GMT+0000 (GMT)",
           senderId: 1,
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "It should use nice Framework.",
@@ -3742,8 +2833,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "Absolutely!",
@@ -3752,8 +2843,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "Our admin is the responsive admin template.!",
@@ -3762,8 +2853,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "Looks clean and fresh UI. \u{1F60D}",
@@ -3772,8 +2863,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "It's perfect for my next project.",
@@ -3782,8 +2873,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "How can I purchase it?",
@@ -3792,8 +2883,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "Thanks, From our official site  \u{1F607}",
@@ -3802,8 +2893,8 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
+            isSeen: true
+          }
         },
         {
           message: "I will purchase it for sure. \u{1F44D}",
@@ -3812,60 +2903,49 @@ const db$b = {
           feedback: {
             isSent: true,
             isDelivered: true,
-            isSeen: true,
-          },
-        },
-      ],
-    },
-  ],
+            isSeen: true
+          }
+        }
+      ]
+    }
+  ]
 };
 
 const chatsAndContacts_get = defineEventHandler(async (event) => {
   const { q = "" } = getQuery$1(event);
   const qLowered = q.toLowerCase();
-  const chatsContacts = db$b.chats
-    .map((chat) => {
-      const contact = JSON.parse(
-        JSON.stringify(db$b.contacts.find((c) => c.id === chat.userId))
-      );
-      contact.chat = {
-        id: chat.id,
-        unseenMsgs: chat.unseenMsgs,
-        lastMessage: chat.messages.at(-1),
-      };
-      return contact;
-    })
-    .reverse();
+  const chatsContacts = db$b.chats.map((chat) => {
+    const contact = JSON.parse(JSON.stringify(db$b.contacts.find((c) => c.id === chat.userId)));
+    contact.chat = { id: chat.id, unseenMsgs: chat.unseenMsgs, lastMessage: chat.messages.at(-1) };
+    return contact;
+  }).reverse();
   const profileUserData = db$b.profileUser;
   return {
-    chatsContacts: chatsContacts.filter((c) =>
-      c.fullName.toLowerCase().includes(qLowered)
-    ),
-    contacts: db$b.contacts.filter((c) =>
-      c.fullName.toLowerCase().includes(qLowered)
-    ),
-    profileUser: profileUserData,
+    chatsContacts: chatsContacts.filter((c) => c.fullName.toLowerCase().includes(qLowered)),
+    contacts: db$b.contacts.filter((c) => c.fullName.toLowerCase().includes(qLowered)),
+    profileUser: profileUserData
   };
 });
 
-const chatsAndContacts_get$1 = /*#__PURE__*/ Object.freeze({
+const chatsAndContacts_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: chatsAndContacts_get,
+  default: chatsAndContacts_get
 });
 
 const _id__get$6 = defineEventHandler(async (event) => {
   const userId = getIntId(event, "User id is required to get chat messages");
   const chat = db$b.chats.find((c) => c.userId === userId);
-  if (chat) chat.unseenMsgs = 0;
+  if (chat)
+    chat.unseenMsgs = 0;
   return {
     chat,
-    contact: db$b.contacts.find((c) => c.id === userId),
+    contact: db$b.contacts.find((c) => c.id === userId)
   };
 });
 
-const _id__get$7 = /*#__PURE__*/ Object.freeze({
+const _id__get$7 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__get$6,
+  default: _id__get$6
 });
 
 const _id__post = defineEventHandler(async (event) => {
@@ -3879,8 +2959,8 @@ const _id__post = defineEventHandler(async (event) => {
     feedback: {
       isSent: true,
       isDelivered: false,
-      isSeen: false,
-    },
+      isSeen: false
+    }
   };
   let isNewChat = false;
   if (activeChat === void 0) {
@@ -3889,21 +2969,22 @@ const _id__post = defineEventHandler(async (event) => {
       id: db$b.chats.length + 1,
       userId: chatId,
       unseenMsgs: 0,
-      messages: [newMessageData],
+      messages: [newMessageData]
     });
     activeChat = db$b.chats.at(-1);
   } else {
     activeChat.messages.push(newMessageData);
   }
   const response = { msg: newMessageData };
-  if (isNewChat) response.chat = activeChat;
+  if (isNewChat)
+    response.chat = activeChat;
   setResponseStatus(event, 201);
   return response;
 });
 
-const _id__post$1 = /*#__PURE__*/ Object.freeze({
+const _id__post$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__post,
+  default: _id__post
 });
 
 const auFlag = getPublicUrl("/images/icons/countries/au.png");
@@ -3960,7 +3041,7 @@ const db$a = {
       qty: 665,
       status: "Inactive",
       image: product1,
-      productBrand: "Super Retina XDR display footnote Pro Motion technology",
+      productBrand: "Super Retina XDR display footnote Pro Motion technology"
     },
     {
       id: 2,
@@ -3972,7 +3053,7 @@ const db$a = {
       qty: 827,
       status: "Published",
       image: product2,
-      productBrand: "Echo Dot Smart speaker with Alexa",
+      productBrand: "Echo Dot Smart speaker with Alexa"
     },
     {
       id: 3,
@@ -3984,7 +3065,7 @@ const db$a = {
       qty: 804,
       status: "Published",
       image: product3$1,
-      productBrand: "Modern 10 Inch Battery Operated Wall Clocks",
+      productBrand: "Modern 10 Inch Battery Operated Wall Clocks"
     },
     {
       id: 4,
@@ -3996,7 +3077,7 @@ const db$a = {
       qty: 528,
       status: "Scheduled",
       image: product4$1,
-      productBrand: "Lightweight Tennis Shoes Non Slip Gym Workout Shoes",
+      productBrand: "Lightweight Tennis Shoes Non Slip Gym Workout Shoes"
     },
     {
       id: 5,
@@ -4008,7 +3089,7 @@ const db$a = {
       qty: 851,
       status: "Scheduled",
       image: product5$1,
-      productBrand: "Starlight Aluminum Case with Starlight Sport Band.",
+      productBrand: "Starlight Aluminum Case with Starlight Sport Band."
     },
     {
       id: 6,
@@ -4020,7 +3101,7 @@ const db$a = {
       qty: 962,
       status: "Scheduled",
       image: product6$1,
-      productBrand: "Advanced All-In-One Virtual Reality Headset",
+      productBrand: "Advanced All-In-One Virtual Reality Headset"
     },
     {
       id: 7,
@@ -4032,8 +3113,7 @@ const db$a = {
       qty: 965,
       status: "Published",
       image: product7$1,
-      productBrand:
-        "Laptop M2 Pro chip with 12\u2011core CPU and 19\u2011core GPU",
+      productBrand: "Laptop M2 Pro chip with 12\u2011core CPU and 19\u2011core GPU"
     },
     {
       id: 8,
@@ -4045,7 +3125,7 @@ const db$a = {
       qty: 447,
       status: "Published",
       image: product8$1,
-      productBrand: "Android Smartphone, 256GB, 8K Camera",
+      productBrand: "Android Smartphone, 256GB, 8K Camera"
     },
     {
       id: 9,
@@ -4057,7 +3137,7 @@ const db$a = {
       qty: 942,
       status: "Inactive",
       image: product9$1,
-      productBrand: "Air Jordan is a line of basketball shoes produced by Nike",
+      productBrand: "Air Jordan is a line of basketball shoes produced by Nike"
     },
     {
       id: 10,
@@ -4069,7 +3149,7 @@ const db$a = {
       qty: 133,
       status: "Scheduled",
       image: product10$1,
-      productBrand: "Armchair, Skartofta black/light grey",
+      productBrand: "Armchair, Skartofta black/light grey"
     },
     {
       id: 11,
@@ -4081,7 +3161,7 @@ const db$a = {
       qty: 870,
       status: "Inactive",
       image: product11$1,
-      productBrand: "TV Mode, Tabletop Mode, Handheld Mode",
+      productBrand: "TV Mode, Tabletop Mode, Handheld Mode"
     },
     {
       id: 12,
@@ -4093,7 +3173,7 @@ const db$a = {
       qty: 145,
       status: "Scheduled",
       image: product12,
-      productBrand: "Marvel at incredible graphics and experience",
+      productBrand: "Marvel at incredible graphics and experience"
     },
     {
       id: 13,
@@ -4105,7 +3185,7 @@ const db$a = {
       qty: 587,
       status: "Scheduled",
       image: product13$1,
-      productBrand: "4K UHD smart TV, stream live TV without cable",
+      productBrand: "4K UHD smart TV, stream live TV without cable"
     },
     {
       id: 14,
@@ -4117,7 +3197,7 @@ const db$a = {
       qty: 310,
       status: "Scheduled",
       image: product14$1,
-      productBrand: "Modern Farmhouse Decor Vase Set of 3",
+      productBrand: "Modern Farmhouse Decor Vase Set of 3"
     },
     {
       id: 15,
@@ -4129,7 +3209,7 @@ const db$a = {
       qty: 468,
       status: "Published",
       image: product15$1,
-      productBrand: "10.2-inch Retina Display, 64GB",
+      productBrand: "10.2-inch Retina Display, 64GB"
     },
     {
       id: 16,
@@ -4141,7 +3221,7 @@ const db$a = {
       qty: 519,
       status: "Inactive",
       image: product16$1,
-      productBrand: "Smart Business Laptop Fits 15.6 Inch Notebook",
+      productBrand: "Smart Business Laptop Fits 15.6 Inch Notebook"
     },
     {
       id: 17,
@@ -4153,7 +3233,7 @@ const db$a = {
       qty: 787,
       status: "Published",
       image: product17$1,
-      productBrand: "Dual Controller Charger Station Dock",
+      productBrand: "Dual Controller Charger Station Dock"
     },
     {
       id: 18,
@@ -4165,7 +3245,7 @@ const db$a = {
       qty: 810,
       status: "Scheduled",
       image: product18$1,
-      productBrand: "18-55mm Lens | Built-in Wi-Fi | 24.1 MP CMOS Sensor",
+      productBrand: "18-55mm Lens | Built-in Wi-Fi | 24.1 MP CMOS Sensor"
     },
     {
       id: 19,
@@ -4177,7 +3257,7 @@ const db$a = {
       qty: 735,
       status: "Inactive",
       image: product19$1,
-      productBrand: "Decorative 12 inch Rustic Wood Mirror Sunburst Boho",
+      productBrand: "Decorative 12 inch Rustic Wood Mirror Sunburst Boho"
     },
     {
       id: 20,
@@ -4189,7 +3269,7 @@ const db$a = {
       qty: 294,
       status: "Inactive",
       image: product20$1,
-      productBrand: "Peloton Shoes Triathlon Road Bike Indoor Cycling",
+      productBrand: "Peloton Shoes Triathlon Road Bike Indoor Cycling"
     },
     {
       id: 21,
@@ -4201,7 +3281,7 @@ const db$a = {
       qty: 927,
       status: "Scheduled",
       image: product1,
-      productBrand: "Cruickshank-Jones",
+      productBrand: "Cruickshank-Jones"
     },
     {
       id: 22,
@@ -4213,7 +3293,7 @@ const db$a = {
       qty: 442,
       status: "Scheduled",
       image: product2,
-      productBrand: "Ferry Group",
+      productBrand: "Ferry Group"
     },
     {
       id: 23,
@@ -4225,7 +3305,7 @@ const db$a = {
       qty: 256,
       status: "Published",
       image: product3$1,
-      productBrand: "Bruen-Heathcote",
+      productBrand: "Bruen-Heathcote"
     },
     {
       id: 24,
@@ -4237,7 +3317,7 @@ const db$a = {
       qty: 728,
       status: "Published",
       image: product4$1,
-      productBrand: "Koch Group",
+      productBrand: "Koch Group"
     },
     {
       id: 25,
@@ -4249,7 +3329,7 @@ const db$a = {
       qty: 445,
       status: "Scheduled",
       image: product5$1,
-      productBrand: "Emmerich and Sons",
+      productBrand: "Emmerich and Sons"
     },
     {
       id: 26,
@@ -4261,7 +3341,7 @@ const db$a = {
       qty: 857,
       status: "Scheduled",
       image: product6$1,
-      productBrand: "Zulauf-Prohaska",
+      productBrand: "Zulauf-Prohaska"
     },
     {
       id: 27,
@@ -4273,7 +3353,7 @@ const db$a = {
       qty: 975,
       status: "Published",
       image: product7$1,
-      productBrand: "VonRueden, Rogahn and Kris",
+      productBrand: "VonRueden, Rogahn and Kris"
     },
     {
       id: 28,
@@ -4285,7 +3365,7 @@ const db$a = {
       qty: 39,
       status: "Published",
       image: product8$1,
-      productBrand: "Romaguera, O'Connell and Abernathy",
+      productBrand: "Romaguera, O'Connell and Abernathy"
     },
     {
       id: 29,
@@ -4297,7 +3377,7 @@ const db$a = {
       qty: 74,
       status: "Published",
       image: product9$1,
-      productBrand: "Mills, Hagenes and Bednar",
+      productBrand: "Mills, Hagenes and Bednar"
     },
     {
       id: 30,
@@ -4309,7 +3389,7 @@ const db$a = {
       qty: 245,
       status: "Inactive",
       image: product10$1,
-      productBrand: "Sanford, Harvey and Parisian",
+      productBrand: "Sanford, Harvey and Parisian"
     },
     {
       id: 31,
@@ -4321,7 +3401,7 @@ const db$a = {
       qty: 657,
       status: "Inactive",
       image: product11$1,
-      productBrand: "Conroy-Bergstrom",
+      productBrand: "Conroy-Bergstrom"
     },
     {
       id: 32,
@@ -4333,7 +3413,7 @@ const db$a = {
       qty: 770,
       status: "Published",
       image: product12,
-      productBrand: "Langosh Inc",
+      productBrand: "Langosh Inc"
     },
     {
       id: 33,
@@ -4345,7 +3425,7 @@ const db$a = {
       qty: 622,
       status: "Inactive",
       image: product13$1,
-      productBrand: "Jerde-Walsh",
+      productBrand: "Jerde-Walsh"
     },
     {
       id: 34,
@@ -4357,7 +3437,7 @@ const db$a = {
       qty: 896,
       status: "Scheduled",
       image: product14$1,
-      productBrand: "Barrows, Quitzon and Roberts",
+      productBrand: "Barrows, Quitzon and Roberts"
     },
     {
       id: 35,
@@ -4369,7 +3449,7 @@ const db$a = {
       qty: 239,
       status: "Inactive",
       image: product15$1,
-      productBrand: "Russel-Grant",
+      productBrand: "Russel-Grant"
     },
     {
       id: 36,
@@ -4381,7 +3461,7 @@ const db$a = {
       qty: 410,
       status: "Scheduled",
       image: product16$1,
-      productBrand: "O'Conner-Zboncak",
+      productBrand: "O'Conner-Zboncak"
     },
     {
       id: 37,
@@ -4393,7 +3473,7 @@ const db$a = {
       qty: 630,
       status: "Published",
       image: product17$1,
-      productBrand: "Rutherford, Heller and Bashirian",
+      productBrand: "Rutherford, Heller and Bashirian"
     },
     {
       id: 38,
@@ -4405,7 +3485,7 @@ const db$a = {
       qty: 247,
       status: "Inactive",
       image: product18$1,
-      productBrand: "Swift-Altenwerth",
+      productBrand: "Swift-Altenwerth"
     },
     {
       id: 39,
@@ -4417,7 +3497,7 @@ const db$a = {
       qty: 672,
       status: "Inactive",
       image: product19$1,
-      productBrand: "O'Kon, Waelchi and Lesch",
+      productBrand: "O'Kon, Waelchi and Lesch"
     },
     {
       id: 40,
@@ -4429,7 +3509,7 @@ const db$a = {
       qty: 697,
       status: "Published",
       image: product20$1,
-      productBrand: "Johnston, Anderson and Metz",
+      productBrand: "Johnston, Anderson and Metz"
     },
     {
       id: 41,
@@ -4441,7 +3521,7 @@ const db$a = {
       qty: 74,
       status: "Published",
       image: product1,
-      productBrand: "O'Conner, Paucek and Braun",
+      productBrand: "O'Conner, Paucek and Braun"
     },
     {
       id: 42,
@@ -4453,7 +3533,7 @@ const db$a = {
       qty: 280,
       status: "Published",
       image: product2,
-      productBrand: "Wisoky-Kassulke",
+      productBrand: "Wisoky-Kassulke"
     },
     {
       id: 43,
@@ -4465,7 +3545,7 @@ const db$a = {
       qty: 758,
       status: "Inactive",
       image: product3$1,
-      productBrand: "Haag, Bruen and Reichel",
+      productBrand: "Haag, Bruen and Reichel"
     },
     {
       id: 44,
@@ -4477,7 +3557,7 @@ const db$a = {
       qty: 14,
       status: "Inactive",
       image: product4$1,
-      productBrand: "Ankunding Inc",
+      productBrand: "Ankunding Inc"
     },
     {
       id: 45,
@@ -4489,7 +3569,7 @@ const db$a = {
       qty: 35,
       status: "Inactive",
       image: product5$1,
-      productBrand: "Deckow and Sons",
+      productBrand: "Deckow and Sons"
     },
     {
       id: 46,
@@ -4501,7 +3581,7 @@ const db$a = {
       qty: 935,
       status: "Scheduled",
       image: product1,
-      productBrand: "Kreiger, Reynolds and Sporer",
+      productBrand: "Kreiger, Reynolds and Sporer"
     },
     {
       id: 47,
@@ -4513,7 +3593,7 @@ const db$a = {
       qty: 361,
       status: "Published",
       image: product6$1,
-      productBrand: "Kuphal-Abbott",
+      productBrand: "Kuphal-Abbott"
     },
     {
       id: 48,
@@ -4525,7 +3605,7 @@ const db$a = {
       qty: 908,
       status: "Scheduled",
       image: product7$1,
-      productBrand: "Romaguera, Schmeler and Volkman",
+      productBrand: "Romaguera, Schmeler and Volkman"
     },
     {
       id: 49,
@@ -4537,7 +3617,7 @@ const db$a = {
       qty: 898,
       status: "Scheduled",
       image: product24$1,
-      productBrand: "Hane-Romaguera",
+      productBrand: "Hane-Romaguera"
     },
     {
       id: 50,
@@ -4549,8 +3629,8 @@ const db$a = {
       qty: 332,
       status: "Published",
       image: product9$1,
-      productBrand: "Hoeger-Powlowski",
-    },
+      productBrand: "Hoeger-Powlowski"
+    }
   ],
   reviews: [
     {
@@ -4565,7 +3645,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "lorem ipsum dolor",
-      para: "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+      para: "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
     },
     {
       id: 2,
@@ -4579,7 +3659,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "libero ut",
-      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
     },
     {
       id: 3,
@@ -4593,7 +3673,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "neque libero convallis",
-      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui."
     },
     {
       id: 4,
@@ -4607,7 +3687,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "accumsan tellus nisi eu",
-      para: "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+      para: "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
     },
     {
       id: 5,
@@ -4621,7 +3701,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "etiam faucibus cursus",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 6,
@@ -4635,13 +3715,12 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "in faucibus orci luctus et",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 7,
       product: "MacBook Pro 16",
-      companyName:
-        "Laptop M2 Pro chip with 12\u2011core CPU and 19\u2011core GPU",
+      companyName: "Laptop M2 Pro chip with 12\u2011core CPU and 19\u2011core GPU",
       productImage: product7$1,
       reviewer: "Abeu Gregorace",
       email: "agregorace6@godaddy.com",
@@ -4650,7 +3729,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "vel enim",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 8,
@@ -4664,7 +3743,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "eget semper rutrum",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 9,
@@ -4678,7 +3757,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "ut mauris",
-      para: "Fusce consequat. Nulla nisl. Nunc nisl.",
+      para: "Fusce consequat. Nulla nisl. Nunc nisl."
     },
     {
       id: 10,
@@ -4692,7 +3771,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "amet consectetuer adipiscing elit proin",
-      para: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      para: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
     },
     {
       id: 11,
@@ -4706,7 +3785,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "eget nunc donec",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 12,
@@ -4720,7 +3799,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "lacus at velit",
-      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui."
     },
     {
       id: 13,
@@ -4734,7 +3813,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "at nunc commodo placerat praesent",
-      para: "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      para: "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
     },
     {
       id: 14,
@@ -4748,7 +3827,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "in hac",
-      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
     },
     {
       id: 15,
@@ -4762,7 +3841,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "ac consequat",
-      para: "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+      para: "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
     },
     {
       id: 16,
@@ -4776,7 +3855,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "mattis egestas metus",
-      para: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      para: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
     },
     {
       id: 17,
@@ -4790,7 +3869,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "sapien placerat",
-      para: "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+      para: "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem."
     },
     {
       id: 18,
@@ -4804,7 +3883,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "nec nisi vulputate",
-      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl."
     },
     {
       id: 19,
@@ -4818,7 +3897,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "parturient montes nascetur ridiculus",
-      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
     },
     {
       id: 20,
@@ -4832,7 +3911,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "maecenas ut massa quis augue",
-      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
     },
     {
       id: 21,
@@ -4846,7 +3925,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "convallis nulla",
-      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
     },
     {
       id: 22,
@@ -4860,7 +3939,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "nunc viverra dapibus",
-      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus."
     },
     {
       id: 23,
@@ -4874,7 +3953,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "nullam porttitor",
-      para: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+      para: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis."
     },
     {
       id: 24,
@@ -4888,7 +3967,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "metus sapien ut",
-      para: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      para: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     },
     {
       id: 25,
@@ -4902,7 +3981,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "orci luctus et",
-      para: "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+      para: "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
     },
     {
       id: 26,
@@ -4916,7 +3995,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "vestibulum ante ipsum",
-      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus."
     },
     {
       id: 27,
@@ -4930,7 +4009,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "vel enim",
-      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
     },
     {
       id: 28,
@@ -4944,7 +4023,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "cubilia curae mauris",
-      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
     },
     {
       id: 29,
@@ -4958,7 +4037,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "gravida nisi at",
-      para: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+      para: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat."
     },
     {
       id: 30,
@@ -4972,7 +4051,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "nec sem",
-      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
     },
     {
       id: 31,
@@ -4986,7 +4065,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "odio elementum eu",
-      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
     },
     {
       id: 32,
@@ -5000,7 +4079,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "in imperdiet et commodo",
-      para: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+      para: "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem."
     },
     {
       id: 33,
@@ -5014,7 +4093,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "pellentesque at",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 34,
@@ -5028,7 +4107,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "congue etiam",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 35,
@@ -5042,7 +4121,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "eget eros",
-      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
     },
     {
       id: 36,
@@ -5056,7 +4135,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "vel dapibus",
-      para: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+      para: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum."
     },
     {
       id: 37,
@@ -5070,7 +4149,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "sit amet consectetuer",
-      para: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+      para: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros."
     },
     {
       id: 38,
@@ -5084,7 +4163,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "blandit non",
-      para: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      para: "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat."
     },
     {
       id: 39,
@@ -5098,7 +4177,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "in ante vestibulum ante",
-      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
     },
     {
       id: 40,
@@ -5112,7 +4191,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "ante ipsum primis in",
-      para: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+      para: "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros."
     },
     {
       id: 41,
@@ -5126,7 +4205,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "mus etiam vel augue",
-      para: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+      para: "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat."
     },
     {
       id: 42,
@@ -5140,7 +4219,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "dictumst aliquam augue quam",
-      para: "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+      para: "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus."
     },
     {
       id: 43,
@@ -5154,7 +4233,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "mauris non ligula pellentesque ultrices",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 44,
@@ -5168,7 +4247,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "vel augue vestibulum ante",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 45,
@@ -5182,7 +4261,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "convallis nulla neque",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 46,
@@ -5196,7 +4275,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "quam turpis adipiscing lorem",
-      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
     },
     {
       id: 47,
@@ -5210,7 +4289,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "morbi non",
-      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
     },
     {
       id: 48,
@@ -5224,7 +4303,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "vel dapibus at diam",
-      para: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      para: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
     },
     {
       id: 49,
@@ -5238,7 +4317,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "morbi porttitor lorem",
-      para: "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+      para: "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi."
     },
     {
       id: 50,
@@ -5252,7 +4331,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "non sodales",
-      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
     },
     {
       id: 51,
@@ -5266,7 +4345,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "nam congue risus semper porta",
-      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
     },
     {
       id: 52,
@@ -5280,7 +4359,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "rutrum rutrum neque aenean auctor",
-      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
     },
     {
       id: 53,
@@ -5294,7 +4373,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "non mi",
-      para: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+      para: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus."
     },
     {
       id: 54,
@@ -5308,7 +4387,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "maecenas pulvinar lobortis est phasellus",
-      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
     },
     {
       id: 55,
@@ -5322,7 +4401,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "tortor sollicitudin",
-      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
     },
     {
       id: 56,
@@ -5336,7 +4415,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "odio cras mi pede malesuada",
-      para: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+      para: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat."
     },
     {
       id: 57,
@@ -5350,7 +4429,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "sed nisl nunc rhoncus",
-      para: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      para: "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum."
     },
     {
       id: 58,
@@ -5364,7 +4443,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "bibendum imperdiet nullam orci",
-      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl."
     },
     {
       id: 59,
@@ -5378,7 +4457,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "curabitur at",
-      para: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+      para: "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum."
     },
     {
       id: 60,
@@ -5392,7 +4471,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "massa donec dapibus duis at",
-      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
     },
     {
       id: 61,
@@ -5406,7 +4485,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "dictumst maecenas",
-      para: "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+      para: "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
     },
     {
       id: 62,
@@ -5420,7 +4499,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "elit ac nulla",
-      para: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      para: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
     },
     {
       id: 63,
@@ -5434,7 +4513,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "sagittis nam congue",
-      para: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+      para: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus."
     },
     {
       id: 64,
@@ -5448,7 +4527,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "amet diam in magna bibendum",
-      para: "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+      para: "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
     },
     {
       id: 65,
@@ -5462,7 +4541,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "enim blandit mi",
-      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
     },
     {
       id: 66,
@@ -5476,7 +4555,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "pede ullamcorper augue a suscipit",
-      para: "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+      para: "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
     },
     {
       id: 67,
@@ -5490,7 +4569,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "porta volutpat",
-      para: "In congue. Etiam justo. Etiam pretium iaculis justo.",
+      para: "In congue. Etiam justo. Etiam pretium iaculis justo."
     },
     {
       id: 68,
@@ -5504,7 +4583,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "aliquam lacus morbi quis tortor",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 69,
@@ -5518,7 +4597,7 @@ const db$a = {
       status: "Pending",
       review: 5,
       head: "vestibulum velit id pretium",
-      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
     },
     {
       id: 70,
@@ -5532,7 +4611,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "amet eros suspendisse accumsan tortor",
-      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
     },
     {
       id: 71,
@@ -5546,7 +4625,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "blandit lacinia erat vestibulum sed",
-      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
     },
     {
       id: 72,
@@ -5560,7 +4639,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "vitae ipsum aliquam",
-      para: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+      para: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
     },
     {
       id: 73,
@@ -5574,7 +4653,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "tortor duis mattis egestas",
-      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      para: "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
     },
     {
       id: 74,
@@ -5588,7 +4667,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "pede justo lacinia eget tincidunt",
-      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+      para: "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus."
     },
     {
       id: 75,
@@ -5602,7 +4681,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "sit amet lobortis sapien",
-      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+      para: "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo."
     },
     {
       id: 76,
@@ -5616,7 +4695,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "cras non velit",
-      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      para: "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
     },
     {
       id: 77,
@@ -5630,7 +4709,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "luctus tincidunt nulla mollis molestie",
-      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
     },
     {
       id: 78,
@@ -5644,7 +4723,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "ut odio cras",
-      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
     },
     {
       id: 79,
@@ -5658,7 +4737,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "gravida sem",
-      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      para: "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl."
     },
     {
       id: 80,
@@ -5672,7 +4751,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "ligula pellentesque ultrices phasellus",
-      para: "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+      para: "Sed ante. Vivamus tortor. Duis mattis egestas metus."
     },
     {
       id: 81,
@@ -5686,7 +4765,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "elementum nullam varius nulla",
-      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      para: "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
     },
     {
       id: 82,
@@ -5700,7 +4779,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "odio porttitor",
-      para: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      para: "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     },
     {
       id: 83,
@@ -5714,7 +4793,7 @@ const db$a = {
       status: "Published",
       review: 1,
       head: "lacinia sapien quis",
-      para: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      para: "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
     },
     {
       id: 84,
@@ -5728,7 +4807,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "mauris sit amet eros suspendisse",
-      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
     },
     {
       id: 85,
@@ -5742,7 +4821,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "molestie hendrerit at vulputate vitae",
-      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      para: "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
     },
     {
       id: 86,
@@ -5756,7 +4835,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "nisi venenatis tristique fusce",
-      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+      para: "Phasellus in felis. Donec semper sapien a libero. Nam dui."
     },
     {
       id: 87,
@@ -5770,7 +4849,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "augue quam sollicitudin",
-      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+      para: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus."
     },
     {
       id: 88,
@@ -5784,7 +4863,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "eget tincidunt",
-      para: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      para: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
     },
     {
       id: 89,
@@ -5798,7 +4877,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "eu interdum eu",
-      para: "In congue. Etiam justo. Etiam pretium iaculis justo.",
+      para: "In congue. Etiam justo. Etiam pretium iaculis justo."
     },
     {
       id: 90,
@@ -5812,7 +4891,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "leo rhoncus sed vestibulum",
-      para: "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+      para: "Sed ante. Vivamus tortor. Duis mattis egestas metus."
     },
     {
       id: 91,
@@ -5826,7 +4905,7 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "dui maecenas",
-      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
     },
     {
       id: 92,
@@ -5840,7 +4919,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "odio elementum",
-      para: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+      para: "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
     },
     {
       id: 93,
@@ -5854,7 +4933,7 @@ const db$a = {
       status: "Published",
       review: 5,
       head: "ultrices phasellus id",
-      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+      para: "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est."
     },
     {
       id: 94,
@@ -5868,7 +4947,7 @@ const db$a = {
       status: "Pending",
       review: 1,
       head: "eleifend quam",
-      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      para: "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
     },
     {
       id: 95,
@@ -5882,7 +4961,7 @@ const db$a = {
       status: "Published",
       review: 4,
       head: "fermentum justo",
-      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      para: "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
     },
     {
       id: 96,
@@ -5896,7 +4975,7 @@ const db$a = {
       status: "Pending",
       review: 2,
       head: "morbi ut",
-      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      para: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus."
     },
     {
       id: 97,
@@ -5910,7 +4989,7 @@ const db$a = {
       status: "Pending",
       review: 4,
       head: "sapien cursus vestibulum proin",
-      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      para: "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum."
     },
     {
       id: 98,
@@ -5924,7 +5003,7 @@ const db$a = {
       status: "Published",
       review: 2,
       head: "tincidunt in leo maecenas",
-      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      para: "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque."
     },
     {
       id: 99,
@@ -5938,7 +5017,7 @@ const db$a = {
       status: "Pending",
       review: 3,
       head: "pharetra magna ac",
-      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
     },
     {
       id: 100,
@@ -5952,8 +5031,8 @@ const db$a = {
       status: "Published",
       review: 3,
       head: "suscipit ligula in lacus",
-      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    },
+      para: "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
+    }
   ],
   referrals: [
     {
@@ -5964,7 +5043,7 @@ const db$a = {
       referredId: 3398,
       status: "Unpaid",
       value: "$6655.92",
-      earning: "$380.17",
+      earning: "$380.17"
     },
     {
       id: 2,
@@ -5974,7 +5053,7 @@ const db$a = {
       referredId: 6740,
       status: "Unpaid",
       value: "$2113.04",
-      earning: "$716.72",
+      earning: "$716.72"
     },
     {
       id: 3,
@@ -5984,7 +5063,7 @@ const db$a = {
       referredId: 2749,
       status: "Unpaid",
       value: "$6717.09",
-      earning: "$699.02",
+      earning: "$699.02"
     },
     {
       id: 4,
@@ -5994,7 +5073,7 @@ const db$a = {
       referredId: 1413,
       status: "Paid",
       value: "$9465.13",
-      earning: "$98.23",
+      earning: "$98.23"
     },
     {
       id: 5,
@@ -6004,7 +5083,7 @@ const db$a = {
       referredId: 9176,
       status: "Paid",
       value: "$6202.81",
-      earning: "$882.51",
+      earning: "$882.51"
     },
     {
       id: 6,
@@ -6014,7 +5093,7 @@ const db$a = {
       referredId: 6975,
       status: "Unpaid",
       value: "$9802.40",
-      earning: "$219.52",
+      earning: "$219.52"
     },
     {
       id: 7,
@@ -6024,7 +5103,7 @@ const db$a = {
       referredId: 4552,
       status: "Paid",
       value: "$6470.46",
-      earning: "$831.45",
+      earning: "$831.45"
     },
     {
       id: 8,
@@ -6034,7 +5113,7 @@ const db$a = {
       referredId: 4131,
       status: "Unpaid",
       value: "$6199.28",
-      earning: "$856.00",
+      earning: "$856.00"
     },
     {
       id: 9,
@@ -6044,7 +5123,7 @@ const db$a = {
       referredId: 4072,
       status: "Unpaid",
       value: "$6774.33",
-      earning: "$821.78",
+      earning: "$821.78"
     },
     {
       id: 10,
@@ -6054,7 +5133,7 @@ const db$a = {
       referredId: 3070,
       status: "Unpaid",
       value: "$1067.14",
-      earning: "$804.91",
+      earning: "$804.91"
     },
     {
       id: 11,
@@ -6064,7 +5143,7 @@ const db$a = {
       referredId: 7828,
       status: "Unpaid",
       value: "$5375.10",
-      earning: "$447.01",
+      earning: "$447.01"
     },
     {
       id: 12,
@@ -6074,7 +5153,7 @@ const db$a = {
       referredId: 8561,
       status: "Unpaid",
       value: "$3104.91",
-      earning: "$552.75",
+      earning: "$552.75"
     },
     {
       id: 13,
@@ -6084,7 +5163,7 @@ const db$a = {
       referredId: 9287,
       status: "Paid",
       value: "$9375.13",
-      earning: "$690.75",
+      earning: "$690.75"
     },
     {
       id: 14,
@@ -6094,7 +5173,7 @@ const db$a = {
       referredId: 4892,
       status: "Paid",
       value: "$8797.12",
-      earning: "$679.71",
+      earning: "$679.71"
     },
     {
       id: 15,
@@ -6104,7 +5183,7 @@ const db$a = {
       referredId: 9180,
       status: "Unpaid",
       value: "$2996.63",
-      earning: "$610.27",
+      earning: "$610.27"
     },
     {
       id: 16,
@@ -6114,7 +5193,7 @@ const db$a = {
       referredId: 9102,
       status: "Paid",
       value: "$7048.18",
-      earning: "$369.06",
+      earning: "$369.06"
     },
     {
       id: 17,
@@ -6124,7 +5203,7 @@ const db$a = {
       referredId: 7049,
       status: "Unpaid",
       value: "$6049.95",
-      earning: "$642.78",
+      earning: "$642.78"
     },
     {
       id: 18,
@@ -6134,7 +5213,7 @@ const db$a = {
       referredId: 9826,
       status: "Paid",
       value: "$2221.71",
-      earning: "$347.19",
+      earning: "$347.19"
     },
     {
       id: 19,
@@ -6144,7 +5223,7 @@ const db$a = {
       referredId: 4555,
       status: "Paid",
       value: "$5918.70",
-      earning: "$543.44",
+      earning: "$543.44"
     },
     {
       id: 20,
@@ -6154,7 +5233,7 @@ const db$a = {
       referredId: 5591,
       status: "Paid",
       value: "$9073.50",
-      earning: "$980.62",
+      earning: "$980.62"
     },
     {
       id: 21,
@@ -6164,7 +5243,7 @@ const db$a = {
       referredId: 4491,
       status: "Unpaid",
       value: "$8389.56",
-      earning: "$746.81",
+      earning: "$746.81"
     },
     {
       id: 22,
@@ -6174,7 +5253,7 @@ const db$a = {
       referredId: 2946,
       status: "Paid",
       value: "$7471.34",
-      earning: "$747.24",
+      earning: "$747.24"
     },
     {
       id: 23,
@@ -6184,7 +5263,7 @@ const db$a = {
       referredId: 2328,
       status: "Paid",
       value: "$8484.83",
-      earning: "$815.79",
+      earning: "$815.79"
     },
     {
       id: 24,
@@ -6194,7 +5273,7 @@ const db$a = {
       referredId: 5725,
       status: "Paid",
       value: "$7088.56",
-      earning: "$329.64",
+      earning: "$329.64"
     },
     {
       id: 25,
@@ -6204,7 +5283,7 @@ const db$a = {
       referredId: 2821,
       status: "Unpaid",
       value: "$2938.87",
-      earning: "$317.42",
+      earning: "$317.42"
     },
     {
       id: 26,
@@ -6214,7 +5293,7 @@ const db$a = {
       referredId: 1661,
       status: "Unpaid",
       value: "$6256.70",
-      earning: "$521.01",
+      earning: "$521.01"
     },
     {
       id: 27,
@@ -6224,7 +5303,7 @@ const db$a = {
       referredId: 3363,
       status: "Unpaid",
       value: "$9106.99",
-      earning: "$705.15",
+      earning: "$705.15"
     },
     {
       id: 28,
@@ -6234,7 +5313,7 @@ const db$a = {
       referredId: 7814,
       status: "Rejected",
       value: "$6300.60",
-      earning: "$234.28",
+      earning: "$234.28"
     },
     {
       id: 29,
@@ -6244,7 +5323,7 @@ const db$a = {
       referredId: 8324,
       status: "Paid",
       value: "$1874.21",
-      earning: "$899.72",
+      earning: "$899.72"
     },
     {
       id: 30,
@@ -6254,7 +5333,7 @@ const db$a = {
       referredId: 6069,
       status: "Paid",
       value: "$6098.09",
-      earning: "$269.32",
+      earning: "$269.32"
     },
     {
       id: 31,
@@ -6264,7 +5343,7 @@ const db$a = {
       referredId: 5286,
       status: "Paid",
       value: "$4752.66",
-      earning: "$546.63",
+      earning: "$546.63"
     },
     {
       id: 32,
@@ -6274,7 +5353,7 @@ const db$a = {
       referredId: 7944,
       status: "Unpaid",
       value: "$5959.05",
-      earning: "$888.10",
+      earning: "$888.10"
     },
     {
       id: 33,
@@ -6284,7 +5363,7 @@ const db$a = {
       referredId: 6876,
       status: "Unpaid",
       value: "$6588.37",
-      earning: "$680.51",
+      earning: "$680.51"
     },
     {
       id: 34,
@@ -6294,7 +5373,7 @@ const db$a = {
       referredId: 7802,
       status: "Rejected",
       value: "$7542.30",
-      earning: "$208.96",
+      earning: "$208.96"
     },
     {
       id: 35,
@@ -6304,7 +5383,7 @@ const db$a = {
       referredId: 6946,
       status: "Paid",
       value: "$4447.48",
-      earning: "$410.48",
+      earning: "$410.48"
     },
     {
       id: 36,
@@ -6314,7 +5393,7 @@ const db$a = {
       referredId: 1372,
       status: "Paid",
       value: "$3700.16",
-      earning: "$858.94",
+      earning: "$858.94"
     },
     {
       id: 37,
@@ -6324,7 +5403,7 @@ const db$a = {
       referredId: 2384,
       status: "Unpaid",
       value: "$7456.86",
-      earning: "$280.52",
+      earning: "$280.52"
     },
     {
       id: 38,
@@ -6334,7 +5413,7 @@ const db$a = {
       referredId: 1971,
       status: "Paid",
       value: "$5563.94",
-      earning: "$515.34",
+      earning: "$515.34"
     },
     {
       id: 39,
@@ -6344,7 +5423,7 @@ const db$a = {
       referredId: 7323,
       status: "Unpaid",
       value: "$7400.29",
-      earning: "$167.44",
+      earning: "$167.44"
     },
     {
       id: 40,
@@ -6354,7 +5433,7 @@ const db$a = {
       referredId: 5719,
       status: "Paid",
       value: "$1977.34",
-      earning: "$652.01",
+      earning: "$652.01"
     },
     {
       id: 41,
@@ -6364,7 +5443,7 @@ const db$a = {
       referredId: 9347,
       status: "Paid",
       value: "$2155.12",
-      earning: "$101.49",
+      earning: "$101.49"
     },
     {
       id: 42,
@@ -6374,7 +5453,7 @@ const db$a = {
       referredId: 1559,
       status: "Rejected",
       value: "$7110.30",
-      earning: "$95.40",
+      earning: "$95.40"
     },
     {
       id: 43,
@@ -6384,7 +5463,7 @@ const db$a = {
       referredId: 3307,
       status: "Paid",
       value: "$2178.00",
-      earning: "$173.10",
+      earning: "$173.10"
     },
     {
       id: 44,
@@ -6394,7 +5473,7 @@ const db$a = {
       referredId: 4426,
       status: "Rejected",
       value: "$6921.60",
-      earning: "$365.93",
+      earning: "$365.93"
     },
     {
       id: 45,
@@ -6404,8 +5483,8 @@ const db$a = {
       referredId: 3570,
       status: "Paid",
       value: "$6891.09",
-      earning: "$900.25",
-    },
+      earning: "$900.25"
+    }
   ],
   orderData: [
     {
@@ -6420,7 +5499,7 @@ const db$a = {
       method: "paypalLogo",
       date: "5/16/2022",
       time: "2:11 AM",
-      methodNumber: 6522,
+      methodNumber: 6522
     },
     {
       id: 2,
@@ -6434,7 +5513,7 @@ const db$a = {
       method: "paypalLogo",
       date: "5/3/2023",
       time: "7:26 PM",
-      methodNumber: 7538,
+      methodNumber: 7538
     },
     {
       id: 3,
@@ -6448,7 +5527,7 @@ const db$a = {
       method: "mastercard",
       date: "12/15/2022",
       time: "6:51 PM",
-      methodNumber: 5170,
+      methodNumber: 5170
     },
     {
       id: 4,
@@ -6462,7 +5541,7 @@ const db$a = {
       method: "paypalLogo",
       date: "8/5/2022",
       time: "9:18 PM",
-      methodNumber: 1748,
+      methodNumber: 1748
     },
     {
       id: 5,
@@ -6476,7 +5555,7 @@ const db$a = {
       method: "mastercard",
       date: "6/18/2022",
       time: "3:34 AM",
-      methodNumber: 6425,
+      methodNumber: 6425
     },
     {
       id: 6,
@@ -6490,7 +5569,7 @@ const db$a = {
       method: "paypalLogo",
       date: "10/14/2022",
       time: "6:12 PM",
-      methodNumber: 1694,
+      methodNumber: 1694
     },
     {
       id: 7,
@@ -6504,7 +5583,7 @@ const db$a = {
       method: "mastercard",
       date: "8/8/2022",
       time: "6:09 PM",
-      methodNumber: 1883,
+      methodNumber: 1883
     },
     {
       id: 8,
@@ -6518,7 +5597,7 @@ const db$a = {
       method: "mastercard",
       date: "6/10/2022",
       time: "12:59 PM",
-      methodNumber: 5047,
+      methodNumber: 5047
     },
     {
       id: 9,
@@ -6532,7 +5611,7 @@ const db$a = {
       method: "paypalLogo",
       date: "10/25/2022",
       time: "10:48 AM",
-      methodNumber: 1945,
+      methodNumber: 1945
     },
     {
       id: 10,
@@ -6546,7 +5625,7 @@ const db$a = {
       method: "mastercard",
       date: "11/2/2022",
       time: "2:19 PM",
-      methodNumber: 3526,
+      methodNumber: 3526
     },
     {
       id: 11,
@@ -6560,7 +5639,7 @@ const db$a = {
       method: "mastercard",
       date: "8/25/2022",
       time: "8:15 PM",
-      methodNumber: 8325,
+      methodNumber: 8325
     },
     {
       id: 12,
@@ -6574,7 +5653,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/3/2022",
       time: "11:31 AM",
-      methodNumber: 2034,
+      methodNumber: 2034
     },
     {
       id: 13,
@@ -6588,7 +5667,7 @@ const db$a = {
       method: "mastercard",
       date: "3/21/2023",
       time: "3:28 PM",
-      methodNumber: 2751,
+      methodNumber: 2751
     },
     {
       id: 14,
@@ -6602,7 +5681,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/26/2022",
       time: "9:16 PM",
-      methodNumber: 3234,
+      methodNumber: 3234
     },
     {
       id: 15,
@@ -6616,7 +5695,7 @@ const db$a = {
       method: "mastercard",
       date: "11/20/2022",
       time: "11:58 PM",
-      methodNumber: 5209,
+      methodNumber: 5209
     },
     {
       id: 16,
@@ -6630,7 +5709,7 @@ const db$a = {
       method: "mastercard",
       date: "4/22/2023",
       time: "3:01 PM",
-      methodNumber: 1555,
+      methodNumber: 1555
     },
     {
       id: 17,
@@ -6644,7 +5723,7 @@ const db$a = {
       method: "mastercard",
       date: "9/1/2022",
       time: "10:31 PM",
-      methodNumber: 7013,
+      methodNumber: 7013
     },
     {
       id: 18,
@@ -6658,7 +5737,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/15/2022",
       time: "11:03 AM",
-      methodNumber: 4636,
+      methodNumber: 4636
     },
     {
       id: 19,
@@ -6672,7 +5751,7 @@ const db$a = {
       method: "paypalLogo",
       date: "8/31/2022",
       time: "10:02 AM",
-      methodNumber: 6846,
+      methodNumber: 6846
     },
     {
       id: 20,
@@ -6686,7 +5765,7 @@ const db$a = {
       method: "paypalLogo",
       date: "1/2/2023",
       time: "4:35 PM",
-      methodNumber: 4813,
+      methodNumber: 4813
     },
     {
       id: 21,
@@ -6700,7 +5779,7 @@ const db$a = {
       method: "paypalLogo",
       date: "9/17/2022",
       time: "6:00 AM",
-      methodNumber: 8197,
+      methodNumber: 8197
     },
     {
       id: 22,
@@ -6714,7 +5793,7 @@ const db$a = {
       method: "paypalLogo",
       date: "12/21/2022",
       time: "8:35 PM",
-      methodNumber: 2844,
+      methodNumber: 2844
     },
     {
       id: 23,
@@ -6728,7 +5807,7 @@ const db$a = {
       method: "mastercard",
       date: "1/24/2023",
       time: "12:01 AM",
-      methodNumber: 2562,
+      methodNumber: 2562
     },
     {
       id: 24,
@@ -6742,7 +5821,7 @@ const db$a = {
       method: "paypalLogo",
       date: "8/22/2022",
       time: "6:36 PM",
-      methodNumber: 2030,
+      methodNumber: 2030
     },
     {
       id: 25,
@@ -6756,7 +5835,7 @@ const db$a = {
       method: "mastercard",
       date: "12/23/2022",
       time: "7:14 AM",
-      methodNumber: 4686,
+      methodNumber: 4686
     },
     {
       id: 26,
@@ -6770,7 +5849,7 @@ const db$a = {
       method: "mastercard",
       date: "12/20/2022",
       time: "12:01 PM",
-      methodNumber: 6209,
+      methodNumber: 6209
     },
     {
       id: 27,
@@ -6784,7 +5863,7 @@ const db$a = {
       method: "mastercard",
       date: "6/1/2022",
       time: "2:31 AM",
-      methodNumber: 7031,
+      methodNumber: 7031
     },
     {
       id: 28,
@@ -6798,7 +5877,7 @@ const db$a = {
       method: "paypalLogo",
       date: "10/13/2022",
       time: "12:57 AM",
-      methodNumber: 4387,
+      methodNumber: 4387
     },
     {
       id: 29,
@@ -6812,7 +5891,7 @@ const db$a = {
       method: "mastercard",
       date: "4/17/2023",
       time: "6:43 PM",
-      methodNumber: 2077,
+      methodNumber: 2077
     },
     {
       id: 30,
@@ -6826,7 +5905,7 @@ const db$a = {
       method: "mastercard",
       date: "3/23/2023",
       time: "10:07 PM",
-      methodNumber: 2696,
+      methodNumber: 2696
     },
     {
       id: 31,
@@ -6840,7 +5919,7 @@ const db$a = {
       method: "mastercard",
       date: "7/1/2022",
       time: "10:37 PM",
-      methodNumber: 8071,
+      methodNumber: 8071
     },
     {
       id: 32,
@@ -6854,7 +5933,7 @@ const db$a = {
       method: "mastercard",
       date: "11/23/2022",
       time: "6:45 AM",
-      methodNumber: 3993,
+      methodNumber: 3993
     },
     {
       id: 33,
@@ -6868,7 +5947,7 @@ const db$a = {
       method: "mastercard",
       date: "4/15/2023",
       time: "10:21 PM",
-      methodNumber: 2356,
+      methodNumber: 2356
     },
     {
       id: 34,
@@ -6882,7 +5961,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/10/2022",
       time: "8:12 PM",
-      methodNumber: 1776,
+      methodNumber: 1776
     },
     {
       id: 35,
@@ -6896,7 +5975,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/17/2022",
       time: "2:32 PM",
-      methodNumber: 6276,
+      methodNumber: 6276
     },
     {
       id: 36,
@@ -6910,7 +5989,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/13/2022",
       time: "9:36 PM",
-      methodNumber: 3876,
+      methodNumber: 3876
     },
     {
       id: 37,
@@ -6924,7 +6003,7 @@ const db$a = {
       method: "mastercard",
       date: "10/14/2022",
       time: "4:39 AM",
-      methodNumber: 2211,
+      methodNumber: 2211
     },
     {
       id: 38,
@@ -6938,7 +6017,7 @@ const db$a = {
       method: "mastercard",
       date: "9/29/2022",
       time: "10:31 AM",
-      methodNumber: 1979,
+      methodNumber: 1979
     },
     {
       id: 39,
@@ -6952,7 +6031,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/29/2022",
       time: "2:59 AM",
-      methodNumber: 8328,
+      methodNumber: 8328
     },
     {
       id: 40,
@@ -6966,7 +6045,7 @@ const db$a = {
       method: "mastercard",
       date: "7/23/2022",
       time: "3:15 PM",
-      methodNumber: 3901,
+      methodNumber: 3901
     },
     {
       id: 41,
@@ -6980,7 +6059,7 @@ const db$a = {
       method: "paypalLogo",
       date: "11/1/2022",
       time: "8:05 AM",
-      methodNumber: 7245,
+      methodNumber: 7245
     },
     {
       id: 42,
@@ -6994,7 +6073,7 @@ const db$a = {
       method: "paypalLogo",
       date: "9/30/2022",
       time: "8:03 PM",
-      methodNumber: 8102,
+      methodNumber: 8102
     },
     {
       id: 43,
@@ -7008,7 +6087,7 @@ const db$a = {
       method: "mastercard",
       date: "12/30/2022",
       time: "12:21 AM",
-      methodNumber: 3075,
+      methodNumber: 3075
     },
     {
       id: 44,
@@ -7022,7 +6101,7 @@ const db$a = {
       method: "paypalLogo",
       date: "12/29/2022",
       time: "8:45 PM",
-      methodNumber: 5021,
+      methodNumber: 5021
     },
     {
       id: 45,
@@ -7036,7 +6115,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/11/2022",
       time: "10:11 AM",
-      methodNumber: 3954,
+      methodNumber: 3954
     },
     {
       id: 46,
@@ -7050,7 +6129,7 @@ const db$a = {
       method: "mastercard",
       date: "8/28/2022",
       time: "3:45 PM",
-      methodNumber: 2128,
+      methodNumber: 2128
     },
     {
       id: 47,
@@ -7064,7 +6143,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/8/2022",
       time: "4:16 PM",
-      methodNumber: 6781,
+      methodNumber: 6781
     },
     {
       id: 48,
@@ -7078,7 +6157,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/23/2022",
       time: "10:36 AM",
-      methodNumber: 5470,
+      methodNumber: 5470
     },
     {
       id: 49,
@@ -7092,7 +6171,7 @@ const db$a = {
       method: "mastercard",
       date: "11/10/2022",
       time: "2:45 AM",
-      methodNumber: 4647,
+      methodNumber: 4647
     },
     {
       id: 50,
@@ -7106,7 +6185,7 @@ const db$a = {
       method: "mastercard",
       date: "5/20/2022",
       time: "8:09 PM",
-      methodNumber: 4113,
+      methodNumber: 4113
     },
     {
       id: 51,
@@ -7120,7 +6199,7 @@ const db$a = {
       method: "mastercard",
       date: "6/10/2022",
       time: "4:00 PM",
-      methodNumber: 6798,
+      methodNumber: 6798
     },
     {
       id: 52,
@@ -7134,7 +6213,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/23/2022",
       time: "6:41 PM",
-      methodNumber: 3529,
+      methodNumber: 3529
     },
     {
       id: 53,
@@ -7148,7 +6227,7 @@ const db$a = {
       method: "paypalLogo",
       date: "10/18/2022",
       time: "8:40 PM",
-      methodNumber: 1664,
+      methodNumber: 1664
     },
     {
       id: 54,
@@ -7162,7 +6241,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/25/2022",
       time: "8:01 AM",
-      methodNumber: 7931,
+      methodNumber: 7931
     },
     {
       id: 55,
@@ -7176,7 +6255,7 @@ const db$a = {
       method: "paypalLogo",
       date: "4/17/2023",
       time: "8:05 AM",
-      methodNumber: 8412,
+      methodNumber: 8412
     },
     {
       id: 56,
@@ -7190,7 +6269,7 @@ const db$a = {
       method: "paypalLogo",
       date: "2/2/2023",
       time: "6:13 PM",
-      methodNumber: 3946,
+      methodNumber: 3946
     },
     {
       id: 57,
@@ -7204,7 +6283,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/11/2022",
       time: "10:15 PM",
-      methodNumber: 3294,
+      methodNumber: 3294
     },
     {
       id: 58,
@@ -7218,7 +6297,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/1/2022",
       time: "1:29 PM",
-      methodNumber: 5571,
+      methodNumber: 5571
     },
     {
       id: 59,
@@ -7232,7 +6311,7 @@ const db$a = {
       method: "mastercard",
       date: "9/26/2022",
       time: "11:40 AM",
-      methodNumber: 4380,
+      methodNumber: 4380
     },
     {
       id: 60,
@@ -7246,7 +6325,7 @@ const db$a = {
       method: "paypalLogo",
       date: "2/5/2023",
       time: "11:42 PM",
-      methodNumber: 5856,
+      methodNumber: 5856
     },
     {
       id: 61,
@@ -7260,7 +6339,7 @@ const db$a = {
       method: "mastercard",
       date: "2/5/2023",
       time: "8:46 AM",
-      methodNumber: 1923,
+      methodNumber: 1923
     },
     {
       id: 62,
@@ -7274,7 +6353,7 @@ const db$a = {
       method: "mastercard",
       date: "9/11/2022",
       time: "7:41 PM",
-      methodNumber: 4367,
+      methodNumber: 4367
     },
     {
       id: 63,
@@ -7288,7 +6367,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/2/2022",
       time: "11:05 AM",
-      methodNumber: 8829,
+      methodNumber: 8829
     },
     {
       id: 64,
@@ -7302,7 +6381,7 @@ const db$a = {
       method: "paypalLogo",
       date: "5/20/2022",
       time: "12:39 PM",
-      methodNumber: 6971,
+      methodNumber: 6971
     },
     {
       id: 65,
@@ -7316,7 +6395,7 @@ const db$a = {
       method: "mastercard",
       date: "3/1/2023",
       time: "10:25 PM",
-      methodNumber: 4305,
+      methodNumber: 4305
     },
     {
       id: 66,
@@ -7330,7 +6409,7 @@ const db$a = {
       method: "mastercard",
       date: "2/1/2023",
       time: "4:11 AM",
-      methodNumber: 7385,
+      methodNumber: 7385
     },
     {
       id: 67,
@@ -7344,7 +6423,7 @@ const db$a = {
       method: "mastercard",
       date: "6/15/2022",
       time: "7:28 PM",
-      methodNumber: 6469,
+      methodNumber: 6469
     },
     {
       id: 68,
@@ -7358,7 +6437,7 @@ const db$a = {
       method: "paypalLogo",
       date: "9/15/2022",
       time: "9:35 PM",
-      methodNumber: 1464,
+      methodNumber: 1464
     },
     {
       id: 69,
@@ -7372,7 +6451,7 @@ const db$a = {
       method: "mastercard",
       date: "11/24/2022",
       time: "12:51 PM",
-      methodNumber: 3957,
+      methodNumber: 3957
     },
     {
       id: 70,
@@ -7386,7 +6465,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/20/2022",
       time: "11:11 AM",
-      methodNumber: 3907,
+      methodNumber: 3907
     },
     {
       id: 71,
@@ -7400,7 +6479,7 @@ const db$a = {
       method: "paypalLogo",
       date: "1/30/2023",
       time: "8:13 AM",
-      methodNumber: 3210,
+      methodNumber: 3210
     },
     {
       id: 72,
@@ -7414,7 +6493,7 @@ const db$a = {
       method: "mastercard",
       date: "8/1/2022",
       time: "7:24 AM",
-      methodNumber: 3507,
+      methodNumber: 3507
     },
     {
       id: 73,
@@ -7428,7 +6507,7 @@ const db$a = {
       method: "mastercard",
       date: "5/10/2022",
       time: "7:51 PM",
-      methodNumber: 7538,
+      methodNumber: 7538
     },
     {
       id: 74,
@@ -7442,7 +6521,7 @@ const db$a = {
       method: "mastercard",
       date: "8/20/2022",
       time: "3:21 AM",
-      methodNumber: 5851,
+      methodNumber: 5851
     },
     {
       id: 75,
@@ -7456,7 +6535,7 @@ const db$a = {
       method: "mastercard",
       date: "9/19/2022",
       time: "5:23 AM",
-      methodNumber: 8332,
+      methodNumber: 8332
     },
     {
       id: 76,
@@ -7470,7 +6549,7 @@ const db$a = {
       method: "mastercard",
       date: "1/13/2023",
       time: "1:41 PM",
-      methodNumber: 8564,
+      methodNumber: 8564
     },
     {
       id: 77,
@@ -7484,7 +6563,7 @@ const db$a = {
       method: "paypalLogo",
       date: "1/23/2023",
       time: "6:10 AM",
-      methodNumber: 2150,
+      methodNumber: 2150
     },
     {
       id: 78,
@@ -7498,7 +6577,7 @@ const db$a = {
       method: "paypalLogo",
       date: "8/24/2022",
       time: "2:01 PM",
-      methodNumber: 4148,
+      methodNumber: 4148
     },
     {
       id: 79,
@@ -7512,7 +6591,7 @@ const db$a = {
       method: "paypalLogo",
       date: "6/25/2022",
       time: "12:54 AM",
-      methodNumber: 4538,
+      methodNumber: 4538
     },
     {
       id: 80,
@@ -7526,7 +6605,7 @@ const db$a = {
       method: "mastercard",
       date: "1/11/2023",
       time: "4:33 PM",
-      methodNumber: 1974,
+      methodNumber: 1974
     },
     {
       id: 81,
@@ -7540,7 +6619,7 @@ const db$a = {
       method: "mastercard",
       date: "7/12/2022",
       time: "1:54 AM",
-      methodNumber: 6563,
+      methodNumber: 6563
     },
     {
       id: 82,
@@ -7554,7 +6633,7 @@ const db$a = {
       method: "paypalLogo",
       date: "9/7/2022",
       time: "5:58 AM",
-      methodNumber: 7367,
+      methodNumber: 7367
     },
     {
       id: 83,
@@ -7568,7 +6647,7 @@ const db$a = {
       method: "mastercard",
       date: "12/9/2022",
       time: "4:22 AM",
-      methodNumber: 4789,
+      methodNumber: 4789
     },
     {
       id: 84,
@@ -7582,7 +6661,7 @@ const db$a = {
       method: "paypalLogo",
       date: "5/26/2022",
       time: "3:15 PM",
-      methodNumber: 2733,
+      methodNumber: 2733
     },
     {
       id: 85,
@@ -7596,7 +6675,7 @@ const db$a = {
       method: "paypalLogo",
       date: "9/10/2022",
       time: "11:40 AM",
-      methodNumber: 3822,
+      methodNumber: 3822
     },
     {
       id: 86,
@@ -7610,7 +6689,7 @@ const db$a = {
       method: "mastercard",
       date: "9/22/2022",
       time: "11:52 PM",
-      methodNumber: 2925,
+      methodNumber: 2925
     },
     {
       id: 87,
@@ -7624,7 +6703,7 @@ const db$a = {
       method: "mastercard",
       date: "8/4/2022",
       time: "9:12 PM",
-      methodNumber: 6240,
+      methodNumber: 6240
     },
     {
       id: 88,
@@ -7638,7 +6717,7 @@ const db$a = {
       method: "mastercard",
       date: "3/2/2023",
       time: "10:00 AM",
-      methodNumber: 7909,
+      methodNumber: 7909
     },
     {
       id: 89,
@@ -7652,7 +6731,7 @@ const db$a = {
       method: "paypalLogo",
       date: "4/29/2023",
       time: "9:52 AM",
-      methodNumber: 5475,
+      methodNumber: 5475
     },
     {
       id: 90,
@@ -7666,7 +6745,7 @@ const db$a = {
       method: "mastercard",
       date: "11/29/2022",
       time: "6:53 PM",
-      methodNumber: 4371,
+      methodNumber: 4371
     },
     {
       id: 91,
@@ -7680,7 +6759,7 @@ const db$a = {
       method: "mastercard",
       date: "6/29/2022",
       time: "6:51 AM",
-      methodNumber: 8321,
+      methodNumber: 8321
     },
     {
       id: 92,
@@ -7694,7 +6773,7 @@ const db$a = {
       method: "mastercard",
       date: "12/6/2022",
       time: "2:11 AM",
-      methodNumber: 8535,
+      methodNumber: 8535
     },
     {
       id: 93,
@@ -7708,7 +6787,7 @@ const db$a = {
       method: "mastercard",
       date: "12/26/2022",
       time: "9:49 AM",
-      methodNumber: 8585,
+      methodNumber: 8585
     },
     {
       id: 94,
@@ -7722,7 +6801,7 @@ const db$a = {
       method: "mastercard",
       date: "8/29/2022",
       time: "5:24 AM",
-      methodNumber: 3432,
+      methodNumber: 3432
     },
     {
       id: 95,
@@ -7736,7 +6815,7 @@ const db$a = {
       method: "mastercard",
       date: "3/11/2023",
       time: "10:43 AM",
-      methodNumber: 1014,
+      methodNumber: 1014
     },
     {
       id: 96,
@@ -7750,7 +6829,7 @@ const db$a = {
       method: "paypalLogo",
       date: "8/14/2022",
       time: "3:26 PM",
-      methodNumber: 3196,
+      methodNumber: 3196
     },
     {
       id: 97,
@@ -7764,7 +6843,7 @@ const db$a = {
       method: "paypalLogo",
       date: "3/20/2023",
       time: "3:11 PM",
-      methodNumber: 4892,
+      methodNumber: 4892
     },
     {
       id: 98,
@@ -7778,7 +6857,7 @@ const db$a = {
       method: "mastercard",
       date: "4/8/2023",
       time: "3:39 AM",
-      methodNumber: 4509,
+      methodNumber: 4509
     },
     {
       id: 99,
@@ -7792,7 +6871,7 @@ const db$a = {
       method: "paypalLogo",
       date: "1/2/2023",
       time: "8:55 PM",
-      methodNumber: 6424,
+      methodNumber: 6424
     },
     {
       id: 100,
@@ -7806,8 +6885,8 @@ const db$a = {
       method: "mastercard",
       date: "2/1/2023",
       time: "4:12 PM",
-      methodNumber: 3949,
-    },
+      methodNumber: 3949
+    }
   ],
   customerData: [
     {
@@ -7820,7 +6899,7 @@ const db$a = {
       countryCode: "lk",
       order: 157,
       totalSpent: 2074.22,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 2,
@@ -7832,7 +6911,7 @@ const db$a = {
       countryCode: "ru",
       order: 663,
       totalSpent: 2404.19,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 3,
@@ -7844,7 +6923,7 @@ const db$a = {
       countryCode: "gt",
       order: 64,
       totalSpent: 8821.4,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 4,
@@ -7856,7 +6935,7 @@ const db$a = {
       countryCode: "pt",
       order: 640,
       totalSpent: 5294.35,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 5,
@@ -7868,7 +6947,7 @@ const db$a = {
       countryCode: "fr",
       order: 184,
       totalSpent: 1003.3,
-      avatar: avatar5$6,
+      avatar: avatar5$6
     },
     {
       id: 6,
@@ -7880,7 +6959,7 @@ const db$a = {
       countryCode: "cn",
       order: 965,
       totalSpent: 3876.92,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 7,
@@ -7892,7 +6971,7 @@ const db$a = {
       countryCode: "br",
       order: 514,
       totalSpent: 7936.85,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 8,
@@ -7904,7 +6983,7 @@ const db$a = {
       countryCode: "gt",
       order: 584,
       totalSpent: 4150.97,
-      avatar: avatar8$4,
+      avatar: avatar8$4
     },
     {
       id: 9,
@@ -7916,7 +6995,7 @@ const db$a = {
       countryCode: "ua",
       order: 539,
       totalSpent: 3430.05,
-      avatar: avatar9,
+      avatar: avatar9
     },
     {
       id: 10,
@@ -7928,7 +7007,7 @@ const db$a = {
       countryCode: "ru",
       order: 4,
       totalSpent: 8646.75,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 11,
@@ -7940,7 +7019,7 @@ const db$a = {
       countryCode: "cn",
       order: 602,
       totalSpent: 5807.99,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 12,
@@ -7952,7 +7031,7 @@ const db$a = {
       countryCode: "bo",
       order: 779,
       totalSpent: 6677.41,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 13,
@@ -7964,7 +7043,7 @@ const db$a = {
       countryCode: "cn",
       order: 267,
       totalSpent: 3340.41,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 14,
@@ -7976,7 +7055,7 @@ const db$a = {
       countryCode: "ru",
       order: 611,
       totalSpent: 5768.17,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 15,
@@ -7988,7 +7067,7 @@ const db$a = {
       countryCode: "jp",
       order: 90,
       totalSpent: 4488.03,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 16,
@@ -8000,7 +7079,7 @@ const db$a = {
       countryCode: "ua",
       order: 597,
       totalSpent: 6936.49,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 17,
@@ -8012,7 +7091,7 @@ const db$a = {
       countryCode: "cn",
       order: 30,
       totalSpent: 7994.11,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 18,
@@ -8024,7 +7103,7 @@ const db$a = {
       countryCode: "id",
       order: 322,
       totalSpent: 5710.25,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 19,
@@ -8036,7 +7115,7 @@ const db$a = {
       countryCode: "mx",
       order: 863,
       totalSpent: 7537.74,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 20,
@@ -8048,7 +7127,7 @@ const db$a = {
       countryCode: "cz",
       order: 812,
       totalSpent: 7801.46,
-      avatar: avatar5$6,
+      avatar: avatar5$6
     },
     {
       id: 21,
@@ -8060,7 +7139,7 @@ const db$a = {
       countryCode: "ru",
       order: 705,
       totalSpent: 1371.44,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 22,
@@ -8072,7 +7151,7 @@ const db$a = {
       countryCode: "us",
       order: 956,
       totalSpent: 8632.52,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 23,
@@ -8084,7 +7163,7 @@ const db$a = {
       countryCode: "my",
       order: 326,
       totalSpent: 7241.74,
-      avatar: avatar8$4,
+      avatar: avatar8$4
     },
     {
       id: 24,
@@ -8096,7 +7175,7 @@ const db$a = {
       countryCode: "id",
       order: 748,
       totalSpent: 5821.27,
-      avatar: avatar9,
+      avatar: avatar9
     },
     {
       id: 25,
@@ -8108,7 +7187,7 @@ const db$a = {
       countryCode: "ng",
       order: 535,
       totalSpent: 900.54,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 26,
@@ -8120,7 +7199,7 @@ const db$a = {
       countryCode: "id",
       order: 645,
       totalSpent: 3200.38,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 27,
@@ -8132,7 +7211,7 @@ const db$a = {
       countryCode: "cl",
       order: 709,
       totalSpent: 376.46,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 28,
@@ -8144,7 +7223,7 @@ const db$a = {
       countryCode: "bt",
       order: 535,
       totalSpent: 3654.39,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 29,
@@ -8156,7 +7235,7 @@ const db$a = {
       countryCode: "cn",
       order: 763,
       totalSpent: 1136.68,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 30,
@@ -8168,7 +7247,7 @@ const db$a = {
       countryCode: "br",
       order: 63,
       totalSpent: 1955.91,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 31,
@@ -8180,7 +7259,7 @@ const db$a = {
       countryCode: "se",
       order: 452,
       totalSpent: 191.11,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 32,
@@ -8192,7 +7271,7 @@ const db$a = {
       countryCode: "cl",
       order: 415,
       totalSpent: 5285.45,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 33,
@@ -8204,7 +7283,7 @@ const db$a = {
       countryCode: "cz",
       order: 651,
       totalSpent: 4284.88,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 34,
@@ -8216,7 +7295,7 @@ const db$a = {
       countryCode: "ke",
       order: 219,
       totalSpent: 6698.44,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 35,
@@ -8228,7 +7307,7 @@ const db$a = {
       countryCode: "br",
       order: 11,
       totalSpent: 3496.34,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 36,
@@ -8240,7 +7319,7 @@ const db$a = {
       countryCode: "id",
       order: 316,
       totalSpent: 5328.02,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 37,
@@ -8252,7 +7331,7 @@ const db$a = {
       countryCode: "pe",
       order: 931,
       totalSpent: 5868.06,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 38,
@@ -8264,7 +7343,7 @@ const db$a = {
       countryCode: "cz",
       order: 30,
       totalSpent: 4134.97,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 39,
@@ -8276,7 +7355,7 @@ const db$a = {
       countryCode: "br",
       order: 215,
       totalSpent: 1869.06,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 40,
@@ -8288,7 +7367,7 @@ const db$a = {
       countryCode: "bo",
       order: 696,
       totalSpent: 2585.57,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 41,
@@ -8300,7 +7379,7 @@ const db$a = {
       countryCode: "bd",
       order: 956,
       totalSpent: 1741.83,
-      avatar: avatar8$4,
+      avatar: avatar8$4
     },
     {
       id: 42,
@@ -8312,7 +7391,7 @@ const db$a = {
       countryCode: "cn",
       order: 172,
       totalSpent: 1733.66,
-      avatar: avatar9,
+      avatar: avatar9
     },
     {
       id: 43,
@@ -8324,7 +7403,7 @@ const db$a = {
       countryCode: "ng",
       order: 822,
       totalSpent: 3930.51,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 44,
@@ -8336,7 +7415,7 @@ const db$a = {
       countryCode: "ca",
       order: 51,
       totalSpent: 4638.94,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 45,
@@ -8348,7 +7427,7 @@ const db$a = {
       countryCode: "cn",
       order: 559,
       totalSpent: 3614,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 46,
@@ -8360,7 +7439,7 @@ const db$a = {
       countryCode: "cn",
       order: 945,
       totalSpent: 5413.53,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 47,
@@ -8372,7 +7451,7 @@ const db$a = {
       countryCode: "ru",
       order: 149,
       totalSpent: 589.72,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 48,
@@ -8384,7 +7463,7 @@ const db$a = {
       countryCode: "cn",
       order: 438,
       totalSpent: 8949.26,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 49,
@@ -8396,7 +7475,7 @@ const db$a = {
       countryCode: "id",
       order: 716,
       totalSpent: 4466.54,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 50,
@@ -8408,7 +7487,7 @@ const db$a = {
       countryCode: "pl",
       order: 307,
       totalSpent: 4382.72,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 51,
@@ -8420,7 +7499,7 @@ const db$a = {
       countryCode: "us",
       order: 684,
       totalSpent: 4671.06,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 52,
@@ -8432,7 +7511,7 @@ const db$a = {
       countryCode: "pt",
       order: 315,
       totalSpent: 6261.53,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 53,
@@ -8444,7 +7523,7 @@ const db$a = {
       countryCode: "id",
       order: 797,
       totalSpent: 741.89,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 54,
@@ -8456,7 +7535,7 @@ const db$a = {
       countryCode: "cn",
       order: 145,
       totalSpent: 4360.35,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 55,
@@ -8468,7 +7547,7 @@ const db$a = {
       countryCode: "co",
       order: 574,
       totalSpent: 8328.19,
-      avatar: avatar5$6,
+      avatar: avatar5$6
     },
     {
       id: 56,
@@ -8480,7 +7559,7 @@ const db$a = {
       countryCode: "eg",
       order: 948,
       totalSpent: 9899.06,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 57,
@@ -8492,7 +7571,7 @@ const db$a = {
       countryCode: "tz",
       order: 541,
       totalSpent: 9285.65,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 58,
@@ -8504,7 +7583,7 @@ const db$a = {
       countryCode: "ru",
       order: 99,
       totalSpent: 3660.8,
-      avatar: avatar8$4,
+      avatar: avatar8$4
     },
     {
       id: 59,
@@ -8516,7 +7595,7 @@ const db$a = {
       countryCode: "ru",
       order: 108,
       totalSpent: 1978.61,
-      avatar: avatar9,
+      avatar: avatar9
     },
     {
       id: 60,
@@ -8528,7 +7607,7 @@ const db$a = {
       countryCode: "cn",
       order: 483,
       totalSpent: 772.98,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 61,
@@ -8540,7 +7619,7 @@ const db$a = {
       countryCode: "mk",
       order: 69,
       totalSpent: 4227.77,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 62,
@@ -8552,7 +7631,7 @@ const db$a = {
       countryCode: "fr",
       order: 147,
       totalSpent: 6637.38,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 63,
@@ -8564,7 +7643,7 @@ const db$a = {
       countryCode: "id",
       order: 444,
       totalSpent: 1730.64,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 64,
@@ -8576,7 +7655,7 @@ const db$a = {
       countryCode: "ru",
       order: 831,
       totalSpent: 9996.22,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 65,
@@ -8588,7 +7667,7 @@ const db$a = {
       countryCode: "fi",
       order: 311,
       totalSpent: 3459.82,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 66,
@@ -8600,7 +7679,7 @@ const db$a = {
       countryCode: "ly",
       order: 473,
       totalSpent: 5218.22,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 67,
@@ -8612,7 +7691,7 @@ const db$a = {
       countryCode: "ar",
       order: 752,
       totalSpent: 5984.53,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 68,
@@ -8624,7 +7703,7 @@ const db$a = {
       countryCode: "no",
       order: 582,
       totalSpent: 5565.85,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 69,
@@ -8636,7 +7715,7 @@ const db$a = {
       countryCode: "cn",
       order: 751,
       totalSpent: 9042.56,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 70,
@@ -8648,7 +7727,7 @@ const db$a = {
       countryCode: "pe",
       order: 689,
       totalSpent: 4508.42,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 71,
@@ -8660,7 +7739,7 @@ const db$a = {
       countryCode: "id",
       order: 837,
       totalSpent: 6379.88,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 72,
@@ -8672,7 +7751,7 @@ const db$a = {
       countryCode: "ec",
       order: 724,
       totalSpent: 2933.59,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 73,
@@ -8684,7 +7763,7 @@ const db$a = {
       countryCode: "br",
       order: 455,
       totalSpent: 724.68,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 74,
@@ -8696,7 +7775,7 @@ const db$a = {
       countryCode: "rs",
       order: 51,
       totalSpent: 8287.03,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 75,
@@ -8708,7 +7787,7 @@ const db$a = {
       countryCode: "pt",
       order: 462,
       totalSpent: 9157.04,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 76,
@@ -8720,7 +7799,7 @@ const db$a = {
       countryCode: "do",
       order: 952,
       totalSpent: 6106.41,
-      avatar: avatar5$6,
+      avatar: avatar5$6
     },
     {
       id: 77,
@@ -8732,7 +7811,7 @@ const db$a = {
       countryCode: "id",
       order: 794,
       totalSpent: 9053.56,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 78,
@@ -8744,7 +7823,7 @@ const db$a = {
       countryCode: "hk",
       order: 454,
       totalSpent: 8180.2,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 79,
@@ -8756,7 +7835,7 @@ const db$a = {
       countryCode: "id",
       order: 320,
       totalSpent: 210.84,
-      avatar: avatar8$4,
+      avatar: avatar8$4
     },
     {
       id: 80,
@@ -8768,7 +7847,7 @@ const db$a = {
       countryCode: "mx",
       order: 515,
       totalSpent: 8571.28,
-      avatar: avatar9,
+      avatar: avatar9
     },
     {
       id: 81,
@@ -8780,7 +7859,7 @@ const db$a = {
       countryCode: "se",
       order: 906,
       totalSpent: 620.57,
-      avatar: avatar10,
+      avatar: avatar10
     },
     {
       id: 82,
@@ -8792,7 +7871,7 @@ const db$a = {
       countryCode: "id",
       order: 519,
       totalSpent: 332.44,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 83,
@@ -8804,7 +7883,7 @@ const db$a = {
       countryCode: "cn",
       order: 313,
       totalSpent: 2481.6,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 84,
@@ -8816,7 +7895,7 @@ const db$a = {
       countryCode: "ni",
       order: 623,
       totalSpent: 8466.96,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 85,
@@ -8828,7 +7907,7 @@ const db$a = {
       countryCode: "cn",
       order: 835,
       totalSpent: 9048.31,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 86,
@@ -8840,7 +7919,7 @@ const db$a = {
       countryCode: "eg",
       order: 361,
       totalSpent: 9159.23,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 87,
@@ -8852,7 +7931,7 @@ const db$a = {
       countryCode: "jo",
       order: 527,
       totalSpent: 9289.92,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 88,
@@ -8864,7 +7943,7 @@ const db$a = {
       countryCode: "in",
       order: 25,
       totalSpent: 4920.68,
-      avatar: avatar2$7,
+      avatar: avatar2$7
     },
     {
       id: 89,
@@ -8876,7 +7955,7 @@ const db$a = {
       countryCode: "cn",
       order: 404,
       totalSpent: 7369.58,
-      avatar: avatar3$6,
+      avatar: avatar3$6
     },
     {
       id: 90,
@@ -8888,7 +7967,7 @@ const db$a = {
       countryCode: "tm",
       order: 550,
       totalSpent: 9083.15,
-      avatar: avatar4$6,
+      avatar: avatar4$6
     },
     {
       id: 91,
@@ -8900,7 +7979,7 @@ const db$a = {
       countryCode: "us",
       order: 792,
       totalSpent: 2634.36,
-      avatar: avatar5$6,
+      avatar: avatar5$6
     },
     {
       id: 92,
@@ -8912,7 +7991,7 @@ const db$a = {
       countryCode: "ru",
       order: 605,
       totalSpent: 9381.83,
-      avatar: avatar6$5,
+      avatar: avatar6$5
     },
     {
       id: 93,
@@ -8924,7 +8003,7 @@ const db$a = {
       countryCode: "cn",
       order: 892,
       totalSpent: 3957.06,
-      avatar: avatar7$4,
+      avatar: avatar7$4
     },
     {
       id: 94,
@@ -8936,7 +8015,7 @@ const db$a = {
       countryCode: "pl",
       order: 894,
       totalSpent: 1450.01,
-      avatar: avatar11,
+      avatar: avatar11
     },
     {
       id: 95,
@@ -8948,7 +8027,7 @@ const db$a = {
       countryCode: "id",
       order: 866,
       totalSpent: 8713.73,
-      avatar: avatar12,
+      avatar: avatar12
     },
     {
       id: 96,
@@ -8960,7 +8039,7 @@ const db$a = {
       countryCode: "cn",
       order: 145,
       totalSpent: 8589.4,
-      avatar: avatar13,
+      avatar: avatar13
     },
     {
       id: 97,
@@ -8972,7 +8051,7 @@ const db$a = {
       countryCode: "id",
       order: 766,
       totalSpent: 7119.15,
-      avatar: avatar14,
+      avatar: avatar14
     },
     {
       id: 98,
@@ -8984,7 +8063,7 @@ const db$a = {
       countryCode: "kp",
       order: 70,
       totalSpent: 4403.22,
-      avatar: avatar15,
+      avatar: avatar15
     },
     {
       id: 99,
@@ -8996,7 +8075,7 @@ const db$a = {
       countryCode: "cz",
       order: 471,
       totalSpent: 7696.67,
-      avatar: avatar1$7,
+      avatar: avatar1$7
     },
     {
       id: 100,
@@ -9008,104 +8087,89 @@ const db$a = {
       countryCode: "jp",
       order: 181,
       totalSpent: 2838.35,
-      avatar: avatar15,
-    },
-  ],
+      avatar: avatar15
+    }
+  ]
 };
 
 const _id__get$4 = defineEventHandler((event) => {
-  const customerId = getIntId(
-    event,
-    "Customer id is required to get customer details"
-  );
+  const customerId = getIntId(event, "Customer id is required to get customer details");
   const id = Number(customerId);
   const customerIndex = db$a.customerData.findIndex((e) => e.customerId === id);
   const customer = db$a.customerData[customerIndex];
   Object.assign(customer, {
     status: "Active",
-    contact: "+1 (234) 567 890",
+    contact: "+1 (234) 567 890"
   });
-  if (customer) return customer;
-  else setResponseStatus(event, 404);
+  if (customer)
+    return customer;
+  else
+    setResponseStatus(event, 404);
 });
 
-const _id__get$5 = /*#__PURE__*/ Object.freeze({
+const _id__get$5 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__get$4,
+  default: _id__get$4
 });
 
 const index_get$m = defineEventHandler((event) => {
-  const {
-    q = "",
-    page = 1,
-    itemsPerPage = 10,
-    sortBy,
-    orderBy,
-  } = getQuery$1(event);
+  const { q = "", page = 1, itemsPerPage = 10, sortBy, orderBy } = getQuery$1(event);
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLowered = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
-  const filteredCustomers = db$a.customerData
-    .filter((customer) => {
-      return (
-        customer.customer.toLowerCase().includes(queryLowered) ||
-        customer.country.toLowerCase().includes(queryLowered) ||
-        customer.email.toLowerCase().includes(queryLowered)
-      );
-    })
-    .reverse();
+  const queryLowered = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
+  const filteredCustomers = db$a.customerData.filter((customer) => {
+    return customer.customer.toLowerCase().includes(queryLowered) || customer.country.toLowerCase().includes(queryLowered) || customer.email.toLowerCase().includes(queryLowered);
+  }).reverse();
   if (sortByLocal) {
     if (sortByLocal === "customer") {
       filteredCustomers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.customer.localeCompare(b.customer);
+        if (orderByLocal === "asc")
+          return a.customer.localeCompare(b.customer);
         return b.customer.localeCompare(a.customer);
       });
     }
     if (sortByLocal === "country") {
       filteredCustomers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.country.localeCompare(b.country);
+        if (orderByLocal === "asc")
+          return a.country.localeCompare(b.country);
         return b.country.localeCompare(a.country);
       });
     }
     if (sortByLocal === "customerId") {
       filteredCustomers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.customerId - b.customerId;
+        if (orderByLocal === "asc")
+          return a.customerId - b.customerId;
         return b.customerId - a.customerId;
       });
     }
     if (sortByLocal === "orders") {
       filteredCustomers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.order - b.order;
+        if (orderByLocal === "asc")
+          return a.order - b.order;
         return b.order - a.order;
       });
     }
     if (sortByLocal === "totalSpent") {
       filteredCustomers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.totalSpent - b.totalSpent;
+        if (orderByLocal === "asc")
+          return a.totalSpent - b.totalSpent;
         return b.totalSpent - a.totalSpent;
       });
     }
   }
-  return {
-    customers: paginateArray(filteredCustomers, itemsPerPageLocal, pageLocal),
-    total: filteredCustomers.length,
-  };
+  return { customers: paginateArray(filteredCustomers, itemsPerPageLocal, pageLocal), total: filteredCustomers.length };
 });
 
-const index_get$n = /*#__PURE__*/ Object.freeze({
+const index_get$n = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$m,
+  default: index_get$m
 });
 
 const _id__delete$6 = defineEventHandler((event) => {
@@ -9120,102 +8184,80 @@ const _id__delete$6 = defineEventHandler((event) => {
   setResponseStatus(event, 204);
 });
 
-const _id__delete$7 = /*#__PURE__*/ Object.freeze({
+const _id__delete$7 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__delete$6,
+  default: _id__delete$6
 });
 
 const index_get$k = defineEventHandler((event) => {
-  const {
-    q = "",
-    sortBy,
-    orderBy,
-    page = 1,
-    itemsPerPage = 10,
-  } = getQuery$1(event);
+  const { q = "", sortBy, orderBy, page = 1, itemsPerPage = 10 } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLower = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLower = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
-  const filterOrders = db$a.orderData
-    .filter((order) => {
-      return (
-        order.customer.toLowerCase().includes(queryLower) ||
-        order.email.toLowerCase().includes(queryLower) ||
-        order.order.toString().includes(queryLower)
-      );
-    })
-    .reverse();
+  const filterOrders = db$a.orderData.filter((order) => {
+    return order.customer.toLowerCase().includes(queryLower) || order.email.toLowerCase().includes(queryLower) || order.order.toString().includes(queryLower);
+  }).reverse();
   if (sortByLocal) {
     if (sortByLocal === "order") {
       filterOrders.sort((a, b) => {
-        if (orderByLocal === "desc") return b.order - a.order;
-        else return a.order - b.order;
+        if (orderByLocal === "desc")
+          return b.order - a.order;
+        else
+          return a.order - b.order;
       });
     }
     if (sortByLocal === "customers") {
       filterOrders.sort((a, b) => {
         if (orderByLocal === "desc")
           return b.customer.localeCompare(a.customer);
-        else return a.customer.localeCompare(b.customer);
+        else
+          return a.customer.localeCompare(b.customer);
       });
     }
     if (sortByLocal === "date") {
       filterOrders.sort((a, b) => {
         if (orderByLocal === "desc")
           return Number(new Date(b.date)) - Number(new Date(a.date));
-        else return Number(new Date(a.date)) - Number(new Date(b.date));
+        else
+          return Number(new Date(a.date)) - Number(new Date(b.date));
       });
     }
     if (sortByLocal === "status") {
       filterOrders.sort((a, b) => {
-        if (orderByLocal === "desc") return b.status.localeCompare(a.status);
-        else return a.status.localeCompare(b.status);
+        if (orderByLocal === "desc")
+          return b.status.localeCompare(a.status);
+        else
+          return a.status.localeCompare(b.status);
       });
     }
     if (sortByLocal === "spent") {
       filterOrders.sort((a, b) => {
-        if (orderByLocal === "desc") return Number(b.spent) - Number(a.spent);
-        else return Number(a.spent) - Number(b.spent);
+        if (orderByLocal === "desc")
+          return Number(b.spent) - Number(a.spent);
+        else
+          return Number(a.spent) - Number(b.spent);
       });
     }
   }
-  return {
-    orders: paginateArray(filterOrders, itemsPerPageLocal, pageLocal),
-    total: filterOrders.length,
-  };
+  return { orders: paginateArray(filterOrders, itemsPerPageLocal, pageLocal), total: filterOrders.length };
 });
 
-const index_get$l = /*#__PURE__*/ Object.freeze({
+const index_get$l = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$k,
+  default: index_get$k
 });
 
 const index_get$i = defineEventHandler((event) => {
-  const {
-    q = "",
-    stock = null,
-    category = null,
-    status = null,
-    sortBy,
-    orderBy,
-    itemsPerPage = 10,
-    page = 1,
-  } = getQuery$1(event);
+  const { q = "", stock = null, category = null, status = null, sortBy, orderBy, itemsPerPage = 10, page = 1 } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLower = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLower = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const parsedStock = destr$1(stock);
   const stockLocal = is.boolean(parsedStock) ? parsedStock : void 0;
   const parsedSortBy = destr$1(sortBy);
@@ -9224,39 +8266,23 @@ const index_get$i = defineEventHandler((event) => {
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
-  let filteredProducts = db$a.products
-    .filter(
-      (product) =>
-        (product.productName.toLowerCase().includes(queryLower) ||
-          product.productBrand.toLowerCase().includes(queryLower)) &&
-        product.category === (category || product.category) &&
-        product.status === (status || product.status) &&
-        (typeof stockLocal === "undefined"
-          ? true
-          : product.stock === stockLocal)
-    )
-    .reverse();
+  let filteredProducts = db$a.products.filter((product) => (product.productName.toLowerCase().includes(queryLower) || product.productBrand.toLowerCase().includes(queryLower)) && product.category === (category || product.category) && product.status === (status || product.status) && (typeof stockLocal === "undefined" ? true : product.stock === stockLocal)).reverse();
   if (sortByLocal) {
     if (sortByLocal === "product") {
       filteredProducts = filteredProducts.sort((a, b) => {
         if (orderByLocal === "asc")
-          return a.productName.toLowerCase() > b.productName.toLowerCase()
-            ? 1
-            : -1;
+          return a.productName.toLowerCase() > b.productName.toLowerCase() ? 1 : -1;
         else if (orderByLocal === "desc")
-          return a.productName.toLowerCase() < b.productName.toLowerCase()
-            ? 1
-            : -1;
+          return a.productName.toLowerCase() < b.productName.toLowerCase() ? 1 : -1;
         return 0;
       });
     }
     if (sortByLocal === "category") {
       filteredProducts = filteredProducts.sort((a, b) => {
-        if (orderByLocal === "asc") return a.category > b.category ? 1 : -1;
+        if (orderByLocal === "asc")
+          return a.category > b.category ? 1 : -1;
         else if (orderByLocal === "desc")
           return a.category < b.category ? 1 : -1;
         return 0;
@@ -9264,8 +8290,10 @@ const index_get$i = defineEventHandler((event) => {
     }
     if (sortByLocal === "status") {
       filteredProducts = filteredProducts.sort((a, b) => {
-        if (orderByLocal === "asc") return a.status > b.status ? 1 : -1;
-        else if (orderByLocal === "desc") return a.status < b.status ? 1 : -1;
+        if (orderByLocal === "asc")
+          return a.status > b.status ? 1 : -1;
+        else if (orderByLocal === "desc")
+          return a.status < b.status ? 1 : -1;
         return 0;
       });
     }
@@ -9280,28 +8308,29 @@ const index_get$i = defineEventHandler((event) => {
     }
     if (sortByLocal === "qty") {
       filteredProducts = filteredProducts.sort((a, b) => {
-        if (orderByLocal === "asc") return a.qty > b.qty ? 1 : -1;
-        else if (orderByLocal === "desc") return a.qty < b.qty ? 1 : -1;
+        if (orderByLocal === "asc")
+          return a.qty > b.qty ? 1 : -1;
+        else if (orderByLocal === "desc")
+          return a.qty < b.qty ? 1 : -1;
         return 0;
       });
     }
     if (sortByLocal === "sku") {
       filteredProducts = filteredProducts.sort((a, b) => {
-        if (orderByLocal === "asc") return a.sku > b.sku ? 1 : -1;
-        else if (orderByLocal === "desc") return a.sku < b.sku ? 1 : -1;
+        if (orderByLocal === "asc")
+          return a.sku > b.sku ? 1 : -1;
+        else if (orderByLocal === "desc")
+          return a.sku < b.sku ? 1 : -1;
         return 0;
       });
     }
   }
-  return {
-    products: paginateArray(filteredProducts, itemsPerPageLocal, pageLocal),
-    total: filteredProducts.length,
-  };
+  return { products: paginateArray(filteredProducts, itemsPerPageLocal, pageLocal), total: filteredProducts.length };
 });
 
-const index_get$j = /*#__PURE__*/ Object.freeze({
+const index_get$j = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$i,
+  default: index_get$i
 });
 
 const index_get$g = defineEventHandler((event) => {
@@ -9312,9 +8341,7 @@ const index_get$g = defineEventHandler((event) => {
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const filteredReferrals = db$a.referrals;
   if (sortByLocal) {
@@ -9329,8 +8356,10 @@ const index_get$g = defineEventHandler((event) => {
     }
     if (sortByLocal === "referred-id") {
       filteredReferrals.sort((a, b) => {
-        if (orderByLocal === "asc") return a.referredId - b.referredId;
-        else if (orderByLocal === "desc") return b.referredId - a.referredId;
+        if (orderByLocal === "asc")
+          return a.referredId - b.referredId;
+        else if (orderByLocal === "desc")
+          return b.referredId - a.referredId;
         return 0;
       });
     }
@@ -9344,22 +8373,16 @@ const index_get$g = defineEventHandler((event) => {
       });
     }
   }
-  return {
-    referrals: paginateArray(filteredReferrals, itemsPerPageLocal, pageLocal),
-    total: filteredReferrals.length,
-  };
+  return { referrals: paginateArray(filteredReferrals, itemsPerPageLocal, pageLocal), total: filteredReferrals.length };
 });
 
-const index_get$h = /*#__PURE__*/ Object.freeze({
+const index_get$h = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$g,
+  default: index_get$g
 });
 
 const _id__delete$4 = defineEventHandler((event) => {
-  const reviewId = getIntId(
-    event,
-    "Review id is required to get review details"
-  );
+  const reviewId = getIntId(event, "Review id is required to get review details");
   const id = Number(reviewId);
   const reviewIndex = db$a.reviews.findIndex((e) => e.id === id);
   if (reviewIndex >= 0) {
@@ -9370,42 +8393,26 @@ const _id__delete$4 = defineEventHandler((event) => {
   setResponseStatus(event, 204);
 });
 
-const _id__delete$5 = /*#__PURE__*/ Object.freeze({
+const _id__delete$5 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__delete$4,
+  default: _id__delete$4
 });
 
 const index_get$e = defineEventHandler((event) => {
-  const {
-    q = "",
-    sortBy,
-    orderBy,
-    itemsPerPage = 10,
-    page = 1,
-  } = getQuery$1(event);
+  const { q = "", sortBy, orderBy, itemsPerPage = 10, page = 1 } = getQuery$1(event);
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLower = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLower = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const filteredReviews = db$a.reviews.filter((review) => {
     const { product, reviewer, email } = review;
-    return (
-      product.toLowerCase().includes(queryLower) ||
-      reviewer.toLowerCase().includes(queryLower) ||
-      email.toLowerCase().includes(queryLower) ||
-      review.head.toLowerCase().includes(queryLower) ||
-      review.para.toLowerCase().includes(queryLower)
-    );
+    return product.toLowerCase().includes(queryLower) || reviewer.toLowerCase().includes(queryLower) || email.toLowerCase().includes(queryLower) || review.head.toLowerCase().includes(queryLower) || review.para.toLowerCase().includes(queryLower);
   });
   if (sortByLocal) {
     if (sortByLocal === "product") {
@@ -9442,18 +8449,16 @@ const index_get$e = defineEventHandler((event) => {
         return a.status.toLowerCase() > b.status.toLowerCase() ? 1 : -1;
       else if (orderByLocal === "desc")
         return a.status.toLowerCase() < b.status.toLowerCase() ? 1 : -1;
-      else return 0;
+      else
+        return 0;
     });
   }
-  return {
-    reviews: paginateArray(filteredReviews, itemsPerPageLocal, pageLocal),
-    total: filteredReviews.length,
-  };
+  return { reviews: paginateArray(filteredReviews, itemsPerPageLocal, pageLocal), total: filteredReviews.length };
 });
 
-const index_get$f = /*#__PURE__*/ Object.freeze({
+const index_get$f = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$e,
+  default: index_get$e
 });
 
 const avatar1$6 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -9473,32 +8478,31 @@ const db$9 = {
       to: [
         {
           email: "johndoe@mail.com",
-          name: "me",
-        },
+          name: "me"
+        }
       ],
       from: {
         email: "james25@gmail.com",
         name: "Katie Brandt",
-        avatar: avatar8$3,
+        avatar: avatar8$3
       },
       subject: "Bring smile discussion same boy include care.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Guy national course pay small per. Commercial research lose key fight marriage. Young series raise degree foot degree detail number.\nCrime gas real pass white. Television success east.</p><p>Into miss knowledge result. Seat carry tax beat line. Amount language paper machine fly.\nMusic several common former. More mouth year site move hold. Billion material born news western late.</p><p>World them term identify. Rule southern condition thought. Article successful traditional friend.\nPhone financial skill theory.\nChange Mr experience. Everyone help structure much family.\nVoice general group likely.</p>",
+      message: "<p>Guy national course pay small per. Commercial research lose key fight marriage. Young series raise degree foot degree detail number.\nCrime gas real pass white. Television success east.</p><p>Into miss knowledge result. Seat carry tax beat line. Amount language paper machine fly.\nMusic several common former. More mouth year site move hold. Billion material born news western late.</p><p>World them term identify. Rule southern condition thought. Article successful traditional friend.\nPhone financial skill theory.\nChange Mr experience. Everyone help structure much family.\nVoice general group likely.</p>",
       attachments: [
         {
           fileName: "log.txt",
           thumbnail: txt,
           url: "",
-          size: "5mb",
+          size: "5mb"
         },
         {
           fileName: "performance.xls",
           thumbnail: xls,
           url: "",
-          size: "10mb",
-        },
+          size: "10mb"
+        }
       ],
       isStarred: true,
       labels: ["private", "company"],
@@ -9506,7 +8510,7 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 49,
@@ -9514,13 +8518,12 @@ const db$9 = {
       from: {
         email: "jamesskinner@hotmail.com",
         name: "Joshua Cline",
-        avatar: avatar1$6,
+        avatar: avatar1$6
       },
       subject: "Magazine say side view.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Campaign even order for color. Remember card return position white argue prepare. Case fill follow then condition investment why.\nCold son pattern wife. Child name interest company thought every federal. He catch daughter design.</p><p>Affect customer a. Which difficult science.\nReality whether what animal. Call report author against season heart.\nCatch have always source response your even. Person mother whether since clearly. Cut staff work the nothing.</p><p>Cell cover along school. Method option not why laugh. Nation medical thousand world rule.\nEvening fish rich sense create. Civil family particularly day machine free read. Interesting capital owner international nor condition.</p>",
+      message: "<p>Campaign even order for color. Remember card return position white argue prepare. Case fill follow then condition investment why.\nCold son pattern wife. Child name interest company thought every federal. He catch daughter design.</p><p>Affect customer a. Which difficult science.\nReality whether what animal. Call report author against season heart.\nCatch have always source response your even. Person mother whether since clearly. Cut staff work the nothing.</p><p>Cell cover along school. Method option not why laugh. Nation medical thousand world rule.\nEvening fish rich sense create. Civil family particularly day machine free read. Interesting capital owner international nor condition.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal"],
@@ -9532,13 +8535,12 @@ const db$9 = {
           from: {
             email: "teresa54@gmail.com",
             name: "Brittany Young",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "The beat save none make sea large number.",
           cc: [],
           bcc: [],
-          message:
-            "<p>College before employee recognize. Teach central this interest service party section. Floor west break bit suggest ok everyone.\n Pm quality school out form. Want case town individual.</p><p>Hundred a modern career whose know find responsibility. East option trouble next. Sport goal after race pull political common board.</p><p>Beat support exactly material fact benefit six. Time represent stuff forget plant pass team. Begin lot war field simple.\nBuilding development wear trip marriage. Economy speech be election arrive color next.</p>",
+          message: "<p>College before employee recognize. Teach central this interest service party section. Floor west break bit suggest ok everyone.\n Pm quality school out form. Want case town individual.</p><p>Hundred a modern career whose know find responsibility. East option trouble next. Sport goal after race pull political common board.</p><p>Beat support exactly material fact benefit six. Time represent stuff forget plant pass team. Begin lot war field simple.\nBuilding development wear trip marriage. Economy speech be election arrive color next.</p>",
           attachments: [],
           isStarred: false,
           labels: ["company", "private", "personal", "important"],
@@ -9546,7 +8548,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 766,
@@ -9554,13 +8556,12 @@ const db$9 = {
           from: {
             email: "angelajimenez@yahoo.com",
             name: "Emily Moore",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Movement along college bad reality scientist.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Goal reveal past rule arrive project performance. Learn despite the way. Operation within suggest glass beautiful always really.\nLanguage although cut network conference economy long. Forward us point meet. Sing buy central quality science.</p><p>Real keep material wind drive life. Job election to determine table within expert art.\nOften ten ask city. Memory to run market.\nMove theory contain good fire. Area walk position site would.</p><p>Seem response base question tough consumer another. Sit hard deep child operation institution. Charge child picture different sense.\nMedia remain could go eight different west. Thousand fly box else.</p>",
+          message: "<p>Goal reveal past rule arrive project performance. Learn despite the way. Operation within suggest glass beautiful always really.\nLanguage although cut network conference economy long. Forward us point meet. Sing buy central quality science.</p><p>Real keep material wind drive life. Job election to determine table within expert art.\nOften ten ask city. Memory to run market.\nMove theory contain good fire. Area walk position site would.</p><p>Seem response base question tough consumer another. Sit hard deep child operation institution. Charge child picture different sense.\nMedia remain could go eight different west. Thousand fly box else.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal"],
@@ -9568,7 +8569,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 3718436,
@@ -9576,13 +8577,12 @@ const db$9 = {
           from: {
             email: "alexanderpatel@yahoo.com",
             name: "Andrew Cruz",
-            avatar: avatar7$3,
+            avatar: avatar7$3
           },
           subject: "Realize agree dark spring suddenly maintain level history.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Actually and them time itself newspaper stand. Billion Republican manager little hot store. Pull issue many close by large seven.\nIt writer will concern community rate through factor. Reduce south director budget shake return.</p><p>Score event since campaign single conference significant. Design fall teacher.\nWhich themselves along that themselves activity.\nUntil nothing cold toward politics product. Rock enter in what option.</p><p>Relate authority agency claim protect. Task not wait respond week hotel.\nAt catch matter try boy why white physical. Section protect try kind few. Skin two author style.\nWestern simple instead strategy mention item suffer. Remain agree account.</p>",
+          message: "<p>Actually and them time itself newspaper stand. Billion Republican manager little hot store. Pull issue many close by large seven.\nIt writer will concern community rate through factor. Reduce south director budget shake return.</p><p>Score event since campaign single conference significant. Design fall teacher.\nWhich themselves along that themselves activity.\nUntil nothing cold toward politics product. Rock enter in what option.</p><p>Relate authority agency claim protect. Task not wait respond week hotel.\nAt catch matter try boy why white physical. Section protect try kind few. Skin two author style.\nWestern simple instead strategy mention item suffer. Remain agree account.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "private"],
@@ -9590,12 +8590,12 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
-        },
+          isDeleted: true
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 48,
@@ -9603,13 +8603,12 @@ const db$9 = {
       from: {
         email: "williamsstacey@yahoo.com",
         name: "Jonathan Walker",
-        avatar: avatar1$6,
+        avatar: avatar1$6
       },
       subject: "Then until task something before color impact now.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Head claim property experience arm remain structure. Worry do science look oil easy. His whose want.\nHuge protect foot save century somebody future. Skin building truth along sing such read speech.\nRaise argue everything send.</p><p>While attorney to power card. Agent card big nothing. Wall behavior investment stay relate stage their. Carry full rather product arrive center when.</p><p>Law chance mention sound maintain expect whose. Treatment simply if power decide bar. Theory building laugh hand manager condition true.\nFoot few eat store environment that involve man. Into report player writer yourself.</p>",
+      message: "<p>Head claim property experience arm remain structure. Worry do science look oil easy. His whose want.\nHuge protect foot save century somebody future. Skin building truth along sing such read speech.\nRaise argue everything send.</p><p>While attorney to power card. Agent card big nothing. Wall behavior investment stay relate stage their. Carry full rather product arrive center when.</p><p>Law chance mention sound maintain expect whose. Treatment simply if power decide bar. Theory building laugh hand manager condition true.\nFoot few eat store environment that involve man. Into report player writer yourself.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "private", "important"],
@@ -9617,21 +8616,16 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 47,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "lori82@gmail.com",
-        name: "Kevin Evans",
-        avatar: avatar7$3,
-      },
+      from: { email: "lori82@gmail.com", name: "Kevin Evans", avatar: avatar7$3 },
       subject: "Shoulder science point show human black answer anything.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Rate church step beat head class nor.\nLeg ten offer girl me teach. Quite could within. Bill civil situation to.\nDifference unit tax garden. Fine cause political center her. Design look free treat item ball.</p><p>Also night argue I explain time practice.\nCommercial example reveal window try door great material. Wear data loss. Visit prove either catch will.</p><p>Show young century between box. Statement go guess bad film.\nIdea voice by audience meet everyone next prove. Art leader minute build.</p>",
+      message: "<p>Rate church step beat head class nor.\nLeg ten offer girl me teach. Quite could within. Bill civil situation to.\nDifference unit tax garden. Fine cause political center her. Design look free treat item ball.</p><p>Also night argue I explain time practice.\nCommercial example reveal window try door great material. Wear data loss. Visit prove either catch will.</p><p>Show young century between box. Statement go guess bad film.\nIdea voice by audience meet everyone next prove. Art leader minute build.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal"],
@@ -9639,21 +8633,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 46,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "crussell@hotmail.com",
-        name: "Alexa Burnett",
-        avatar: avatar4$5,
-      },
+      from: { email: "crussell@hotmail.com", name: "Alexa Burnett", avatar: avatar4$5 },
       subject: "Want manager source car recognize character impact.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Mr attorney role meeting enter.\nMajor serve night often. Region current nation.\nHear each knowledge today. Church positive let anyone hospital member difficult color. Product difference such sea view senior.</p><p>Home require nor material current. State probably customer size soldier music site.\nSeveral east when miss partner language hotel ask. She hold turn. Century general study radio.</p><p>Old community prevent. Subject minute song sport.\nCover woman born decision agree center cold.</p>",
+      message: "<p>Mr attorney role meeting enter.\nMajor serve night often. Region current nation.\nHear each knowledge today. Church positive let anyone hospital member difficult color. Product difference such sea view senior.</p><p>Home require nor material current. State probably customer size soldier music site.\nSeveral east when miss partner language hotel ask. She hold turn. Century general study radio.</p><p>Old community prevent. Subject minute song sport.\nCover woman born decision agree center cold.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal"],
@@ -9661,21 +8650,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 45,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "kkim@yahoo.com",
-        name: "Dominique Paul",
-        avatar: avatar4$5,
-      },
+      from: { email: "kkim@yahoo.com", name: "Dominique Paul", avatar: avatar4$5 },
       subject: "Level within enjoy baby.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Opportunity meet author table pressure leader. Owner never investment recent nearly before. Whom ask road.\nBody attorney clear program tonight current. Name watch school hard fly.</p><p>People crime window talk. Cell should third have sit would.\nOccur hit take.\nFact go system really entire common. Fast organization could themselves continue. End ahead rather.</p><p>Action quickly hundred movie choice. Nice yes lose two. Stay practice section onto some firm little Republican.\nLarge fast politics what. Common price speak sign particularly answer. You simply certain which direction.</p>",
+      message: "<p>Opportunity meet author table pressure leader. Owner never investment recent nearly before. Whom ask road.\nBody attorney clear program tonight current. Name watch school hard fly.</p><p>People crime window talk. Cell should third have sit would.\nOccur hit take.\nFact go system really entire common. Fast organization could themselves continue. End ahead rather.</p><p>Action quickly hundred movie choice. Nice yes lose two. Stay practice section onto some firm little Republican.\nLarge fast politics what. Common price speak sign particularly answer. You simply certain which direction.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important", "personal"],
@@ -9687,13 +8671,12 @@ const db$9 = {
           from: {
             email: "amyconner@hotmail.com",
             name: "Michael Martinez",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Recent seek particularly seem southern charge.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Accept his citizen again anyone. Claim process watch.\nSeven court there. Local author line would real machine officer.\nPlant just benefit operation. Similar soldier wrong part hospital action drive.</p><p>Before throw enough goal different. Doctor remain Mrs political staff.\nSeem successful why check after best pass. Degree because prove church move center space often.</p><p>Might trade cell guess institution. Difference win again.\nCulture life car agency improve you. Thing also hold child apply south box appear. Education itself effort their.\nFast save pull deal his talk issue. Fall sport better step.</p>",
+          message: "<p>Accept his citizen again anyone. Claim process watch.\nSeven court there. Local author line would real machine officer.\nPlant just benefit operation. Similar soldier wrong part hospital action drive.</p><p>Before throw enough goal different. Doctor remain Mrs political staff.\nSeem successful why check after best pass. Degree because prove church move center space often.</p><p>Might trade cell guess institution. Difference win again.\nCulture life car agency improve you. Thing also hold child apply south box appear. Education itself effort their.\nFast save pull deal his talk issue. Fall sport better step.</p>",
           attachments: [],
           isStarred: true,
           labels: ["important", "personal"],
@@ -9701,7 +8684,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 6933053,
@@ -9709,13 +8692,12 @@ const db$9 = {
           from: {
             email: "ivanguerrero@yahoo.com",
             name: "Ashley Fuller",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Difference owner claim student site property would.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Hour town against move difference scene cause walk.\nAgreement bag accept society story generation.\nLike process floor lose.\nStop think work off once. Billion institution anyone stuff determine federal attention.</p><p>Notice ever same tonight away performance role increase. Continue best same candidate expect look. Feeling church whole case risk town boy language.\nManage may send rate among. Physical law risk final source. Matter star ago or at possible.</p><p>Hotel I energy piece drop. Learn southern by maintain often evening.\nLate rise husband top skin memory lot.\nTest compare strategy father. Everyone few actually this again minute become.</p>",
+          message: "<p>Hour town against move difference scene cause walk.\nAgreement bag accept society story generation.\nLike process floor lose.\nStop think work off once. Billion institution anyone stuff determine federal attention.</p><p>Notice ever same tonight away performance role increase. Continue best same candidate expect look. Feeling church whole case risk town boy language.\nManage may send rate among. Physical law risk final source. Matter star ago or at possible.</p><p>Hotel I energy piece drop. Learn southern by maintain often evening.\nLate rise husband top skin memory lot.\nTest compare strategy father. Everyone few actually this again minute become.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -9723,21 +8705,16 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 8,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "lmoreno@yahoo.com",
-            name: "Ashley Lewis",
-            avatar: avatar4$5,
-          },
+          from: { email: "lmoreno@yahoo.com", name: "Ashley Lewis", avatar: avatar4$5 },
           subject: "Candidate available material away.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Ten spend paper. Trial certain those. Make middle campaign might.\nEffect well accept great wall.\nSeem your at small. So his serious high center political man.</p><p>Guess staff argue ready trade whole including. Science four skill best level interesting prevent. Mind he recent another point understand.\nAsk daughter specific hot without body challenge. Official threat pretty left bar check believe bit.</p><p>Trouble result receive political.\nAvailable knowledge increase. Dog computer ability prove paper. Scientist either color capital fall do.\nShoulder bar small. Those thank beyond sea piece.</p>",
+          message: "<p>Ten spend paper. Trial certain those. Make middle campaign might.\nEffect well accept great wall.\nSeem your at small. So his serious high center political man.</p><p>Guess staff argue ready trade whole including. Science four skill best level interesting prevent. Mind he recent another point understand.\nAsk daughter specific hot without body challenge. Official threat pretty left bar check believe bit.</p><p>Trouble result receive political.\nAvailable knowledge increase. Dog computer ability prove paper. Scientist either color capital fall do.\nShoulder bar small. Those thank beyond sea piece.</p>",
           attachments: [],
           isStarred: false,
           labels: ["important", "personal"],
@@ -9745,21 +8722,16 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 784835803,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "mortiz@gmail.com",
-            name: "Bradley Hobbs",
-            avatar: avatar7$3,
-          },
+          from: { email: "mortiz@gmail.com", name: "Bradley Hobbs", avatar: avatar7$3 },
           subject: "Tend picture church team place show society.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Republican risk window. Different speak prove college from push main.\nRegion experience field wind get choose. Away drug professional memory. Nation still best fact forget election smile. Sure ready security office question.</p><p>Appear civil appear movie space.\nAmount rule meet wide exactly theory be. Pretty Republican material human that. Page war fear pay.\nAgree fall investment red nothing go also. Expect join against threat and.</p><p>Serve writer leader room.\nPurpose high west lose firm. Mouth between myself get upon avoid power low.\nSurface particular be main yeah. Huge parent morning continue research.</p>",
+          message: "<p>Republican risk window. Different speak prove college from push main.\nRegion experience field wind get choose. Away drug professional memory. Nation still best fact forget election smile. Sure ready security office question.</p><p>Appear civil appear movie space.\nAmount rule meet wide exactly theory be. Pretty Republican material human that. Page war fear pay.\nAgree fall investment red nothing go also. Expect join against threat and.</p><p>Serve writer leader room.\nPurpose high west lose firm. Mouth between myself get upon avoid power low.\nSurface particular be main yeah. Huge parent morning continue research.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "private", "important"],
@@ -9767,27 +8739,21 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 44,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "ethan27@gmail.com",
-        name: "Daniel Sullivan",
-        avatar: avatar7$3,
-      },
-      subject:
-        "Choose security yes relationship recognize consumer democratic international.",
+      from: { email: "ethan27@gmail.com", name: "Daniel Sullivan", avatar: avatar7$3 },
+      subject: "Choose security yes relationship recognize consumer democratic international.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Person whom reflect prove show.\nBreak exist which prepare. Collection she population understand result business ability site.\nFact figure recent population condition. What west grow food space former.</p><p>Individual catch management her skin bag specific. Order base project under. Minute watch continue relationship state continue this store.</p><p>Recent cut organization machine.\nEnter today growth five interest some. Million official middle space return. Second cold available seven behind protect owner.</p>",
+      message: "<p>Person whom reflect prove show.\nBreak exist which prepare. Collection she population understand result business ability site.\nFact figure recent population condition. What west grow food space former.</p><p>Individual catch management her skin bag specific. Order base project under. Minute watch continue relationship state continue this store.</p><p>Recent cut organization machine.\nEnter today growth five interest some. Million official middle space return. Second cold available seven behind protect owner.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important", "personal"],
@@ -9799,13 +8765,12 @@ const db$9 = {
           from: {
             email: "hubbardsharon@hotmail.com",
             name: "Laura Dominguez",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Daughter skill fact rise nice power.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Concern enter model team want admit detail far. West TV themselves short friend agreement service.\nAccording toward free upon draw family state. Account or action president piece.\nCause part fight second. Natural international mean.</p><p>Lay nearly center hear ten season officer water. Pattern loss window follow sure line.\nGlass analysis seat have. Ok budget among moment sing four.</p><p>Product now material play pick deal determine suffer. Most second region represent.\nRich reduce evidence home nothing yeah pressure. Rule play between fast wrong place.\nEvidence color anything because. Wall start manage style central charge beyond.</p>",
+          message: "<p>Concern enter model team want admit detail far. West TV themselves short friend agreement service.\nAccording toward free upon draw family state. Account or action president piece.\nCause part fight second. Natural international mean.</p><p>Lay nearly center hear ten season officer water. Pattern loss window follow sure line.\nGlass analysis seat have. Ok budget among moment sing four.</p><p>Product now material play pick deal determine suffer. Most second region represent.\nRich reduce evidence home nothing yeah pressure. Rule play between fast wrong place.\nEvidence color anything because. Wall start manage style central charge beyond.</p>",
           attachments: [],
           isStarred: false,
           labels: ["company", "important"],
@@ -9813,7 +8778,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 317,
@@ -9821,13 +8786,12 @@ const db$9 = {
           from: {
             email: "jameslopez@yahoo.com",
             name: "Christopher Farrell",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Character fall follow.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Hope bar civil. Final design section those.\nBrother sit many receive vote read large. Reflect evening man realize detail. Party yeah factor never guy.\nSouthern movement everything. Play although movie effect space front.</p><p>Front first say interesting million force issue so. Enjoy least Democrat strong dark. Parent business bill surface arrive daughter.\nUntil home successful might capital. Nearly issue free customer. Carry matter executive country human shake.</p><p>Key do choose however.\nDiscuss each police modern. Apply method speech population participant.</p>",
+          message: "<p>Hope bar civil. Final design section those.\nBrother sit many receive vote read large. Reflect evening man realize detail. Party yeah factor never guy.\nSouthern movement everything. Play although movie effect space front.</p><p>Front first say interesting million force issue so. Enjoy least Democrat strong dark. Parent business bill surface arrive daughter.\nUntil home successful might capital. Nearly issue free customer. Carry matter executive country human shake.</p><p>Key do choose however.\nDiscuss each police modern. Apply method speech population participant.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal"],
@@ -9835,26 +8799,21 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 43,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "rmartin@gmail.com",
-        name: "Nicole Allen",
-        avatar: avatar4$5,
-      },
+      from: { email: "rmartin@gmail.com", name: "Nicole Allen", avatar: avatar4$5 },
       subject: "Ten store nature surface that seek black return.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Recognize section different ground million. Source court seek street.\nScience thank two capital shoulder herself certainly. Individual hair general manager why.</p><p>Live hear lawyer quickly player system. American spend ok beautiful. Shoulder drug itself wrong partner event.\nInclude account water success political. Newspaper quality really road. Short maintain raise appear.</p><p>Move cultural others protect season he future. Argue glass loss whether available size apply government.\nFood hand night particular. Change few key would thus.\nGreen talk to improve miss.</p>",
+      message: "<p>Recognize section different ground million. Source court seek street.\nScience thank two capital shoulder herself certainly. Individual hair general manager why.</p><p>Live hear lawyer quickly player system. American spend ok beautiful. Shoulder drug itself wrong partner event.\nInclude account water success political. Newspaper quality really road. Short maintain raise appear.</p><p>Move cultural others protect season he future. Argue glass loss whether available size apply government.\nFood hand night particular. Change few key would thus.\nGreen talk to improve miss.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -9862,21 +8821,16 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 42,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "adkinsryan@yahoo.com",
-        name: "Karen Russell",
-        avatar: avatar6$4,
-      },
+      from: { email: "adkinsryan@yahoo.com", name: "Karen Russell", avatar: avatar6$4 },
       subject: "Along represent responsibility security he leg.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Explain through thought forward daughter entire. Investment direction great writer thus blue provide.\nPersonal she community phone same. Remain religious meeting. Data personal meeting agreement style. Next time build.</p><p>Avoid board beautiful strong effect. We star fight quality stay sense soldier. Her social month. System professional social.\nYoung back including benefit position plan just. Line history sometimes check need remain make.</p><p>Radio should magazine yard ahead then. Student knowledge cover general use though.\nEnergy agree away team. Power whose music sort between man analysis. Boy election value.\nClearly law avoid dream. Would around role third seek world present.</p>",
+      message: "<p>Explain through thought forward daughter entire. Investment direction great writer thus blue provide.\nPersonal she community phone same. Remain religious meeting. Data personal meeting agreement style. Next time build.</p><p>Avoid board beautiful strong effect. We star fight quality stay sense soldier. Her social month. System professional social.\nYoung back including benefit position plan just. Line history sometimes check need remain make.</p><p>Radio should magazine yard ahead then. Student knowledge cover general use though.\nEnergy agree away team. Power whose music sort between man analysis. Boy election value.\nClearly law avoid dream. Would around role third seek world present.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal"],
@@ -9888,13 +8842,12 @@ const db$9 = {
           from: {
             email: "oblack@hotmail.com",
             name: "Michael Mccarthy",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Around impact point interest method.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Blood power job common. Spring success arm article. Continue manager blue new enough business six difference.\nMe finish pick energy wear him home. If affect ready east. Light enter speech many off day answer.</p><p>Quality consider statement building suddenly poor. Indeed because image month charge pressure lawyer. Color lot subject leg.\nUs cold everybody clearly evening ago apply. Run between pull. Could amount policy think second take born draw.</p><p>Rest feel forget garden tough citizen him. Sign court point recent.\nClaim wide chair plant. Smile build everyone politics run.\nFactor trip personal.</p>",
+          message: "<p>Blood power job common. Spring success arm article. Continue manager blue new enough business six difference.\nMe finish pick energy wear him home. If affect ready east. Light enter speech many off day answer.</p><p>Quality consider statement building suddenly poor. Indeed because image month charge pressure lawyer. Color lot subject leg.\nUs cold everybody clearly evening ago apply. Run between pull. Could amount policy think second take born draw.</p><p>Rest feel forget garden tough citizen him. Sign court point recent.\nClaim wide chair plant. Smile build everyone politics run.\nFactor trip personal.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private", "important", "company"],
@@ -9902,7 +8855,7 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 3151,
@@ -9910,13 +8863,12 @@ const db$9 = {
           from: {
             email: "zjackson@hotmail.com",
             name: "Don Stewart",
-            avatar: avatar7$3,
+            avatar: avatar7$3
           },
           subject: "Nation campaign still never church politics business.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Leg simple region out compare include wide. Simply kid away person training how. Answer laugh build attention cell authority be.\nPolitical citizen soldier record score green consider. Catch result traditional debate subject finally security.</p><p>Model seek stand fish three. View might space.\nSection receive fire town prepare public camera order. Sometimes nice another realize level. Shake fill institution forward author matter same.</p><p>Too home after lay senior. Result agree strong finish should easy onto agreement. Size PM usually war recent raise tend use.\nWork section story six billion. Long would add film middle financial third. Citizen up debate room owner deal.</p>",
+          message: "<p>Leg simple region out compare include wide. Simply kid away person training how. Answer laugh build attention cell authority be.\nPolitical citizen soldier record score green consider. Catch result traditional debate subject finally security.</p><p>Model seek stand fish three. View might space.\nSection receive fire town prepare public camera order. Sometimes nice another realize level. Shake fill institution forward author matter same.</p><p>Too home after lay senior. Result agree strong finish should easy onto agreement. Size PM usually war recent raise tend use.\nWork section story six billion. Long would add film middle financial third. Citizen up debate room owner deal.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private", "company"],
@@ -9924,21 +8876,16 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 600,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "mary98@yahoo.com",
-            name: "Dana Harvey",
-            avatar: avatar2$6,
-          },
+          from: { email: "mary98@yahoo.com", name: "Dana Harvey", avatar: avatar2$6 },
           subject: "Both community term run maybe sort per.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Watch great himself all. Court such building kid from region. Reveal team poor lawyer theory listen.\nSon participant very better. Bed city dog sign.\nBall despite player whatever whatever opportunity. Training social kitchen blood fly.</p><p>May hit expert last. Attention opportunity shoulder. Agency federal just candidate study long.\nNotice first work full write recognize probably. Once writer common low last.</p><p>Hour about entire material. Various from subject military read safe seat. Truth third spend hair role home. Any herself analysis pay.\nGame get class ever enter once its. Job street student ok.</p>",
+          message: "<p>Watch great himself all. Court such building kid from region. Reveal team poor lawyer theory listen.\nSon participant very better. Bed city dog sign.\nBall despite player whatever whatever opportunity. Training social kitchen blood fly.</p><p>May hit expert last. Attention opportunity shoulder. Agency federal just candidate study long.\nNotice first work full write recognize probably. Once writer common low last.</p><p>Hour about entire material. Various from subject military read safe seat. Truth third spend hair role home. Any herself analysis pay.\nGame get class ever enter once its. Job street student ok.</p>",
           attachments: [],
           isStarred: true,
           labels: ["important", "private", "personal", "company"],
@@ -9946,7 +8893,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 23080678,
@@ -9954,13 +8901,12 @@ const db$9 = {
           from: {
             email: "ppineda@yahoo.com",
             name: "Samantha Martin",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Whether far ready success yes many window.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Cause have like. Unit nearly view feeling arrive player. Nor officer she production fly nice begin value.\nBehavior trade focus any. Or economy information class blue school structure everything. Production white although her total natural space.</p><p>Recognize section and tend. Understand box option agency event drive window. Child himself during statement financial under. Drug daughter attention magazine window go red.</p><p>Because drop measure I significant. Fall type us a staff wind court. Student discuss pattern way.\nPlan should book. Lead decide radio ok foreign behavior bit style.\nHundred no dream smile. Whose put indeed medical.</p>",
+          message: "<p>Cause have like. Unit nearly view feeling arrive player. Nor officer she production fly nice begin value.\nBehavior trade focus any. Or economy information class blue school structure everything. Production white although her total natural space.</p><p>Recognize section and tend. Understand box option agency event drive window. Child himself during statement financial under. Drug daughter attention magazine window go red.</p><p>Because drop measure I significant. Fall type us a staff wind court. Student discuss pattern way.\nPlan should book. Lead decide radio ok foreign behavior bit style.\nHundred no dream smile. Whose put indeed medical.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal", "company"],
@@ -9968,26 +8914,21 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
-        },
+          isDeleted: true
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 41,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "julie16@yahoo.com",
-        name: "Tyler Hernandez",
-        avatar: avatar3$5,
-      },
+      from: { email: "julie16@yahoo.com", name: "Tyler Hernandez", avatar: avatar3$5 },
       subject: "Environment success however window student.",
       cc: [],
       bcc: [],
-      message:
-        "<p>While million social ball surface in late.\nBudget though five so fund purpose.\nBall understand effect teach. Find charge rich child. Do require laugh everybody interesting.</p><p>Season south town performance whole political thought box. Management try just president. Finish fish strong teach enter ahead.\nBehind unit difference expert position two. Let before account baby cut should TV. Explain effort realize need.</p><p>Even item or environment save ten prepare activity. Nearly become current.\nBed nature indicate discussion least career perhaps. Head must sure. Why sea around buy. Audience politics sell strong career.</p>",
+      message: "<p>While million social ball surface in late.\nBudget though five so fund purpose.\nBall understand effect teach. Find charge rich child. Do require laugh everybody interesting.</p><p>Season south town performance whole political thought box. Management try just president. Finish fish strong teach enter ahead.\nBehind unit difference expert position two. Let before account baby cut should TV. Explain effort realize need.</p><p>Even item or environment save ten prepare activity. Nearly become current.\nBed nature indicate discussion least career perhaps. Head must sure. Why sea around buy. Audience politics sell strong career.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important", "private", "company"],
@@ -9995,21 +8936,16 @@ const db$9 = {
       replies: [],
       folder: "sent",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 40,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "brownsandy@gmail.com",
-        name: "Michael Smith",
-        avatar: avatar3$5,
-      },
+      from: { email: "brownsandy@gmail.com", name: "Michael Smith", avatar: avatar3$5 },
       subject: "Miss strategy want author test.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Hear college professor see agent believe easy. Front test big black shoulder although. Candidate skill every player pressure.\nMany six reason allow kitchen. Respond us bank idea treat sure stuff tonight.</p><p>Nothing stay medical strategy early position maybe buy. Turn board early. Particularly then care value should material.\nSong doctor phone offer. Lawyer fear say discussion result represent. Performance back when cover effort.</p><p>Determine huge with newspaper computer focus detail trouble. Move support strong certainly.\nPopulation administration thing fund push movie democratic community. Town next wonder.</p>",
+      message: "<p>Hear college professor see agent believe easy. Front test big black shoulder although. Candidate skill every player pressure.\nMany six reason allow kitchen. Respond us bank idea treat sure stuff tonight.</p><p>Nothing stay medical strategy early position maybe buy. Turn board early. Particularly then care value should material.\nSong doctor phone offer. Lawyer fear say discussion result represent. Performance back when cover effort.</p><p>Determine huge with newspaper computer focus detail trouble. Move support strong certainly.\nPopulation administration thing fund push movie democratic community. Town next wonder.</p>",
       attachments: [],
       isStarred: true,
       labels: ["private", "important"],
@@ -10017,21 +8953,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 39,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "marissa73@hotmail.com",
-        name: "James Russell",
-        avatar: avatar3$5,
-      },
+      from: { email: "marissa73@hotmail.com", name: "James Russell", avatar: avatar3$5 },
       subject: "Interview some and minute.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Result last clearly should bad. Need management account other player. Time pressure beautiful teacher provide. Mouth senior explain official would exactly.</p><p>Management attack fight some item. Once century agent method section what. What their defense you. Factor civil significant enough plan different.</p><p>Body amount know condition own gas near state. Strong as black place service.\nSignificant all game. Drive assume from wear option.</p>",
+      message: "<p>Result last clearly should bad. Need management account other player. Time pressure beautiful teacher provide. Mouth senior explain official would exactly.</p><p>Management attack fight some item. Once century agent method section what. What their defense you. Factor civil significant enough plan different.</p><p>Body amount know condition own gas near state. Strong as black place service.\nSignificant all game. Drive assume from wear option.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "private", "important"],
@@ -10039,7 +8970,7 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 38,
@@ -10047,13 +8978,12 @@ const db$9 = {
       from: {
         email: "brendajames@hotmail.com",
         name: "Richard Spencer",
-        avatar: avatar7$3,
+        avatar: avatar7$3
       },
       subject: "Town baby them account house save prevent.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Pattern sing wrong late north.\nDeal age risk yourself mission able car defense. Choice audience determine dream spend Congress. Mrs produce everyone who bed civil.</p><p>Forget top well little door at share. Money leg recently from make will radio.</p><p>Result plant rich tonight here discussion draw during. Population play serious their bill. Reduce industry right remember attorney them too.\nFirst once over yard. Standard so low.</p>",
+      message: "<p>Pattern sing wrong late north.\nDeal age risk yourself mission able car defense. Choice audience determine dream spend Congress. Mrs produce everyone who bed civil.</p><p>Forget top well little door at share. Money leg recently from make will radio.</p><p>Result plant rich tonight here discussion draw during. Population play serious their bill. Reduce industry right remember attorney them too.\nFirst once over yard. Standard so low.</p>",
       attachments: [],
       isStarred: true,
       labels: ["company", "important"],
@@ -10065,13 +8995,12 @@ const db$9 = {
           from: {
             email: "kellyjones@yahoo.com",
             name: "Mark Martinez",
-            avatar: avatar5$5,
+            avatar: avatar5$5
           },
           subject: "Movement risk cultural.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Both statement now painting decade guess commercial. Treatment movement over idea drop house expect. Heart sense agree live amount her.\nAuthority data Mr all day stock star. By shake seem shoulder not myself order. Out concern from reach.</p><p>Me worry field three name. Mr history when across around. Garden think rate central challenge guess structure.\nCall difficult relationship house around. Water public maintain. Our myself yet personal government condition.</p><p>Themselves final admit from staff conference no. Ask certain summer set purpose. Budget cost enter town most trip. Most your keep he the power.\nTrip news couple.</p>",
+          message: "<p>Both statement now painting decade guess commercial. Treatment movement over idea drop house expect. Heart sense agree live amount her.\nAuthority data Mr all day stock star. By shake seem shoulder not myself order. Out concern from reach.</p><p>Me worry field three name. Mr history when across around. Garden think rate central challenge guess structure.\nCall difficult relationship house around. Water public maintain. Our myself yet personal government condition.</p><p>Themselves final admit from staff conference no. Ask certain summer set purpose. Budget cost enter town most trip. Most your keep he the power.\nTrip news couple.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal"],
@@ -10079,7 +9008,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 1,
@@ -10087,13 +9016,12 @@ const db$9 = {
           from: {
             email: "sonyamccall@hotmail.com",
             name: "Lisa Richardson",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Despite produce officer ground employee president.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Understand conference debate. Among call fear away. Represent camera show job range street.\nInterview continue ahead believe subject. Himself sit them bit with bring. Oil particular represent wish home.</p><p>Your action note rise can food change. Eat claim plant accept wear film available few. Human wind security protect camera line.\nNotice deal to about truth forget every. Dark me camera where different better. Dog involve serve indicate do share for.</p><p>Sort all want oil travel need.\nBag contain hold deal individual pick believe ago. Middle oil receive close fact read. Offer often painting identify sure.\nLearn show next. Learn consider view face. Only life study near.</p>",
+          message: "<p>Understand conference debate. Among call fear away. Represent camera show job range street.\nInterview continue ahead believe subject. Himself sit them bit with bring. Oil particular represent wish home.</p><p>Your action note rise can food change. Eat claim plant accept wear film available few. Human wind security protect camera line.\nNotice deal to about truth forget every. Dark me camera where different better. Dog involve serve indicate do share for.</p><p>Sort all want oil travel need.\nBag contain hold deal individual pick believe ago. Middle oil receive close fact read. Offer often painting identify sure.\nLearn show next. Learn consider view face. Only life study near.</p>",
           attachments: [],
           isStarred: true,
           labels: ["important", "private", "company"],
@@ -10101,26 +9029,21 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 37,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "juliasosa@hotmail.com",
-        name: "Cheryl Wright",
-        avatar: avatar6$4,
-      },
+      from: { email: "juliasosa@hotmail.com", name: "Cheryl Wright", avatar: avatar6$4 },
       subject: "Movie admit final enjoy particular.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Poor bad find. Report TV over long region defense.\nTwo sister according alone. Natural great before prove north assume become focus. Including work environment water poor.</p><p>Score though true evening again analysis feeling wait. Certain discover carry chance ever. Rich staff test raise discover.\nBoard federal improve bad impact eat box word. Situation blue culture environment road city soon.</p><p>Decade subject another our million or. Be stock interview easy those population maybe. Help send society. Win many team find.\nManagement about guy. Cultural resource prevent natural age tree reduce. Effect carry man.</p>",
+      message: "<p>Poor bad find. Report TV over long region defense.\nTwo sister according alone. Natural great before prove north assume become focus. Including work environment water poor.</p><p>Score though true evening again analysis feeling wait. Certain discover carry chance ever. Rich staff test raise discover.\nBoard federal improve bad impact eat box word. Situation blue culture environment road city soon.</p><p>Decade subject another our million or. Be stock interview easy those population maybe. Help send society. Win many team find.\nManagement about guy. Cultural resource prevent natural age tree reduce. Effect carry man.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -10132,13 +9055,12 @@ const db$9 = {
           from: {
             email: "dillon01@hotmail.com",
             name: "Brenda Navarro",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Business key Democrat sing.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Meeting carry shake turn. Money because radio lawyer better. World trial view benefit result someone sort expert. American while public question.</p><p>Court ask various serious safe. Cup than hot child sort.\nSmile view issue high recently develop floor. Ten science including force message. Hear room author return risk military.</p><p>Unit vote popular collection strategy group. Newspaper region fly structure seem story art. Skill ever as money meet involve.\nAs environmental sister investment film represent. Until student occur include few science.</p>",
+          message: "<p>Meeting carry shake turn. Money because radio lawyer better. World trial view benefit result someone sort expert. American while public question.</p><p>Court ask various serious safe. Cup than hot child sort.\nSmile view issue high recently develop floor. Ten science including force message. Hear room author return risk military.</p><p>Unit vote popular collection strategy group. Newspaper region fly structure seem story art. Skill ever as money meet involve.\nAs environmental sister investment film represent. Until student occur include few science.</p>",
           attachments: [],
           isStarred: true,
           labels: ["important", "personal"],
@@ -10146,7 +9068,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 21238317,
@@ -10154,13 +9076,12 @@ const db$9 = {
           from: {
             email: "danielle69@yahoo.com",
             name: "Erica Miller",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "Way program finish type yes then area.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Project growth brother. Star capital bring.\nRange movement risk perhaps loss. Team raise card bag hit.\nParticularly last lead system within walk public perhaps. Tax travel suggest physical data company. Mrs fear establish away.</p><p>Treatment fight as foot Republican. Sister happy major I well less fish. Various goal face up. Age put head hotel style tree.\nSurface list evening this stay. Doctor stage would current. Wide audience after paper. Process yard end man future lead.</p><p>Moment push store necessary program. Have health seek. Name safe young career those agent.\nBe protect whatever skin. Read by talk we start. Might author final perform. Tv own follow wife either husband.</p>",
+          message: "<p>Project growth brother. Star capital bring.\nRange movement risk perhaps loss. Team raise card bag hit.\nParticularly last lead system within walk public perhaps. Tax travel suggest physical data company. Mrs fear establish away.</p><p>Treatment fight as foot Republican. Sister happy major I well less fish. Various goal face up. Age put head hotel style tree.\nSurface list evening this stay. Doctor stage would current. Wide audience after paper. Process yard end man future lead.</p><p>Moment push store necessary program. Have health seek. Name safe young career those agent.\nBe protect whatever skin. Read by talk we start. Might author final perform. Tv own follow wife either husband.</p>",
           attachments: [],
           isStarred: false,
           labels: ["company", "private", "important"],
@@ -10168,26 +9089,21 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
-        },
+          isDeleted: true
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 36,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "benjamin30@gmail.com",
-        name: "Pamela Mueller",
-        avatar: avatar6$4,
-      },
+      from: { email: "benjamin30@gmail.com", name: "Pamela Mueller", avatar: avatar6$4 },
       subject: "Dinner start pretty.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Require might team under authority.\nCustomer value still number deal. Cell both type customer do. Congress opportunity subject.</p><p>Above threat security how. Worry too interesting especially government help instead.\nWide ability study oil training teach. Help lot tree recent admit lot business.\nCapital order himself fall rest room those.</p><p>Impact beat business hear pretty. Current professor nearly agency. Attorney education fish result move.\nFormer military bar middle PM back his. Play nature image matter pick. Standard job smile food.</p>",
+      message: "<p>Require might team under authority.\nCustomer value still number deal. Cell both type customer do. Congress opportunity subject.</p><p>Above threat security how. Worry too interesting especially government help instead.\nWide ability study oil training teach. Help lot tree recent admit lot business.\nCapital order himself fall rest room those.</p><p>Impact beat business hear pretty. Current professor nearly agency. Attorney education fish result move.\nFormer military bar middle PM back his. Play nature image matter pick. Standard job smile food.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "personal"],
@@ -10195,21 +9111,16 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 35,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "dana33@yahoo.com",
-        name: "Becky Coffey",
-        avatar: avatar2$6,
-      },
+      from: { email: "dana33@yahoo.com", name: "Becky Coffey", avatar: avatar2$6 },
       subject: "Less forget everything only girl.",
       cc: [],
       bcc: [],
-      message:
-        "<p>His exactly require able. Team become friend chair between within. Employee program power science eight guy dark.</p><p>Crime his teacher imagine outside energy recent. Building week short brother many enter measure. Approach better them area deep.\nChild gas yard character. To management mother never own arm key. Trouble three speech cover feel listen.</p><p>Future north quite partner interesting. Interview investment clear industry Democrat investment. Even ahead identify.\nThese character threat next help include. Offer contain necessary something all. Reflect growth quickly part rate create question.</p>",
+      message: "<p>His exactly require able. Team become friend chair between within. Employee program power science eight guy dark.</p><p>Crime his teacher imagine outside energy recent. Building week short brother many enter measure. Approach better them area deep.\nChild gas yard character. To management mother never own arm key. Trouble three speech cover feel listen.</p><p>Future north quite partner interesting. Interview investment clear industry Democrat investment. Even ahead identify.\nThese character threat next help include. Offer contain necessary something all. Reflect growth quickly part rate create question.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important", "company"],
@@ -10217,7 +9128,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 34,
@@ -10225,13 +9136,12 @@ const db$9 = {
       from: {
         email: "hollandjulie@yahoo.com",
         name: "Christopher Evans DDS",
-        avatar: avatar5$5,
+        avatar: avatar5$5
       },
       subject: "Financial series artist region.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Peace approach ask course central reality. Decision PM standard production brother report federal its. Wonder common group current often vote.</p><p>Professional sure fear blood much question. Operation ever authority water the woman. Hospital second rich let.\nOpportunity actually decision positive. During beautiful today decide know those. Chance list many create including become instead with.</p><p>Feel put treat. Mention arm name bank side.\nWhy area language reach well. Mother Mr worry order example.\nBegin part stay culture tend. Strategy administration yeah woman measure air. Than exist with indeed population talk.</p>",
+      message: "<p>Peace approach ask course central reality. Decision PM standard production brother report federal its. Wonder common group current often vote.</p><p>Professional sure fear blood much question. Operation ever authority water the woman. Hospital second rich let.\nOpportunity actually decision positive. During beautiful today decide know those. Chance list many create including become instead with.</p><p>Feel put treat. Mention arm name bank side.\nWhy area language reach well. Mother Mr worry order example.\nBegin part stay culture tend. Strategy administration yeah woman measure air. Than exist with indeed population talk.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal", "private"],
@@ -10243,13 +9153,12 @@ const db$9 = {
           from: {
             email: "wilsonroy@gmail.com",
             name: "Chelsea Sims",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Prove rest forward wear.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Just trip own remember change these part. Trip success network send not room half yet. Floor pay which expert service.\nWhile both throw sister.\nCertainly remember certain country both. How seat exist. Hundred wind in page.</p><p>Trouble them least control. Forget up scene training garden. Effect for risk remain sign.\nSouthern bill blue general usually end how admit. Whom view final pay population reason. Type fire million on section individual.</p><p>Business specific prepare machine. Area stage poor pull. Performance myself dark school.\nScientist service student nation who wide market. Know clearly they finish. And maintain not soon play right.\nSign similar support cell. Meet less share pass.</p>",
+          message: "<p>Just trip own remember change these part. Trip success network send not room half yet. Floor pay which expert service.\nWhile both throw sister.\nCertainly remember certain country both. How seat exist. Hundred wind in page.</p><p>Trouble them least control. Forget up scene training garden. Effect for risk remain sign.\nSouthern bill blue general usually end how admit. Whom view final pay population reason. Type fire million on section individual.</p><p>Business specific prepare machine. Area stage poor pull. Performance myself dark school.\nScientist service student nation who wide market. Know clearly they finish. And maintain not soon play right.\nSign similar support cell. Meet less share pass.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal", "company", "private"],
@@ -10257,7 +9166,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 66371,
@@ -10265,13 +9174,12 @@ const db$9 = {
           from: {
             email: "dannynguyen@hotmail.com",
             name: "Matthew Schaefer",
-            avatar: avatar5$5,
+            avatar: avatar5$5
           },
           subject: "Staff can next along long true dark.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Hotel only mind create soon north life. Improve pass too important those per including. System four north.\nFamily politics floor huge bad. Light look start apply forward civil agree. Later place expect at build.</p><p>First now against include time experience those and. Their these reveal guy dark. Always option fall evidence once success.\nLive sing gun meet. Spring face political voice. Blood clear couple run left available.</p><p>Visit network so total wife. People artist experience citizen maybe water good.\nHis news wonder note. Consumer kitchen him sport type.\nCandidate fall where structure. Art hour term matter look program.</p>",
+          message: "<p>Hotel only mind create soon north life. Improve pass too important those per including. System four north.\nFamily politics floor huge bad. Light look start apply forward civil agree. Later place expect at build.</p><p>First now against include time experience those and. Their these reveal guy dark. Always option fall evidence once success.\nLive sing gun meet. Spring face political voice. Blood clear couple run left available.</p><p>Visit network so total wife. People artist experience citizen maybe water good.\nHis news wonder note. Consumer kitchen him sport type.\nCandidate fall where structure. Art hour term matter look program.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal", "private"],
@@ -10279,26 +9187,21 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "sent",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 33,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "hsmith@gmail.com",
-        name: "Wendy Marshall",
-        avatar: avatar8$3,
-      },
+      from: { email: "hsmith@gmail.com", name: "Wendy Marshall", avatar: avatar8$3 },
       subject: "Enjoy see man news decide build class make.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Because gun area better region role party. Most cultural control radio religious rule human.\nFinal cold positive country story gun.\nThey myself bed involve. Course president health might lot close. Level fine college deal.</p><p>Tree race ground customer. Window prove maybe television possible well soldier over. International run conference free white audience consider.\nInterview ball leg number blood support his turn. Care product a.</p><p>Something ahead painting then option recognize. Use force price then away.\nFind agent hospital physical his. Town money person case during body.\nFast have kitchen character a race walk. Stage bring we entire sort.</p>",
+      message: "<p>Because gun area better region role party. Most cultural control radio religious rule human.\nFinal cold positive country story gun.\nThey myself bed involve. Course president health might lot close. Level fine college deal.</p><p>Tree race ground customer. Window prove maybe television possible well soldier over. International run conference free white audience consider.\nInterview ball leg number blood support his turn. Care product a.</p><p>Something ahead painting then option recognize. Use force price then away.\nFind agent hospital physical his. Town money person case during body.\nFast have kitchen character a race walk. Stage bring we entire sort.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal", "company"],
@@ -10310,13 +9213,12 @@ const db$9 = {
           from: {
             email: "maryatkins@gmail.com",
             name: "Kimberly Cisneros",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Family pretty interest decision.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Feeling production spend. Program look stand meet him. Ask away generation phone.\nMachine process window range serious process remain. Good charge in serious study seat. Heavy she concern door fire organization money fact.</p><p>Whether end investment pay. Happy information cup then. Edge fire suffer remain catch.\nDirector international determine might. Clearly fire something player. How that increase ready section. Visit become contain.</p><p>Decide find growth continue movie thank sort.\nPull where attention treat or. Since resource gas person trade organization crime. Growth southern lay lose president likely half.</p>",
+          message: "<p>Feeling production spend. Program look stand meet him. Ask away generation phone.\nMachine process window range serious process remain. Good charge in serious study seat. Heavy she concern door fire organization money fact.</p><p>Whether end investment pay. Happy information cup then. Edge fire suffer remain catch.\nDirector international determine might. Clearly fire something player. How that increase ready section. Visit become contain.</p><p>Decide find growth continue movie thank sort.\nPull where attention treat or. Since resource gas person trade organization crime. Growth southern lay lose president likely half.</p>",
           attachments: [],
           isStarred: true,
           labels: ["private"],
@@ -10324,21 +9226,16 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 930166,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "nramirez@yahoo.com",
-            name: "Kenneth West",
-            avatar: avatar1$6,
-          },
+          from: { email: "nramirez@yahoo.com", name: "Kenneth West", avatar: avatar1$6 },
           subject: "Factor TV wife career thing loss increase.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Every public quality also. Almost base imagine former decade pull also the. She stage so military admit.\nSouth better general base reason employee may. Control see way end material service. Everybody fear risk party weight.</p><p>Sea line production appear them through. Late gun something power little care. Interest since test total.\nProvide as condition none wind month thus. Fly sort south artist letter health night.\nWrong group affect even. Identify way interview politics.</p><p>Risk total natural follow music drop sense hospital. Space family cover effect. Live particularly letter generation toward concern reality friend.\nOrganization bar ask great most live seat week. Against western use present.</p>",
+          message: "<p>Every public quality also. Almost base imagine former decade pull also the. She stage so military admit.\nSouth better general base reason employee may. Control see way end material service. Everybody fear risk party weight.</p><p>Sea line production appear them through. Late gun something power little care. Interest since test total.\nProvide as condition none wind month thus. Fly sort south artist letter health night.\nWrong group affect even. Identify way interview politics.</p><p>Risk total natural follow music drop sense hospital. Space family cover effect. Live particularly letter generation toward concern reality friend.\nOrganization bar ask great most live seat week. Against western use present.</p>",
           attachments: [],
           isStarred: true,
           labels: ["private", "company"],
@@ -10346,7 +9243,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 324,
@@ -10354,13 +9251,12 @@ const db$9 = {
           from: {
             email: "tina53@hotmail.com",
             name: "Douglas George",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Recognize to study.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Perhaps pretty color walk different likely think. Southern occur soon chair leave discover heart. Rest product break member operation.</p><p>Agreement I include for.\nState anyone fight interview view west concern. Reach social reason how husband east.\nSometimes able especially simple size behavior. Talk beyond both big another often former.</p><p>Her money art involve building natural garden. Pay them respond step that. Old yourself table would agency. Pay recognize family individual.</p>",
+          message: "<p>Perhaps pretty color walk different likely think. Southern occur soon chair leave discover heart. Rest product break member operation.</p><p>Agreement I include for.\nState anyone fight interview view west concern. Reach social reason how husband east.\nSometimes able especially simple size behavior. Talk beyond both big another often former.</p><p>Her money art involve building natural garden. Pay them respond step that. Old yourself table would agency. Pay recognize family individual.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "company"],
@@ -10368,12 +9264,12 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "spam",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 32,
@@ -10381,14 +9277,12 @@ const db$9 = {
       from: {
         email: "jeffreystevens@yahoo.com",
         name: "Christopher Adams",
-        avatar: avatar3$5,
+        avatar: avatar3$5
       },
-      subject:
-        "Finish actually parent condition business discussion later practice.",
+      subject: "Finish actually parent condition business discussion later practice.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Design left million test bag character. Pm everybody ago. Table finish sell my pay quite. Often account cover home war.\nCourt sport difference film left guy natural understand. Across ok quite now camera rock.</p><p>Plan citizen star off often evidence remember. Describe professor economic professional represent catch. Employee stand person eye. Region address spend.</p><p>It policy beyond scene. Wide bed culture account eat. Color technology even.\nMight ready option guess. Once create ever worker paper perhaps. Show likely say produce capital court.</p>",
+      message: "<p>Design left million test bag character. Pm everybody ago. Table finish sell my pay quite. Often account cover home war.\nCourt sport difference film left guy natural understand. Across ok quite now camera rock.</p><p>Plan citizen star off often evidence remember. Describe professor economic professional represent catch. Employee stand person eye. Region address spend.</p><p>It policy beyond scene. Wide bed culture account eat. Color technology even.\nMight ready option guess. Once create ever worker paper perhaps. Show likely say produce capital court.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal", "important", "private", "company"],
@@ -10396,21 +9290,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 31,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "maria99@hotmail.com",
-        name: "Theresa Schmitt",
-        avatar: avatar8$3,
-      },
+      from: { email: "maria99@hotmail.com", name: "Theresa Schmitt", avatar: avatar8$3 },
       subject: "Life store technology least under black type.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Main each pay bar professional blood fill. The commercial amount thousand carry. Sound ball become court relationship so white.\nFight late exactly evidence evidence art but. Congress spend camera sea other. Theory protect plant wait.</p><p>Her necessary capital around nor issue herself. Late quickly someone own painting moment participant.\nRequire civil night take. Southern cold because option report share fine who.</p><p>List black mean everything read front Mrs. Look whatever street approach fear guess once. Paper somebody hear machine.\nTogether it price world professor country. National worker specific shake. Open security tell all sure none imagine say.</p>",
+      message: "<p>Main each pay bar professional blood fill. The commercial amount thousand carry. Sound ball become court relationship so white.\nFight late exactly evidence evidence art but. Congress spend camera sea other. Theory protect plant wait.</p><p>Her necessary capital around nor issue herself. Late quickly someone own painting moment participant.\nRequire civil night take. Southern cold because option report share fine who.</p><p>List black mean everything read front Mrs. Look whatever street approach fear guess once. Paper somebody hear machine.\nTogether it price world professor country. National worker specific shake. Open security tell all sure none imagine say.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "private", "personal"],
@@ -10418,21 +9307,16 @@ const db$9 = {
       replies: [],
       folder: "sent",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 30,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "kempsarah@gmail.com",
-        name: "Sherry Guzman",
-        avatar: avatar2$6,
-      },
+      from: { email: "kempsarah@gmail.com", name: "Sherry Guzman", avatar: avatar2$6 },
       subject: "Officer population memory level foot public.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Summer general go happen owner last. Store live organization court think.\nDiscover second million today space activity conference. Generation young design factor interesting. Account always Mrs garden plant.</p><p>Sound discover piece people. Positive decade describe. Focus science free.\nSide mean however plan price me.\nBy later building result important down lay. Try growth structure nation above pull however those.</p><p>Wonder end value lead help quite trial. Recognize teacher establish explain. Try usually find over matter much.\nRaise son mouth.\nBase reach bit recognize focus. Stop best sea improve develop.</p>",
+      message: "<p>Summer general go happen owner last. Store live organization court think.\nDiscover second million today space activity conference. Generation young design factor interesting. Account always Mrs garden plant.</p><p>Sound discover piece people. Positive decade describe. Focus science free.\nSide mean however plan price me.\nBy later building result important down lay. Try growth structure nation above pull however those.</p><p>Wonder end value lead help quite trial. Recognize teacher establish explain. Try usually find over matter much.\nRaise son mouth.\nBase reach bit recognize focus. Stop best sea improve develop.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private"],
@@ -10444,13 +9328,12 @@ const db$9 = {
           from: {
             email: "jessica23@gmail.com",
             name: "Lauren Smith",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "College community effect care.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Task age compare talk yard. Matter turn their price road.\nCulture four decide work chance cost include. Rock return statement. Major major several around method.\nUs would threat federal sense mean.\nCondition as why fast. Guy bit often professor.</p><p>Tell concern difference eye office trade fund fire. Lead report only star hot.\nFeel far factor current girl. Two hair fight a recent movie apply. Again series sometimes recent identify.</p><p>Perhaps agree note between house whom too. Down could important production tend figure special. West far bad impact cause great.\nRepresent green throughout never type trouble outside. Call adult would clearly. Turn stand federal.</p>",
+          message: "<p>Task age compare talk yard. Matter turn their price road.\nCulture four decide work chance cost include. Rock return statement. Major major several around method.\nUs would threat federal sense mean.\nCondition as why fast. Guy bit often professor.</p><p>Tell concern difference eye office trade fund fire. Lead report only star hot.\nFeel far factor current girl. Two hair fight a recent movie apply. Again series sometimes recent identify.</p><p>Perhaps agree note between house whom too. Down could important production tend figure special. West far bad impact cause great.\nRepresent green throughout never type trouble outside. Call adult would clearly. Turn stand federal.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private", "important", "personal"],
@@ -10458,7 +9341,7 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 435260844,
@@ -10466,13 +9349,12 @@ const db$9 = {
           from: {
             email: "lkelley@yahoo.com",
             name: "Michael Torres",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Build learn audience water article ball must.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Method election require important majority five. Seat listen story.\nCause middle act film. Available turn gun before whole especially kind simple.\nStage wrong hot find agree suddenly. Chance source clear share stay few.</p><p>Figure activity role official. Food live personal.\nPersonal no public computer prepare when. Fish available report network if attack among decide. Seem rule inside economic door.</p><p>Budget open send wrong property. Half spend stock less. Degree act general skin these any personal per.\nUntil never state chair already. Product sign best.</p>",
+          message: "<p>Method election require important majority five. Seat listen story.\nCause middle act film. Available turn gun before whole especially kind simple.\nStage wrong hot find agree suddenly. Chance source clear share stay few.</p><p>Figure activity role official. Food live personal.\nPersonal no public computer prepare when. Fish available report network if attack among decide. Seem rule inside economic door.</p><p>Budget open send wrong property. Half spend stock less. Degree act general skin these any personal per.\nUntil never state chair already. Product sign best.</p>",
           attachments: [],
           isStarred: false,
           labels: ["important", "company", "private"],
@@ -10480,7 +9362,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 7780,
@@ -10488,13 +9370,12 @@ const db$9 = {
           from: {
             email: "thomaspeterson@yahoo.com",
             name: "Dylan Logan",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Artist food section media commercial hospital.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Tax above either world. Candidate accept final challenge which risk. Fact book example positive follow attention.\nCost building central contain natural. Adult least by.</p><p>Fast cause environment go explain necessary. Help citizen others beat sure child. Claim inside whether approach chance always central.\nSide ten bill look fine career. Attention real little power yourself bank.</p><p>Nothing American sister truth medical matter. Use door practice feel point fear. Argue else however involve fact.\nOwn recognize save. Federal brother loss mouth painting paper.\nDemocrat crime join quality. Off politics note soon.</p>",
+          message: "<p>Tax above either world. Candidate accept final challenge which risk. Fact book example positive follow attention.\nCost building central contain natural. Adult least by.</p><p>Fast cause environment go explain necessary. Help citizen others beat sure child. Claim inside whether approach chance always central.\nSide ten bill look fine career. Attention real little power yourself bank.</p><p>Nothing American sister truth medical matter. Use door practice feel point fear. Argue else however involve fact.\nOwn recognize save. Federal brother loss mouth painting paper.\nDemocrat crime join quality. Off politics note soon.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -10502,26 +9383,21 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
-        },
+          isDeleted: true
+        }
       ],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 29,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "daniel37@hotmail.com",
-        name: "David Cruz",
-        avatar: avatar5$5,
-      },
+      from: { email: "daniel37@hotmail.com", name: "David Cruz", avatar: avatar5$5 },
       subject: "Clearly my usually billion ability response.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Face despite management international talk force detail. Partner score hit democratic fast life property. Age information wear grow rise hard price. Every area character first activity smile.</p><p>Station character American usually nice change young. Make perhaps happy trade since science. Fine think attack successful.\nCrime bit spring city. Lawyer light ball unit instead statement. Lose friend account buy oil ten tend.</p><p>Security identify there. Person factor item build never language.\nEnter stock military early. Wish identify level difference fire wall. Girl finish sense indicate bad.</p>",
+      message: "<p>Face despite management international talk force detail. Partner score hit democratic fast life property. Age information wear grow rise hard price. Every area character first activity smile.</p><p>Station character American usually nice change young. Make perhaps happy trade since science. Fine think attack successful.\nCrime bit spring city. Lawyer light ball unit instead statement. Lose friend account buy oil ten tend.</p><p>Security identify there. Person factor item build never language.\nEnter stock military early. Wish identify level difference fire wall. Girl finish sense indicate bad.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private", "company"],
@@ -10529,21 +9405,16 @@ const db$9 = {
       replies: [],
       folder: "sent",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 28,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "areeves@gmail.com",
-        name: "Anthony Obrien",
-        avatar: avatar5$5,
-      },
+      from: { email: "areeves@gmail.com", name: "Anthony Obrien", avatar: avatar5$5 },
       subject: "A type network effort blood do various.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Own measure phone view baby officer. Detail nor television. Wear decade official long.\nCan interview point poor increase pick quickly run. General need audience foot weight firm. Month ability public. Go class let rise spring heart.</p><p>Cover attention letter later many town stuff away. Week lawyer western street.\nUnit rate reality adult. Arrive staff book me many.\nHand perhaps well thank join serious great budget. Including road upon will. Per price mission break.</p><p>Experience late nothing get baby head should. Must technology service address blood.\nChance decide else mean consumer pretty everything. Hospital couple second fly security region brother.</p>",
+      message: "<p>Own measure phone view baby officer. Detail nor television. Wear decade official long.\nCan interview point poor increase pick quickly run. General need audience foot weight firm. Month ability public. Go class let rise spring heart.</p><p>Cover attention letter later many town stuff away. Week lawyer western street.\nUnit rate reality adult. Arrive staff book me many.\nHand perhaps well thank join serious great budget. Including road upon will. Per price mission break.</p><p>Experience late nothing get baby head should. Must technology service address blood.\nChance decide else mean consumer pretty everything. Hospital couple second fly security region brother.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important", "company"],
@@ -10551,21 +9422,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 27,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "bnunez@hotmail.com",
-        name: "Jason Gonzalez",
-        avatar: avatar5$5,
-      },
+      from: { email: "bnunez@hotmail.com", name: "Jason Gonzalez", avatar: avatar5$5 },
       subject: "Affect method provide break himself house.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Science design amount responsibility. Seem himself degree. Decade central manage. Rather four decide word.\nQuickly keep such popular different approach woman. Population body decade baby view significant can. Wish a build respond.</p><p>Site cut forget international lay he there. Tax early try authority.\nAbout term enjoy prevent affect. Even environmental kid skill.\nFirst plant number site bad interest board. Investment half so.</p><p>Method sea agent capital later just worker. Main guy cut build building. Condition similar best gun. Dinner new box major artist space in.\nRaise try science grow. House picture raise indeed light.</p>",
+      message: "<p>Science design amount responsibility. Seem himself degree. Decade central manage. Rather four decide word.\nQuickly keep such popular different approach woman. Population body decade baby view significant can. Wish a build respond.</p><p>Site cut forget international lay he there. Tax early try authority.\nAbout term enjoy prevent affect. Even environmental kid skill.\nFirst plant number site bad interest board. Investment half so.</p><p>Method sea agent capital later just worker. Main guy cut build building. Condition similar best gun. Dinner new box major artist space in.\nRaise try science grow. House picture raise indeed light.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private"],
@@ -10573,7 +9439,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 26,
@@ -10581,13 +9447,12 @@ const db$9 = {
       from: {
         email: "welchcrystal@gmail.com",
         name: "Christopher Sanchez",
-        avatar: avatar5$5,
+        avatar: avatar5$5
       },
       subject: "Trade science concern necessary theory option us.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Top foreign never recent baby girl base. Show charge senior difficult drug effect. Fear on standard doctor stop investment spring.</p><p>One long article market there into. Share nature member owner evening. Form tree real cultural.\nSecond be report teacher admit close.\nWhom skill teach. Blue song ahead weight rather walk line. Five talk require.</p><p>Rate onto nearly address rule side activity. Result ahead you hope woman worker evidence.\nCollection citizen we industry. Sister and that according organization leave. Day agency hope pick.\nEconomic him consider body four section single when.</p>",
+      message: "<p>Top foreign never recent baby girl base. Show charge senior difficult drug effect. Fear on standard doctor stop investment spring.</p><p>One long article market there into. Share nature member owner evening. Form tree real cultural.\nSecond be report teacher admit close.\nWhom skill teach. Blue song ahead weight rather walk line. Five talk require.</p><p>Rate onto nearly address rule side activity. Result ahead you hope woman worker evidence.\nCollection citizen we industry. Sister and that according organization leave. Day agency hope pick.\nEconomic him consider body four section single when.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -10595,21 +9460,16 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 25,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "fullerkatelyn@hotmail.com",
-        name: "Ana Short",
-        avatar: avatar4$5,
-      },
+      from: { email: "fullerkatelyn@hotmail.com", name: "Ana Short", avatar: avatar4$5 },
       subject: "Follow tax officer soon our four relationship consumer.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Couple almost table everyone together contain. Plan fill trip. Perhaps explain college will machine mouth training popular.\nNice include wrong road alone. Could for adult perform.</p><p>Tax ahead ground general industry. Else style only Mr agent all.\nAlready walk edge might forward. Cold wind hard read. Street poor process major especially example defense.\nDecade capital question talk work box forget. Always hear Mr ago.</p><p>Apply camera white natural should another. Past event herself score. Own thus general despite pattern. Ability pressure network mouth sometimes represent.</p>",
+      message: "<p>Couple almost table everyone together contain. Plan fill trip. Perhaps explain college will machine mouth training popular.\nNice include wrong road alone. Could for adult perform.</p><p>Tax ahead ground general industry. Else style only Mr agent all.\nAlready walk edge might forward. Cold wind hard read. Street poor process major especially example defense.\nDecade capital question talk work box forget. Always hear Mr ago.</p><p>Apply camera white natural should another. Past event herself score. Own thus general despite pattern. Ability pressure network mouth sometimes represent.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -10621,13 +9481,12 @@ const db$9 = {
           from: {
             email: "woodjames@gmail.com",
             name: "Taylor Lopez",
-            avatar: avatar4$5,
+            avatar: avatar4$5
           },
           subject: "Appear imagine western.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Effect fall action chair candidate forward. Away character action start even focus claim address.\nJob once off according put off. Give answer near star cell expert. Use tax care month list.</p><p>Investment it check.\nPopulation oil mouth glass against. Stand all art leader agree.\nHerself only score image prevent bar table. Total treatment enjoy everything. Long later just cover or great meet.</p><p>Exist month watch wish remember simply low. Knowledge treatment maintain fine organization fall identify.\nIdea enough worry coach better stand general. Threat western language must person.</p>",
+          message: "<p>Effect fall action chair candidate forward. Away character action start even focus claim address.\nJob once off according put off. Give answer near star cell expert. Use tax care month list.</p><p>Investment it check.\nPopulation oil mouth glass against. Stand all art leader agree.\nHerself only score image prevent bar table. Total treatment enjoy everything. Long later just cover or great meet.</p><p>Exist month watch wish remember simply low. Knowledge treatment maintain fine organization fall identify.\nIdea enough worry coach better stand general. Threat western language must person.</p>",
           attachments: [],
           isStarred: false,
           labels: ["important", "company"],
@@ -10635,7 +9494,7 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 419,
@@ -10643,13 +9502,12 @@ const db$9 = {
           from: {
             email: "charlotte46@gmail.com",
             name: "Edwin Pena",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Hundred happen national measure.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Try high body design blue. Deep improve ahead police.\nHuman behind police international. Around would nor position particular physical break. Pm for against clearly.</p><p>Who in rock then build. Analysis produce kind senior until where. Part east understand.\nChance billion culture might so five. Particularly create story maintain article give fall. Short improve whatever new available wear affect.</p><p>Financial great impact everyone until.\nThem might try range main. Activity decade stock first stock start explain. Write phone nice increase fish several.\nNewspaper exist himself dinner choice agree hear. Great receive today identify.</p>",
+          message: "<p>Try high body design blue. Deep improve ahead police.\nHuman behind police international. Around would nor position particular physical break. Pm for against clearly.</p><p>Who in rock then build. Analysis produce kind senior until where. Part east understand.\nChance billion culture might so five. Particularly create story maintain article give fall. Short improve whatever new available wear affect.</p><p>Financial great impact everyone until.\nThem might try range main. Activity decade stock first stock start explain. Write phone nice increase fish several.\nNewspaper exist himself dinner choice agree hear. Great receive today identify.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "personal"],
@@ -10657,7 +9515,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 5123,
@@ -10665,13 +9523,12 @@ const db$9 = {
           from: {
             email: "amandawagner@yahoo.com",
             name: "Laura Montes",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "Administration choice move against provide value none.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Goal throw including miss sometimes staff traditional. Material talk place point pay.\nShake popular part wind. While state light. Explain movement they.</p><p>Our herself indeed let use. Debate front within yes impact change big contain. Purpose outside nothing leg image never dark husband.\nPlant bring decision avoid ground act book. Up hold speech. Local indeed short.</p><p>Cold step herself style important. Week base tree game kid. Coach yet expect determine personal. Here happy peace have cause up.\nApply include recently reality common attention. Effort politics player though fly.</p>",
+          message: "<p>Goal throw including miss sometimes staff traditional. Material talk place point pay.\nShake popular part wind. While state light. Explain movement they.</p><p>Our herself indeed let use. Debate front within yes impact change big contain. Purpose outside nothing leg image never dark husband.\nPlant bring decision avoid ground act book. Up hold speech. Local indeed short.</p><p>Cold step herself style important. Week base tree game kid. Coach yet expect determine personal. Here happy peace have cause up.\nApply include recently reality common attention. Effort politics player though fly.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "company"],
@@ -10679,7 +9536,7 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 60679807,
@@ -10687,13 +9544,12 @@ const db$9 = {
           from: {
             email: "clarkdwayne@hotmail.com",
             name: "Felicia Myers",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "Me during name.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Miss back sing simply. Tax surface shake page so. Any rule vote for.\nSport six former simple. Daughter business push reality information.\nResource just possible rich enter. Tax full box beat. Network edge cultural among no morning.</p><p>Since but appear place. Trouble particularly paper chair commercial. Offer everyone success trip. Treatment special support resource.\nGun analysis test recently ball. Reality organization family test TV I surface.</p><p>Appear system shake charge nice foot. There our wrong author investment coach. Feel leg economy require push performance out speech. Need hair however commercial.\nLike Congress system whether skin. Research little attention art.</p>",
+          message: "<p>Miss back sing simply. Tax surface shake page so. Any rule vote for.\nSport six former simple. Daughter business push reality information.\nResource just possible rich enter. Tax full box beat. Network edge cultural among no morning.</p><p>Since but appear place. Trouble particularly paper chair commercial. Offer everyone success trip. Treatment special support resource.\nGun analysis test recently ball. Reality organization family test TV I surface.</p><p>Appear system shake charge nice foot. There our wrong author investment coach. Feel leg economy require push performance out speech. Need hair however commercial.\nLike Congress system whether skin. Research little attention art.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "important"],
@@ -10701,7 +9557,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 31103,
@@ -10709,13 +9565,12 @@ const db$9 = {
           from: {
             email: "hobbsjeffrey@yahoo.com",
             name: "Erica Mann",
-            avatar: avatar6$4,
+            avatar: avatar6$4
           },
           subject: "Ability pretty student health current interesting even.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Image American daughter test animal. Somebody especially war loss name only just.\nStation such television also good away so water. Protect across television phone. Realize almost final half fight establish.</p><p>Program skill rest bed east here become law. How loss might purpose low time organization. Industry different enter share budget.\nFeel million how modern whole religious half finish. Hospital stage decision consider democratic.</p><p>Sort move scene behind. First office take together keep note break kind. Either laugh top agree prepare change.</p>",
+          message: "<p>Image American daughter test animal. Somebody especially war loss name only just.\nStation such television also good away so water. Protect across television phone. Realize almost final half fight establish.</p><p>Program skill rest bed east here become law. How loss might purpose low time organization. Industry different enter share budget.\nFeel million how modern whole religious half finish. Hospital stage decision consider democratic.</p><p>Sort move scene behind. First office take together keep note break kind. Either laugh top agree prepare change.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "important", "company"],
@@ -10723,26 +9578,21 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: false,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 24,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "hmoran@gmail.com",
-        name: "Vincent Alexander",
-        avatar: avatar1$6,
-      },
+      from: { email: "hmoran@gmail.com", name: "Vincent Alexander", avatar: avatar1$6 },
       subject: "Over tough city well first should quite.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Sense speech economic compare chair. Suddenly model bank add. Let church door human ready share begin sense.\nPlay weight audience call necessary reach candidate rest. Collection lead voice position news listen police.</p><p>Describe safe almost hold. Rich because trip blue. Discussion born spend because anyone need.\nWonder skill state. Movie receive guess with. Turn pressure market term experience hotel collection.\nOff staff word once money.</p><p>Response north Mrs area writer election. Include early look similar nearly be. Rate happen green not.\nRun bed where state why sit house attorney. Which allow size learn. Describe mind where speak some son herself.</p>",
+      message: "<p>Sense speech economic compare chair. Suddenly model bank add. Let church door human ready share begin sense.\nPlay weight audience call necessary reach candidate rest. Collection lead voice position news listen police.</p><p>Describe safe almost hold. Rich because trip blue. Discussion born spend because anyone need.\nWonder skill state. Movie receive guess with. Turn pressure market term experience hotel collection.\nOff staff word once money.</p><p>Response north Mrs area writer election. Include early look similar nearly be. Rate happen green not.\nRun bed where state why sit house attorney. Which allow size learn. Describe mind where speak some son herself.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "important"],
@@ -10754,13 +9604,12 @@ const db$9 = {
           from: {
             email: "victorjohnson@yahoo.com",
             name: "Tamara Vega",
-            avatar: avatar6$4,
+            avatar: avatar6$4
           },
           subject: "Democrat miss deal career maintain hotel.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Base enter whom respond throughout together. Nor generation various company bar. What consumer how.\nKid recently civil store. High hot assume gun.</p><p>Important win election center. Party less knowledge only magazine past condition yard. Sound doctor say between.\nResult process may have firm wide. Moment audience skill safe fast. Spring although member defense value job.</p><p>Nothing serve media tell network site benefit artist. Left scene strong. As community decide major.\nNearly indeed send begin read. Recent foot three letter wide spend have. Growth whether once home actually without central.</p>",
+          message: "<p>Base enter whom respond throughout together. Nor generation various company bar. What consumer how.\nKid recently civil store. High hot assume gun.</p><p>Important win election center. Party less knowledge only magazine past condition yard. Sound doctor say between.\nResult process may have firm wide. Moment audience skill safe fast. Spring although member defense value job.</p><p>Nothing serve media tell network site benefit artist. Left scene strong. As community decide major.\nNearly indeed send begin read. Recent foot three letter wide spend have. Growth whether once home actually without central.</p>",
           attachments: [],
           isStarred: false,
           labels: ["important", "personal"],
@@ -10768,7 +9617,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 3,
@@ -10776,13 +9625,12 @@ const db$9 = {
           from: {
             email: "jeremywilliams@yahoo.com",
             name: "Jason Schultz",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Piece effect usually everyone make.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Market easy before really individual window soldier garden. Better space avoid fund. Politics friend class something western model. Seem successful recently sometimes.\nServe shake try for you our. Involve organization last at inside.</p><p>Employee office list player. Pass cold charge.\nEye sometimes article pressure. Chair mission structure him owner. Fight leg common her forget across against.\nMusic national student. At part wide fund.\nReady health everybody.</p><p>Cover century him back card property success. Enter feeling light oil cell push research.\nNow drop everyone must side blood program. Factor fire dark their kind hit everyone person. How property million interesting both important.</p>",
+          message: "<p>Market easy before really individual window soldier garden. Better space avoid fund. Politics friend class something western model. Seem successful recently sometimes.\nServe shake try for you our. Involve organization last at inside.</p><p>Employee office list player. Pass cold charge.\nEye sometimes article pressure. Chair mission structure him owner. Fight leg common her forget across against.\nMusic national student. At part wide fund.\nReady health everybody.</p><p>Cover century him back card property success. Enter feeling light oil cell push research.\nNow drop everyone must side blood program. Factor fire dark their kind hit everyone person. How property million interesting both important.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal"],
@@ -10790,7 +9638,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 4,
@@ -10798,13 +9646,12 @@ const db$9 = {
           from: {
             email: "jasonpalmer@hotmail.com",
             name: "Deborah Tran",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "Certain executive them health successful spring.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Commercial individual understand past history large strong.\nPositive summer three need evening. North between pay politics art hand ago cover.\nLevel happen start practice reach. Produce sport show condition. Individual grow education.</p><p>Return fear food enter friend. Great company opportunity nearly garden choose.\nLast capital cell true edge. Daughter cost west stage force tell.\nEvidence stop whether power. North hospital base accept. Message him likely trouble tax business part.</p><p>Just record kind drug four perhaps entire. Economic surface century individual behind understand.\nTax hair charge investment similar perhaps pay. Return room create table other foot happen approach.</p>",
+          message: "<p>Commercial individual understand past history large strong.\nPositive summer three need evening. North between pay politics art hand ago cover.\nLevel happen start practice reach. Produce sport show condition. Individual grow education.</p><p>Return fear food enter friend. Great company opportunity nearly garden choose.\nLast capital cell true edge. Daughter cost west stage force tell.\nEvidence stop whether power. North hospital base accept. Message him likely trouble tax business part.</p><p>Just record kind drug four perhaps entire. Economic surface century individual behind understand.\nTax hair charge investment similar perhaps pay. Return room create table other foot happen approach.</p>",
           attachments: [],
           isStarred: true,
           labels: ["private", "personal"],
@@ -10812,21 +9659,16 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 19865651,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "danny06@gmail.com",
-            name: "Walter Moss",
-            avatar: avatar3$5,
-          },
+          from: { email: "danny06@gmail.com", name: "Walter Moss", avatar: avatar3$5 },
           subject: "Go town spend determine we money experience partner.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Color onto chair very the account article different. Time however total without.\nHerself left knowledge never heart its product over. Citizen range state various same fall would day. Anyone against when grow evening.</p><p>Grow main front thing boy. Accept shake student consumer whom.\nAnyone return between apply.\nRead its prepare young. Week start for again focus doctor. Itself term until see somebody.</p><p>Trial direction idea green young. Success to light later.\nUse box sense indicate ask. Himself six five. Ready government than young represent difficult.</p>",
+          message: "<p>Color onto chair very the account article different. Time however total without.\nHerself left knowledge never heart its product over. Citizen range state various same fall would day. Anyone against when grow evening.</p><p>Grow main front thing boy. Accept shake student consumer whom.\nAnyone return between apply.\nRead its prepare young. Week start for again focus doctor. Itself term until see somebody.</p><p>Trial direction idea green young. Success to light later.\nUse box sense indicate ask. Himself six five. Ready government than young represent difficult.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -10834,26 +9676,21 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 23,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "paulbarrett@gmail.com",
-        name: "Robert Soto",
-        avatar: avatar7$3,
-      },
+      from: { email: "paulbarrett@gmail.com", name: "Robert Soto", avatar: avatar7$3 },
       subject: "Apply loss always difference husband course deal.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Realize American professor television give.\nNice meeting individual could major instead. Late development deep. Memory main how minute reduce want whether happy.</p><p>Capital fight water page artist seem own. Make join public break. Support water analysis cup forget together.\nAgain along listen defense ground mission once region. Last ground experience hot trade free camera.</p><p>Bill floor tonight good condition. Traditional must spring onto break. Left just everybody election. Treatment foreign control dark often.</p>",
+      message: "<p>Realize American professor television give.\nNice meeting individual could major instead. Late development deep. Memory main how minute reduce want whether happy.</p><p>Capital fight water page artist seem own. Make join public break. Support water analysis cup forget together.\nAgain along listen defense ground mission once region. Last ground experience hot trade free camera.</p><p>Bill floor tonight good condition. Traditional must spring onto break. Left just everybody election. Treatment foreign control dark often.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private", "personal"],
@@ -10861,7 +9698,7 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 22,
@@ -10869,13 +9706,12 @@ const db$9 = {
       from: {
         email: "danagriffin@gmail.com",
         name: "Alexander Alexander",
-        avatar: avatar7$3,
+        avatar: avatar7$3
       },
       subject: "Lead position story common choice pay sit line.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Hand style bill phone day new area. Central husband measure could. Democratic health begin draw politics wear interest.\nHim avoid knowledge music. Offer forward happy easy. Just yard one light weight teacher threat.</p><p>American it feel parent protect. Center building recent politics when hand bar under. Without hard relationship issue.\nContinue friend game concern. Agency discussion simply hotel now prevent.</p><p>Sense indeed glass accept interest. Carry window dog onto involve specific.\nRadio despite police scientist economic. Fire affect your term. Send to end avoid political ability.</p>",
+      message: "<p>Hand style bill phone day new area. Central husband measure could. Democratic health begin draw politics wear interest.\nHim avoid knowledge music. Offer forward happy easy. Just yard one light weight teacher threat.</p><p>American it feel parent protect. Center building recent politics when hand bar under. Without hard relationship issue.\nContinue friend game concern. Agency discussion simply hotel now prevent.</p><p>Sense indeed glass accept interest. Carry window dog onto involve specific.\nRadio despite police scientist economic. Fire affect your term. Send to end avoid political ability.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private", "personal"],
@@ -10883,21 +9719,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 21,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "bakercarrie@yahoo.com",
-        name: "Dawn Hall",
-        avatar: avatar2$6,
-      },
+      from: { email: "bakercarrie@yahoo.com", name: "Dawn Hall", avatar: avatar2$6 },
       subject: "Magazine smile hear price.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Ball skin product option anyone. Away involve whatever score.\nCommon ever show all body bed already. Modern politics century sort. Half study write life certain.</p><p>Nothing little whose carry source force heavy employee. Price force leave small follow. Push enjoy down teacher among. Huge nature whose risk season east maybe peace.\nPolitics interview drop sell. Trip from simple matter event.</p><p>Brother simply structure some kitchen some expect. Family personal civil focus professional task specific cut.\nDemocrat continue cause television yourself whether. Find west particular ago stand car.</p>",
+      message: "<p>Ball skin product option anyone. Away involve whatever score.\nCommon ever show all body bed already. Modern politics century sort. Half study write life certain.</p><p>Nothing little whose carry source force heavy employee. Price force leave small follow. Push enjoy down teacher among. Huge nature whose risk season east maybe peace.\nPolitics interview drop sell. Trip from simple matter event.</p><p>Brother simply structure some kitchen some expect. Family personal civil focus professional task specific cut.\nDemocrat continue cause television yourself whether. Find west particular ago stand car.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -10909,13 +9740,12 @@ const db$9 = {
           from: {
             email: "james94@gmail.com",
             name: "Ronald Mitchell",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Cost example hope modern especially language rock.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Mr go size financial role. Deal defense about space. Leader site water well side walk need.\nBall impact suddenly those rather have marriage first. May wear need may design.</p><p>Everyone artist run weight. State on executive travel.\nBrother instead nice while such half trial live. Policy truth animal make set them ask.\nPretty almost pick player after involve. Hot energy interview clearly however adult.</p><p>People during left particular rock design war young. Station require reflect. Later space head front within general. Program lose century stage.\nInstead very both. Owner bill tend Congress local.</p>",
+          message: "<p>Mr go size financial role. Deal defense about space. Leader site water well side walk need.\nBall impact suddenly those rather have marriage first. May wear need may design.</p><p>Everyone artist run weight. State on executive travel.\nBrother instead nice while such half trial live. Policy truth animal make set them ask.\nPretty almost pick player after involve. Hot energy interview clearly however adult.</p><p>People during left particular rock design war young. Station require reflect. Later space head front within general. Program lose century stage.\nInstead very both. Owner bill tend Congress local.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -10923,7 +9753,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 3539,
@@ -10931,13 +9761,12 @@ const db$9 = {
           from: {
             email: "averyamy@hotmail.com",
             name: "Courtney Reynolds",
-            avatar: avatar6$4,
+            avatar: avatar6$4
           },
           subject: "President attack quickly religious.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Stop military interest. Picture his money go quickly. Possible second wide high.\nTime air somebody on development born charge. Marriage address pull. Laugh chair range standard open list consumer wide.</p><p>Dinner another but student upon out. Soldier current management hair management.\nLikely population measure Democrat serious result reflect. Property tax knowledge. Recognize top peace nature pattern.</p><p>Table teach knowledge. Economic section security she. Myself share oil decide necessary when smile difference.\nService open oil car. Be model record stuff position scene also. All professional plan as radio candidate movie.</p>",
+          message: "<p>Stop military interest. Picture his money go quickly. Possible second wide high.\nTime air somebody on development born charge. Marriage address pull. Laugh chair range standard open list consumer wide.</p><p>Dinner another but student upon out. Soldier current management hair management.\nLikely population measure Democrat serious result reflect. Property tax knowledge. Recognize top peace nature pattern.</p><p>Table teach knowledge. Economic section security she. Myself share oil decide necessary when smile difference.\nService open oil car. Be model record stuff position scene also. All professional plan as radio candidate movie.</p>",
           attachments: [],
           isStarred: false,
           labels: ["company"],
@@ -10945,7 +9774,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 132667,
@@ -10953,13 +9782,12 @@ const db$9 = {
           from: {
             email: "englishjohn@gmail.com",
             name: "Phillip Warner",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Stand never treat commercial.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Like begin million option dream just. Side still six truth alone exist that.\nIncluding himself movement increase significant. Police trial instead success he chair speak. Medical writer oil.</p><p>Successful compare analysis yes successful. Before sit old process similar physical.\nMedical receive debate than. Hit assume baby result place total.\nMoney discussion tax democratic surface everybody thousand. Throw six far home.</p><p>While reality along loss only alone pick current. Ok month view computer. Available drug ask knowledge add choose must.\nScene you ago laugh else city. Receive provide goal husband throughout. Focus local middle civil ever oil.</p>",
+          message: "<p>Like begin million option dream just. Side still six truth alone exist that.\nIncluding himself movement increase significant. Police trial instead success he chair speak. Medical writer oil.</p><p>Successful compare analysis yes successful. Before sit old process similar physical.\nMedical receive debate than. Hit assume baby result place total.\nMoney discussion tax democratic surface everybody thousand. Throw six far home.</p><p>While reality along loss only alone pick current. Ok month view computer. Available drug ask knowledge add choose must.\nScene you ago laugh else city. Receive provide goal husband throughout. Focus local middle civil ever oil.</p>",
           attachments: [],
           isStarred: false,
           labels: ["important"],
@@ -10967,7 +9795,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 815966603,
@@ -10975,13 +9803,12 @@ const db$9 = {
           from: {
             email: "davidmckenzie@yahoo.com",
             name: "Tony Garcia",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "However walk less use election.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Shake stop century indicate cut garden. Night learn should low material north economy.\nAnother soldier base whole accept. Natural two everyone television. Sure option key market method week. Mouth day look too western world.</p><p>Company first rise in. Image movement enjoy clearly work box. Process parent fear state these theory want. Close friend team put check.\nCourt practice since account way indeed. Between exactly five. Conference green fast see century notice.</p><p>South six discover college long anyone young. Her company fine hotel rise.\nIf raise long yeah direction painting. Rest tell entire machine than summer laugh list. Personal rise figure collection player yard.</p>",
+          message: "<p>Shake stop century indicate cut garden. Night learn should low material north economy.\nAnother soldier base whole accept. Natural two everyone television. Sure option key market method week. Mouth day look too western world.</p><p>Company first rise in. Image movement enjoy clearly work box. Process parent fear state these theory want. Close friend team put check.\nCourt practice since account way indeed. Between exactly five. Conference green fast see century notice.</p><p>South six discover college long anyone young. Her company fine hotel rise.\nIf raise long yeah direction painting. Rest tell entire machine than summer laugh list. Personal rise figure collection player yard.</p>",
           attachments: [],
           isStarred: true,
           labels: ["private", "company", "important"],
@@ -10989,12 +9816,12 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 20,
@@ -11002,13 +9829,12 @@ const db$9 = {
       from: {
         email: "sandraarroyo@hotmail.com",
         name: "Natalie Lloyd",
-        avatar: avatar2$6,
+        avatar: avatar2$6
       },
       subject: "During teach truth group society enough that.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Price agreement more tell. Push special fine turn alone.\nVarious weight shake heavy age control side so. Determine fall family agreement pull guy easy. Sell will director experience where challenge Democrat.</p><p>Fly such evening all entire. Data cold hour.\nLocal strong article tend bag. Probably relate political sell. Service end environmental theory health. Ready think body necessary low result impact.</p><p>Agency trial address per strong bill able. Top lay chair bag positive rich partner. Interest address government argue project attention myself election.\nReach value pattern treat act result star. Staff list federal.</p>",
+      message: "<p>Price agreement more tell. Push special fine turn alone.\nVarious weight shake heavy age control side so. Determine fall family agreement pull guy easy. Sell will director experience where challenge Democrat.</p><p>Fly such evening all entire. Data cold hour.\nLocal strong article tend bag. Probably relate political sell. Service end environmental theory health. Ready think body necessary low result impact.</p><p>Agency trial address per strong bill able. Top lay chair bag positive rich partner. Interest address government argue project attention myself election.\nReach value pattern treat act result star. Staff list federal.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "important"],
@@ -11020,13 +9846,12 @@ const db$9 = {
           from: {
             email: "webersamuel@gmail.com",
             name: "Steven Jackson",
-            avatar: avatar1$6,
+            avatar: avatar1$6
           },
           subject: "Hotel account interview begin carry everybody its.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Get behavior better walk claim. Material popular civil detail.\nStop strong true first. Science scientist low story. These former near represent.</p><p>Fine value happy admit. Although its four could yet call. May beyond building bank push past perform.\nEnd civil audience son our my artist make. Security wish probably cold space reach life situation.</p><p>Station per choice live safe dog without. Above according break her woman organization market.\nCareer pass race mother manage for. Summer organization stage century fact individual particular.</p>",
+          message: "<p>Get behavior better walk claim. Material popular civil detail.\nStop strong true first. Science scientist low story. These former near represent.</p><p>Fine value happy admit. Although its four could yet call. May beyond building bank push past perform.\nEnd civil audience son our my artist make. Security wish probably cold space reach life situation.</p><p>Station per choice live safe dog without. Above according break her woman organization market.\nCareer pass race mother manage for. Summer organization stage century fact individual particular.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal"],
@@ -11034,7 +9859,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 378459327,
@@ -11042,13 +9867,12 @@ const db$9 = {
           from: {
             email: "jobush@yahoo.com",
             name: "Mrs. Pamela Riggs MD",
-            avatar: avatar6$4,
+            avatar: avatar6$4
           },
           subject: "Industry difficult want without day partner road.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Never hospital price site without star. Agency nature resource perhaps send. Stand nice must.\nProve window individual final. Exactly collection boy picture try operation increase. About purpose American type include store determine.</p><p>Speak they reality consumer ball church.\nWorld sit price. More local clear. Camera kind food.\nShe often term somebody prove. Would low over someone law.\nInstitution any among face begin race term do. Teach language technology get animal good.</p><p>Play cell type process certain total stay. Court enough side choice again speech.\nBy alone young scientist walk individual a. Mind relate whatever fund vote contain. Reflect special hospital study may local.</p>",
+          message: "<p>Never hospital price site without star. Agency nature resource perhaps send. Stand nice must.\nProve window individual final. Exactly collection boy picture try operation increase. About purpose American type include store determine.</p><p>Speak they reality consumer ball church.\nWorld sit price. More local clear. Camera kind food.\nShe often term somebody prove. Would low over someone law.\nInstitution any among face begin race term do. Teach language technology get animal good.</p><p>Play cell type process certain total stay. Court enough side choice again speech.\nBy alone young scientist walk individual a. Mind relate whatever fund vote contain. Reflect special hospital study may local.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "private"],
@@ -11056,12 +9880,12 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "spam",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 19,
@@ -11069,13 +9893,12 @@ const db$9 = {
       from: {
         email: "washingtonsamantha@hotmail.com",
         name: "Jessica Johnston",
-        avatar: avatar6$4,
+        avatar: avatar6$4
       },
       subject: "Exist general medical under entire radio.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Process book suddenly plan sense change science. Prepare air option response. Voice range human.\nYet staff back idea note his cold. Raise service about state final official.\nHair when expect ok sit food. Religious rule doctor all.</p><p>Need improve field set wrong born.\nConsider there situation also something. Glass finally must special. Region news water responsibility to my short. Deal hotel fill.</p><p>Successful apply reality think woman short. Hope various indeed onto third audience.\nWay score none. Raise budget tough dinner name. Similar something fall certain I different.</p>",
+      message: "<p>Process book suddenly plan sense change science. Prepare air option response. Voice range human.\nYet staff back idea note his cold. Raise service about state final official.\nHair when expect ok sit food. Religious rule doctor all.</p><p>Need improve field set wrong born.\nConsider there situation also something. Glass finally must special. Region news water responsibility to my short. Deal hotel fill.</p><p>Successful apply reality think woman short. Hope various indeed onto third audience.\nWay score none. Raise budget tough dinner name. Similar something fall certain I different.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private"],
@@ -11083,7 +9906,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 18,
@@ -11091,13 +9914,12 @@ const db$9 = {
       from: {
         email: "mcleanrobert@hotmail.com",
         name: "Matthew Lee",
-        avatar: avatar1$6,
+        avatar: avatar1$6
       },
       subject: "Travel free or write determine.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Edge memory where short stuff. Seven summer from sometimes body probably church.\nYeah might enough believe world person somebody. Compare summer road save magazine.</p><p>Light street wear home. Result baby my show current present. Attorney analysis rule democratic bed top.\nFace should pay side federal responsibility item. Test step safe his yourself.\nHold language interview other agency. Leg soon determine.</p><p>Make style already you physical.\nAir challenge fund dark. Myself another evening let big improve parent huge. Money fly investment practice.\nProvide feeling peace open decide course. Community attack her magazine white. Those let any beyond.</p>",
+      message: "<p>Edge memory where short stuff. Seven summer from sometimes body probably church.\nYeah might enough believe world person somebody. Compare summer road save magazine.</p><p>Light street wear home. Result baby my show current present. Attorney analysis rule democratic bed top.\nFace should pay side federal responsibility item. Test step safe his yourself.\nHold language interview other agency. Leg soon determine.</p><p>Make style already you physical.\nAir challenge fund dark. Myself another evening let big improve parent huge. Money fly investment practice.\nProvide feeling peace open decide course. Community attack her magazine white. Those let any beyond.</p>",
       attachments: [],
       isStarred: true,
       labels: ["private", "company", "personal"],
@@ -11105,7 +9927,7 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 17,
@@ -11113,13 +9935,12 @@ const db$9 = {
       from: {
         email: "perkinselizabeth@gmail.com",
         name: "James Wilson",
-        avatar: avatar7$3,
+        avatar: avatar7$3
       },
       subject: "Always beautiful name push miss international.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Skin if open line speak wish. Ten size their happen trial. Will third prevent.\nPopular wall indeed memory cause generation under age. Less one pressure guy song.\nUpon theory item science speak mission. After read plan official good week yet show.</p><p>Shake trip when once break election red. Left individual store site prepare figure. Once indicate blue wear effect person catch.\nWind chance entire perhaps carry notice leg. Successful property education. Guy option include.</p><p>Author of exist no bag exactly. To impact since.\nArgue market strategy evidence start business movie. Million fire crime magazine mention.\nDeep figure full Mr. Take response four serve law. Forward late part.</p>",
+      message: "<p>Skin if open line speak wish. Ten size their happen trial. Will third prevent.\nPopular wall indeed memory cause generation under age. Less one pressure guy song.\nUpon theory item science speak mission. After read plan official good week yet show.</p><p>Shake trip when once break election red. Left individual store site prepare figure. Once indicate blue wear effect person catch.\nWind chance entire perhaps carry notice leg. Successful property education. Guy option include.</p><p>Author of exist no bag exactly. To impact since.\nArgue market strategy evidence start business movie. Million fire crime magazine mention.\nDeep figure full Mr. Take response four serve law. Forward late part.</p>",
       attachments: [],
       isStarred: true,
       labels: ["important"],
@@ -11127,7 +9948,7 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 16,
@@ -11135,13 +9956,12 @@ const db$9 = {
       from: {
         email: "garcialauren@hotmail.com",
         name: "Gregory Allen",
-        avatar: avatar3$5,
+        avatar: avatar3$5
       },
       subject: "Test look option movement position card cause.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Key rather religious director week inside campaign. Sport fast activity.\nCamera go sing development up pay. Product toward well.\nRepresent appear civil skill son city leg. Best road attorney religious. Issue collection who peace morning director.</p><p>Above know trip beyond smile science. Part sport behavior notice establish. Recent direction similar everything admit pretty.\nBehind a knowledge second sound. Body soldier begin word site.</p><p>Sense policy rule after no response itself. Have magazine draw should bit often food. Car start that trade person.\nLeft pattern PM identify before executive Mr. State two your meeting task different.</p>",
+      message: "<p>Key rather religious director week inside campaign. Sport fast activity.\nCamera go sing development up pay. Product toward well.\nRepresent appear civil skill son city leg. Best road attorney religious. Issue collection who peace morning director.</p><p>Above know trip beyond smile science. Part sport behavior notice establish. Recent direction similar everything admit pretty.\nBehind a knowledge second sound. Body soldier begin word site.</p><p>Sense policy rule after no response itself. Have magazine draw should bit often food. Car start that trade person.\nLeft pattern PM identify before executive Mr. State two your meeting task different.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal", "company", "important"],
@@ -11153,13 +9973,12 @@ const db$9 = {
           from: {
             email: "howardjustin@gmail.com",
             name: "Rebecca Smith",
-            avatar: avatar6$4,
+            avatar: avatar6$4
           },
           subject: "Region stop vote tonight partner capital us.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Republican ten picture although partner green.\nWrite his than another hand only. Focus night table speak ahead couple. Baby me single another already unit hand.</p><p>On alone involve.\nMusic author event story east pressure thus. Game power administration.\nNext standard boy provide although city short society. Hospital company old view.</p><p>Interest see majority ability center hope. His decision use most four return college. Born technology affect like.\nAlong your military there note great day attack. Specific I throughout. Hand month family open.</p>",
+          message: "<p>Republican ten picture although partner green.\nWrite his than another hand only. Focus night table speak ahead couple. Baby me single another already unit hand.</p><p>On alone involve.\nMusic author event story east pressure thus. Game power administration.\nNext standard boy provide although city short society. Hospital company old view.</p><p>Interest see majority ability center hope. His decision use most four return college. Born technology affect like.\nAlong your military there note great day attack. Specific I throughout. Hand month family open.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal", "important", "private"],
@@ -11167,21 +9986,16 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 18,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "dwelch@yahoo.com",
-            name: "Peter Davis",
-            avatar: avatar1$6,
-          },
+          from: { email: "dwelch@yahoo.com", name: "Peter Davis", avatar: avatar1$6 },
           subject: "Second ground way child seem social resource appear.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Building believe manage analysis artist another enough similar.\nFood provide long view civil couple. Citizen too health west culture rule finish administration. Political ever eight message specific mission.\nServe determine city stand four present.</p><p>Moment compare red or institution begin more. Nothing law long might degree. Meet relationship work money human probably head.\nForward region their high with region their. Many side goal.</p><p>Customer thousand amount ask other might. Article energy wide relationship. Prevent save himself wrong action.\nShow entire play upon at shake. Unit heavy training window probably start share. Common by allow.</p>",
+          message: "<p>Building believe manage analysis artist another enough similar.\nFood provide long view civil couple. Citizen too health west culture rule finish administration. Political ever eight message specific mission.\nServe determine city stand four present.</p><p>Moment compare red or institution begin more. Nothing law long might degree. Meet relationship work money human probably head.\nForward region their high with region their. Many side goal.</p><p>Customer thousand amount ask other might. Article energy wide relationship. Prevent save himself wrong action.\nShow entire play upon at shake. Unit heavy training window probably start share. Common by allow.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal"],
@@ -11189,21 +10003,16 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 712,
           to: [{ email: "johndoe@mail.com", name: "me" }],
-          from: {
-            email: "larrybrown@yahoo.com",
-            name: "Amy Peters",
-            avatar: avatar4$5,
-          },
+          from: { email: "larrybrown@yahoo.com", name: "Amy Peters", avatar: avatar4$5 },
           subject: "Interesting strategy south ok recognize shoulder lead.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Bring dark let list then kitchen audience. Agreement raise result decision choose without.\nIndicate yet radio consider perform western. Find follow far require wish than pattern. Meeting benefit through seven service.</p><p>Question response big son student stuff. There imagine hold pick friend. For join condition try.\nAnimal foot work public one brother hit.\nWithout free business new degree. Local administration it those animal.</p><p>Simply less tax. Stuff apply member deal rather sort. Best politics project say rest.\nCare expect program break concern development care. East seat window. Kind firm cover up share perhaps.</p>",
+          message: "<p>Bring dark let list then kitchen audience. Agreement raise result decision choose without.\nIndicate yet radio consider perform western. Find follow far require wish than pattern. Meeting benefit through seven service.</p><p>Question response big son student stuff. There imagine hold pick friend. For join condition try.\nAnimal foot work public one brother hit.\nWithout free business new degree. Local administration it those animal.</p><p>Simply less tax. Stuff apply member deal rather sort. Best politics project say rest.\nCare expect program break concern development care. East seat window. Kind firm cover up share perhaps.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal"],
@@ -11211,26 +10020,21 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 15,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "dreed@hotmail.com",
-        name: "Rhonda Hamilton",
-        avatar: avatar4$5,
-      },
+      from: { email: "dreed@hotmail.com", name: "Rhonda Hamilton", avatar: avatar4$5 },
       subject: "They new police guy trade carry bad.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Certain operation woman production especially second. To answer main good democratic move likely radio. Down rise human model land culture the.</p><p>Ten actually feeling call blue human. Less forward star another something he.\nUsually scene door enjoy heavy view management. Eye data conference. Attention traditional especially star else federal course. Speak position season stage head when.</p><p>Foot face beautiful little seven former you usually. Candidate hotel help.\nKitchen heavy she. Agent put move sister much. Hit some baby have fight.</p>",
+      message: "<p>Certain operation woman production especially second. To answer main good democratic move likely radio. Down rise human model land culture the.</p><p>Ten actually feeling call blue human. Less forward star another something he.\nUsually scene door enjoy heavy view management. Eye data conference. Attention traditional especially star else federal course. Speak position season stage head when.</p><p>Foot face beautiful little seven former you usually. Candidate hotel help.\nKitchen heavy she. Agent put move sister much. Hit some baby have fight.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "private", "important", "personal"],
@@ -11238,7 +10042,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 14,
@@ -11246,13 +10050,12 @@ const db$9 = {
       from: {
         email: "andersonkatrina@hotmail.com",
         name: "Richard Buckley",
-        avatar: avatar7$3,
+        avatar: avatar7$3
       },
       subject: "Hospital small technology defense affect car.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Finish race write suggest visit pay east. Might point heavy care.\nSociety who happen stock over toward account. Question shake city share marriage drug.\nEvery test total agency another like. Wall day word camera art.</p><p>As thus necessary degree always support fall. Leader town agree improve check career. Later service when artist customer blood.\nEasy daughter tend no raise. Throw glass various among nearly act if. Than area sort trial many marriage old decision.</p><p>Worker coach together raise civil term themselves. Television something ok thank.\nAlmost song task there budget quite process than. Sell which apply environmental.\nDrop mind computer increase born.\nAuthor with will time. Garden others agency wall.</p>",
+      message: "<p>Finish race write suggest visit pay east. Might point heavy care.\nSociety who happen stock over toward account. Question shake city share marriage drug.\nEvery test total agency another like. Wall day word camera art.</p><p>As thus necessary degree always support fall. Leader town agree improve check career. Later service when artist customer blood.\nEasy daughter tend no raise. Throw glass various among nearly act if. Than area sort trial many marriage old decision.</p><p>Worker coach together raise civil term themselves. Television something ok thank.\nAlmost song task there budget quite process than. Sell which apply environmental.\nDrop mind computer increase born.\nAuthor with will time. Garden others agency wall.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal", "company", "private"],
@@ -11260,7 +10063,7 @@ const db$9 = {
       replies: [],
       folder: "sent",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 13,
@@ -11268,13 +10071,12 @@ const db$9 = {
       from: {
         email: "kimberlyrobinson@hotmail.com",
         name: "James Brady",
-        avatar: avatar3$5,
+        avatar: avatar3$5
       },
       subject: "There bar risk bring.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Thought prepare want hand character design most. Run result attack before.\nVoice return give right way along. He lose change season less cell moment use. Today benefit would somebody.</p><p>Million area million across near company heart. Happen official knowledge look. Turn class interesting.\nGive product fund would factor into hope. Everyone painting program forget including.</p><p>Begin force foreign degree detail oil such.\nFirm scene individual here point. Particular interview before people last shoulder. Appear until spend under along magazine.</p>",
+      message: "<p>Thought prepare want hand character design most. Run result attack before.\nVoice return give right way along. He lose change season less cell moment use. Today benefit would somebody.</p><p>Million area million across near company heart. Happen official knowledge look. Turn class interesting.\nGive product fund would factor into hope. Everyone painting program forget including.</p><p>Begin force foreign degree detail oil such.\nFirm scene individual here point. Particular interview before people last shoulder. Appear until spend under along magazine.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal"],
@@ -11282,21 +10084,16 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 12,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "ugray@gmail.com",
-        name: "Jane Buckley",
-        avatar: avatar2$6,
-      },
+      from: { email: "ugray@gmail.com", name: "Jane Buckley", avatar: avatar2$6 },
       subject: "Picture everything throw happen nothing social.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Cell role hundred husband president figure. Make how real again.\nDevelopment image develop Republican. Military head drop. Relate wait able art.\nPolice response range establish back. Chance assume subject stock appear good research.</p><p>Thousand PM speech hear three yard should for.\nMachine crime too represent campaign book. According call each.\nPicture site create sister. Opportunity become who never bed number develop set. Major finish everyone meet vote letter across.</p><p>Reality send American. Democratic serious event oil lose. Tax position down front service improve election.\nThreat heavy over. Each leave several writer card politics. Question feel technology many thank.</p>",
+      message: "<p>Cell role hundred husband president figure. Make how real again.\nDevelopment image develop Republican. Military head drop. Relate wait able art.\nPolice response range establish back. Chance assume subject stock appear good research.</p><p>Thousand PM speech hear three yard should for.\nMachine crime too represent campaign book. According call each.\nPicture site create sister. Opportunity become who never bed number develop set. Major finish everyone meet vote letter across.</p><p>Reality send American. Democratic serious event oil lose. Tax position down front service improve election.\nThreat heavy over. Each leave several writer card politics. Question feel technology many thank.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -11304,7 +10101,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 11,
@@ -11312,13 +10109,12 @@ const db$9 = {
       from: {
         email: "morrisjaclyn@gmail.com",
         name: "Kathryn Smith",
-        avatar: avatar6$4,
+        avatar: avatar6$4
       },
       subject: "Green attorney government same course join in woman.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Employee society live back. Bar woman film education.\nImportant report avoid. Wait nor goal. As morning say clear.\nBody strong of alone camera fall. Civil program particular first garden. Social become voice law quality.</p><p>Mouth whole for positive. Certain tough especially nature claim box.\nFill space allow second second cut. Bank want why decide recognize space.</p><p>Outside ability second whose second. Point stand bank list defense understand seat.\nClear finish follow media sing type. Technology white practice miss price.\nDifference establish some nation western job meeting. Give article beautiful.</p>",
+      message: "<p>Employee society live back. Bar woman film education.\nImportant report avoid. Wait nor goal. As morning say clear.\nBody strong of alone camera fall. Civil program particular first garden. Social become voice law quality.</p><p>Mouth whole for positive. Certain tough especially nature claim box.\nFill space allow second second cut. Bank want why decide recognize space.</p><p>Outside ability second whose second. Point stand bank list defense understand seat.\nClear finish follow media sing type. Technology white practice miss price.\nDifference establish some nation western job meeting. Give article beautiful.</p>",
       attachments: [],
       isStarred: false,
       labels: ["private"],
@@ -11330,13 +10126,12 @@ const db$9 = {
           from: {
             email: "juan31@gmail.com",
             name: "Jennifer Robinson",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Beautiful despite note couple pretty issue near.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Store use cultural human smile. Subject trip that laugh.\nWalk sense a operation about window small southern. Show road them movement.</p><p>Water behind do else just. Reach mean science yet among what.\nGreen modern design us know use others weight. Recently wonder soldier within plan.\nRoom test story see southern special nice. Drop take mind plant throw American my. A husband sit thing.</p><p>There performance fine coach way majority truth. House beyond candidate beyond debate painting alone. There significant poor something chance spring. Yeah worry white Democrat.</p>",
+          message: "<p>Store use cultural human smile. Subject trip that laugh.\nWalk sense a operation about window small southern. Show road them movement.</p><p>Water behind do else just. Reach mean science yet among what.\nGreen modern design us know use others weight. Recently wonder soldier within plan.\nRoom test story see southern special nice. Drop take mind plant throw American my. A husband sit thing.</p><p>There performance fine coach way majority truth. House beyond candidate beyond debate painting alone. There significant poor something chance spring. Yeah worry white Democrat.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -11344,7 +10139,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 867,
@@ -11352,13 +10147,12 @@ const db$9 = {
           from: {
             email: "gflores@hotmail.com",
             name: "Cindy Hernandez",
-            avatar: avatar2$6,
+            avatar: avatar2$6
           },
           subject: "Watch vote decide compare start.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Choice race different. Yard case newspaper wide series growth identify.\nBeyond go rest read me. Though quite industry method animal organization leave quality.</p><p>Back music theory fund produce. Foreign hard board learn home add. Data political buy budget think.\nBook consumer future writer. Bag evidence thus school.\nDifficult my accept yard. Million loss officer person language to. Television room feeling.</p><p>Country myself current tough image school. Court activity catch low value. Hotel local through.\nFocus attorney computer evening you always. Guess require event picture director. Garden floor month husband mention.</p>",
+          message: "<p>Choice race different. Yard case newspaper wide series growth identify.\nBeyond go rest read me. Though quite industry method animal organization leave quality.</p><p>Back music theory fund produce. Foreign hard board learn home add. Data political buy budget think.\nBook consumer future writer. Bag evidence thus school.\nDifficult my accept yard. Million loss officer person language to. Television room feeling.</p><p>Country myself current tough image school. Court activity catch low value. Hotel local through.\nFocus attorney computer evening you always. Guess require event picture director. Garden floor month husband mention.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "important", "private"],
@@ -11366,7 +10160,7 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 7,
@@ -11374,13 +10168,12 @@ const db$9 = {
           from: {
             email: "judyvillarreal@hotmail.com",
             name: "Amy Chavez",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Member around task woman as.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Police physical down generation condition throw foot relate. Table experience represent practice development.\nOrder option success thank miss. Tree knowledge light police service remain during. Entire respond join hit kind enjoy language.</p><p>Modern page social decide though small realize impact. Around special difficult level organization course her.\nMr tree three former this husband hold. Local expert especially should writer visit moment. Quite move travel less.</p><p>Nearly loss those democratic bring production. Ago economic method consider discuss.\nCapital approach red but reveal successful. Middle television treatment. Turn recent reflect interview.</p>",
+          message: "<p>Police physical down generation condition throw foot relate. Table experience represent practice development.\nOrder option success thank miss. Tree knowledge light police service remain during. Entire respond join hit kind enjoy language.</p><p>Modern page social decide though small realize impact. Around special difficult level organization course her.\nMr tree three former this husband hold. Local expert especially should writer visit moment. Quite move travel less.</p><p>Nearly loss those democratic bring production. Ago economic method consider discuss.\nCapital approach red but reveal successful. Middle television treatment. Turn recent reflect interview.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "private"],
@@ -11388,7 +10181,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 59708653,
@@ -11396,13 +10189,12 @@ const db$9 = {
           from: {
             email: "mwalker@hotmail.com",
             name: "Marcus Campbell",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Woman ability middle choose vote few ability.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Because structure put. Face business possible light box.\nSmile group six history financial. General try financial either discuss like million. Begin create fill series age.\nExist control popular begin deep. Sit another health live.</p><p>Politics side finally senior sit here activity protect. Heavy major control education. Bad involve want skill project feel.\nNone usually kid study eight. Civil consider effort. Marriage front their live eye significant far.</p><p>Scene keep major bank up prepare others. Change century brother media energy alone. Life range explain interest address.\nMedical account indicate hit start live support. Prove popular claim direction college.</p>",
+          message: "<p>Because structure put. Face business possible light box.\nSmile group six history financial. General try financial either discuss like million. Begin create fill series age.\nExist control popular begin deep. Sit another health live.</p><p>Politics side finally senior sit here activity protect. Heavy major control education. Bad involve want skill project feel.\nNone usually kid study eight. Civil consider effort. Marriage front their live eye significant far.</p><p>Scene keep major bank up prepare others. Change century brother media energy alone. Life range explain interest address.\nMedical account indicate hit start live support. Prove popular claim direction college.</p>",
           attachments: [],
           isStarred: false,
           labels: ["private"],
@@ -11410,7 +10202,7 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
+          isDeleted: true
         },
         {
           id: 804622,
@@ -11418,13 +10210,12 @@ const db$9 = {
           from: {
             email: "lauramartin@hotmail.com",
             name: "Connie Osborne",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Heavy ball debate style message main rate.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Feeling ability finish kitchen majority same moment. Decision money compare really education deal. Officer get be food ahead compare stay.\nDeep teacher state. Guy purpose too remain help enough.</p><p>Cut city father while green both information.\nLetter left fall body general. Very exactly common though policy star. Former health arm respond treatment.\nEnter industry will trouble day authority agree blood. Indeed air until but idea nor enter.</p><p>Site direction lay hotel these. Role focus affect focus before. Gas fill figure rise marriage like offer child.\nAgainst wall either. Mind one ready total. Fly food why part for again season.</p>",
+          message: "<p>Feeling ability finish kitchen majority same moment. Decision money compare really education deal. Officer get be food ahead compare stay.\nDeep teacher state. Guy purpose too remain help enough.</p><p>Cut city father while green both information.\nLetter left fall body general. Very exactly common though policy star. Former health arm respond treatment.\nEnter industry will trouble day authority agree blood. Indeed air until but idea nor enter.</p><p>Site direction lay hotel these. Role focus affect focus before. Gas fill figure rise marriage like offer child.\nAgainst wall either. Mind one ready total. Fly food why part for again season.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "important", "private"],
@@ -11432,26 +10223,21 @@ const db$9 = {
           replies: [],
           folder: "sent",
           isRead: true,
-          isDeleted: false,
-        },
+          isDeleted: false
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 10,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "sean36@gmail.com",
-        name: "Ronald Buckley",
-        avatar: avatar5$5,
-      },
+      from: { email: "sean36@gmail.com", name: "Ronald Buckley", avatar: avatar5$5 },
       subject: "Blue both light anyone trial nor approach tough.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Take anything season ok. Nor than war fine speak happen. Where business hold continue message state for.\nMorning southern allow. Mission color camera how Republican behind. Learn five break suffer.</p><p>Over born sure continue. Option show meet however.\nModel no mean us. Enough as space herself article bring others. Place them need drive cost decide.</p><p>Million friend remain product eye Congress. Education near amount middle.\nSay key past if shoulder rule. Others mean behind case interesting bag near option. Step why example mean thus. Fish forget turn never kind boy anyone.</p>",
+      message: "<p>Take anything season ok. Nor than war fine speak happen. Where business hold continue message state for.\nMorning southern allow. Mission color camera how Republican behind. Learn five break suffer.</p><p>Over born sure continue. Option show meet however.\nModel no mean us. Enough as space herself article bring others. Place them need drive cost decide.</p><p>Million friend remain product eye Congress. Education near amount middle.\nSay key past if shoulder rule. Others mean behind case interesting bag near option. Step why example mean thus. Fish forget turn never kind boy anyone.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal", "important"],
@@ -11459,21 +10245,16 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 9,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "wkline@yahoo.com",
-        name: "Jennifer Garcia",
-        avatar: avatar6$4,
-      },
+      from: { email: "wkline@yahoo.com", name: "Jennifer Garcia", avatar: avatar6$4 },
       subject: "Simply idea project health prevent beyond both after.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Second again well doctor because election necessary point. Campaign about from western themselves particular loss popular. During garden star couple water simply area.</p><p>Worker leave know mission southern. Sea eye walk moment.\nCamera executive education wall marriage say. Man tend perform. Issue area great financial note other guess.</p><p>Likely market physical heavy quite we.\nRecent how room page sit fast Congress fight. Interview establish watch water.\nLoss family picture mind consumer about PM. Safe natural size. Character recognize painting movie.</p>",
+      message: "<p>Second again well doctor because election necessary point. Campaign about from western themselves particular loss popular. During garden star couple water simply area.</p><p>Worker leave know mission southern. Sea eye walk moment.\nCamera executive education wall marriage say. Man tend perform. Issue area great financial note other guess.</p><p>Likely market physical heavy quite we.\nRecent how room page sit fast Congress fight. Interview establish watch water.\nLoss family picture mind consumer about PM. Safe natural size. Character recognize painting movie.</p>",
       attachments: [],
       isStarred: false,
       labels: ["personal", "company"],
@@ -11481,21 +10262,16 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 8,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "tolson@gmail.com",
-        name: "Lindsey Melton",
-        avatar: avatar2$6,
-      },
+      from: { email: "tolson@gmail.com", name: "Lindsey Melton", avatar: avatar2$6 },
       subject: "Amount collection marriage price.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Join list dog rate doctor surface share. Meeting beat particular sing apply space.\nClear down thought magazine meet.\nWould better sport wide personal matter. Analysis effort school officer such. Age blue future her start marriage.</p><p>Material year close beat rest happy. Interview material over thought. Win until morning certainly.\nDevelopment personal direction game present.</p><p>Accept wall price hair garden staff. Enough off rest. Beyond half small lay agency.\nOption in hand charge direction least message. Safe minute situation just floor. Guess month than already.</p>",
+      message: "<p>Join list dog rate doctor surface share. Meeting beat particular sing apply space.\nClear down thought magazine meet.\nWould better sport wide personal matter. Analysis effort school officer such. Age blue future her start marriage.</p><p>Material year close beat rest happy. Interview material over thought. Win until morning certainly.\nDevelopment personal direction game present.</p><p>Accept wall price hair garden staff. Enough off rest. Beyond half small lay agency.\nOption in hand charge direction least message. Safe minute situation just floor. Guess month than already.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company"],
@@ -11503,21 +10279,16 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 7,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "jeffrey89@gmail.com",
-        name: "Amanda Pratt",
-        avatar: avatar4$5,
-      },
+      from: { email: "jeffrey89@gmail.com", name: "Amanda Pratt", avatar: avatar4$5 },
       subject: "Pull clear protect start exactly purpose scientist food.",
       cc: [],
       bcc: [],
-      message:
-        "<p>See beautiful necessary hold. Marriage TV cut look chance whom.\nHeavy girl like only special position hot throw.\nReligious someone value girl save avoid. Market soon against central baby. So follow paper run along bag.</p><p>Worry provide form. Walk receive adult.\nMind style campaign blood. Public sign allow history nature customer. Offer how answer join.\nDiscussion blue Congress half important beat without. Authority key personal forget quickly model quickly really.</p><p>Better know magazine. Attention discuss staff turn affect tough.\nSo later whose reveal follow. Almost someone end. Rate necessary dog strategy.\nHope administration born his. Upon foot vote ability medical. Poor behind stage opportunity.</p>",
+      message: "<p>See beautiful necessary hold. Marriage TV cut look chance whom.\nHeavy girl like only special position hot throw.\nReligious someone value girl save avoid. Market soon against central baby. So follow paper run along bag.</p><p>Worry provide form. Walk receive adult.\nMind style campaign blood. Public sign allow history nature customer. Offer how answer join.\nDiscussion blue Congress half important beat without. Authority key personal forget quickly model quickly really.</p><p>Better know magazine. Attention discuss staff turn affect tough.\nSo later whose reveal follow. Almost someone end. Rate necessary dog strategy.\nHope administration born his. Upon foot vote ability medical. Poor behind stage opportunity.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company"],
@@ -11525,21 +10296,16 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 6,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "gentryjeff@yahoo.com",
-        name: "Joseph Clark",
-        avatar: avatar3$5,
-      },
+      from: { email: "gentryjeff@yahoo.com", name: "Joseph Clark", avatar: avatar3$5 },
       subject: "Grow seat discover.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Become laugh and up onto. Sister raise pretty material picture. Own middle region open.\nProcess rock throw kind.\nQuestion them interest some international notice agreement. Control remember purpose.</p><p>Level consumer contain process rise system. Ten responsibility finally detail development else.\nRace well letter. Over receive it might.\nDifferent use send than he everyone. Drive answer develop bad past budget.</p><p>Increase prove theory million lose down quickly.\nMoment young just position information.\nName discover different majority use seek. Religious world discover never pressure ok develop. Name also all. Drug city program way.</p>",
+      message: "<p>Become laugh and up onto. Sister raise pretty material picture. Own middle region open.\nProcess rock throw kind.\nQuestion them interest some international notice agreement. Control remember purpose.</p><p>Level consumer contain process rise system. Ten responsibility finally detail development else.\nRace well letter. Over receive it might.\nDifferent use send than he everyone. Drive answer develop bad past budget.</p><p>Increase prove theory million lose down quickly.\nMoment young just position information.\nName discover different majority use seek. Religious world discover never pressure ok develop. Name also all. Drug city program way.</p>",
       attachments: [],
       isStarred: true,
       labels: ["personal", "private"],
@@ -11547,7 +10313,7 @@ const db$9 = {
       replies: [],
       folder: "inbox",
       isRead: true,
-      isDeleted: true,
+      isDeleted: true
     },
     {
       id: 5,
@@ -11555,13 +10321,12 @@ const db$9 = {
       from: {
         email: "maciaspatricia@hotmail.com",
         name: "Alisha Hughes",
-        avatar: avatar4$5,
+        avatar: avatar4$5
       },
       subject: "Play hope gas military that.",
       cc: [],
       bcc: [],
-      message:
-        "<p>International hundred anything see ten but long. Collection edge difference turn other let price. Would ahead commercial may scene develop minute.\nOnly film avoid. Last dark party store. Collection another three movement network ready hit.</p><p>Report keep probably individual argue.\nKid activity style million. Late stage lawyer answer.\nReligious both opportunity wide. Once television amount necessary so line. Now simple shoulder ground.</p><p>Radio idea glass realize research floor. Why range brother baby own impact century. Believe service doctor once.\nKnowledge finally anything sea. Across certainly reality provide. Past center feeling financial.</p>",
+      message: "<p>International hundred anything see ten but long. Collection edge difference turn other let price. Would ahead commercial may scene develop minute.\nOnly film avoid. Last dark party store. Collection another three movement network ready hit.</p><p>Report keep probably individual argue.\nKid activity style million. Late stage lawyer answer.\nReligious both opportunity wide. Once television amount necessary so line. Now simple shoulder ground.</p><p>Radio idea glass realize research floor. Why range brother baby own impact century. Believe service doctor once.\nKnowledge finally anything sea. Across certainly reality provide. Past center feeling financial.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -11569,7 +10334,7 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 4,
@@ -11577,13 +10342,12 @@ const db$9 = {
       from: {
         email: "rvalenzuela@hotmail.com",
         name: "Michelle Murphy",
-        avatar: avatar6$4,
+        avatar: avatar6$4
       },
       subject: "Anyone want yet forget effect.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Expert space school material success security interest. Realize size seem growth game evidence. Time itself fine travel.\nCup reason environmental analysis.</p><p>Chance election look. Pretty job they officer other.\nBrother challenge military dark. Decade behavior several few race ball along. Amount rich suddenly stand. Mention street local site.</p><p>Join thus employee determine degree lead player. Color room ever soon easy. Administration toward experience why.\nSea hard detail rule. Strong factor language enjoy find.</p>",
+      message: "<p>Expert space school material success security interest. Realize size seem growth game evidence. Time itself fine travel.\nCup reason environmental analysis.</p><p>Chance election look. Pretty job they officer other.\nBrother challenge military dark. Decade behavior several few race ball along. Amount rich suddenly stand. Mention street local site.</p><p>Join thus employee determine degree lead player. Color room ever soon easy. Administration toward experience why.\nSea hard detail rule. Strong factor language enjoy find.</p>",
       attachments: [],
       isStarred: false,
       labels: ["company", "important"],
@@ -11591,34 +10355,29 @@ const db$9 = {
       replies: [],
       folder: "spam",
       isRead: false,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 3,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "gbeltran@gmail.com",
-        name: "Charles Cooper",
-        avatar: avatar1$6,
-      },
+      from: { email: "gbeltran@gmail.com", name: "Charles Cooper", avatar: avatar1$6 },
       subject: "Fight account night short.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Get through stay. On difficult popular.\nFine turn mean artist. President explain turn professor fly prove cultural. Moment field front.\nSuccess almost various week. North message herself front eight. Final huge right happy.</p><p>Analysis rise son let. Age specific against visit.\nPerhaps series unit center total. Bed hour sense. Star morning history design late.\nOnce but fund share education. Majority face what year interest wish financial pretty.</p><p>Class treat enjoy stock seven natural establish indeed.\nHelp eat figure rich. Although bill discover build town.\nAsk continue claim here hand surface. Success foot action close treat.</p>",
+      message: "<p>Get through stay. On difficult popular.\nFine turn mean artist. President explain turn professor fly prove cultural. Moment field front.\nSuccess almost various week. North message herself front eight. Final huge right happy.</p><p>Analysis rise son let. Age specific against visit.\nPerhaps series unit center total. Bed hour sense. Star morning history design late.\nOnce but fund share education. Majority face what year interest wish financial pretty.</p><p>Class treat enjoy stock seven natural establish indeed.\nHelp eat figure rich. Although bill discover build town.\nAsk continue claim here hand surface. Success foot action close treat.</p>",
       attachments: [
         {
           fileName: "log.txt",
           thumbnail: txt,
           url: "",
-          size: "5mb",
+          size: "5mb"
         },
         {
           fileName: "performance.xls",
           thumbnail: xls,
           url: "",
-          size: "10mb",
-        },
+          size: "10mb"
+        }
       ],
       isStarred: true,
       labels: ["important", "company"],
@@ -11630,13 +10389,12 @@ const db$9 = {
           from: {
             email: "rwhitehead@yahoo.com",
             name: "Bruce Johnson",
-            avatar: avatar3$5,
+            avatar: avatar3$5
           },
           subject: "Guy someone wind.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Century those system character. Enter mind she baby compare movie. Soldier reality guy end meeting go.\nPositive only our important. Month world century impact nothing such bar. Term their himself safe its deep.</p><p>Coach bank agent value glass race. Instead reason suffer bar role action finally town. Political market window of although least will.\nGuess thought chance term.</p><p>Pressure tonight beyond because wait early leader prove. Ground reality court event bar. Behind manage really so four vote.\nSecond series score thus.\nRealize move around baby interview clear.</p>",
+          message: "<p>Century those system character. Enter mind she baby compare movie. Soldier reality guy end meeting go.\nPositive only our important. Month world century impact nothing such bar. Term their himself safe its deep.</p><p>Coach bank agent value glass race. Instead reason suffer bar role action finally town. Political market window of although least will.\nGuess thought chance term.</p><p>Pressure tonight beyond because wait early leader prove. Ground reality court event bar. Behind manage really so four vote.\nSecond series score thus.\nRealize move around baby interview clear.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal", "private"],
@@ -11644,7 +10402,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 4255040,
@@ -11652,13 +10410,12 @@ const db$9 = {
           from: {
             email: "perezannette@gmail.com",
             name: "Kyle Christensen",
-            avatar: avatar7$3,
+            avatar: avatar7$3
           },
           subject: "Each close probably.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Late contain dream why ready go spring to. Against page medical wonder just fall card four. Unit live manager within feeling.\nSupport democratic lose list law. Baby address inside area or. Little individual remain sister area since thousand.</p><p>Culture effect similar clear population stuff himself quite. Trade story quality quite successful such.\nEven might his continue necessary thousand give. Record former tend determine true population reflect.</p><p>Dream when TV try loss central. Billion direction up run reduce that record. Ability then best draw.\nRich second yourself deep about foreign impact. Crime military appear shoulder bed. West job call home health woman lot.</p>",
+          message: "<p>Late contain dream why ready go spring to. Against page medical wonder just fall card four. Unit live manager within feeling.\nSupport democratic lose list law. Baby address inside area or. Little individual remain sister area since thousand.</p><p>Culture effect similar clear population stuff himself quite. Trade story quality quite successful such.\nEven might his continue necessary thousand give. Record former tend determine true population reflect.</p><p>Dream when TV try loss central. Billion direction up run reduce that record. Ability then best draw.\nRich second yourself deep about foreign impact. Crime military appear shoulder bed. West job call home health woman lot.</p>",
           attachments: [],
           isStarred: true,
           labels: ["personal"],
@@ -11666,7 +10423,7 @@ const db$9 = {
           replies: [],
           folder: "draft",
           isRead: false,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 946586133,
@@ -11674,13 +10431,12 @@ const db$9 = {
           from: {
             email: "ramirezsarah@yahoo.com",
             name: "Tammy Lloyd",
-            avatar: avatar8$3,
+            avatar: avatar8$3
           },
           subject: "Security set letter once.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Hair kind piece main want evening career. Water artist source ago south design father. Mention movie number house yeah some government.\nScore rock idea seven establish of. Candidate oil fact about to spend about.</p><p>Not both energy key.\nMust face those idea address pull.\nLet look cover star place later. Personal student both window agency produce.\nRemember cause hour explain box worry. One upon might soon enter baby car consumer.</p><p>Character service your idea. Adult guess stay us. Law would improve.\nWithin official anyone Mr. Difference before record treatment perhaps audience culture. Along present experience because history challenge detail.</p>",
+          message: "<p>Hair kind piece main want evening career. Water artist source ago south design father. Mention movie number house yeah some government.\nScore rock idea seven establish of. Candidate oil fact about to spend about.</p><p>Not both energy key.\nMust face those idea address pull.\nLet look cover star place later. Personal student both window agency produce.\nRemember cause hour explain box worry. One upon might soon enter baby car consumer.</p><p>Character service your idea. Adult guess stay us. Law would improve.\nWithin official anyone Mr. Difference before record treatment perhaps audience culture. Along present experience because history challenge detail.</p>",
           attachments: [],
           isStarred: true,
           labels: ["company", "important"],
@@ -11688,7 +10444,7 @@ const db$9 = {
           replies: [],
           folder: "spam",
           isRead: true,
-          isDeleted: false,
+          isDeleted: false
         },
         {
           id: 182449812,
@@ -11696,13 +10452,12 @@ const db$9 = {
           from: {
             email: "evansantonio@yahoo.com",
             name: "Shawn Flores",
-            avatar: avatar5$5,
+            avatar: avatar5$5
           },
           subject: "Card yeah need shake.",
           cc: [],
           bcc: [],
-          message:
-            "<p>Fine wonder sister order rock conference lose should. Personal party drug sense way north. Hear stock political pick model.</p><p>Focus population expert sense past green. Call community property tough news instead bad. War explain former quite else explain next guy. Education like send method method.</p><p>Necessary detail teacher company discuss world activity. And me get star eat power. Read sound wish already culture seek because face. Attorney purpose green.</p>",
+          message: "<p>Fine wonder sister order rock conference lose should. Personal party drug sense way north. Hear stock political pick model.</p><p>Focus population expert sense past green. Call community property tough news instead bad. War explain former quite else explain next guy. Education like send method method.</p><p>Necessary detail teacher company discuss world activity. And me get star eat power. Read sound wish already culture seek because face. Attorney purpose green.</p>",
           attachments: [],
           isStarred: false,
           labels: ["personal", "private"],
@@ -11710,12 +10465,12 @@ const db$9 = {
           replies: [],
           folder: "inbox",
           isRead: true,
-          isDeleted: true,
-        },
+          isDeleted: true
+        }
       ],
       folder: "inbox",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 2,
@@ -11723,13 +10478,12 @@ const db$9 = {
       from: {
         email: "wilsonwilliam@yahoo.com",
         name: "Rachel Palmer",
-        avatar: avatar2$6,
+        avatar: avatar2$6
       },
       subject: "Account base lose detail.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Religious system evidence star meeting notice draw. Garden audience sometimes strong imagine vote free.\nLow Republican nice. Toward fund decade ever. Likely itself serve camera risk adult imagine.</p><p>Main nice environmental address defense. Toward movie inside every. Else event message continue.\nReturn rise attorney black role. Individual build tonight soldier return environment successful. Dinner learn rock mother wife all.</p><p>Yard but card her then. Foreign evening ability my president dog guess. Leave husband south.\nHealth leg represent yeah. Turn sell onto kid several. Morning degree few.\nStart dark measure big end role. Property attention walk eye exist.</p>",
+      message: "<p>Religious system evidence star meeting notice draw. Garden audience sometimes strong imagine vote free.\nLow Republican nice. Toward fund decade ever. Likely itself serve camera risk adult imagine.</p><p>Main nice environmental address defense. Toward movie inside every. Else event message continue.\nReturn rise attorney black role. Individual build tonight soldier return environment successful. Dinner learn rock mother wife all.</p><p>Yard but card her then. Foreign evening ability my president dog guess. Leave husband south.\nHealth leg represent yeah. Turn sell onto kid several. Morning degree few.\nStart dark measure big end role. Property attention walk eye exist.</p>",
       attachments: [],
       isStarred: false,
       labels: ["important"],
@@ -11737,21 +10491,16 @@ const db$9 = {
       replies: [],
       folder: "draft",
       isRead: true,
-      isDeleted: false,
+      isDeleted: false
     },
     {
       id: 1,
       to: [{ email: "johndoe@mail.com", name: "me" }],
-      from: {
-        email: "edavid@yahoo.com",
-        name: "Wendy Harris",
-        avatar: avatar2$6,
-      },
+      from: { email: "edavid@yahoo.com", name: "Wendy Harris", avatar: avatar2$6 },
       subject: "Step face collection heart light cultural prepare.",
       cc: [],
       bcc: [],
-      message:
-        "<p>Suddenly man team would nor piece. Miss democratic receive.\nWindow measure drug success recent necessary group mission. Exist school under student rock trial treatment.\nRun season there social. Visit staff floor network improve home the.</p><p>Lay laugh sea sit food parent. Line move scientist floor establish like production. Decade PM exist moment.\nBeat under campaign say. Term gun local Congress democratic.</p><p>Chance poor attack far kitchen will. Appear thing also child whom manage hospital. Federal trouble fear between receive such involve here.\nSeek wife increase draw hair. Onto style minute democratic. Clearly music outside standard.</p>",
+      message: "<p>Suddenly man team would nor piece. Miss democratic receive.\nWindow measure drug success recent necessary group mission. Exist school under student rock trial treatment.\nRun season there social. Visit staff floor network improve home the.</p><p>Lay laugh sea sit food parent. Line move scientist floor establish like production. Decade PM exist moment.\nBeat under campaign say. Term gun local Congress democratic.</p><p>Chance poor attack far kitchen will. Appear thing also child whom manage hospital. Federal trouble fear between receive such involve here.\nSeek wife increase draw hair. Onto style minute democratic. Clearly music outside standard.</p>",
       attachments: [],
       isStarred: true,
       labels: ["important", "private"],
@@ -11759,74 +10508,72 @@ const db$9 = {
       replies: [],
       folder: "sent",
       isRead: true,
-      isDeleted: false,
-    },
-  ],
+      isDeleted: false
+    }
+  ]
 };
 
 const index_get$c = defineEventHandler((event) => {
   const { q = "", filter = "inbox", label } = destr$1(getQuery$1(event));
   const queryLowered = q.toLowerCase();
   function isInFolder(email) {
-    if (filter === "trashed") return email.isDeleted;
-    if (filter === "starred") return email.isStarred && !email.isDeleted;
+    if (filter === "trashed")
+      return email.isDeleted;
+    if (filter === "starred")
+      return email.isStarred && !email.isDeleted;
     return email.folder === (filter || email.folder) && !email.isDeleted;
   }
   const filteredData = db$9.emails.filter(
-    (email) =>
-      (email.from.name.toLowerCase().includes(queryLowered) ||
-        email.subject.toLowerCase().includes(queryLowered)) &&
-      isInFolder(email) &&
-      (label ? email.labels.includes(label) : true)
+    (email) => (email.from.name.toLowerCase().includes(queryLowered) || email.subject.toLowerCase().includes(queryLowered)) && isInFolder(email) && (label ? email.labels.includes(label) : true)
   );
   const emailsMeta = {
-    inbox: db$9.emails.filter(
-      (email) => !email.isDeleted && !email.isRead && email.folder === "inbox"
-    ).length,
+    inbox: db$9.emails.filter((email) => !email.isDeleted && !email.isRead && email.folder === "inbox").length,
     draft: db$9.emails.filter((email) => email.folder === "draft").length,
-    spam: db$9.emails.filter(
-      (email) => !email.isDeleted && !email.isRead && email.folder === "spam"
-    ).length,
+    spam: db$9.emails.filter((email) => !email.isDeleted && !email.isRead && email.folder === "spam").length
   };
   setResponseStatus(event, 200);
   return { emails: filteredData, emailsMeta };
 });
 
-const index_get$d = /*#__PURE__*/ Object.freeze({
+const index_get$d = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$c,
+  default: index_get$c
 });
 
 const index_post$2 = defineEventHandler(async (event) => {
   const { ids: emailIds, data: dataToUpdate, label } = await readBody(event);
   const labelLocal = destr$1(label);
   if (!labelLocal) {
-    let updateMailData = function (email) {
+    let updateMailData = function(email) {
       Object.assign(email, dataToUpdate);
     };
     const emailIdsLocal = destr$1(emailIds);
     db$9.emails.forEach((email) => {
-      if (emailIdsLocal.includes(email.id)) updateMailData(email);
+      if (emailIdsLocal.includes(email.id))
+        updateMailData(email);
     });
     setResponseStatus(event, 200);
     return null;
   } else {
-    let updateMailLabels = function (email) {
+    let updateMailLabels = function(email) {
       const labelIndex = email.labels.indexOf(label);
-      if (labelIndex === -1) email.labels.push(label);
-      else email.labels.splice(labelIndex, 1);
+      if (labelIndex === -1)
+        email.labels.push(label);
+      else
+        email.labels.splice(labelIndex, 1);
     };
     db$9.emails.forEach((email) => {
-      if (emailIds.includes(email.id)) updateMailLabels(email);
+      if (emailIds.includes(email.id))
+        updateMailLabels(email);
     });
     setResponseStatus(event, 200);
     return null;
   }
 });
 
-const index_post$3 = /*#__PURE__*/ Object.freeze({
+const index_post$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_post$2,
+  default: index_post$2
 });
 
 const now = /* @__PURE__ */ new Date();
@@ -11849,14 +10596,14 @@ const database = [
       companyEmail: "don85@johnson.com",
       country: "USA",
       contact: "(616) 865-4180",
-      name: "Jordan Stevenson",
+      name: "Jordan Stevenson"
     },
     service: "Software Development",
     total: 3428,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 724,
-    dueDate: `${now.getFullYear()}-${currentMonth}-23`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-23`
   },
   {
     id: 4988,
@@ -11867,14 +10614,14 @@ const database = [
       companyEmail: "brenda49@taylor.info",
       country: "Haiti",
       contact: "(226) 204-8287",
-      name: "Stephanie Burns",
+      name: "Stephanie Burns"
     },
     service: "UI/UX Design & Development",
     total: 5219,
     avatar: avatar1$5,
     invoiceStatus: "Downloaded",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-15`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-15`
   },
   {
     id: 4989,
@@ -11885,14 +10632,14 @@ const database = [
       companyEmail: "smithtiffany@powers.com",
       country: "Denmark",
       contact: "(955) 676-1076",
-      name: "Tony Herrera",
+      name: "Tony Herrera"
     },
     service: "Unlimited Extended License",
     total: 3719,
     invoiceStatus: "Paid",
     avatar: avatar2$5,
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-03`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-03`
   },
   {
     id: 4990,
@@ -11903,14 +10650,14 @@ const database = [
       companyEmail: "mejiageorge@lee-perez.com",
       country: "Cambodia",
       contact: "(832) 323-6914",
-      name: "Kevin Patton",
+      name: "Kevin Patton"
     },
     service: "Software Development",
     total: 4749,
     avatar: avatar3$4,
     invoiceStatus: "Sent",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-11`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-11`
   },
   {
     id: 4991,
@@ -11921,14 +10668,14 @@ const database = [
       companyEmail: "brandon07@pierce.com",
       country: "Martinique",
       contact: "(970) 982-3353",
-      name: "Mrs. Julie Donovan MD",
+      name: "Mrs. Julie Donovan MD"
     },
     service: "UI/UX Design & Development",
     total: 4056,
     avatar: avatar4$4,
     invoiceStatus: "Draft",
     balance: 815,
-    dueDate: `${now.getFullYear()}-${currentMonth}-30`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-30`
   },
   {
     id: 4992,
@@ -11939,14 +10686,14 @@ const database = [
       companyEmail: "guerrerobrandy@beasley-harper.com",
       country: "Botswana",
       contact: "(511) 938-9617",
-      name: "Amanda Phillips",
+      name: "Amanda Phillips"
     },
     service: "UI/UX Design & Development",
     total: 2771,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 2771,
-    dueDate: `${now.getFullYear()}-${currentMonth}-24`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-24`
   },
   {
     id: 4993,
@@ -11957,14 +10704,14 @@ const database = [
       companyEmail: "williamshenry@moon-smith.com",
       country: "Montserrat",
       contact: "(504) 859-2893",
-      name: "Christina Collier",
+      name: "Christina Collier"
     },
     service: "UI/UX Design & Development",
     total: 2713,
     avatar: "",
     invoiceStatus: "Draft",
     balance: 407,
-    dueDate: `${now.getFullYear()}-${currentMonth}-22`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-22`
   },
   {
     id: 4994,
@@ -11975,14 +10722,14 @@ const database = [
       companyEmail: "margaretharvey@russell-murray.com",
       country: "Oman",
       contact: "(758) 403-7718",
-      name: "David Flores",
+      name: "David Flores"
     },
     service: "Template Customization",
     total: 4309,
     avatar: avatar5$4,
     invoiceStatus: "Paid",
     balance: -205,
-    dueDate: `${now.getFullYear()}-${currentMonth}-13`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-13`
   },
   {
     id: 4995,
@@ -11993,14 +10740,14 @@ const database = [
       companyEmail: "dianarodriguez@villegas.com",
       country: "Cambodia",
       contact: "(292) 873-8254",
-      name: "Valerie Perez",
+      name: "Valerie Perez"
     },
     service: "Software Development",
     total: 3367,
     avatar: avatar6$3,
     invoiceStatus: "Downloaded",
     balance: 3367,
-    dueDate: `${now.getFullYear()}-${currentMonth}-24`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-24`
   },
   {
     id: 4996,
@@ -12011,14 +10758,14 @@ const database = [
       companyEmail: "bwilson@norris-brock.com",
       country: "Guam",
       contact: "(956) 803-2008",
-      name: "Susan Dickerson",
+      name: "Susan Dickerson"
     },
     service: "Software Development",
     total: 4776,
     avatar: avatar7$2,
     invoiceStatus: "Downloaded",
     balance: 305,
-    dueDate: `${now.getFullYear()}-${currentMonth}-02`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-02`
   },
   {
     id: 4997,
@@ -12029,14 +10776,14 @@ const database = [
       companyEmail: "markcampbell@bell.info",
       country: "United States Virgin Islands",
       contact: "(716) 962-8635",
-      name: "Kelly Smith",
+      name: "Kelly Smith"
     },
     service: "Unlimited Extended License",
     total: 3789,
     avatar: avatar8$2,
     invoiceStatus: "Partial Payment",
     balance: 666,
-    dueDate: `${now.getFullYear()}-${currentMonth}-18`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-18`
   },
   {
     id: 4998,
@@ -12047,14 +10794,14 @@ const database = [
       companyEmail: "mary61@rosario.com",
       country: "Syrian Arab Republic",
       contact: "(523) 449-0782",
-      name: "Jamie Jones",
+      name: "Jamie Jones"
     },
     service: "Unlimited Extended License",
     total: 5200,
     avatar: avatar2$5,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-17`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-17`
   },
   {
     id: 4999,
@@ -12065,14 +10812,14 @@ const database = [
       companyEmail: "sean22@cook.com",
       country: "Ukraine",
       contact: "(583) 470-8356",
-      name: "Ruben Garcia",
+      name: "Ruben Garcia"
     },
     service: "Software Development",
     total: 4558,
     avatar: avatar1$5,
     invoiceStatus: "Paid",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-01`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-01`
   },
   {
     id: 5e3,
@@ -12083,14 +10830,14 @@ const database = [
       companyEmail: "mccoymatthew@lopez-jenkins.net",
       country: "Vanuatu",
       contact: "(366) 906-6467",
-      name: "Ryan Meyer",
+      name: "Ryan Meyer"
     },
     service: "Template Customization",
     total: 3503,
     avatar: avatar7$2,
     invoiceStatus: "Paid",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-22`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-22`
   },
   {
     id: 5001,
@@ -12101,14 +10848,14 @@ const database = [
       companyEmail: "novakshannon@mccarty-murillo.com",
       country: "Romania",
       contact: "(320) 616-3915",
-      name: "Valerie Valdez",
+      name: "Valerie Valdez"
     },
     service: "Unlimited Extended License",
     total: 5285,
     avatar: avatar6$3,
     invoiceStatus: "Partial Payment",
     balance: -202,
-    dueDate: `${now.getFullYear()}-${currentMonth}-02`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-02`
   },
   {
     id: 5002,
@@ -12119,14 +10866,14 @@ const database = [
       companyEmail: "smithrachel@davis-rose.net",
       country: "Costa Rica",
       contact: "(435) 899-1963",
-      name: "Melissa Wheeler",
+      name: "Melissa Wheeler"
     },
     service: "UI/UX Design & Development",
     total: 3668,
     avatar: avatar5$4,
     invoiceStatus: "Downloaded",
     balance: 731,
-    dueDate: `${now.getFullYear()}-${currentMonth}-15`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-15`
   },
   {
     id: 5003,
@@ -12137,14 +10884,14 @@ const database = [
       companyEmail: "scott96@mejia.net",
       country: "Congo",
       contact: "(254) 399-4728",
-      name: "Alan Jimenez",
+      name: "Alan Jimenez"
     },
     service: "Unlimited Extended License",
     total: 4372,
     avatar: "",
     invoiceStatus: "Sent",
     balance: -344,
-    dueDate: `${now.getFullYear()}-${currentMonth}-17`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-17`
   },
   {
     id: 5004,
@@ -12155,14 +10902,14 @@ const database = [
       companyEmail: "cramirez@ross-bass.biz",
       country: "Saint Pierre and Miquelon",
       contact: "(648) 500-4338",
-      name: "Jennifer Morris",
+      name: "Jennifer Morris"
     },
     service: "Template Customization",
     total: 3198,
     avatar: avatar4$4,
     invoiceStatus: "Partial Payment",
     balance: -253,
-    dueDate: `${now.getFullYear()}-${currentMonth}-16`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-16`
   },
   {
     id: 5005,
@@ -12173,14 +10920,14 @@ const database = [
       companyEmail: "arielberg@wolfe-smith.com",
       country: "Uruguay",
       contact: "(896) 544-3796",
-      name: "Timothy Stevenson",
+      name: "Timothy Stevenson"
     },
     service: "Unlimited Extended License",
     total: 5293,
     avatar: "",
     invoiceStatus: "Past Due",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-01`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-01`
   },
   {
     id: 5006,
@@ -12191,14 +10938,14 @@ const database = [
       companyEmail: "yrobinson@nichols.com",
       country: "Israel",
       contact: "(236) 784-5142",
-      name: "Erik Hayden",
+      name: "Erik Hayden"
     },
     service: "Template Customization",
     total: 5612,
     avatar: avatar3$4,
     invoiceStatus: "Downloaded",
     balance: 883,
-    dueDate: `${now.getFullYear()}-${currentMonth}-12`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-12`
   },
   {
     id: 5007,
@@ -12209,14 +10956,14 @@ const database = [
       companyEmail: "tatejennifer@allen.net",
       country: "Cook Islands",
       contact: "(436) 717-2419",
-      name: "Katherine Kennedy",
+      name: "Katherine Kennedy"
     },
     service: "Software Development",
     total: 2230,
     avatar: avatar2$5,
     invoiceStatus: "Sent",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-19`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-19`
   },
   {
     id: 5008,
@@ -12227,14 +10974,14 @@ const database = [
       companyEmail: "gdurham@lee.com",
       country: "Nepal",
       contact: "(489) 946-3041",
-      name: "Monica Fuller",
+      name: "Monica Fuller"
     },
     service: "Unlimited Extended License",
     total: 2032,
     avatar: avatar1$5,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-30`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-30`
   },
   {
     id: 5009,
@@ -12245,14 +10992,14 @@ const database = [
       companyEmail: "jenny96@lawrence-thompson.com",
       country: "Kiribati",
       contact: "(274) 246-3725",
-      name: "Stacey Carter",
+      name: "Stacey Carter"
     },
     service: "UI/UX Design & Development",
     total: 3128,
     avatar: avatar8$2,
     invoiceStatus: "Paid",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-10`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-10`
   },
   {
     id: 5010,
@@ -12263,14 +11010,14 @@ const database = [
       companyEmail: "jgutierrez@jackson.com",
       country: "Swaziland",
       contact: "(258) 211-5970",
-      name: "Chad Davis",
+      name: "Chad Davis"
     },
     service: "Software Development",
     total: 2060,
     avatar: avatar7$2,
     invoiceStatus: "Downloaded",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-08`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-08`
   },
   {
     id: 5011,
@@ -12281,14 +11028,14 @@ const database = [
       companyEmail: "hunter14@jones.com",
       country: "Congo",
       contact: "(593) 965-4100",
-      name: "Chris Reyes",
+      name: "Chris Reyes"
     },
     service: "UI/UX Design & Development",
     total: 4077,
     avatar: "",
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-01`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-01`
   },
   {
     id: 5012,
@@ -12299,14 +11046,14 @@ const database = [
       companyEmail: "pricetodd@johnson-jenkins.com",
       country: "Brazil",
       contact: "(585) 829-2603",
-      name: "Laurie Summers",
+      name: "Laurie Summers"
     },
     service: "Template Customization",
     total: 2872,
     avatar: avatar6$3,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-18`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-18`
   },
   {
     id: 5013,
@@ -12317,14 +11064,14 @@ const database = [
       companyEmail: "perrydavid@chapman-rogers.com",
       country: "Congo",
       contact: "(527) 351-5517",
-      name: "Lindsay Wilson",
+      name: "Lindsay Wilson"
     },
     service: "Software Development",
     total: 3740,
     avatar: avatar4$4,
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-01`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-01`
   },
   {
     id: 5014,
@@ -12335,14 +11082,14 @@ const database = [
       companyEmail: "leahgriffin@carpenter.com",
       country: "Equatorial Guinea",
       contact: "(628) 903-0132",
-      name: "Jenna Castro",
+      name: "Jenna Castro"
     },
     service: "Unlimited Extended License",
     total: 3623,
     avatar: "",
     invoiceStatus: "Downloaded",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-23`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-23`
   },
   {
     id: 5015,
@@ -12353,14 +11100,14 @@ const database = [
       companyEmail: "esparzadaniel@allen.com",
       country: "Seychelles",
       contact: "(847) 396-9904",
-      name: "Wendy Weber",
+      name: "Wendy Weber"
     },
     service: "Software Development",
     total: 2477,
     avatar: avatar5$4,
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-01`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-01`
   },
   {
     id: 5016,
@@ -12371,14 +11118,14 @@ const database = [
       companyEmail: "todd34@owens-morgan.com",
       country: "Ireland",
       contact: "(852) 249-4539",
-      name: "April Yates",
+      name: "April Yates"
     },
     service: "Unlimited Extended License",
     total: 3904,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 951,
-    dueDate: `${now.getFullYear()}-${currentMonth}-30`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-30`
   },
   {
     id: 5017,
@@ -12389,14 +11136,14 @@ const database = [
       companyEmail: "roydavid@bailey.com",
       country: "Netherlands",
       contact: "(917) 984-2232",
-      name: "Daniel Marshall PhD",
+      name: "Daniel Marshall PhD"
     },
     service: "UI/UX Design & Development",
     total: 3102,
     avatar: avatar3$4,
     invoiceStatus: "Partial Payment",
     balance: -153,
-    dueDate: `${now.getFullYear()}-${currentMonth}-25`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-25`
   },
   {
     id: 5018,
@@ -12407,14 +11154,14 @@ const database = [
       companyEmail: "baldwinjoel@washington.com",
       country: "Cocos (Keeling) Islands",
       contact: "(670) 409-3703",
-      name: "Randy Rich",
+      name: "Randy Rich"
     },
     service: "UI/UX Design & Development",
     total: 2483,
     avatar: avatar2$5,
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-10`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-10`
   },
   {
     id: 5019,
@@ -12425,14 +11172,14 @@ const database = [
       companyEmail: "psmith@morris.info",
       country: "Macao",
       contact: "(646) 263-0257",
-      name: "Mrs. Jodi Chapman",
+      name: "Mrs. Jodi Chapman"
     },
     service: "Unlimited Extended License",
     total: 2825,
     avatar: avatar1$5,
     invoiceStatus: "Partial Payment",
     balance: -459,
-    dueDate: `${now.getFullYear()}-${currentMonth}-14`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-14`
   },
   {
     id: 5020,
@@ -12443,14 +11190,14 @@ const database = [
       companyEmail: "lori06@morse.com",
       country: "Somalia",
       contact: "(751) 213-4288",
-      name: "Steven Myers",
+      name: "Steven Myers"
     },
     service: "Unlimited Extended License",
     total: 2029,
     avatar: avatar2$5,
     invoiceStatus: "Past Due",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-28`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-28`
   },
   {
     id: 5021,
@@ -12461,14 +11208,14 @@ const database = [
       companyEmail: "zpearson@miller.com",
       country: "Slovakia (Slovak Republic)",
       contact: "(655) 649-7872",
-      name: "Charles Alexander",
+      name: "Charles Alexander"
     },
     service: "Software Development",
     total: 3208,
     avatar: "",
     invoiceStatus: "Sent",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-06`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-06`
   },
   {
     id: 5022,
@@ -12479,14 +11226,14 @@ const database = [
       companyEmail: "strongpenny@young.net",
       country: "Brazil",
       contact: "(402) 935-0735",
-      name: "Elizabeth Jones",
+      name: "Elizabeth Jones"
     },
     service: "Software Development",
     total: 3077,
     avatar: "",
     invoiceStatus: "Sent",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-09`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-09`
   },
   {
     id: 5023,
@@ -12497,14 +11244,14 @@ const database = [
       companyEmail: "carrietorres@acosta.com",
       country: "Argentina",
       contact: "(915) 448-6271",
-      name: "Heidi Walton",
+      name: "Heidi Walton"
     },
     service: "Software Development",
     total: 5578,
     avatar: avatar4$4,
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-23`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-23`
   },
   {
     id: 5024,
@@ -12515,14 +11262,14 @@ const database = [
       companyEmail: "zjohnson@nichols-powers.com",
       country: "Philippines",
       contact: "(817) 700-2984",
-      name: "Christopher Allen",
+      name: "Christopher Allen"
     },
     service: "Software Development",
     total: 2787,
     avatar: avatar5$4,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-25`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-25`
   },
   {
     id: 5025,
@@ -12533,14 +11280,14 @@ const database = [
       companyEmail: "kayla09@thomas.com",
       country: "Martinique",
       contact: "(266) 611-9482",
-      name: "Joseph Oliver",
+      name: "Joseph Oliver"
     },
     service: "UI/UX Design & Development",
     total: 5591,
     avatar: "",
     invoiceStatus: "Downloaded",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-07`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-07`
   },
   {
     id: 5026,
@@ -12551,14 +11298,14 @@ const database = [
       companyEmail: "melvindavis@allen.info",
       country: "Mexico",
       contact: "(739) 745-9728",
-      name: "Megan Roberts",
+      name: "Megan Roberts"
     },
     service: "Template Customization",
     total: 2783,
     avatar: avatar6$3,
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-22`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-22`
   },
   {
     id: 5027,
@@ -12569,14 +11316,14 @@ const database = [
       companyEmail: "gjordan@fernandez-coleman.com",
       country: "Costa Rica",
       contact: "(682) 804-6506",
-      name: "Mary Garcia",
+      name: "Mary Garcia"
     },
     service: "Template Customization",
     total: 2719,
     avatar: "",
     invoiceStatus: "Sent",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-04`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-04`
   },
   {
     id: 5028,
@@ -12587,14 +11334,14 @@ const database = [
       companyEmail: "robertscott@garcia.com",
       country: "Cameroon",
       contact: "(775) 366-0411",
-      name: "Crystal Mays",
+      name: "Crystal Mays"
     },
     service: "Template Customization",
     total: 3325,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 361,
-    dueDate: `${now.getFullYear()}-${currentMonth}-02`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-02`
   },
   {
     id: 5029,
@@ -12605,14 +11352,14 @@ const database = [
       companyEmail: "desiree61@kelly.com",
       country: "Macedonia",
       contact: "(510) 536-6029",
-      name: "Nicholas Tanner",
+      name: "Nicholas Tanner"
     },
     service: "Template Customization",
     total: 3851,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-25`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-25`
   },
   {
     id: 5030,
@@ -12623,14 +11370,14 @@ const database = [
       companyEmail: "jeffrey25@martinez-hodge.com",
       country: "Congo",
       contact: "(253) 230-4657",
-      name: "Justin Richardson",
+      name: "Justin Richardson"
     },
     service: "Template Customization",
     total: 5565,
     avatar: "",
     invoiceStatus: "Draft",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-06`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-06`
   },
   {
     id: 5031,
@@ -12641,14 +11388,14 @@ const database = [
       companyEmail: "john77@anderson.net",
       country: "Falkland Islands (Malvinas)",
       contact: "(612) 546-3485",
-      name: "Jennifer Summers",
+      name: "Jennifer Summers"
     },
     service: "Template Customization",
     total: 3313,
     avatar: avatar7$2,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-09`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-09`
   },
   {
     id: 5032,
@@ -12659,14 +11406,14 @@ const database = [
       companyEmail: "ywagner@jones.com",
       country: "Germany",
       contact: "(203) 601-8603",
-      name: "Richard Payne",
+      name: "Richard Payne"
     },
     service: "Template Customization",
     total: 5181,
     avatar: "",
     invoiceStatus: "Past Due",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-29`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-29`
   },
   {
     id: 5033,
@@ -12677,14 +11424,14 @@ const database = [
       companyEmail: "calvin07@joseph-edwards.org",
       country: "Colombia",
       contact: "(895) 401-4255",
-      name: "Lori Wells",
+      name: "Lori Wells"
     },
     service: "Template Customization",
     total: 2869,
     avatar: avatar4$4,
     invoiceStatus: "Partial Payment",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-22`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-22`
   },
   {
     id: 5034,
@@ -12695,14 +11442,14 @@ const database = [
       companyEmail: "eric47@george-castillo.com",
       country: "Paraguay",
       contact: "(602) 336-9806",
-      name: "Tammy Sanchez",
+      name: "Tammy Sanchez"
     },
     service: "Unlimited Extended License",
     total: 4836,
     avatar: "",
     invoiceStatus: "Paid",
     balance: 0,
-    dueDate: `${now.getFullYear()}-${currentMonth}-22`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-22`
   },
   {
     id: 5035,
@@ -12713,14 +11460,14 @@ const database = [
       companyEmail: "jamesjoel@chapman.net",
       country: "Western Sahara",
       contact: "(936) 550-1638",
-      name: "Dana Carey",
+      name: "Dana Carey"
     },
     service: "UI/UX Design & Development",
     total: 4263,
     avatar: "",
     invoiceStatus: "Draft",
     balance: 762,
-    dueDate: `${now.getFullYear()}-${currentMonth}-12`,
+    dueDate: `${now.getFullYear()}-${currentMonth}-12`
   },
   {
     id: 5036,
@@ -12731,15 +11478,15 @@ const database = [
       companyEmail: "pwillis@cross.org",
       country: "Bhutan",
       contact: "(687) 660-2473",
-      name: "Andrew Burns",
+      name: "Andrew Burns"
     },
     service: "Unlimited Extended License",
     total: 3171,
     avatar: avatar3$4,
     invoiceStatus: "Paid",
     balance: -205,
-    dueDate: `${now.getFullYear()}-${currentMonth}-25`,
-  },
+    dueDate: `${now.getFullYear()}-${currentMonth}-25`
+  }
 ];
 
 const _id__delete$2 = defineEventHandler((event) => {
@@ -12754,9 +11501,9 @@ const _id__delete$2 = defineEventHandler((event) => {
   setResponseStatus(event, 204);
 });
 
-const _id__delete$3 = /*#__PURE__*/ Object.freeze({
+const _id__delete$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__delete$2,
+  default: _id__delete$2
 });
 
 const _id__get$2 = defineEventHandler((event) => {
@@ -12766,7 +11513,7 @@ const _id__get$2 = defineEventHandler((event) => {
   if (!invoice) {
     throw createError({
       statusCode: 404,
-      statusMessage: "Invoice not found",
+      statusMessage: "Invoice not found"
     });
   }
   return {
@@ -12776,14 +11523,14 @@ const _id__get$2 = defineEventHandler((event) => {
       bankName: "American Bank",
       country: "United States",
       iban: "ETD95476213874685",
-      swiftCode: "BR91905",
-    },
+      swiftCode: "BR91905"
+    }
   };
 });
 
-const _id__get$3 = /*#__PURE__*/ Object.freeze({
+const _id__get$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__get$2,
+  default: _id__get$2
 });
 
 const clients_get = defineEventHandler((event) => {
@@ -12792,48 +11539,29 @@ const clients_get = defineEventHandler((event) => {
   return clients.splice(0, 5);
 });
 
-const clients_get$1 = /*#__PURE__*/ Object.freeze({
+const clients_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: clients_get,
+  default: clients_get
 });
 
 const index_get$a = defineEventHandler((event) => {
-  const {
-    q,
-    status,
-    selectedDateRange,
-    sortBy = "",
-    page = 1,
-    itemsPerPage = 10,
-    orderBy,
-  } = getQuery$1(event);
+  const { q, status, selectedDateRange, sortBy = "", page = 1, itemsPerPage = 10, orderBy } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLowered = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLowered = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const parsedDateRange = destr$1(selectedDateRange);
-  const startDateLocal =
-    parsedDateRange == null ? void 0 : parsedDateRange.start;
+  const startDateLocal = parsedDateRange == null ? void 0 : parsedDateRange.start;
   const endDateLocal = parsedDateRange == null ? void 0 : parsedDateRange.end;
-  let filteredInvoices = database
-    .filter(
-      (invoice) =>
-        (invoice.client.name.toLowerCase().includes(queryLowered) ||
-          invoice.client.companyEmail.toLowerCase().includes(queryLowered) ||
-          invoice.id.toString().includes(queryLowered)) &&
-        invoice.invoiceStatus === (status || invoice.invoiceStatus)
-    )
-    .reverse();
+  let filteredInvoices = database.filter(
+    (invoice) => (invoice.client.name.toLowerCase().includes(queryLowered) || invoice.client.companyEmail.toLowerCase().includes(queryLowered) || invoice.id.toString().includes(queryLowered)) && invoice.invoiceStatus === (status || invoice.invoiceStatus)
+  ).reverse();
   if (sortByLocal) {
     if (sortByLocal === "client") {
       filteredInvoices = filteredInvoices.sort((a, b) => {
@@ -12843,27 +11571,26 @@ const index_get$a = defineEventHandler((event) => {
       });
     } else if (sortByLocal === "total") {
       filteredInvoices = filteredInvoices.sort((a, b) => {
-        if (orderByLocal === "asc") return a.total - b.total;
+        if (orderByLocal === "asc")
+          return a.total - b.total;
         return b.total - a.total;
       });
     } else if (sortByLocal === "id") {
       filteredInvoices = filteredInvoices.sort((a, b) => {
-        if (orderByLocal === "asc") return a.id - b.id;
+        if (orderByLocal === "asc")
+          return a.id - b.id;
         return b.id - a.id;
       });
     } else if (sortByLocal === "date") {
       filteredInvoices = filteredInvoices.sort((a, b) => {
         if (orderByLocal === "asc")
-          return (
-            new Date(a.issuedDate).getTime() - new Date(b.issuedDate).getTime()
-          );
-        return (
-          new Date(b.issuedDate).getTime() - new Date(a.issuedDate).getTime()
-        );
+          return new Date(a.issuedDate).getTime() - new Date(b.issuedDate).getTime();
+        return new Date(b.issuedDate).getTime() - new Date(a.issuedDate).getTime();
       });
     } else if (sortByLocal === "balance") {
       filteredInvoices = filteredInvoices.sort((a, b) => {
-        if (orderByLocal === "asc") return a.balance - b.balance;
+        if (orderByLocal === "asc")
+          return a.balance - b.balance;
         return b.balance - a.balance;
       });
     }
@@ -12877,16 +11604,12 @@ const index_get$a = defineEventHandler((event) => {
     });
   }
   const totalInvoices = filteredInvoices.length;
-  return {
-    invoices: paginateArray(filteredInvoices, itemsPerPageLocal, pageLocal),
-    totalInvoices,
-    page: pageLocal > Math.ceil(totalInvoices / itemsPerPageLocal) ? 1 : page,
-  };
+  return { invoices: paginateArray(filteredInvoices, itemsPerPageLocal, pageLocal), totalInvoices, page: pageLocal > Math.ceil(totalInvoices / itemsPerPageLocal) ? 1 : page };
 });
 
-const index_get$b = /*#__PURE__*/ Object.freeze({
+const index_get$b = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$a,
+  default: index_get$a
 });
 
 const db$8 = {
@@ -12899,7 +11622,7 @@ const db$8 = {
       endCity: "Catania",
       endCountry: "Italy",
       warnings: "No Warnings",
-      progress: 49,
+      progress: 49
     },
     {
       id: 2,
@@ -12909,7 +11632,7 @@ const db$8 = {
       endCity: "Laspezia",
       endCountry: "Italy",
       warnings: "Ecu Not Responding",
-      progress: 24,
+      progress: 24
     },
     {
       id: 3,
@@ -12919,7 +11642,7 @@ const db$8 = {
       endCity: "Hamm",
       endCountry: "Germany",
       warnings: "Oil Leakage",
-      progress: 7,
+      progress: 7
     },
     {
       id: 4,
@@ -12929,7 +11652,7 @@ const db$8 = {
       endCity: "Gelsenkirchen",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 95,
+      progress: 95
     },
     {
       id: 5,
@@ -12939,7 +11662,7 @@ const db$8 = {
       endCity: "Berlin",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 65,
+      progress: 65
     },
     {
       id: 6,
@@ -12949,7 +11672,7 @@ const db$8 = {
       endCity: "Halle",
       endCountry: "Germany",
       warnings: "Ecu Not Responding",
-      progress: 55,
+      progress: 55
     },
     {
       id: 7,
@@ -12959,7 +11682,7 @@ const db$8 = {
       endCity: "Bochum",
       endCountry: "Germany",
       warnings: "Fuel Problems",
-      progress: 74,
+      progress: 74
     },
     {
       id: 8,
@@ -12969,7 +11692,7 @@ const db$8 = {
       endCity: "L\xFCbeck",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 100,
+      progress: 100
     },
     {
       id: 9,
@@ -12979,7 +11702,7 @@ const db$8 = {
       endCity: "Roma",
       endCountry: "Italy",
       warnings: "Oil Leakage",
-      progress: 82,
+      progress: 82
     },
     {
       id: 10,
@@ -12989,7 +11712,7 @@ const db$8 = {
       endCity: "M\xFClheim an der Ruhr",
       endCountry: "Germany",
       warnings: "Oil Leakage",
-      progress: 49,
+      progress: 49
     },
     {
       id: 11,
@@ -12999,7 +11722,7 @@ const db$8 = {
       endCity: "Wuppertal",
       endCountry: "Germany",
       warnings: "Temperature not optimal",
-      progress: 66,
+      progress: 66
     },
     {
       id: 12,
@@ -13009,7 +11732,7 @@ const db$8 = {
       endCity: "Magdeburg",
       endCountry: "Germany",
       warnings: "Temperature not optimal",
-      progress: 7,
+      progress: 7
     },
     {
       id: 13,
@@ -13019,7 +11742,7 @@ const db$8 = {
       endCity: "Wiesbaden",
       endCountry: "Germany",
       warnings: "Fuel Problems",
-      progress: 27,
+      progress: 27
     },
     {
       id: 14,
@@ -13029,7 +11752,7 @@ const db$8 = {
       endCity: "Dresden",
       endCountry: "Germany",
       warnings: "Temperature not optimal",
-      progress: 90,
+      progress: 90
     },
     {
       id: 15,
@@ -13039,7 +11762,7 @@ const db$8 = {
       endCity: "Kiel",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 81,
+      progress: 81
     },
     {
       id: 16,
@@ -13049,7 +11772,7 @@ const db$8 = {
       endCity: "Berlin",
       endCountry: "Germany",
       warnings: "Fuel Problems",
-      progress: 21,
+      progress: 21
     },
     {
       id: 17,
@@ -13059,7 +11782,7 @@ const db$8 = {
       endCity: "M\xFCnchen",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 26,
+      progress: 26
     },
     {
       id: 18,
@@ -13069,7 +11792,7 @@ const db$8 = {
       endCity: "Salerno",
       endCountry: "Italy",
       warnings: "Temperature not optimal",
-      progress: 80,
+      progress: 80
     },
     {
       id: 19,
@@ -13079,7 +11802,7 @@ const db$8 = {
       endCity: "Ath",
       endCountry: "Belgium",
       warnings: "Ecu Not Responding",
-      progress: 50,
+      progress: 50
     },
     {
       id: 20,
@@ -13089,7 +11812,7 @@ const db$8 = {
       endCity: "Neuss",
       endCountry: "Germany",
       warnings: "Oil Leakage",
-      progress: 44,
+      progress: 44
     },
     {
       id: 21,
@@ -13099,7 +11822,7 @@ const db$8 = {
       endCity: "Messina",
       endCountry: "Italy",
       warnings: "Temperature not optimal",
-      progress: 55,
+      progress: 55
     },
     {
       id: 22,
@@ -13109,7 +11832,7 @@ const db$8 = {
       endCity: "Napoli",
       endCountry: "Italy",
       warnings: "No Warnings",
-      progress: 48,
+      progress: 48
     },
     {
       id: 23,
@@ -13119,7 +11842,7 @@ const db$8 = {
       endCity: "Tournai",
       endCountry: "Belgium",
       warnings: "Ecu Not Responding",
-      progress: 73,
+      progress: 73
     },
     {
       id: 24,
@@ -13129,7 +11852,7 @@ const db$8 = {
       endCity: "Torino",
       endCountry: "Italy",
       warnings: "Fuel Problems",
-      progress: 30,
+      progress: 30
     },
     {
       id: 25,
@@ -13139,9 +11862,9 @@ const db$8 = {
       endCity: "Dresden",
       endCountry: "Germany",
       warnings: "No Warnings",
-      progress: 60,
-    },
-  ],
+      progress: 60
+    }
+  ]
 };
 
 const index = defineEventHandler((event) => {
@@ -13152,49 +11875,49 @@ const index = defineEventHandler((event) => {
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   if (sortByLocal && sortByLocal === "location") {
     db$8.vehicles = db$8.vehicles.sort((a, b) => {
-      if (orderByLocal === "asc") return a.location - b.location;
+      if (orderByLocal === "asc")
+        return a.location - b.location;
       return b.location - a.location;
     });
   }
   if (sortByLocal && sortByLocal === "startRoute") {
     db$8.vehicles = db$8.vehicles.sort((a, b) => {
-      if (orderByLocal === "asc") return a.startCity.localeCompare(b.startCity);
+      if (orderByLocal === "asc")
+        return a.startCity.localeCompare(b.startCity);
       return b.startCity.localeCompare(a.startCity);
     });
   }
   if (sortByLocal && sortByLocal === "endRoute") {
     db$8.vehicles = db$8.vehicles.sort((a, b) => {
-      if (orderByLocal === "asc") return a.endCity.localeCompare(b.endCity);
+      if (orderByLocal === "asc")
+        return a.endCity.localeCompare(b.endCity);
       return b.endCity.localeCompare(a.endCity);
     });
   }
   if (sortByLocal && sortByLocal === "warnings") {
     db$8.vehicles = db$8.vehicles.sort((a, b) => {
-      if (orderByLocal === "asc") return a.warnings.localeCompare(b.warnings);
+      if (orderByLocal === "asc")
+        return a.warnings.localeCompare(b.warnings);
       return b.warnings.localeCompare(a.warnings);
     });
   }
   if (sortByLocal && sortByLocal === "progress") {
     db$8.vehicles = db$8.vehicles.sort((a, b) => {
-      if (orderByLocal === "asc") return a.progress - b.progress;
+      if (orderByLocal === "asc")
+        return a.progress - b.progress;
       return b.progress - a.progress;
     });
   }
-  return {
-    vehicles: paginateArray(db$8.vehicles, itemsPerPageLocal, pageLocal),
-    totalVehicles: db$8.vehicles.length,
-  };
+  return { vehicles: paginateArray(db$8.vehicles, itemsPerPageLocal, pageLocal), totalVehicles: db$8.vehicles.length };
 });
 
-const index$1 = /*#__PURE__*/ Object.freeze({
+const index$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index,
+  default: index
 });
 
 const db$7 = {
@@ -13203,106 +11926,87 @@ const db$7 = {
       id: 1,
       name: "Management",
       assignedTo: ["administrator"],
-      createdDate: "14 Apr 2021, 8:43 PM",
+      createdDate: "14 Apr 2021, 8:43 PM"
     },
     {
       id: 2,
       assignedTo: ["administrator"],
       name: "Manage Billing & Roles",
-      createdDate: "16 Sep 2021, 5:20 PM",
+      createdDate: "16 Sep 2021, 5:20 PM"
     },
     {
       id: 3,
       name: "Add & Remove Users",
       createdDate: "14 Oct 2021, 10:20 AM",
-      assignedTo: ["administrator", "manager"],
+      assignedTo: ["administrator", "manager"]
     },
     {
       id: 4,
       name: "Project Planning",
       createdDate: "14 Oct 2021, 10:20 AM",
-      assignedTo: ["administrator", "users", "support"],
+      assignedTo: ["administrator", "users", "support"]
     },
     {
       id: 5,
       name: "Manage Email Sequences",
       createdDate: "23 Aug 2021, 2:00 PM",
-      assignedTo: ["administrator", "users", "support"],
+      assignedTo: ["administrator", "users", "support"]
     },
     {
       id: 6,
       name: "Client Communication",
       createdDate: "15 Apr 2021, 11:30 AM",
-      assignedTo: ["administrator", "manager"],
+      assignedTo: ["administrator", "manager"]
     },
     {
       id: 7,
       name: "Only View",
       createdDate: "04 Dec 2021, 8:15 PM",
-      assignedTo: ["administrator", "restricted-user"],
+      assignedTo: ["administrator", "restricted-user"]
     },
     {
       id: 8,
       name: "Financial Management",
       createdDate: "25 Feb 2021, 10:30 AM",
-      assignedTo: ["administrator", "manager"],
+      assignedTo: ["administrator", "manager"]
     },
     {
       id: 9,
       name: "Manage Others' Tasks",
       createdDate: "04 Nov 2021, 11:45 AM",
-      assignedTo: ["administrator", "support"],
-    },
-  ],
+      assignedTo: ["administrator", "support"]
+    }
+  ]
 };
 
 const index_get$8 = defineCachedEventHandler((event) => {
-  const {
-    q = "",
-    sortBy,
-    page = 1,
-    itemsPerPage = 10,
-    orderBy,
-  } = getQuery$1(event);
+  const { q = "", sortBy, page = 1, itemsPerPage = 10, orderBy } = getQuery$1(event);
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLower = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLower = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   let filteredPermissions = db$7.permissions.filter(
-    (permissions) =>
-      permissions.name.toLowerCase().includes(queryLower) ||
-      permissions.createdDate.toLowerCase().includes(queryLower) ||
-      permissions.assignedTo.some((i) => i.toLowerCase().startsWith(queryLower))
+    (permissions) => permissions.name.toLowerCase().includes(queryLower) || permissions.createdDate.toLowerCase().includes(queryLower) || permissions.assignedTo.some((i) => i.toLowerCase().startsWith(queryLower))
   );
   if (sortByLocal && sortByLocal === "name") {
     filteredPermissions = filteredPermissions.sort((a, b) => {
-      if (orderByLocal === "asc") return a.name.localeCompare(b.name);
+      if (orderByLocal === "asc")
+        return a.name.localeCompare(b.name);
       return b.name.localeCompare(a.name);
     });
   }
-  return {
-    permissions: paginateArray(
-      filteredPermissions,
-      itemsPerPageLocal,
-      pageLocal
-    ),
-    totalPermissions: filteredPermissions.length,
-  };
+  return { permissions: paginateArray(filteredPermissions, itemsPerPageLocal, pageLocal), totalPermissions: filteredPermissions.length };
 });
 
-const index_get$9 = /*#__PURE__*/ Object.freeze({
+const index_get$9 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$8,
+  default: index_get$8
 });
 
 const avatar1$4 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -13325,7 +12029,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "inactive",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 2,
@@ -13339,7 +12043,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: avatar2$4,
-      billing: "Auto debit",
+      billing: "Auto debit"
     },
     {
       id: 3,
@@ -13353,7 +12057,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "active",
       avatar: avatar3$3,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 4,
@@ -13367,7 +12071,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: "",
-      billing: "Auto debit",
+      billing: "Auto debit"
     },
     {
       id: 5,
@@ -13381,7 +12085,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "pending",
       avatar: avatar5$3,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 6,
@@ -13395,7 +12099,7 @@ const db$6 = {
       currentPlan: "company",
       status: "active",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 7,
@@ -13409,7 +12113,7 @@ const db$6 = {
       currentPlan: "company",
       status: "pending",
       avatar: avatar1$4,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 8,
@@ -13423,7 +12127,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "pending",
       avatar: "",
-      billing: "Auto debit",
+      billing: "Auto debit"
     },
     {
       id: 9,
@@ -13437,7 +12141,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: avatar1$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 10,
@@ -13451,7 +12155,7 @@ const db$6 = {
       currentPlan: "company",
       status: "inactive",
       avatar: avatar3$3,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 11,
@@ -13465,7 +12169,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: "",
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 12,
@@ -13479,7 +12183,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: avatar3$3,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 13,
@@ -13493,7 +12197,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "inactive",
       avatar: avatar6$2,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 14,
@@ -13507,7 +12211,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: "",
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 15,
@@ -13521,7 +12225,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "active",
       avatar: avatar3$3,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 16,
@@ -13535,7 +12239,7 @@ const db$6 = {
       currentPlan: "company",
       status: "active",
       avatar: avatar4$3,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 17,
@@ -13549,7 +12253,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "active",
       avatar: avatar1$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 18,
@@ -13563,7 +12267,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: avatar3$3,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 19,
@@ -13577,7 +12281,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "active",
       avatar: "",
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 20,
@@ -13591,7 +12295,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: avatar5$3,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 21,
@@ -13605,7 +12309,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: "",
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 22,
@@ -13619,7 +12323,7 @@ const db$6 = {
       currentPlan: "company",
       status: "inactive",
       avatar: avatar6$2,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 23,
@@ -13633,7 +12337,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "pending",
       avatar: avatar2$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 24,
@@ -13647,7 +12351,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 25,
@@ -13661,7 +12365,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "pending",
       avatar: "",
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 26,
@@ -13675,7 +12379,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "inactive",
       avatar: avatar6$2,
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 27,
@@ -13689,7 +12393,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "active",
       avatar: "",
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 28,
@@ -13703,7 +12407,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: "",
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 29,
@@ -13717,7 +12421,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: avatar1$4,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 30,
@@ -13731,7 +12435,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: avatar5$3,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 31,
@@ -13745,7 +12449,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "pending",
       avatar: avatar2$4,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 32,
@@ -13759,7 +12463,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "pending",
       avatar: avatar6$2,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 33,
@@ -13773,7 +12477,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "active",
       avatar: "",
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 34,
@@ -13787,7 +12491,7 @@ const db$6 = {
       currentPlan: "company",
       status: "active",
       avatar: avatar3$3,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 35,
@@ -13801,7 +12505,7 @@ const db$6 = {
       currentPlan: "company",
       status: "pending",
       avatar: avatar2$4,
-      billing: "Manual-Cash",
+      billing: "Manual-Cash"
     },
     {
       id: 36,
@@ -13815,7 +12519,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 37,
@@ -13829,7 +12533,7 @@ const db$6 = {
       currentPlan: "company",
       status: "inactive",
       avatar: avatar1$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 38,
@@ -13843,7 +12547,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "inactive",
       avatar: avatar2$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 39,
@@ -13857,7 +12561,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: "",
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 40,
@@ -13871,7 +12575,7 @@ const db$6 = {
       currentPlan: "company",
       status: "active",
       avatar: avatar1$4,
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 41,
@@ -13885,7 +12589,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: avatar5$3,
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 42,
@@ -13899,7 +12603,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: "",
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 43,
@@ -13913,7 +12617,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "inactive",
       avatar: avatar2$4,
-      billing: "Auto Debit",
+      billing: "Auto Debit"
     },
     {
       id: 44,
@@ -13927,7 +12631,7 @@ const db$6 = {
       currentPlan: "team",
       status: "active",
       avatar: avatar1$4,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 45,
@@ -13941,7 +12645,7 @@ const db$6 = {
       currentPlan: "team",
       status: "pending",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 46,
@@ -13955,7 +12659,7 @@ const db$6 = {
       currentPlan: "enterprise",
       status: "pending",
       avatar: avatar4$3,
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 47,
@@ -13969,7 +12673,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "active",
       avatar: "",
-      billing: "Manual-Credit Card",
+      billing: "Manual-Credit Card"
     },
     {
       id: 48,
@@ -13983,7 +12687,7 @@ const db$6 = {
       currentPlan: "basic",
       status: "pending",
       avatar: avatar3$3,
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 49,
@@ -13997,7 +12701,7 @@ const db$6 = {
       currentPlan: "team",
       status: "inactive",
       avatar: "",
-      billing: "Manual-PayPal",
+      billing: "Manual-PayPal"
     },
     {
       id: 50,
@@ -14011,9 +12715,9 @@ const db$6 = {
       currentPlan: "company",
       status: "active",
       avatar: avatar1$4,
-      billing: "Manual-Cash",
-    },
-  ],
+      billing: "Manual-Cash"
+    }
+  ]
 };
 
 const _id__delete = defineEventHandler((event) => {
@@ -14024,9 +12728,9 @@ const _id__delete = defineEventHandler((event) => {
   return null;
 });
 
-const _id__delete$1 = /*#__PURE__*/ Object.freeze({
+const _id__delete$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__delete,
+  default: _id__delete
 });
 
 const _id__get = defineEventHandler((event) => {
@@ -14035,7 +12739,7 @@ const _id__get = defineEventHandler((event) => {
   if (!user) {
     throw createError({
       statusCode: 404,
-      statusMessage: "User not found",
+      statusMessage: "User not found"
     });
   }
   return {
@@ -14043,112 +12747,94 @@ const _id__get = defineEventHandler((event) => {
     taskDone: 1230,
     projectDone: 568,
     taxId: "Tax-8894",
-    language: "English",
+    language: "English"
   };
 });
 
-const _id__get$1 = /*#__PURE__*/ Object.freeze({
+const _id__get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _id__get,
+  default: _id__get
 });
 
 const index_get$6 = defineEventHandler(async (event) => {
-  const {
-    q = "",
-    role = null,
-    plan = null,
-    status = null,
-    sortBy,
-    itemsPerPage = 10,
-    page = 1,
-    orderBy,
-  } = getQuery$1(event);
+  const { q = "", role = null, plan = null, status = null, sortBy, itemsPerPage = 10, page = 1, orderBy } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLower = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLower = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const parsedSortBy = destr$1(sortBy);
   const sortByLocal = is.string(parsedSortBy) ? parsedSortBy : "";
   const parsedOrderBy = destr$1(orderBy);
   const orderByLocal = is.string(parsedOrderBy) ? parsedOrderBy : "";
   const parsedItemsPerPage = destr$1(itemsPerPage);
   const parsedPage = destr$1(page);
-  const itemsPerPageLocal = is.number(parsedItemsPerPage)
-    ? parsedItemsPerPage
-    : 10;
+  const itemsPerPageLocal = is.number(parsedItemsPerPage) ? parsedItemsPerPage : 10;
   const pageLocal = is.number(parsedPage) ? parsedPage : 1;
-  let filteredUsers = db$6.users
-    .filter(
-      (user) =>
-        (user.fullName.toLowerCase().includes(queryLower) ||
-          user.email.toLowerCase().includes(queryLower)) &&
-        user.role === (role || user.role) &&
-        user.currentPlan === (plan || user.currentPlan) &&
-        user.status === (status || user.status)
-    )
-    .reverse();
+  let filteredUsers = db$6.users.filter((user) => (user.fullName.toLowerCase().includes(queryLower) || user.email.toLowerCase().includes(queryLower)) && user.role === (role || user.role) && user.currentPlan === (plan || user.currentPlan) && user.status === (status || user.status)).reverse();
   if (sortByLocal) {
     if (sortByLocal === "user") {
       filteredUsers = filteredUsers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.fullName.localeCompare(b.fullName);
-        else return b.fullName.localeCompare(a.fullName);
+        if (orderByLocal === "asc")
+          return a.fullName.localeCompare(b.fullName);
+        else
+          return b.fullName.localeCompare(a.fullName);
       });
     }
     if (sortByLocal === "email") {
       filteredUsers = filteredUsers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.email.localeCompare(b.email);
-        else return b.email.localeCompare(a.email);
+        if (orderByLocal === "asc")
+          return a.email.localeCompare(b.email);
+        else
+          return b.email.localeCompare(a.email);
       });
     }
     if (sortByLocal === "role") {
       filteredUsers = filteredUsers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.role.localeCompare(b.role);
-        else return b.role.localeCompare(a.role);
+        if (orderByLocal === "asc")
+          return a.role.localeCompare(b.role);
+        else
+          return b.role.localeCompare(a.role);
       });
     }
     if (sortByLocal === "plan") {
       filteredUsers = filteredUsers.sort((a, b) => {
         if (orderByLocal === "asc")
           return a.currentPlan.localeCompare(b.currentPlan);
-        else return b.currentPlan.localeCompare(a.currentPlan);
+        else
+          return b.currentPlan.localeCompare(a.currentPlan);
       });
     }
     if (sortByLocal === "status") {
       filteredUsers = filteredUsers.sort((a, b) => {
-        if (orderByLocal === "asc") return a.status.localeCompare(b.status);
-        else return b.status.localeCompare(a.status);
+        if (orderByLocal === "asc")
+          return a.status.localeCompare(b.status);
+        else
+          return b.status.localeCompare(a.status);
       });
     }
   }
   const totalUsers = filteredUsers.length;
   const totalPages = Math.ceil(totalUsers / itemsPerPageLocal);
   setResponseStatus(event, 200);
-  return {
-    users: paginateArray(filteredUsers, itemsPerPageLocal, pageLocal),
-    totalPages,
-    totalUsers,
-    page: pageLocal > Math.ceil(totalUsers / itemsPerPageLocal) ? 1 : page,
-  };
+  return { users: paginateArray(filteredUsers, itemsPerPageLocal, pageLocal), totalPages, totalUsers, page: pageLocal > Math.ceil(totalUsers / itemsPerPageLocal) ? 1 : page };
 });
 
-const index_get$7 = /*#__PURE__*/ Object.freeze({
+const index_get$7 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$6,
+  default: index_get$6
 });
 
 const index_post = defineEventHandler(async (event) => {
   const user = await readBody(event);
   db$6.users.push({
     ...user,
-    id: db$6.users.length + 1,
+    id: db$6.users.length + 1
   });
   setResponseStatus(event, 201);
   return { body: user };
 });
 
-const index_post$1 = /*#__PURE__*/ Object.freeze({
+const index_post$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_post,
+  default: index_post
 });
 
 const _____ = NuxtAuthHandler({
@@ -14166,19 +12852,19 @@ const _____ = NuxtAuthHandler({
       async authorize(credentials) {
         const { user } = await $fetch("/api/login/", {
           method: "POST",
-          body: JSON.stringify(credentials),
+          body: JSON.stringify(credentials)
         }).catch((err) => {
           throw createError({
             statusCode: err.statusCode || 403,
-            statusMessage: JSON.stringify(err.data),
+            statusMessage: JSON.stringify(err.data)
           });
         });
         return user || null;
-      },
-    }),
+      }
+    })
   ],
   pages: {
-    signIn: "/login",
+    signIn: "/login"
   },
   callbacks: {
     jwt: async ({ token, user }) => {
@@ -14200,13 +12886,13 @@ const _____ = NuxtAuthHandler({
         session.user.role = token.role;
       }
       return session;
-    },
-  },
+    }
+  }
 });
 
-const _____$1 = /*#__PURE__*/ Object.freeze({
+const _____$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: _____,
+  default: _____
 });
 
 const figmaLabel$1 = getPublicUrl("images/icons/brands/figma-label.png");
@@ -14229,7 +12915,7 @@ const db$5 = {
       date: "10 May 2021",
       leader: "Eileen",
       team: [avatar5$2, avatar2$3, avatar3$2, avatar4$2],
-      status: 38,
+      status: 38
     },
     {
       logo: socialLabel$1,
@@ -14237,7 +12923,7 @@ const db$5 = {
       date: "03 Jan 2021",
       leader: "Owen",
       team: [avatar1$3, avatar2$3],
-      status: 45,
+      status: 45
     },
     {
       logo: sketchLabel,
@@ -14245,7 +12931,7 @@ const db$5 = {
       date: "12 Aug 2021",
       leader: "Keith",
       team: [avatar4$2, avatar2$3, avatar5$2, avatar3$2],
-      status: 92,
+      status: 92
     },
     {
       logo: sketchLabel,
@@ -14253,7 +12939,7 @@ const db$5 = {
       date: "19 Apr 2021",
       leader: "Merlin",
       team: [avatar1$3, avatar5$2, avatar3$2, avatar2$3],
-      status: 56,
+      status: 56
     },
     {
       logo: figmaLabel$1,
@@ -14261,7 +12947,7 @@ const db$5 = {
       date: "08 Apr 2021",
       leader: "Harmonica",
       team: [avatar5$2, avatar4$2, avatar1$3],
-      status: 25,
+      status: 25
     },
     {
       logo: htmlLabel$1,
@@ -14269,7 +12955,7 @@ const db$5 = {
       date: "29 Sept 2021",
       leader: "Allyson",
       team: [avatar3$2, avatar2$3, avatar4$2, avatar5$2],
-      status: 36,
+      status: 36
     },
     {
       logo: reactLabel$1,
@@ -14277,7 +12963,7 @@ const db$5 = {
       date: "20 Mar 2021",
       leader: "Georgia",
       team: [avatar3$2, avatar3$2, avatar2$3, avatar5$2],
-      status: 72,
+      status: 72
     },
     {
       logo: xdLabel$1,
@@ -14285,7 +12971,7 @@ const db$5 = {
       date: "09 Feb 2021",
       leader: "Fred",
       team: [avatar3$2, avatar4$2, avatar5$2],
-      status: 89,
+      status: 89
     },
     {
       logo: xdLabel$1,
@@ -14293,7 +12979,7 @@ const db$5 = {
       date: "17 June 2021",
       leader: "Richard",
       team: [avatar1$3, avatar3$2, avatar4$2, avatar2$3],
-      status: 77,
+      status: 77
     },
     {
       logo: vueLabel$1,
@@ -14301,9 +12987,9 @@ const db$5 = {
       date: "06 Oct 2021",
       leader: "Geneva",
       team: [avatar1$3, avatar2$3, avatar3$2, avatar5$2],
-      status: 100,
-    },
-  ],
+      status: 100
+    }
+  ]
 };
 
 const projects_get = defineEventHandler(async (event) => {
@@ -14311,9 +12997,9 @@ const projects_get = defineEventHandler(async (event) => {
   return db$5.analytics;
 });
 
-const projects_get$1 = /*#__PURE__*/ Object.freeze({
+const projects_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: projects_get,
+  default: projects_get
 });
 
 const avatar1$2 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -14332,7 +13018,7 @@ const db$4 = {
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6N30.KH9RmOWIYv_HONxajg7xBIJXHEUvSdcBygFtS2if8Jk",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OH0.shrp-oMHkVAkiMkv_aIvSx3k6Jk-X7TrH5UeufChz_g",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OX0.9JD1MR3ZkwHzhl4mOHH6lGG8hOVNZqDNH6UkFzjCqSE",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTB9.txWLuN4QT5PqTtgHmlOiNerIu5Do51PpYOiZutkyXYg",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTB9.txWLuN4QT5PqTtgHmlOiNerIu5Do51PpYOiZutkyXYg"
   ],
   users: [
     {
@@ -14346,9 +13032,9 @@ const db$4 = {
       abilityRules: [
         {
           action: "manage",
-          subject: "all",
-        },
-      ],
+          subject: "all"
+        }
+      ]
     },
     {
       id: 2,
@@ -14361,15 +13047,15 @@ const db$4 = {
       abilityRules: [
         {
           action: "read",
-          subject: "Auth",
+          subject: "Auth"
         },
         {
           action: "read",
-          subject: "AclDemo",
-        },
-      ],
-    },
-  ],
+          subject: "AclDemo"
+        }
+      ]
+    }
+  ]
 };
 
 const login_post = defineEventHandler(async (event) => {
@@ -14379,39 +13065,34 @@ const login_post = defineEventHandler(async (event) => {
       statusCode: 403,
       statusMessage: "Email and Password is required to login",
       data: {
-        email: ["Email and Password is required to login"],
-      },
+        email: ["Email and Password is required to login"]
+      }
     });
   }
-  const dbUser = db$4.users.find(
-    (u) => u.email === email && u.password === password
-  );
+  const dbUser = db$4.users.find((u) => u.email === email && u.password === password);
   if (!dbUser) {
     throw createError({
       statusCode: 403,
       statusMessage: "Invalid email or password",
       data: {
-        email: ["Invalid email or password"],
-      },
+        email: ["Invalid email or password"]
+      }
     });
   }
   const { password: _, ...user } = dbUser;
   return {
-    user,
+    user
   };
 });
 
-const login_post$1 = /*#__PURE__*/ Object.freeze({
+const login_post$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: login_post,
+  default: login_post
 });
 
 const me_get = defineEventHandler(async (event) => {
   var _a;
-  const session = await setAuthOnlyRoute(
-    event,
-    "You must be signed in to get your data."
-  );
+  const session = await setAuthOnlyRoute(event, "You must be signed in to get your data.");
   const dbUser = db$4.users.find((user) => {
     var _a2;
     return user.email === ((_a2 = session.user) == null ? void 0 : _a2.email);
@@ -14419,18 +13100,16 @@ const me_get = defineEventHandler(async (event) => {
   if (!dbUser) {
     throw createError({
       statusCode: 403,
-      statusMessage: `User with email "${
-        (_a = session.user) == null ? void 0 : _a.email
-      }" not found in records.`,
+      statusMessage: `User with email "${(_a = session.user) == null ? void 0 : _a.email}" not found in records.`
     });
   }
   const { password: _, ...response } = dbUser;
   return response;
 });
 
-const me_get$1 = /*#__PURE__*/ Object.freeze({
+const me_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: me_get,
+  default: me_get
 });
 
 const avatar1$1 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -14475,20 +13154,19 @@ const db$3 = {
         image: product9,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles.",
+        description: "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles."
       },
       date: "30 Apr 2020",
       buyer: {
         name: "Ana Smith",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 984,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 984,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -14501,72 +13179,69 @@ const db$3 = {
         image: product7,
         hasFreeShipping: true,
         rating: 4,
-        description:
-          "Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use\n    voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with\n    Android and iOS operating systems, and can control compatible smart devices such as Chromecast or Nest.",
+        description: "Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use\n    voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with\n    Android and iOS operating systems, and can control compatible smart devices such as Chromecast or Nest."
       },
       date: "11 Jul 2020",
       buyer: {
         name: "Lindsay Green",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 1101,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1101,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 17,
         name: "Nike Air Max",
         slug: "72-9301-speaker-wire-harness-adapter-for-most-plymouth-dodge-and-mitsubishi-vehicles-multi-17",
-        description:
-          "With a bold application of colorblocking inspired by modern art styles, the Nike Air Max 270 React sneaker is constructed with layers of lightweight material to achieve its artful look and comfortable feel.",
+        description: "With a bold application of colorblocking inspired by modern art styles, the Nike Air Max 270 React sneaker is constructed with layers of lightweight material to achieve its artful look and comfortable feel.",
         brand: "Nike",
         category: "Shoes",
         price: 81.99,
         image: product11,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "06 Jan 2021",
       buyer: {
         name: "Ethan Lee",
-        avatar: avatar1$1,
+        avatar: avatar1$1
       },
       payment: {
         total: 726,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 126,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 2,
         name: "Bose Frames Tenor",
         slug: "bose-frames-tenor-rectangular-polarized-bluetooth-audio-sunglasses-2",
-        description:
-          "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
+        description: "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
         brand: "Bose",
         category: "Glass",
         price: 249,
         image: product26,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "21 Aug 2020",
       buyer: {
         name: "Scott Miller",
-        avatar: avatar7$1,
+        avatar: avatar7$1
       },
       payment: {
         total: 646,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 345,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -14579,46 +13254,44 @@ const db$3 = {
         image: product3,
         hasFreeShipping: true,
         rating: 4,
-        description:
-          "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n    capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n    than ever.",
+        description: "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n    capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n    than ever."
       },
       date: "21 Aug 2020",
       buyer: {
         name: "Brandon Brooks",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 1005,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 21,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 12,
         name: "Adidas Mens Tech Response Shoes",
         slug: "adidas-mens-tech-response-shoes-12",
-        description:
-          "Comfort + performance.  Designed with materials that are durable, lightweight and extremely comfortable. Core performance delivers the perfect mix of fit, style and all-around performance.",
+        description: "Comfort + performance.  Designed with materials that are durable, lightweight and extremely comfortable. Core performance delivers the perfect mix of fit, style and all-around performance.",
         brand: "Adidas",
         category: "Shoes",
         price: 54.59,
         image: product16,
         hasFreeShipping: false,
-        rating: 5,
+        rating: 5
       },
       date: "10 Mar 2021",
       buyer: {
         name: "Henry Mann",
-        avatar: avatar6$1,
+        avatar: avatar6$1
       },
       payment: {
         total: 1114,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 814,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -14631,20 +13304,19 @@ const db$3 = {
         image: product3,
         hasFreeShipping: true,
         rating: 4,
-        description:
-          "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n    capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n    than ever.",
+        description: "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n    capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n    than ever."
       },
       date: "21 Aug 2020",
       buyer: {
         name: "Brandon Brooks",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 1005,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 21,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -14657,20 +13329,19 @@ const db$3 = {
         image: product4,
         hasFreeShipping: true,
         rating: 3,
-        description:
-          "Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,\n    podcasting and taking calls on the go. Better pick up your voice. Control most electric devices through voice\n    activation, or schedule a ride with Uber and order a pizza. OneOdio A71 Wired Headphones voice-controlled device\n    turns any home into a smart device on a smartphone or tablet.",
+        description: "Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,\n    podcasting and taking calls on the go. Better pick up your voice. Control most electric devices through voice\n    activation, or schedule a ride with Uber and order a pizza. OneOdio A71 Wired Headphones voice-controlled device\n    turns any home into a smart device on a smartphone or tablet."
       },
       date: "12 Nov 2020",
       buyer: {
         name: "Grant Wright",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 207,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 207,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -14683,20 +13354,19 @@ const db$3 = {
         image: product8,
         hasFreeShipping: false,
         rating: 5,
-        description:
-          "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty.",
+        description: "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty."
       },
       date: "19 Apr 2021",
       buyer: {
         name: "Amanda Sanchez",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 1119,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1119,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -14709,20 +13379,19 @@ const db$3 = {
         image: product5,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a\n    fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.1 Its thin,\n    light, and durable enough to take everywhere you go-and powerful enough to do everything once you get there,\n better.",
+        description: "MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a\n    fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.1 Its thin,\n    light, and durable enough to take everywhere you go-and powerful enough to do everything once you get there,\n better."
       },
       date: "25 Dec 2020",
       buyer: {
         name: "Kathy Estrada",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 1221,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 1025,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -14735,72 +13404,69 @@ const db$3 = {
         image: product3,
         hasFreeShipping: true,
         rating: 4,
-        description:
-          "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n than ever.",
+        description: "The all-in-one for all. If you can dream it, you can do it on iMac. It\u2019s beautifully & incredibly intuitive and\n    packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the\n    experience in way, with faster processors and graphics, expanded memory and storage, enhanced audio and video\n capabilities, and an even more stunning Retina 5K display. It\u2019s the desktop that does it all \u2014 better and faster\n than ever."
       },
       date: "19 May 2020",
       buyer: {
         name: "William Lopez",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 973,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 374,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 8,
         name: "PlayStation 4 Console",
         slug: "play-station-4-console-8",
-        description:
-          "All the greatest, games, TV, music and more. Connect with your friends to broadcast and celebrate your epic moments at the press of the Share button to Twitch, YouTube, Facebook and Twitter.",
+        description: "All the greatest, games, TV, music and more. Connect with your friends to broadcast and celebrate your epic moments at the press of the Share button to Twitch, YouTube, Facebook and Twitter.",
         brand: "Sony",
         category: "Gaming",
         price: 339.95,
         image: product20,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "27 Mar 2021",
       buyer: {
         name: "Colleen Taylor",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 1235,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1235,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 5,
         name: "Toshiba Canvio External Hard Drive",
         slug: "toshiba-canvio-advance-2-tb-portable-external-hard-drive-5",
-        description:
-          "Up to 3TB of storage capacity to store your growing files and content",
+        description: "Up to 3TB of storage capacity to store your growing files and content",
         brand: "Toshiba",
         category: "Storage Device",
         price: 69.99,
         image: product23,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "21 Jun 2020",
       buyer: {
         name: "Melanie Olson",
-        avatar: avatar6$1,
+        avatar: avatar6$1
       },
       payment: {
         total: 780,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 780,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -14813,20 +13479,19 @@ const db$3 = {
         image: product9,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles.",
+        description: "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles."
       },
       date: "28 Jan 2021",
       buyer: {
         name: "Cynthia Cannon",
-        avatar: avatar7$1,
+        avatar: avatar7$1
       },
       payment: {
         total: 1073,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 871,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -14839,228 +13504,219 @@ const db$3 = {
         image: product5,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a\n    fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.1 Its thin,\n    light, and durable enough to take everywhere you go-and powerful enough to do everything once you get there,\n better.",
+        description: "MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a\n    fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.1 Its thin,\n    light, and durable enough to take everywhere you go-and powerful enough to do everything once you get there,\n better."
       },
       date: "20 Aug 2020",
       buyer: {
         name: "David Archer",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 224,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 224,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 9,
         name: "Giotto 32oz Leakproof BPA Free Drinking Water",
         slug: "giotto-32oz-leakproof-bpa-free-drinking-water-9",
-        description:
-          "With unique inspirational quote and time markers on it,this water bottle is great for measuring your daily intake of water,reminding you stay hydrated and drink enough water throughout the day.A must have for any fitness goals including weight loss,appetite control and overall health.",
+        description: "With unique inspirational quote and time markers on it,this water bottle is great for measuring your daily intake of water,reminding you stay hydrated and drink enough water throughout the day.A must have for any fitness goals including weight loss,appetite control and overall health.",
         brand: "3M",
         category: "Home",
         price: 16.99,
         image: product19,
         hasFreeShipping: true,
-        rating: 4,
+        rating: 4
       },
       date: "29 Dec 2020",
       buyer: {
         name: "Michael Cervantes",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 960,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 866,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 13,
         name: "Laptop Bag",
         slug: "laptop-bag-13",
-        description:
-          "TSA FRIENDLY- A separate DIGI SMART compartment can hold 15.6 inch Laptop as well as 15 inch, 14 inch MacBook, 12.9 inch iPad, and tech accessories like charger for quick TSA checkpoint when traveling",
+        description: "TSA FRIENDLY- A separate DIGI SMART compartment can hold 15.6 inch Laptop as well as 15 inch, 14 inch MacBook, 12.9 inch iPad, and tech accessories like charger for quick TSA checkpoint when traveling",
         brand: "TAS",
         category: "Bag",
         price: 29.99,
         image: product15,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "15 Aug 2020",
       buyer: {
         name: "Nathaniel Marshall",
-        avatar: avatar6$1,
+        avatar: avatar6$1
       },
       payment: {
         total: 1423,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Cancelled",
-      },
+        status: "Cancelled"
+      }
     },
     {
       product: {
         id: 5,
         name: "Toshiba Canvio External Hard Drive",
         slug: "toshiba-canvio-advance-2-tb-portable-external-hard-drive-5",
-        description:
-          "Up to 3TB of storage capacity to store your growing files and content",
+        description: "Up to 3TB of storage capacity to store your growing files and content",
         brand: "Toshiba",
         category: "Storage Device",
         price: 69.99,
         image: product23,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "03 Jan 2021",
       buyer: {
         name: "Tiffany Ross",
-        avatar: avatar4$1,
+        avatar: avatar4$1
       },
       payment: {
         total: 663,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 285,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 14,
         name: "Wireless Charger 5W Max",
         slug: "wireless-charger-5-w-max-14",
-        description:
-          "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
+        description: "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
         brand: "3M",
         category: "Electronics",
         price: 10.83,
         image: product14,
         hasFreeShipping: true,
-        rating: 3,
+        rating: 3
       },
       date: "20 Dec 2020",
       buyer: {
         name: "Philip Walters",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 1112,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 426,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 15,
         name: "Vankyo leisure 3 mini projector",
         slug: "3-m-filtrete-vacuum-belt-for-select-hoover-t-series-upright-vacuums-15",
-        description:
-          "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
+        description: "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
         brand: "Vankyo Store",
         category: "Projector",
         price: 99.99,
         image: product13,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "02 Jul 2020",
       buyer: {
         name: "Pamela Smith",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 462,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 383,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 12,
         name: "Adidas Mens Tech Response Shoes",
         slug: "adidas-mens-tech-response-shoes-12",
-        description:
-          "Comfort + performance.  Designed with materials that are durable, lightweight and extremely comfortable. Core performance delivers the perfect mix of fit, style and all-around performance.",
+        description: "Comfort + performance.  Designed with materials that are durable, lightweight and extremely comfortable. Core performance delivers the perfect mix of fit, style and all-around performance.",
         brand: "Adidas",
         category: "Shoes",
         price: 54.59,
         image: product16,
         hasFreeShipping: false,
-        rating: 5,
+        rating: 5
       },
       date: "24 Jul 2020",
       buyer: {
         name: "Kara Gonzalez",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 1325,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 792,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 18,
         name: "Logitech K380 Wireless Keyboard",
         slug: "acer-11-6-chromebook-intel-celeron-2-gb-memory-16-gb-e-mmc-flash-memory-moonstone-white-18",
-        description:
-          "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
+        description: "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
         brand: "Logitech",
         category: "Keyboard",
         price: 81.99,
         image: product10,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "07 Jan 2021",
       buyer: {
         name: "Katherine Tate",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 582,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 234,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 3,
         name: "Willful Smart Watch for Men Women 2020,",
         slug: "willful-smart-watch-for-men-women-2020-3",
-        description:
-          "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
+        description: "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
         brand: "Willful",
         category: "Smart Watch",
         price: 29.99,
         image: product25,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "29 Aug 2020",
       buyer: {
         name: "Ashley Douglas DDS",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 1092,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1092,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -15073,124 +13729,119 @@ const db$3 = {
         image: product6,
         hasFreeShipping: false,
         rating: 3,
-        description:
-          "The Nintendo Switch Pro Controller is one of the priciest 'baseline' controllers in the current console\n generation, but it's also sturdy, feels good to play with, has an excellent direction pad, and features\n    impressive motion sensors and vibration systems. On top of all of that, it uses Bluetooth, so you don't need an\n    adapter to use it with your PC.",
+        description: "The Nintendo Switch Pro Controller is one of the priciest 'baseline' controllers in the current console\n generation, but it's also sturdy, feels good to play with, has an excellent direction pad, and features\n    impressive motion sensors and vibration systems. On top of all of that, it uses Bluetooth, so you don't need an\n    adapter to use it with your PC."
       },
       date: "09 Jan 2021",
       buyer: {
         name: "Eric Gregory",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 939,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 939,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 4,
         name: "Ronyes Unisex College Bag Bookbags for Women",
         slug: "ronyes-unisex-college-bag-bookbags-for-women-4",
-        description:
-          "Made of high quality water-resistant material; padded and adjustable shoulder straps; external USB with built-in charging cable offers a convenient charging",
+        description: "Made of high quality water-resistant material; padded and adjustable shoulder straps; external USB with built-in charging cable offers a convenient charging",
         brand: "Ronyes",
         category: "Bag",
         price: 23.99,
         image: product24,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "06 May 2020",
       buyer: {
         name: "Taylor Hernandez",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 1129,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Cancelled",
-      },
+        status: "Cancelled"
+      }
     },
     {
       product: {
         id: 10,
         name: "Oculus Quest All-in-one VR",
         slug: "oculus-quest-all-in-one-vr-10",
-        description:
-          "All-in-one VR: No PC. No wires. No limits. Oculus quest is an all-in-one gaming system built for virtual reality. Now you can play almost anywhere with just a VR headset and controllers. Oculus touch controllers: arm yourself with the award-winning Oculus touch controllers. Your slashes, throws and grab appear in VR with intuitive, realistic Precision, transporting your hands and gestures right into the game",
+        description: "All-in-one VR: No PC. No wires. No limits. Oculus quest is an all-in-one gaming system built for virtual reality. Now you can play almost anywhere with just a VR headset and controllers. Oculus touch controllers: arm yourself with the award-winning Oculus touch controllers. Your slashes, throws and grab appear in VR with intuitive, realistic Precision, transporting your hands and gestures right into the game",
         brand: "Oculus",
         category: "VR",
         price: 645,
         image: product18,
         hasFreeShipping: false,
-        rating: 1,
+        rating: 1
       },
       date: "29 Dec 2020",
       buyer: {
         name: "Justin Patterson",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 252,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 252,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 11,
         name: "Handbags for Women Large Designer bag",
         slug: "handbags-for-women-large-designer-bag-11",
-        description:
-          "Classic Hobo Purse: Top zipper closure, with 2 side zipper pockets design and elegant tassels decoration, fashionable and practical handbags for women, perfect for shopping, dating, travel and business",
+        description: "Classic Hobo Purse: Top zipper closure, with 2 side zipper pockets design and elegant tassels decoration, fashionable and practical handbags for women, perfect for shopping, dating, travel and business",
         brand: "Hobo",
         category: "Bag",
         price: 39.99,
         image: product17,
         hasFreeShipping: true,
-        rating: 3,
+        rating: 3
       },
       date: "19 Dec 2020",
       buyer: {
         name: "Judy Cummings",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 1369,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1369,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 18,
         name: "Logitech K380 Wireless Keyboard",
         slug: "acer-11-6-chromebook-intel-celeron-2-gb-memory-16-gb-e-mmc-flash-memory-moonstone-white-18",
-        description:
-          "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
+        description: "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
         brand: "Logitech",
         category: "Keyboard",
         price: 81.99,
         image: product10,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "02 Jan 2021",
       buyer: {
         name: "Linda Buchanan",
-        avatar: avatar7$1,
+        avatar: avatar7$1
       },
       payment: {
         total: 351,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 351,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -15203,124 +13854,119 @@ const db$3 = {
         image: product7,
         hasFreeShipping: true,
         rating: 4,
-        description:
-          "Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use\n    voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with\n    Android and iOS operating systems, and can control compatible smart devices such as Chromecast or Nest.",
+        description: "Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use\n    voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with\n    Android and iOS operating systems, and can control compatible smart devices such as Chromecast or Nest."
       },
       date: "25 Feb 2021",
       buyer: {
         name: "Brian Perez",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 506,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 497,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 3,
         name: "Willful Smart Watch for Men Women 2020,",
         slug: "willful-smart-watch-for-men-women-2020-3",
-        description:
-          "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
+        description: "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
         brand: "Willful",
         category: "Smart Watch",
         price: 29.99,
         image: product25,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "13 Sep 2020",
       buyer: {
         name: "Amy White",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 195,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 195,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 18,
         name: "Logitech K380 Wireless Keyboard",
         slug: "acer-11-6-chromebook-intel-celeron-2-gb-memory-16-gb-e-mmc-flash-memory-moonstone-white-18",
-        description:
-          "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
+        description: "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
         brand: "Logitech",
         category: "Keyboard",
         price: 81.99,
         image: product10,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "30 Sep 2020",
       buyer: {
         name: "Katherine Clark",
-        avatar: avatar1$1,
+        avatar: avatar1$1
       },
       payment: {
         total: 1246,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 475,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 14,
         name: "Wireless Charger 5W Max",
         slug: "wireless-charger-5-w-max-14",
-        description:
-          "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
+        description: "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
         brand: "3M",
         category: "Electronics",
         price: 10.83,
         image: product14,
         hasFreeShipping: true,
-        rating: 3,
+        rating: 3
       },
       date: "26 Mar 2021",
       buyer: {
         name: "Jose Murphy",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 383,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 383,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 2,
         name: "Bose Frames Tenor",
         slug: "bose-frames-tenor-rectangular-polarized-bluetooth-audio-sunglasses-2",
-        description:
-          "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
+        description: "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
         brand: "Bose",
         category: "Glass",
         price: 249,
         image: product26,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "01 Dec 2020",
       buyer: {
         name: "Jeffrey Rose",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 902,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 902,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
@@ -15333,72 +13979,69 @@ const db$3 = {
         image: product4,
         hasFreeShipping: true,
         rating: 3,
-        description:
-          "Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,\n    podcasting and taking calls on the go. Better pick up your voice. Control most electric devices through voice\n    activation, or schedule a ride with Uber and order a pizza. OneOdio A71 Wired Headphones voice-controlled device\n    turns any home into a smart device on a smartphone or tablet.",
+        description: "Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,\n    podcasting and taking calls on the go. Better pick up your voice. Control most electric devices through voice\n    activation, or schedule a ride with Uber and order a pizza. OneOdio A71 Wired Headphones voice-controlled device\n    turns any home into a smart device on a smartphone or tablet."
       },
       date: "15 Sep 2020",
       buyer: {
         name: "Amber Hunt",
-        avatar: avatar7$1,
+        avatar: avatar7$1
       },
       payment: {
         total: 379,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 174,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 2,
         name: "Bose Frames Tenor",
         slug: "bose-frames-tenor-rectangular-polarized-bluetooth-audio-sunglasses-2",
-        description:
-          "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
+        description: "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
         brand: "Bose",
         category: "Glass",
         price: 249,
         image: product26,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "08 Apr 2021",
       buyer: {
         name: "Christopher Haas",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 7,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 2,
         name: "Bose Frames Tenor",
         slug: "bose-frames-tenor-rectangular-polarized-bluetooth-audio-sunglasses-2",
-        description:
-          "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
+        description: "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
         brand: "Bose",
         category: "Glass",
         price: 249,
         image: product26,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "21 Oct 2020",
       buyer: {
         name: "Stephen Mccormick",
-        avatar: avatar6$1,
+        avatar: avatar6$1
       },
       payment: {
         total: 186,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 81,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -15411,46 +14054,44 @@ const db$3 = {
         image: product9,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles.",
+        description: "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles."
       },
       date: "21 Oct 2020",
       buyer: {
         name: "Matthew Reyes",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 198,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 198,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 4,
         name: "Ronyes Unisex College Bag Bookbags for Women",
         slug: "ronyes-unisex-college-bag-bookbags-for-women-4",
-        description:
-          "Made of high quality water-resistant material; padded and adjustable shoulder straps; external USB with built-in charging cable offers a convenient charging",
+        description: "Made of high quality water-resistant material; padded and adjustable shoulder straps; external USB with built-in charging cable offers a convenient charging",
         brand: "Ronyes",
         category: "Bag",
         price: 23.99,
         image: product24,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "16 May 2020",
       buyer: {
         name: "Ricardo Morgan",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 519,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 447,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -15463,176 +14104,169 @@ const db$3 = {
         image: product8,
         hasFreeShipping: false,
         rating: 5,
-        description:
-          "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty.",
+        description: "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty."
       },
       date: "01 Jul 2020",
       buyer: {
         name: "William Castillo",
-        avatar: avatar4$1,
+        avatar: avatar4$1
       },
       payment: {
         total: 10,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 6,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 11,
         name: "Handbags for Women Large Designer bag",
         slug: "handbags-for-women-large-designer-bag-11",
-        description:
-          "Classic Hobo Purse: Top zipper closure, with 2 side zipper pockets design and elegant tassels decoration, fashionable and practical handbags for women, perfect for shopping, dating, travel and business",
+        description: "Classic Hobo Purse: Top zipper closure, with 2 side zipper pockets design and elegant tassels decoration, fashionable and practical handbags for women, perfect for shopping, dating, travel and business",
         brand: "Hobo",
         category: "Bag",
         price: 39.99,
         image: product17,
         hasFreeShipping: true,
-        rating: 3,
+        rating: 3
       },
       date: "04 Jul 2020",
       buyer: {
         name: "James Coleman",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 897,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 677,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 18,
         name: "Logitech K380 Wireless Keyboard",
         slug: "acer-11-6-chromebook-intel-celeron-2-gb-memory-16-gb-e-mmc-flash-memory-moonstone-white-18",
-        description:
-          "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
+        description: "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
         brand: "Logitech",
         category: "Keyboard",
         price: 81.99,
         image: product10,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "19 Feb 2021",
       buyer: {
         name: "Michael Summers",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 653,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 653,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 3,
         name: "Willful Smart Watch for Men Women 2020,",
         slug: "willful-smart-watch-for-men-women-2020-3",
-        description:
-          "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
+        description: "Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.",
         brand: "Willful",
         category: "Smart Watch",
         price: 29.99,
         image: product25,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "03 Mar 2021",
       buyer: {
         name: "Jeremiah Espinoza",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 913,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 468,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 2,
         name: "Bose Frames Tenor",
         slug: "bose-frames-tenor-rectangular-polarized-bluetooth-audio-sunglasses-2",
-        description:
-          "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
+        description: "Redesigned for luxury \u2014 Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen",
         brand: "Bose",
         category: "Glass",
         price: 249,
         image: product26,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "03 Mar 2021",
       buyer: {
         name: "Tyler Brooks",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 1123,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 1123,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 17,
         name: "Nike Air Max",
         slug: "72-9301-speaker-wire-harness-adapter-for-most-plymouth-dodge-and-mitsubishi-vehicles-multi-17",
-        description:
-          "With a bold application of colorblocking inspired by modern art styles, the Nike Air Max 270 React sneaker is constructed with layers of lightweight material to achieve its artful look and comfortable feel.",
+        description: "With a bold application of colorblocking inspired by modern art styles, the Nike Air Max 270 React sneaker is constructed with layers of lightweight material to achieve its artful look and comfortable feel.",
         brand: "Nike",
         category: "Shoes",
         price: 81.99,
         image: product11,
         hasFreeShipping: true,
-        rating: 5,
+        rating: 5
       },
       date: "29 Dec 2020",
       buyer: {
         name: "Juan Wilson",
-        avatar: avatar3$1,
+        avatar: avatar3$1
       },
       payment: {
         total: 779,
         receivedPaymentStatus: "Fully Paid",
         paidAmount: 779,
-        status: "Completed",
-      },
+        status: "Completed"
+      }
     },
     {
       product: {
         id: 15,
         name: "Vankyo leisure 3 mini projector",
         slug: "3-m-filtrete-vacuum-belt-for-select-hoover-t-series-upright-vacuums-15",
-        description:
-          "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
+        description: "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
         brand: "Vankyo Store",
         category: "Projector",
         price: 99.99,
         image: product13,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "03 Dec 2020",
       buyer: {
         name: "Marvin Duran",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 594,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Cancelled",
-      },
+        status: "Cancelled"
+      }
     },
     {
       product: {
@@ -15645,46 +14279,44 @@ const db$3 = {
         image: product6,
         hasFreeShipping: false,
         rating: 3,
-        description:
-          "The Nintendo Switch Pro Controller is one of the priciest 'baseline' controllers in the current console\n    generation, but it's also sturdy, feels good to play with, has an excellent direction pad, and features\n impressive motion sensors and vibration systems. On top of all of that, it uses Bluetooth, so you don't need an\n    adapter to use it with your PC.",
+        description: "The Nintendo Switch Pro Controller is one of the priciest 'baseline' controllers in the current console\n    generation, but it's also sturdy, feels good to play with, has an excellent direction pad, and features\n impressive motion sensors and vibration systems. On top of all of that, it uses Bluetooth, so you don't need an\n    adapter to use it with your PC."
       },
       date: "28 May 2020",
       buyer: {
         name: "Jessica Glass",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 1065,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 844,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 18,
         name: "Logitech K380 Wireless Keyboard",
         slug: "acer-11-6-chromebook-intel-celeron-2-gb-memory-16-gb-e-mmc-flash-memory-moonstone-white-18",
-        description:
-          "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
+        description: "Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.",
         brand: "Logitech",
         category: "Keyboard",
         price: 81.99,
         image: product10,
         hasFreeShipping: false,
-        rating: 4,
+        rating: 4
       },
       date: "17 May 2020",
       buyer: {
         name: "Gary Herman",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 432,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 64,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -15697,20 +14329,19 @@ const db$3 = {
         image: product9,
         hasFreeShipping: false,
         rating: 4,
-        description:
-          "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles.",
+        description: "The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels\n    very premium but\u2019s it\u2019s also very heavy. The Nebula Blue variant looks slick but it\u2019s quite slippery, which\n    makes single-handed use a real challenge. It has a massive 6.67-inch \u2018Fluid AMOLED\u2019 display with a QHD+\n    resolution, 90Hz refresh rate and support for HDR 10+ content. The display produces vivid colours, deep blacks\n    and has good viewing angles."
       },
       date: "25 Mar 2021",
       buyer: {
         name: "Adam Williams",
-        avatar: avatar2$1,
+        avatar: avatar2$1
       },
       payment: {
         total: 1402,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 434,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
@@ -15723,74 +14354,71 @@ const db$3 = {
         image: product8,
         hasFreeShipping: false,
         rating: 5,
-        description:
-          "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty.",
+        description: "Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality\n    and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.\n    You can connect various gadgets such as your laptop using the HDMI port. The TV comes with a 1 Year warranty."
       },
       date: "13 Apr 2021",
       buyer: {
         name: "Bobby Brown",
-        avatar: null,
+        avatar: null
       },
       payment: {
         total: 100,
         receivedPaymentStatus: "Partially Paid",
         paidAmount: 65,
-        status: "Confirmed",
-      },
+        status: "Confirmed"
+      }
     },
     {
       product: {
         id: 14,
         name: "Wireless Charger 5W Max",
         slug: "wireless-charger-5-w-max-14",
-        description:
-          "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
+        description: "Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.",
         brand: "3M",
         category: "Electronics",
         price: 10.83,
         image: product14,
         hasFreeShipping: true,
-        rating: 3,
+        rating: 3
       },
       date: "07 Aug 2020",
       buyer: {
         name: "Sharon Moss",
-        avatar: avatar8$1,
+        avatar: avatar8$1
       },
       payment: {
         total: 823,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Cancelled",
-      },
+        status: "Cancelled"
+      }
     },
     {
       product: {
         id: 15,
         name: "Vankyo leisure 3 mini projector",
         slug: "3-m-filtrete-vacuum-belt-for-select-hoover-t-series-upright-vacuums-15",
-        description:
-          "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
+        description: "SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.",
         brand: "Vankyo Store",
         category: "Projector",
         price: 99.99,
         image: product13,
         hasFreeShipping: true,
-        rating: 2,
+        rating: 2
       },
       date: "23 Feb 2021",
       buyer: {
         name: "Scott Buchanan",
-        avatar: avatar5$1,
+        avatar: avatar5$1
       },
       payment: {
         total: 183,
         receivedPaymentStatus: "Unpaid",
         paidAmount: 0,
-        status: "Cancelled",
-      },
-    },
-  ],
+        status: "Cancelled"
+      }
+    }
+  ]
 };
 
 const datatable_get = defineEventHandler(async (event) => {
@@ -15798,9 +14426,9 @@ const datatable_get = defineEventHandler(async (event) => {
   return db$3.salesDetails;
 });
 
-const datatable_get$1 = /*#__PURE__*/ Object.freeze({
+const datatable_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: datatable_get,
+  default: datatable_get
 });
 
 const db$2 = {
@@ -15812,31 +14440,25 @@ const db$2 = {
       faqs: [
         {
           question: "When is payment taken for my order?",
-          answer:
-            "Payment is taken during the checkout process when you pay for your order. The order number that appears on the confirmation screen indicates payment has been successfully processed.",
+          answer: "Payment is taken during the checkout process when you pay for your order. The order number that appears on the confirmation screen indicates payment has been successfully processed."
         },
         {
           question: "How do I pay for my order?",
-          answer:
-            "We accept Visa\xAE, MasterCard\xAE, American Express\xAE, and PayPal\xAE. Our servers encrypt all information submitted to them, so you can be confident that your credit card information will be kept safe and secure.",
+          answer: "We accept Visa\xAE, MasterCard\xAE, American Express\xAE, and PayPal\xAE. Our servers encrypt all information submitted to them, so you can be confident that your credit card information will be kept safe and secure."
         },
         {
           question: "What should I do if I'm having trouble placing an order?",
-          answer:
-            "For any technical difficulties you are experiencing with our website, please contact us at our support portal, or you can call us toll-free at 1-000-000-000, or email us at order@companymail.com",
+          answer: "For any technical difficulties you are experiencing with our website, please contact us at our support portal, or you can call us toll-free at 1-000-000-000, or email us at order@companymail.com"
         },
         {
-          question:
-            "Which license do I need for an end product that is only accessible to paying users?",
-          answer:
-            "If you have paying users or you are developing any SaaS products then you need an Extended License. For each products, you need a license. You can get free lifetime updates as well.",
+          question: "Which license do I need for an end product that is only accessible to paying users?",
+          answer: "If you have paying users or you are developing any SaaS products then you need an Extended License. For each products, you need a license. You can get free lifetime updates as well."
         },
         {
           question: "Does my subscription automatically renew?",
-          answer:
-            "No, This is not subscription based item.Pastry pudding cookie toffee bonbon jujubes jujubes powder topping. Jelly beans gummi bears sweet roll bonbon muffin liquorice. Wafer lollipop sesame snaps.",
-        },
-      ],
+          answer: "No, This is not subscription based item.Pastry pudding cookie toffee bonbon jujubes jujubes powder topping. Jelly beans gummi bears sweet roll bonbon muffin liquorice. Wafer lollipop sesame snaps."
+        }
+      ]
     },
     {
       faqTitle: "Delivery",
@@ -15845,20 +14467,17 @@ const db$2 = {
       faqs: [
         {
           question: "How would you ship my order?",
-          answer:
-            "For large products, we deliver your product via a third party logistics company offering you the \u201Croom of choice\u201D scheduled delivery service. For small products, we offer free parcel delivery.",
+          answer: "For large products, we deliver your product via a third party logistics company offering you the \u201Croom of choice\u201D scheduled delivery service. For small products, we offer free parcel delivery."
         },
         {
           question: "What is the delivery cost of my order?",
-          answer:
-            "The cost of scheduled delivery is $69 or $99 per order, depending on the destination postal code. The parcel delivery is free.",
+          answer: "The cost of scheduled delivery is $69 or $99 per order, depending on the destination postal code. The parcel delivery is free."
         },
         {
           question: "What to do if my product arrives damaged?",
-          answer:
-            "We will promptly replace any product that is damaged in transit. Just contact our support team, to notify us of the situation within 48 hours of product arrival.",
-        },
-      ],
+          answer: "We will promptly replace any product that is damaged in transit. Just contact our support team, to notify us of the situation within 48 hours of product arrival."
+        }
+      ]
     },
     {
       faqTitle: "Cancellation",
@@ -15867,20 +14486,17 @@ const db$2 = {
       faqs: [
         {
           question: "Can I cancel my order?",
-          answer:
-            "Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund. Parcel delivery orders cannot be cancelled, however a free return label can be provided upon request.",
+          answer: "Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund. Parcel delivery orders cannot be cancelled, however a free return label can be provided upon request."
         },
         {
           question: "Can I return my product?",
-          answer:
-            "You can return your product within 15 days of delivery, by contacting our support team, All merchandise returned must be in the original packaging with all original items.",
+          answer: "You can return your product within 15 days of delivery, by contacting our support team, All merchandise returned must be in the original packaging with all original items."
         },
         {
           question: "Where can I view status of return?",
-          answer:
-            "Locate the item from Your Orders. Select Return/Refund status",
-        },
-      ],
+          answer: "Locate the item from Your Orders. Select Return/Refund status"
+        }
+      ]
     },
     {
       faqTitle: "My Orders",
@@ -15891,19 +14507,17 @@ const db$2 = {
           question: "Has my order been successful?",
           answer: `All successful order transactions will receive an order confirmation email once the order has been processed. If you have not received your order confirmation email within 24 hours, check your junk email or spam folder.
               Alternatively, log in to your account to check your order summary. If you do not have a account, you can contact our Customer Care Team on 1-000-000-000.
-              `,
+              `
         },
         {
           question: "My Promotion Code is not working, what can I do?",
-          answer:
-            "If you are having issues with a promotion code, please contact us at 1 000 000 000 for assistance.",
+          answer: "If you are having issues with a promotion code, please contact us at 1 000 000 000 for assistance."
         },
         {
           question: "How do I track my Orders?",
-          answer:
-            "If you have an account just sign into your account from here and select \u201CMy Orders\u201D. If you have a a guest account track your order from here using the order number and the email address.",
-        },
-      ],
+          answer: "If you have an account just sign into your account from here and select \u201CMy Orders\u201D. If you have a a guest account track your order from here using the order number and the email address."
+        }
+      ]
     },
     {
       faqTitle: "Services",
@@ -15912,30 +14526,25 @@ const db$2 = {
       faqs: [
         {
           question: "Will I be notified once my order has shipped?",
-          answer:
-            "Yes, We will send you an email once your order has been shipped. This email will contain tracking and order information.",
+          answer: "Yes, We will send you an email once your order has been shipped. This email will contain tracking and order information."
         },
         {
           question: "Where can I find warranty information?",
-          answer:
-            "We are committed to quality products. For information on warranty period and warranty services, visit our Warranty section here.",
+          answer: "We are committed to quality products. For information on warranty period and warranty services, visit our Warranty section here."
         },
         {
           question: "How can I purchase additional warranty coverage?",
-          answer:
-            "For the peace of your mind, we offer extended warranty plans that add additional year(s) of protection to the standard manufacturer's warranty provided by us. To purchase or find out more about the extended warranty program, visit Extended Warranty section here.",
-        },
-      ],
-    },
-  ],
+          answer: "For the peace of your mind, we offer extended warranty plans that add additional year(s) of protection to the standard manufacturer's warranty provided by us. To purchase or find out more about the extended warranty program, visit Extended Warranty section here."
+        }
+      ]
+    }
+  ]
 };
 
 const faq_get = defineEventHandler(async (event) => {
   const { q = "" } = getQuery$1(event);
   const searchQuery = is.string(q) ? q : void 0;
-  const queryLowered = (searchQuery != null ? searchQuery : "")
-    .toString()
-    .toLowerCase();
+  const queryLowered = (searchQuery != null ? searchQuery : "").toString().toLowerCase();
   const filteredData = [];
   Object.entries(db$2.faqs).forEach(([_, faqObj]) => {
     const filteredQAndA = faqObj.faqs.filter((obj) => {
@@ -15948,9 +14557,9 @@ const faq_get = defineEventHandler(async (event) => {
   return filteredData;
 });
 
-const faq_get$1 = /*#__PURE__*/ Object.freeze({
+const faq_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: faq_get,
+  default: faq_get
 });
 
 const checkoutImg = getPublicUrl("/images/front-pages/misc/checkout-image.png");
@@ -15961,22 +14570,20 @@ const db$1 = {
       slug: "getting-started",
       title: "Getting Started",
       img: "custom-rocket",
-      subtitle:
-        "Whether you're new or you're a power user, this article will help you to get started",
+      subtitle: "Whether you're new or you're a power user, this article will help you to get started"
     },
     {
       slug: "first-steps",
       title: "First Steps",
       img: "custom-gift",
-      subtitle:
-        "Are you a new customer wondering how to get started? This article will help you",
+      subtitle: "Are you a new customer wondering how to get started? This article will help you"
     },
     {
       slug: "external-content",
       title: "Add External Content",
       img: "custom-keyboard",
-      subtitle: "Article will show you how to expand the functionality of App",
-    },
+      subtitle: "Article will show you how to expand the functionality of App"
+    }
   ],
   allArticles: [
     {
@@ -15988,8 +14595,8 @@ const db$1 = {
         { title: "How do i add or change my details?" },
         { title: "How do refunds work?" },
         { title: "Can I Get A Refund?" },
-        { title: "I'm trying to find a specific item" },
-      ],
+        { title: "I'm trying to find a specific item" }
+      ]
     },
     {
       title: "Item Support",
@@ -16000,8 +14607,8 @@ const db$1 = {
         { title: "Where Is My Purchase Code?" },
         { title: "Extend or renew Item Support" },
         { title: "Item Support FAQ" },
-        { title: "Why has my item been removed?" },
-      ],
+        { title: "Why has my item been removed?" }
+      ]
     },
     {
       title: "Licenses",
@@ -16012,8 +14619,8 @@ const db$1 = {
         { title: "I'm making a test site - it's not for ..." },
         { title: "which license do I need?" },
         { title: "I want to make multiple end prod ..." },
-        { title: "For logo what license do I need?" },
-      ],
+        { title: "For logo what license do I need?" }
+      ]
     },
     {
       title: "Template Kits",
@@ -16024,8 +14631,8 @@ const db$1 = {
         { title: "Template Kits - Imported template ..." },
         { title: "Troubleshooting Import Problems" },
         { title: "How to use the WordPress Plugin ..." },
-        { title: "How to use the Template Kit Import ..." },
-      ],
+        { title: "How to use the Template Kit Import ..." }
+      ]
     },
     {
       title: "Account & Password",
@@ -16036,8 +14643,8 @@ const db$1 = {
         { title: "I'm not receiving the verification email" },
         { title: "Forgotten Username Or Password" },
         { title: "New password not accepted" },
-        { title: "What is Sign In Verification?" },
-      ],
+        { title: "What is Sign In Verification?" }
+      ]
     },
     {
       title: "Account Settings",
@@ -16048,32 +14655,29 @@ const db$1 = {
         { title: "How do I close my account?" },
         { title: "How do I change my email address?" },
         { title: "How can I regain access to my a ..." },
-        { title: "Are RSS feeds available on Market?" },
-      ],
-    },
+        { title: "Are RSS feeds available on Market?" }
+      ]
+    }
   ],
   keepLearning: [
     {
       slug: "blogging",
       title: "Blogging",
       img: "custom-laptop",
-      subtitle:
-        "Expert tips & tools to improve your website or online store using blog.",
+      subtitle: "Expert tips & tools to improve your website or online store using blog."
     },
     {
       slug: "inspiration-center",
       title: "Inspiration Center",
       img: "custom-lightbulb",
-      subtitle:
-        "inspiration from experts to help you start and grow your big ideas.",
+      subtitle: "inspiration from experts to help you start and grow your big ideas."
     },
     {
       slug: "community",
       title: "Community",
       img: "custom-discord",
-      subtitle:
-        "A group of people living in the same place or having a particular.",
-    },
+      subtitle: "A group of people living in the same place or having a particular."
+    }
   ],
   articleData: {
     title: "How to add product in cart?",
@@ -16086,19 +14690,18 @@ const db$1 = {
               If you want several items, use the 'Add to Cart' button and then choose 'Keep Browsing' to continue shopping or 'Checkout' to finalize your purchase.
             </p>
         `,
-    checkoutContent:
-      "You can go back to your cart at any time by clicking on the shopping cart icon at the top right side of the page.",
+    checkoutContent: "You can go back to your cart at any time by clicking on the shopping cart icon at the top right side of the page.",
     articleList: [
       "Template Kits",
       "Elementor Template Kits: PHP Zip Extends",
       "Envato Elements Template Kits",
       "Envato Elements Template Kits",
       "How to use the template in WordPress",
-      "How to use the Template Kit Import",
+      "How to use the Template Kit Import"
     ],
     checkoutImg,
-    productImg,
-  },
+    productImg
+  }
 };
 
 const index_get$4 = defineEventHandler(async (event) => {
@@ -16106,23 +14709,19 @@ const index_get$4 = defineEventHandler(async (event) => {
   return db$1.articleData;
 });
 
-const index_get$5 = /*#__PURE__*/ Object.freeze({
+const index_get$5 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$4,
+  default: index_get$4
 });
 
 const index_get$2 = defineEventHandler(async (event) => {
   setResponseStatus(event, 200);
-  return {
-    allArticles: db$1.allArticles,
-    popularArticles: db$1.popularArticles,
-    keepLearning: db$1.keepLearning,
-  };
+  return { allArticles: db$1.allArticles, popularArticles: db$1.popularArticles, keepLearning: db$1.keepLearning };
 });
 
-const index_get$3 = /*#__PURE__*/ Object.freeze({
+const index_get$3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get$2,
+  default: index_get$2
 });
 
 const avatar1 = getPublicUrl("/images/avatars/avatar-1.png");
@@ -16142,9 +14741,7 @@ const supportLabel = getPublicUrl("/images/icons/project-icons/support.png");
 const twitterLabel = getPublicUrl("/images/icons/project-icons/twitter.png");
 const vueLabel = getPublicUrl("/images/icons/project-icons/vue.png");
 const xdLabel = getPublicUrl("/images/icons/project-icons/xd.png");
-const UserProfileHeaderBg = getPublicUrl(
-  "/images/pages/user-profile-header-bg.png"
-);
+const UserProfileHeaderBg = getPublicUrl("/images/pages/user-profile-header-bg.png");
 const db = {
   data: {
     profileHeader: {
@@ -16153,7 +14750,7 @@ const db = {
       joiningDate: "April 2021",
       designation: "UX Designer",
       profileImg: avatar1,
-      coverImg: UserProfileHeaderBg,
+      coverImg: UserProfileHeaderBg
     },
     profile: {
       about: [
@@ -16161,71 +14758,53 @@ const db = {
         { property: "Status", value: "active", icon: "tabler-check" },
         { property: "Role", value: "Developer", icon: "tabler-star" },
         { property: "Country", value: "USA", icon: "tabler-flag" },
-        { property: "Language", value: "English", icon: "tabler-language" },
+        { property: "Language", value: "English", icon: "tabler-language" }
       ],
       contacts: [
         { property: "Contact", value: "(123) 456-7890", icon: "tabler-phone" },
         { property: "Skype", value: "john.doe", icon: "tabler-message" },
-        {
-          property: "Email",
-          value: "john.doe@example.com",
-          icon: "tabler-mail",
-        },
+        { property: "Email", value: "john.doe@example.com", icon: "tabler-mail" }
       ],
       teams: [
-        {
-          property: "Backend Developer",
-          value: "(126 Members)",
-          icon: "tabler-brand-github",
-          color: "secondary",
-        },
-        {
-          property: "VueJS Developer",
-          value: "(98 Members)",
-          icon: "tabler-brand-vue",
-          color: "success",
-        },
+        { property: "Backend Developer", value: "(126 Members)", icon: "tabler-brand-github", color: "secondary" },
+        { property: "VueJS Developer", value: "(98 Members)", icon: "tabler-brand-vue", color: "success" }
       ],
       overview: [
         { property: "Task Compiled", value: "13.5k", icon: "tabler-check" },
         { property: "Connections", value: "897", icon: "tabler-user" },
-        {
-          property: "Projects Compiled",
-          value: "146",
-          icon: "tabler-layout-grid",
-        },
+        { property: "Projects Compiled", value: "146", icon: "tabler-layout-grid" }
       ],
       connections: [
         {
           isFriend: false,
           connections: "45",
           name: "Cecilia Payne",
-          avatar: avatar2,
+          avatar: avatar2
         },
         {
           isFriend: true,
           connections: "1.32k",
           name: "Curtis Fletcher",
-          avatar: avatar3,
+          avatar: avatar3
         },
         {
           isFriend: true,
           connections: "125",
           name: "Alice Stone",
-          avatar: avatar4,
+          avatar: avatar4
         },
         {
           isFriend: false,
           connections: "456",
           name: "Darrell Barnes",
-          avatar: avatar5,
+          avatar: avatar5
         },
         {
           isFriend: false,
           connections: "1.2k",
           name: "Eugenia Moore",
-          avatar: avatar8,
-        },
+          avatar: avatar8
+        }
       ],
       teamsTech: [
         {
@@ -16233,37 +14812,37 @@ const db = {
           ChipColor: "error",
           chipText: "Developer",
           title: "React Developers",
-          avatar: reactLabel,
+          avatar: reactLabel
         },
         {
           members: 122,
           chipText: "Support",
           ChipColor: "primary",
           title: "Support Team",
-          avatar: supportLabel,
+          avatar: supportLabel
         },
         {
           members: 7,
           ChipColor: "info",
           chipText: "Designer",
           title: "UI Designer",
-          avatar: figmaLabel,
+          avatar: figmaLabel
         },
         {
           members: 289,
           ChipColor: "error",
           chipText: "Developer",
           title: "Vue.js Developers",
-          avatar: vueLabel,
+          avatar: vueLabel
         },
         {
           members: 24,
           chipText: "Marketing",
           ChipColor: "secondary",
           title: "Digital Marketing",
-          avatar: twitterLabel,
-        },
-      ],
+          avatar: twitterLabel
+        }
+      ]
     },
     teams: [
       {
@@ -16274,20 +14853,19 @@ const db = {
           { avatar: avatar1, name: "Vinnie Mostowy" },
           { avatar: avatar2, name: "Allen Rieske" },
           { avatar: avatar3, name: "Julee Rossignol" },
-          { avatar: avatar4, name: "George Burrill" },
+          { avatar: avatar4, name: "George Burrill" }
         ],
-        description:
-          "We don't make assumptions about the rest of your technology stack, so you can develop new features in React.",
+        description: "We don't make assumptions about the rest of your technology stack, so you can develop new features in React.",
         chips: [
           {
             title: "React",
-            color: "primary",
+            color: "primary"
           },
           {
             title: "MUI",
-            color: "info",
-          },
-        ],
+            color: "info"
+          }
+        ]
       },
       {
         extraMembers: 15,
@@ -16297,20 +14875,19 @@ const db = {
           { avatar: avatar5, name: "Kaith D'souza" },
           { avatar: avatar6, name: "John Doe" },
           { avatar: avatar7, name: "Alan Walker" },
-          { avatar: avatar8, name: "Calvin Middleton" },
+          { avatar: avatar8, name: "Calvin Middleton" }
         ],
-        description:
-          "The development of Vue and its ecosystem is guided by an international team, some of whom have chosen to be featured below.",
+        description: "The development of Vue and its ecosystem is guided by an international team, some of whom have chosen to be featured below.",
         chips: [
           {
             title: "Vuejs",
-            color: "success",
+            color: "success"
           },
           {
             color: "error",
-            title: "Developer",
-          },
-        ],
+            title: "Developer"
+          }
+        ]
       },
       {
         extraMembers: 55,
@@ -16320,20 +14897,19 @@ const db = {
           { avatar: avatar1, name: "Jimmy Ressula" },
           { avatar: avatar2, name: "Kristi Lawker" },
           { avatar: avatar3, name: "Danny Paul" },
-          { avatar: avatar4, name: "Alicia Littleton" },
+          { avatar: avatar4, name: "Alicia Littleton" }
         ],
-        description:
-          "A design or product team is more than just the people on it. A team includes the people, the roles they play.",
+        description: "A design or product team is more than just the people on it. A team includes the people, the roles they play.",
         chips: [
           {
             title: "Sketch",
-            color: "warning",
+            color: "warning"
           },
           {
             title: "XD",
-            color: "error",
-          },
-        ],
+            color: "error"
+          }
+        ]
       },
       {
         extraMembers: 35,
@@ -16343,16 +14919,15 @@ const db = {
           { avatar: avatar5, name: "Andrew Tye" },
           { avatar: avatar6, name: "Rishi Swaat" },
           { avatar: avatar7, name: "Rossie Kim" },
-          { avatar: avatar8, name: "Mary Hunter" },
+          { avatar: avatar8, name: "Mary Hunter" }
         ],
-        description:
-          "Support your team. Your customer support team is fielding the good, the bad, and the ugly day in and day out.",
+        description: "Support your team. Your customer support team is fielding the good, the bad, and the ugly day in and day out.",
         chips: [
           {
             color: "info",
-            title: "Zendesk",
-          },
-        ],
+            title: "Zendesk"
+          }
+        ]
       },
       {
         extraMembers: 19,
@@ -16362,20 +14937,19 @@ const db = {
           { avatar: avatar1, name: "Kim Merchent" },
           { avatar: avatar2, name: "Sam D'souza" },
           { avatar: avatar3, name: "Nurvi Karlos" },
-          { avatar: avatar4, name: "Margorie Whitmire" },
+          { avatar: avatar4, name: "Margorie Whitmire" }
         ],
-        description:
-          "Digital marketing refers to advertising delivered through digital channels such as search engines, websites\u2026",
+        description: "Digital marketing refers to advertising delivered through digital channels such as search engines, websites\u2026",
         chips: [
           {
             color: "primary",
-            title: "Twitter",
+            title: "Twitter"
           },
           {
             title: "Email",
-            color: "success",
-          },
-        ],
+            color: "success"
+          }
+        ]
       },
       {
         title: "Event",
@@ -16385,16 +14959,15 @@ const db = {
           { avatar: avatar5, name: "Vinnie Mostowy" },
           { avatar: avatar6, name: "Allen Rieske" },
           { avatar: avatar7, name: "Julee Rossignol" },
-          { avatar: avatar8, name: "Daniel Long" },
+          { avatar: avatar8, name: "Daniel Long" }
         ],
-        description:
-          "Event is defined as a particular contest which is part of a program of contests. An example of an event is the long\u2026",
+        description: "Event is defined as a particular contest which is part of a program of contests. An example of an event is the long\u2026",
         chips: [
           {
             title: "Hubilo",
-            color: "success",
-          },
-        ],
+            color: "success"
+          }
+        ]
       },
       {
         extraMembers: 45,
@@ -16404,20 +14977,19 @@ const db = {
           { avatar: avatar1, name: "Andrew Mostowy" },
           { avatar: avatar2, name: "Micky Ressula" },
           { avatar: avatar3, name: "Michel Pal" },
-          { avatar: avatar4, name: "Herman Lockard" },
+          { avatar: avatar4, name: "Herman Lockard" }
         ],
-        description:
-          "Explore, install, use, and remix thousands of plugins and files published to the Figma Community by designers and developers.",
+        description: "Explore, install, use, and remix thousands of plugins and files published to the Figma Community by designers and developers.",
         chips: [
           {
             title: "UI/UX",
-            color: "success",
+            color: "success"
           },
           {
             title: "Figma",
-            color: "secondary",
-          },
-        ],
+            color: "secondary"
+          }
+        ]
       },
       {
         extraMembers: 50,
@@ -16427,21 +14999,20 @@ const db = {
           { avatar: avatar5, name: "Kim Karlos" },
           { avatar: avatar6, name: "Katy Turner" },
           { avatar: avatar7, name: "Peter Adward" },
-          { avatar: avatar8, name: "Leona Miller" },
+          { avatar: avatar8, name: "Leona Miller" }
         ],
-        description:
-          "Learn the basics of how websites work, front-end vs back-end, and using a code editor. Learn basic HTML, CSS, and\u2026",
+        description: "Learn the basics of how websites work, front-end vs back-end, and using a code editor. Learn basic HTML, CSS, and\u2026",
         chips: [
           {
             title: "CSS",
-            color: "info",
+            color: "info"
           },
           {
             title: "HTML",
-            color: "warning",
-          },
-        ],
-      },
+            color: "warning"
+          }
+        ]
+      }
     ],
     projects: [
       {
@@ -16460,13 +15031,12 @@ const db = {
         title: "Social Banners",
         client: "Christian Jimenez",
         avatar: socialLabel,
-        description:
-          "We are Consulting, Software Development and Web Development Services.",
+        description: "We are Consulting, Software Development and Web Development Services.",
         avatarGroup: [
           { avatar: avatar1, name: "Vinnie Mostowy" },
           { avatar: avatar2, name: "Allen Rieske" },
-          { avatar: avatar3, name: "Julee Rossignol" },
-        ],
+          { avatar: avatar3, name: "Julee Rossignol" }
+        ]
       },
       {
         daysLeft: 15,
@@ -16487,10 +15057,9 @@ const db = {
         avatarGroup: [
           { avatar: avatar4, name: "Kaith D'souza" },
           { avatar: avatar5, name: "John Doe" },
-          { avatar: avatar6, name: "Alan Walker" },
+          { avatar: avatar6, name: "Alan Walker" }
         ],
-        description:
-          "Time is our most valuable asset, that's why we want to help you save it by creating\u2026",
+        description: "Time is our most valuable asset, that's why we want to help you save it by creating\u2026"
       },
       {
         daysLeft: 45,
@@ -16508,13 +15077,12 @@ const db = {
         members: "458 members",
         client: "Ricky McDonald",
         avatar: vueLabel,
-        description:
-          "App design combines the user interface (UI) and user experience (UX).",
+        description: "App design combines the user interface (UI) and user experience (UX).",
         avatarGroup: [
           { avatar: avatar7, name: "Jimmy Ressula" },
           { avatar: avatar8, name: "Kristi Lawker" },
-          { avatar: avatar1, name: "Danny Paul" },
-        ],
+          { avatar: avatar1, name: "Danny Paul" }
+        ]
       },
       {
         comments: 120,
@@ -16532,13 +15100,12 @@ const db = {
         client: "Hulda Wright",
         title: "Create Website",
         avatar: htmlLabel,
-        description:
-          "Your domain name should reflect your products or services so that your...",
+        description: "Your domain name should reflect your products or services so that your...",
         avatarGroup: [
           { avatar: avatar2, name: "Andrew Tye" },
           { avatar: avatar3, name: "Rishi Swaat" },
-          { avatar: avatar4, name: "Rossie Kim" },
-        ],
+          { avatar: avatar4, name: "Rossie Kim" }
+        ]
       },
       {
         daysLeft: 5,
@@ -16556,13 +15123,12 @@ const db = {
         client: "Jerry Greene",
         title: "Figma Dashboard",
         avatar: figmaLabel,
-        description:
-          "Use this template to organize your design project. Some of the key features are\u2026",
+        description: "Use this template to organize your design project. Some of the key features are\u2026",
         avatarGroup: [
           { avatar: avatar5, name: "Kim Merchent" },
           { avatar: avatar6, name: "Sam D'souza" },
-          { avatar: avatar7, name: "Nurvi Karlos" },
-        ],
+          { avatar: avatar7, name: "Nurvi Karlos" }
+        ]
       },
       {
         daysLeft: 4,
@@ -16580,14 +15146,13 @@ const db = {
         members: "16 members",
         client: "Olive Strickland",
         avatar: xdLabel,
-        description:
-          "Premium logo designs created by top logo designers. Create the branding of business.",
+        description: "Premium logo designs created by top logo designers. Create the branding of business.",
         avatarGroup: [
           { avatar: avatar8, name: "Kim Karlos" },
           { avatar: avatar1, name: "Katy Turner" },
-          { avatar: avatar2, name: "Peter Adward" },
-        ],
-      },
+          { avatar: avatar2, name: "Peter Adward" }
+        ]
+      }
     ],
     connections: [
       {
@@ -16601,13 +15166,13 @@ const db = {
         chips: [
           {
             title: "Figma",
-            color: "secondary",
+            color: "secondary"
           },
           {
             title: "Sketch",
-            color: "warning",
-          },
-        ],
+            color: "warning"
+          }
+        ]
       },
       {
         tasks: "2.31k",
@@ -16620,13 +15185,13 @@ const db = {
         chips: [
           {
             color: "error",
-            title: "Angular",
+            title: "Angular"
           },
           {
             color: "info",
-            title: "React",
-          },
-        ],
+            title: "React"
+          }
+        ]
       },
       {
         tasks: "1.25k",
@@ -16639,13 +15204,13 @@ const db = {
         chips: [
           {
             title: "HTML",
-            color: "primary",
+            color: "primary"
           },
           {
             color: "info",
-            title: "React",
-          },
-        ],
+            title: "React"
+          }
+        ]
       },
       {
         tasks: "12.4k",
@@ -16658,17 +15223,17 @@ const db = {
         chips: [
           {
             title: "Figma",
-            color: "secondary",
+            color: "secondary"
           },
           {
             title: "Sketch",
-            color: "warning",
+            color: "warning"
           },
           {
             color: "primary",
-            title: "Photoshop",
-          },
-        ],
+            title: "Photoshop"
+          }
+        ]
       },
       {
         tasks: "23.8k",
@@ -16681,17 +15246,17 @@ const db = {
         chips: [
           {
             color: "info",
-            title: "React",
+            title: "React"
           },
           {
             title: "HTML",
-            color: "warning",
+            color: "warning"
           },
           {
             color: "success",
-            title: "Node.js",
-          },
-        ],
+            title: "Node.js"
+          }
+        ]
       },
       {
         tasks: "1.28k",
@@ -16704,15 +15269,15 @@ const db = {
         chips: [
           {
             title: "Analysis",
-            color: "secondary",
+            color: "secondary"
           },
           {
             color: "success",
-            title: "Writing",
-          },
-        ],
-      },
-    ],
+            title: "Writing"
+          }
+        ]
+      }
+    ]
   },
   projectTable: [
     {
@@ -16722,7 +15287,7 @@ const db = {
       name: "Website SEO",
       date: "10 may 2021",
       avatarColor: "success",
-      avatarGroup: [avatar1, avatar2, avatar3, avatar4],
+      avatarGroup: [avatar1, avatar2, avatar3, avatar4]
     },
     {
       id: 2,
@@ -16731,7 +15296,7 @@ const db = {
       date: "03 Jan 2021",
       name: "Social Banners",
       avatar: socialLabel,
-      avatarGroup: [avatar5, avatar6],
+      avatarGroup: [avatar5, avatar6]
     },
     {
       id: 3,
@@ -16740,7 +15305,7 @@ const db = {
       date: "12 Aug 2021",
       name: "Logo Designs",
       avatar: "/images/icons/project-icons/sketch-label.png",
-      avatarGroup: [avatar7, avatar8, avatar1, avatar2],
+      avatarGroup: [avatar7, avatar8, avatar1, avatar2]
     },
     {
       id: 4,
@@ -16749,7 +15314,7 @@ const db = {
       date: "19 Apr 2021",
       name: "IOS App Design",
       avatar: "/images/icons/project-icons/sketch-label.png",
-      avatarGroup: [avatar3, avatar4, avatar5, avatar6],
+      avatarGroup: [avatar3, avatar4, avatar5, avatar6]
     },
     {
       id: 5,
@@ -16758,7 +15323,7 @@ const db = {
       date: "08 Apr 2021",
       name: "Figma Dashboards",
       avatar: figmaLabel,
-      avatarGroup: [avatar7, avatar8, avatar1],
+      avatarGroup: [avatar7, avatar8, avatar1]
     },
     {
       id: 6,
@@ -16767,7 +15332,7 @@ const db = {
       date: "29 Sept 2021",
       name: "Crypto Admin",
       avatar: htmlLabel,
-      avatarGroup: [avatar2, avatar3, avatar4, avatar5],
+      avatarGroup: [avatar2, avatar3, avatar4, avatar5]
     },
     {
       id: 7,
@@ -16776,7 +15341,7 @@ const db = {
       date: "20 Mar 2021",
       name: "Create Website",
       avatar: reactLabel,
-      avatarGroup: [avatar6, avatar7, avatar8, avatar1],
+      avatarGroup: [avatar6, avatar7, avatar8, avatar1]
     },
     {
       id: 8,
@@ -16785,7 +15350,7 @@ const db = {
       date: "09 Feb 2021",
       name: "App Design",
       avatar: xdLabel,
-      avatarGroup: [avatar2, avatar3, avatar4, avatar5],
+      avatarGroup: [avatar2, avatar3, avatar4, avatar5]
     },
     {
       id: 9,
@@ -16794,7 +15359,7 @@ const db = {
       date: "17 June 2021",
       name: "Angular APIs",
       avatar: figmaLabel,
-      avatarGroup: [avatar6, avatar7, avatar8, avatar1],
+      avatarGroup: [avatar6, avatar7, avatar8, avatar1]
     },
     {
       id: 10,
@@ -16803,9 +15368,9 @@ const db = {
       date: "06 Oct 2021",
       name: "Admin Template",
       avatar: vueLabel,
-      avatarGroup: [avatar2, avatar3, avatar4, avatar5],
-    },
-  ],
+      avatarGroup: [avatar2, avatar3, avatar4, avatar5]
+    }
+  ]
 };
 
 const header_get = defineEventHandler(async (event) => {
@@ -16813,9 +15378,9 @@ const header_get = defineEventHandler(async (event) => {
   return db.data.profileHeader;
 });
 
-const header_get$1 = /*#__PURE__*/ Object.freeze({
+const header_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: header_get,
+  default: header_get
 });
 
 const index_get = defineEventHandler(async (event) => {
@@ -16824,9 +15389,9 @@ const index_get = defineEventHandler(async (event) => {
   return db.data[tab];
 });
 
-const index_get$1 = /*#__PURE__*/ Object.freeze({
+const index_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: index_get,
+  default: index_get
 });
 
 const token_get = defineEventHandler(async (event) => {
@@ -16834,9 +15399,9 @@ const token_get = defineEventHandler(async (event) => {
   return getToken({ event });
 });
 
-const token_get$1 = /*#__PURE__*/ Object.freeze({
+const token_get$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: token_get,
+  default: token_get
 });
 
 const Vue3 = version.startsWith("3");
@@ -16845,15 +15410,18 @@ function resolveUnref(r) {
   return typeof r === "function" ? r() : unref(r);
 }
 function resolveUnrefHeadInput(ref, lastKey = "") {
-  if (ref instanceof Promise) return ref;
+  if (ref instanceof Promise)
+    return ref;
   const root = resolveUnref(ref);
-  if (!ref || !root) return root;
+  if (!ref || !root)
+    return root;
   if (Array.isArray(root))
     return root.map((r) => resolveUnrefHeadInput(r, lastKey));
   if (typeof root === "object") {
     return Object.fromEntries(
       Object.entries(root).map(([k, v]) => {
-        if (k === "titleTemplate" || k.startsWith("on")) return [k, unref(v)];
+        if (k === "titleTemplate" || k.startsWith("on"))
+          return [k, unref(v)];
         return [k, resolveUnrefHeadInput(v, k)];
       })
     );
@@ -16863,11 +15431,11 @@ function resolveUnrefHeadInput(ref, lastKey = "") {
 
 const VueReactivityPlugin = defineHeadPlugin({
   hooks: {
-    "entries:resolve": function (ctx) {
+    "entries:resolve": function(ctx) {
       for (const entry of ctx.entries)
         entry.resolvedInput = resolveUnrefHeadInput(entry.input);
-    },
-  },
+    }
+  }
 });
 
 const headSymbol = "usehead";
@@ -16879,7 +15447,7 @@ function vueInstall(head) {
         app.config.globalProperties.$head = head;
         app.provide(headSymbol, head);
       }
-    },
+    }
   };
   return plugin.install;
 }
@@ -16892,18 +15460,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {
-  meta: [
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { charset: "utf-8" },
-  ],
-  link: [],
-  style: [],
-  script: [],
-  noscript: [],
-  titleTemplate: "%s - NuxtJS Admin Template",
-  title: "Vuexy",
-};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"titleTemplate":"%s - NuxtJS Admin Template","title":"Vuexy"};
 
 const appRootId = "__nuxt";
 
@@ -16911,23 +15468,9 @@ const appRootTag = "div";
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () =>
-  import(
-    "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/.nuxt/dist/server/client.manifest.mjs"
-  )
-    .then((r) => r.default || r)
-    .then((r) => (typeof r === "function" ? r() : r));
-const getServerEntry = () =>
-  import(
-    "file://C:/Users/young/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%ED%95%99%EC%83%9D%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/77%EA%B8%B0%201%EC%B0%A8%20Vue/%ED%9A%8C%EA%B3%84/77th_acc_front/.nuxt/dist/server/server.mjs"
-  ).then((r) => r.default || r);
-const getSSRStyles = lazyCachedFunction(() =>
-  Promise.resolve()
-    .then(function () {
-      return styles$1;
-    })
-    .then((r) => r.default || r)
-);
+const getClientManifest = () => import('file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/gong5/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/Nuxt_Front/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -16940,7 +15483,7 @@ const getSSRRenderer = lazyCachedFunction(async () => {
   const options = {
     manifest,
     renderToString: renderToString$1,
-    buildAssetsURL,
+    buildAssetsURL
   };
   const renderer = createRenderer(createSSRApp, options);
   async function renderToString$1(input, context) {
@@ -16948,25 +15491,20 @@ const getSSRRenderer = lazyCachedFunction(async () => {
     if (process.env.NUXT_VITE_NODE_OPTIONS) {
       renderer.rendererContext.updateManifest(await getClientManifest());
     }
-    return `<${appRootTag}${` id="${appRootId}"`}>${html}</${appRootTag}>`;
+    return `<${appRootTag}${` id="${appRootId}"` }>${html}</${appRootTag}>`;
   }
   return renderer;
 });
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
-  const spaTemplate = await Promise.resolve()
-    .then(function () {
-      return _virtual__spaTemplate;
-    })
-    .then((r) => r.template)
-    .catch(() => "");
+  const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "");
   const options = {
     manifest,
-    renderToString: () =>
-      `<${appRootTag}${` id="${appRootId}"`}>${spaTemplate}</${appRootTag}>`,
-    buildAssetsURL,
+    renderToString: () => `<${appRootTag}${` id="${appRootId}"` }>${spaTemplate}</${appRootTag}>`,
+    buildAssetsURL
   };
-  const renderer = createRenderer(() => () => {}, options);
+  const renderer = createRenderer(() => () => {
+  }, options);
   const result = await renderer.renderToString({});
   const renderToString = (ssrContext) => {
     const config = useRuntimeConfig();
@@ -16975,32 +15513,30 @@ const getSPARenderer = lazyCachedFunction(async () => {
       _errors: {},
       serverRendered: false,
       data: {},
-      state: {},
+      state: {}
     };
     ssrContext.config = {
       public: config.public,
-      app: config.app,
+      app: config.app
     };
     return Promise.resolve(result);
   };
   return {
     rendererContext: renderer.rendererContext,
-    renderToString,
+    renderToString
   };
 });
-const PAYLOAD_URL_RE = /\/_payload(\.[a-zA-Z0-9]+)?.json(\?.*)?$/;
+const PAYLOAD_URL_RE = /\/_payload(\.[a-zA-Z0-9]+)?.json(\?.*)?$/ ;
 const renderer = defineRenderHandler(async (event) => {
   const nitroApp = useNitroApp();
-  const ssrError = event.path.startsWith("/__nuxt_error")
-    ? getQuery$1(event)
-    : null;
+  const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$1(event) : null;
   if (ssrError && ssrError.statusCode) {
     ssrError.statusCode = parseInt(ssrError.statusCode);
   }
   if (ssrError && !("__unenv__" in event.node.req)) {
     throw createError({
       statusCode: 404,
-      statusMessage: "Page Not Found: /__nuxt_error",
+      statusMessage: "Page Not Found: /__nuxt_error"
     });
   }
   const islandContext = void 0;
@@ -17013,7 +15549,7 @@ const renderer = defineRenderHandler(async (event) => {
   }
   const routeOptions = getRouteRules(event);
   const head = createServerHead({
-    plugins: unheadPlugins,
+    plugins: unheadPlugins
   });
   const headEntryOptions = { mode: "server" };
   head.push(appHead, headEntryOptions);
@@ -17021,35 +15557,25 @@ const renderer = defineRenderHandler(async (event) => {
     url,
     event,
     runtimeConfig: useRuntimeConfig(),
-    noSSR:
-      event.context.nuxt?.noSSR ||
-      (routeOptions.ssr === false && !islandContext) ||
-      false,
+    noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !islandContext || (false),
     head,
     error: !!ssrError,
     nuxt: void 0,
     /* NuxtApp */
     payload: ssrError ? { error: ssrError } : {},
     _payloadReducers: {},
-    islandContext,
+    islandContext
   };
-  const renderer = ssrContext.noSSR
-    ? await getSPARenderer()
-    : await getSSRRenderer();
-  const _rendered = await renderer
-    .renderToString(ssrContext)
-    .catch(async (error) => {
-      if (ssrContext._renderResponse && error.message === "skipping render") {
-        return {};
-      }
-      const _err = (!ssrError && ssrContext.payload?.error) || error;
-      await ssrContext.nuxt?.hooks.callHook("app:error", _err);
-      throw _err;
-    });
-  await ssrContext.nuxt?.hooks.callHook("app:rendered", {
-    ssrContext,
-    renderResult: _rendered,
+  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
+  const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
+    if (ssrContext._renderResponse && error.message === "skipping render") {
+      return {};
+    }
+    const _err = !ssrError && ssrContext.payload?.error || error;
+    await ssrContext.nuxt?.hooks.callHook("app:error", _err);
+    throw _err;
   });
+  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext, renderResult: _rendered });
   if (ssrContext._renderResponse) {
     return ssrContext._renderResponse;
   }
@@ -17060,70 +15586,42 @@ const renderer = defineRenderHandler(async (event) => {
     const response2 = renderPayloadResponse(ssrContext);
     return response2;
   }
-  const inlinedStyles = Boolean(islandContext)
-    ? await renderInlineStyles(
-        ssrContext.modules ?? ssrContext._registeredComponents ?? []
-      )
-    : [];
+  const inlinedStyles = Boolean(islandContext) ? await renderInlineStyles(ssrContext.modules ?? ssrContext._registeredComponents ?? []) : [];
   const NO_SCRIPTS = routeOptions.experimentalNoScripts;
-  const { styles, scripts } = getRequestDependencies(
-    ssrContext,
-    renderer.rendererContext
-  );
+  const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
   head.push({ style: inlinedStyles });
-  head.push(
-    {
-      link: Object.values(styles).map((resource) => ({
-        rel: "stylesheet",
-        href: renderer.rendererContext.buildAssetsURL(resource.file),
-      })),
-    },
-    headEntryOptions
-  );
+  head.push({
+    link: Object.values(styles).map(
+      (resource) => ({ rel: "stylesheet", href: renderer.rendererContext.buildAssetsURL(resource.file) })
+    )
+  }, headEntryOptions);
   if (!NO_SCRIPTS) {
-    head.push(
-      {
-        link: getPreloadLinks(ssrContext, renderer.rendererContext),
-      },
-      headEntryOptions
-    );
-    head.push(
-      {
-        link: getPrefetchLinks(ssrContext, renderer.rendererContext),
-      },
-      headEntryOptions
-    );
-    head.push(
-      {
-        script: renderPayloadJsonScript({
-          id: "__NUXT_DATA__",
-          ssrContext,
-          data: ssrContext.payload,
-        }),
-      },
-      {
-        ...headEntryOptions,
-        // this should come before another end of body scripts
-        tagPosition: "bodyClose",
-        tagPriority: "high",
-      }
-    );
+    head.push({
+      link: getPreloadLinks(ssrContext, renderer.rendererContext)
+    }, headEntryOptions);
+    head.push({
+      link: getPrefetchLinks(ssrContext, renderer.rendererContext)
+    }, headEntryOptions);
+    head.push({
+      script: renderPayloadJsonScript({ id: "__NUXT_DATA__", ssrContext, data: ssrContext.payload }) 
+    }, {
+      ...headEntryOptions,
+      // this should come before another end of body scripts
+      tagPosition: "bodyClose",
+      tagPriority: "high"
+    });
   }
   if (!routeOptions.experimentalNoScripts) {
-    head.push(
-      {
-        script: Object.values(scripts).map((resource) => ({
-          type: resource.module ? "module" : null,
-          src: renderer.rendererContext.buildAssetsURL(resource.file),
-          defer: resource.module ? null : true,
-          crossorigin: "",
-        })),
-      },
-      headEntryOptions
-    );
+    head.push({
+      script: Object.values(scripts).map((resource) => ({
+        type: resource.module ? "module" : null,
+        src: renderer.rendererContext.buildAssetsURL(resource.file),
+        defer: resource.module ? null : true,
+        crossorigin: ""
+      }))
+    }, headEntryOptions);
   }
-  const { headTags, bodyTags, bodyTagsOpen, htmlAttrs, bodyAttrs } =
-    await renderSSRHead(head);
+  const { headTags, bodyTags, bodyTagsOpen, htmlAttrs, bodyAttrs } = await renderSSRHead(head);
   const htmlContext = {
     island: Boolean(islandContext),
     htmlAttrs: [htmlAttrs],
@@ -17131,7 +15629,7 @@ const renderer = defineRenderHandler(async (event) => {
     bodyAttrs: [bodyAttrs],
     bodyPrepend: normalizeChunks([bodyTagsOpen, ssrContext.teleports?.body]),
     body: [_rendered.html],
-    bodyAppend: [bodyTags],
+    bodyAppend: [bodyTags]
   };
   await nitroApp.hooks.callHook("render:html", htmlContext, { event });
   const response = {
@@ -17140,8 +15638,8 @@ const renderer = defineRenderHandler(async (event) => {
     statusMessage: getResponseStatusText(event),
     headers: {
       "content-type": "text/html;charset=utf-8",
-      "x-powered-by": "Nuxt",
-    },
+      "x-powered-by": "Nuxt"
+    }
   };
   return response;
 });
@@ -17170,9 +15668,7 @@ function renderHTMLDocument(html) {
   return `<!DOCTYPE html>
 <html ${joinAttrs(html.htmlAttrs)}>
 <head>${joinTags(html.head)}</head>
-<body ${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPrepend)}${joinTags(
-    html.body
-  )}${joinTags(html.bodyAppend)}</body>
+<body ${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPrepend)}${joinTags(html.body)}${joinTags(html.bodyAppend)}</body>
 </html>`;
 }
 async function renderInlineStyles(usedModules) {
@@ -17189,27 +15685,22 @@ async function renderInlineStyles(usedModules) {
 }
 function renderPayloadResponse(ssrContext) {
   return {
-    body: stringify(
-      splitPayload(ssrContext).payload,
-      ssrContext._payloadReducers
-    ),
+    body: stringify(splitPayload(ssrContext).payload, ssrContext._payloadReducers) ,
     statusCode: getResponseStatus(ssrContext.event),
     statusMessage: getResponseStatusText(ssrContext.event),
     headers: {
-      "content-type": "application/json;charset=utf-8",
-      "x-powered-by": "Nuxt",
-    },
+      "content-type": "application/json;charset=utf-8" ,
+      "x-powered-by": "Nuxt"
+    }
   };
 }
 function renderPayloadJsonScript(opts) {
-  const contents = opts.data
-    ? stringify(opts.data, opts.ssrContext._payloadReducers)
-    : "";
+  const contents = opts.data ? stringify(opts.data, opts.ssrContext._payloadReducers) : "";
   const payload = {
     type: "application/json",
     id: opts.id,
     innerHTML: contents,
-    "data-ssr": !opts.ssrContext.noSSR,
+    "data-ssr": !(opts.ssrContext.noSSR)
   };
   if (opts.src) {
     payload["data-src"] = opts.src;
@@ -17217,35 +15708,33 @@ function renderPayloadJsonScript(opts) {
   return [
     payload,
     {
-      innerHTML: `window.__NUXT__={};window.__NUXT__.config=${uneval(
-        opts.ssrContext.config
-      )}`,
-    },
+      innerHTML: `window.__NUXT__={};window.__NUXT__.config=${uneval(opts.ssrContext.config)}`
+    }
   ];
 }
 function splitPayload(ssrContext) {
   const { data, prerenderedAt, ...initial } = ssrContext.payload;
   return {
     initial: { ...initial, prerenderedAt },
-    payload: { data, prerenderedAt },
+    payload: { data, prerenderedAt }
   };
 }
 
-const renderer$1 = /*#__PURE__*/ Object.freeze({
+const renderer$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: renderer,
+  default: renderer
 });
 
 const styles = {};
 
-const styles$1 = /*#__PURE__*/ Object.freeze({
+const styles$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  default: styles,
+  default: styles
 });
 
 const template = "";
 
-const _virtual__spaTemplate = /*#__PURE__*/ Object.freeze({
+const _virtual__spaTemplate = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  template: template,
+  template: template
 });
